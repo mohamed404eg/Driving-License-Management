@@ -1,0 +1,12 @@
+C:\Programming\cpp\#18 db connectivity in csharp\DVLD - WindowsFormsApp\Test -ConsoleApp\bin\Debug\Test -ConsoleApp.exe.config
+C:\Programming\cpp\#18 db connectivity in csharp\DVLD - WindowsFormsApp\Test -ConsoleApp\bin\Debug\Test -ConsoleApp.exe
+C:\Programming\cpp\#18 db connectivity in csharp\DVLD - WindowsFormsApp\Test -ConsoleApp\bin\Debug\Test -ConsoleApp.pdb
+C:\Programming\cpp\#18 db connectivity in csharp\DVLD - WindowsFormsApp\Test -ConsoleApp\obj\Debug\Test -ConsoleApp.csproj.AssemblyReference.cache
+C:\Programming\cpp\#18 db connectivity in csharp\DVLD - WindowsFormsApp\Test -ConsoleApp\obj\Debug\Test -ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Programming\cpp\#18 db connectivity in csharp\DVLD - WindowsFormsApp\Test -ConsoleApp\obj\Debug\Test -ConsoleApp.exe
+C:\Programming\cpp\#18 db connectivity in csharp\DVLD - WindowsFormsApp\Test -ConsoleApp\obj\Debug\Test -ConsoleApp.pdb
+C:\Programming\cpp\#18 db connectivity in csharp\DVLD - WindowsFormsApp\Test -ConsoleApp\bin\Debug\DVLD - BusinessPresentation.dll
+C:\Programming\cpp\#18 db connectivity in csharp\DVLD - WindowsFormsApp\Test -ConsoleApp\bin\Debug\DVLD - BusinessPresentation.pdb
+C:\Programming\cpp\#18 db connectivity in csharp\DVLD - WindowsFormsApp\Test -ConsoleApp\obj\Debug\Test -ConsoleApp.csproj.CopyComplete
+C:\Programming\cpp\#18 db connectivity in csharp\DVLD - WindowsFormsApp\Test -ConsoleApp\bin\Debug\DVLD - DataAccess.dll
+C:\Programming\cpp\#18 db connectivity in csharp\DVLD - WindowsFormsApp\Test -ConsoleApp\bin\Debug\DVLD - DataAccess.pdb
