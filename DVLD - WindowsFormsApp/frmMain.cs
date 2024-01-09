@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DVLD___BusinessPresentation;
+using DVLD___WindowsFormsApp.MyFroms;
+using DVLD___WindowsFormsApp.MyFroms.Login;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,8 +13,15 @@ using System.Windows.Forms;
 
 namespace DVLD___WindowsFormsApp
 {
+
+  
+    
+
     public partial class frmMain : Form
     {
+        
+
+
         public frmMain()
         {
             InitializeComponent();
@@ -45,7 +55,24 @@ namespace DVLD___WindowsFormsApp
             frmManagePeople = null;
         }
 
+        private void frmMain_Load(object sender, EventArgs e)
+        {
 
+        }
 
+        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void signOutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            CurrentUser.User = null;
+
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show   ();
+        }
     }
 }

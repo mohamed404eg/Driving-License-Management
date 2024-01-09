@@ -574,6 +574,21 @@ string ImagePath)
             }
 
         }
+
+
+
+        static void TestFindUserByUserName(string UserName)
+        {
+            clsUser user = clsUser.Find(UserName);
+
+            if(user != null)
+            {
+                Console.WriteLine(user.UserName);
+                Console.WriteLine(user.Password);
+                
+            }
+
+        }
         static void Main(string[] args)
         {
 
@@ -643,6 +658,17 @@ string ImagePath)
             //TestCountrise();
             //TestCountriseFindByName();
             //TestCountriseGetAll();
+
+
+            TestFindUserByUserName("Msaqer77");
+
+
+
+
+
+
+
+
 
             Console.ReadKey();
         }

@@ -44,6 +44,7 @@
     <Compile Include="clsCountriesDateAccess.cs" />
     <Compile Include="clsPeopleDataAccess.cs" />
     <Compile Include="clsConnectionsString.cs" />
+    <Compile Include="clsUserDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

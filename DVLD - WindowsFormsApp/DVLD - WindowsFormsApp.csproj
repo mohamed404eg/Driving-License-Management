@@ -52,6 +52,7 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyFroms\CurrentUser.cs" />
     <Compile Include="MyFroms\Login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
