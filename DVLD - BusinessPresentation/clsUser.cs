@@ -1,6 +1,8 @@
 ﻿using DVLD___DataAccess;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +11,13 @@ namespace DVLD___BusinessPresentation
 {
     public class clsUser
     {
+
+        enum enMode
+        {
+            Add,
+            Update
+        }
+        enMode _Mode;
         int _UserID;
         
         public int UserID
@@ -30,8 +39,21 @@ namespace DVLD___BusinessPresentation
             this.UserName = UserName;
             this.Password = Password;
             this.IsActive = IsActive;
+
+            _Mode = enMode.Update;
+
         }
 
+        public clsUser()
+        {
+            _UserID = -1;
+            this.PersonID = -1;
+            this.UserName = "";
+            this.Password = "";
+            this.IsActive = false;
+
+            _Mode = enMode.Add;
+        }
 
         /// <summary>
         /// find user by username
@@ -93,5 +115,122 @@ namespace DVLD___BusinessPresentation
 
 
 
+        /// <summary>
+        /// get all users
+        /// </summary>
+        /// <returns>DataTable Users</returns>
+        static public DataTable GetAllUsers()
+        {
+            return clsUserDataAccess.GetAllUsers();
+        }
+
+
+        // find none return Password
+        static public DataTable FindByUserIdNonePassword(int UserId)
+        {
+
+            return clsUserDataAccess.FindByUserIdNonePassword(UserId);
+
+        }
+        static public DataTable FindByPersonIdNonePassword(int PersonID)
+        {
+
+            return clsUserDataAccess.FindByPersonIdNonePassword(PersonID);
+
+        }
+        static public DataTable FindByUserNameNonePassword(string UserName)
+        {
+            return clsUserDataAccess.FindByUserNameNonePassword(UserName);
+        }
+        static public DataTable FindByFullNameNonePassword(string FullName)
+        {
+            return clsUserDataAccess.FindByFullNameNonePassword(FullName);
+        }
+        static public DataTable FindByIsActiveNonePassword(bool IsActive)
+        {
+            return clsUserDataAccess.FindByIsActiveNonePassword(IsActive);
+        }
+
+    
+
+        bool _AddNew()
+        {
+            // if this Person arediay conactied other User 
+
+            if(clsUserDataAccess.IsExistPersonId(this.PersonID)) {
+                return false;
+            }
+
+
+
+
+
+            int USERid = -1;
+
+            USERid = clsUserDataAccess.AddUser(this.PersonID, this.UserName, this.Password,this.IsActive);
+            
+
+            this._UserID = USERid;
+
+            return (USERid != -1);
+
+        }
+
+        bool _Update()
+        {
+            return clsUserDataAccess.UpdateUser(this.UserID,this.PersonID,this.UserName,this.Password,this.IsActive);
+        }
+        public bool Save()
+        {
+            switch(_Mode){
+
+                case enMode.Add:
+
+
+                    if (_AddNew())
+                    {
+                        _Mode = enMode.Update;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+
+                    break;
+            
+            
+            
+            
+            
+            case enMode.Update :
+
+                    return _Update();
+                    
+                    
+                    break;
+            
+            
+            
+            
+            
+            }
+
+
+
+
+
+
+            return false;
+        }
+
+
+
+
+        public static bool DeleteUser(int UserID)
+        {
+            return clsUserDataAccess.DeleteUser(UserID);
+        }
     }
 }

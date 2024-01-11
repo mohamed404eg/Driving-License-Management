@@ -1,5 +1,6 @@
 ﻿using DVLD___WindowsFormsApp.MyFroms.Login;
 using DVLD___WindowsFormsApp.MyFroms.Person;
+using DVLD___WindowsFormsApp.MyFroms.Uesr;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace DVLD___WindowsFormsApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new frmManageUsers());
         }
     }
 }

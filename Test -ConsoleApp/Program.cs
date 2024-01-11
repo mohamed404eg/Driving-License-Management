@@ -589,6 +589,187 @@ string ImagePath)
             }
 
         }
+
+
+        static void TestGetAllUsers()
+        {
+
+            DataTable dt = new DataTable();
+
+
+            dt = clsUser.GetAllUsers();
+
+
+            foreach (DataRow item in dt.Rows)
+            {
+                Console.WriteLine(item["UserID"]);
+                Console.WriteLine(item["PersonID"]);
+                Console.WriteLine(item["UserName"]);
+                Console.WriteLine(item["IsActive"]);
+            }
+
+        }
+
+        static void TestFindByUserIdNonePassword(int UserId)
+        {
+
+            DataTable dt = new DataTable();
+
+
+            dt = clsUser.FindByUserIdNonePassword(UserId);
+
+
+            foreach (DataRow item in dt.Rows)
+            {
+                Console.WriteLine(item["UserID"]);
+                Console.WriteLine(item["PersonID"]);
+                Console.WriteLine(item["FullName"]);
+                Console.WriteLine(item["UserName"]);
+                Console.WriteLine(item["IsActive"]);
+            }
+
+        }
+
+        static void TestFindByPersonIdNonePassword(int UserId)
+        {
+
+            DataTable dt = new DataTable();
+
+
+            dt = clsUser.FindByPersonIdNonePassword(UserId);
+
+
+            foreach (DataRow item in dt.Rows)
+            {
+                Console.WriteLine(item["UserID"]);
+                Console.WriteLine(item["PersonID"]);
+                Console.WriteLine(item["FullName"]);
+                Console.WriteLine(item["UserName"]);
+                Console.WriteLine(item["IsActive"]);
+            }
+
+        }
+
+
+        static void TestAddNewUsers()
+        {
+            clsUser clsUser = new clsUser();
+
+            clsUser.PersonID = 1100;
+            clsUser.UserName = "Mohamed";
+            clsUser.IsActive = true;
+            clsUser.Password = "1234";
+
+            if (clsUser.Save())
+            {
+                Console.WriteLine($"Successfully {clsUser.UserID.ToString()}");
+            }
+            else
+            {
+                Console.WriteLine("faild");
+            }
+
+
+
+        }
+
+
+        static void TestUodateUser()
+        {
+            clsUser clsUser = clsUser.Find("Mohamed");
+
+            clsUser.UserName = "Mohamed";
+            clsUser.IsActive = true;
+            clsUser.Password = "1234";
+
+            if (clsUser.Save())
+            {
+                Console.WriteLine($"Successfully {clsUser.UserID.ToString()}");
+            }
+            else
+            {
+                Console.WriteLine("faild");
+            }
+
+
+
+        }
+
+
+        static void TestDeleteUser(int UserId)
+        {
+          
+
+            if (clsUser.DeleteUser(UserId))
+            {
+                Console.WriteLine($"Successfully");
+            }
+            else
+            {
+                Console.WriteLine("faild");
+            }
+
+
+
+        }
+
+
+        static void TestFindByUserNameNonePassword(string UserName)
+        {
+            DataTable dt = new DataTable();
+
+
+            dt = clsUser.FindByUserNameNonePassword(UserName);
+
+
+            foreach (DataRow item in dt.Rows)
+            {
+                Console.WriteLine(item["UserID"]);
+                Console.WriteLine(item["PersonID"]);
+                Console.WriteLine(item["FullName"]);
+                Console.WriteLine(item["UserName"]);
+                Console.WriteLine(item["IsActive"]);
+            }
+
+        }
+
+        static void TestFindByFullNameNonePassword(string FullName)
+        {
+            DataTable dt = new DataTable();
+
+
+            dt = clsUser.FindByFullNameNonePassword(FullName);
+
+
+            foreach (DataRow item in dt.Rows)
+            {
+                Console.WriteLine(item["UserID"]);
+                Console.WriteLine(item["PersonID"]);
+                Console.WriteLine(item["FullName"]);
+                Console.WriteLine(item["UserName"]);
+                Console.WriteLine(item["IsActive"]);
+            }
+
+        }
+
+        static void TestFindByIsActiveNonePassword(bool IsActive)
+        {
+            DataTable dt = new DataTable();
+
+
+            dt = clsUser.FindByIsActiveNonePassword(IsActive);
+
+
+            foreach (DataRow item in dt.Rows)
+            {
+                Console.WriteLine(item["UserID"]);
+                Console.WriteLine(item["PersonID"]);
+                Console.WriteLine(item["FullName"]);
+                Console.WriteLine(item["UserName"]);
+                Console.WriteLine(item["IsActive"]);
+            }
+
+        }
         static void Main(string[] args)
         {
 
@@ -660,7 +841,38 @@ string ImagePath)
             //TestCountriseGetAll();
 
 
-            TestFindUserByUserName("Msaqer77");
+            //TestFindUserByUserName("Msaqer77");
+
+            //TestGetAllUsers();
+
+            //TestFindByUserIdNonePassword(1);
+
+
+            //  TestFindByPersonIdNonePassword(1);
+
+            //TestAddNewUsers();
+
+
+
+
+            //TestFindByUserNameNonePassword("Mohamed");
+
+
+            //TestFindByFullNameNonePassword("iqvh ngmx ojis dudz");
+
+
+
+            //TestFindByIsActiveNonePassword(true);
+            //   TestFindByIsActiveNonePassword(false);
+
+           // TestUodateUser();
+
+
+            TestDeleteUser(324);
+
+
+
+
 
 
 
