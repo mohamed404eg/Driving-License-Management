@@ -14,6 +14,7 @@ namespace Test__ConsoleApp
     {
 
 
+
      static   public void TestFindById(int PersonId)
         {
             
@@ -770,6 +771,18 @@ string ImagePath)
             }
 
         }
+
+
+        static void TestGetGendor()
+        {
+            DataTable dt = clsPeople.GetAllGendor();
+
+            foreach(DataRow item in dt.Rows)
+            {
+                Console.WriteLine(item["Gendor"]);
+            }
+
+        }
         static void Main(string[] args)
         {
 
@@ -865,13 +878,13 @@ string ImagePath)
             //TestFindByIsActiveNonePassword(true);
             //   TestFindByIsActiveNonePassword(false);
 
-           // TestUodateUser();
+            // TestUodateUser();
 
 
-            TestDeleteUser(324);
+            //TestDeleteUser(324);
 
 
-
+           // TestGetGendor();
 
 
 

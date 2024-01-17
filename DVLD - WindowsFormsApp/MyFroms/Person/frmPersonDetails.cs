@@ -13,33 +13,34 @@ namespace DVLD___WindowsFormsApp.MyFroms.Person
 {
     public partial class frmPersonDetails : Form
     {
-        int _PersonId;
+       public static int _PersonId;
 
-        void _FullPerson(int PersonId)
-        {
-            clsPeople Person = clsPeople.Find(PersonId);
-            if(Person != null)
-            {
-                lab_PersonId.Text = Person.PersonID.ToString();
-                lab_Name.Text=Person.FirstName.ToString() + " "+ Person.SecondName.ToString()+" " + Person.ThirdName.ToString()+ " " + Person.LastName.ToString();
-                lab_NationalNO.Text = Person.NationalNo;
-                lab_Gendor .Text = Person.Gendor;
-                lab_Email .Text = Person.Email;
-                lab_Address .Text = Person.Address;
-                lab_DataOfBirth .Text = Person.DateOfBirth.ToShortDateString();
-                lab_Phone.Text = Person.Phone;
-                lab_Country.Text = Person.NationalityCountry;
-                pB_Image.ImageLocation = Person.ImagePath;
+        //void _FullPerson(int PersonId)
+        //{
+        //    clsPeople Person = clsPeople.Find(PersonId);
+        //    if(Person != null)
+        //    {
+        //        lab_PersonId.Text = Person.PersonID.ToString();
+        //        lab_Name.Text=Person.FirstName.ToString() + " "+ Person.SecondName.ToString()+" " + Person.ThirdName.ToString()+ " " + Person.LastName.ToString();
+        //        lab_NationalNO.Text = Person.NationalNo;
+        //        lab_Gendor .Text = Person.Gendor;
+        //        lab_Email .Text = Person.Email;
+        //        lab_Address .Text = Person.Address;
+        //        lab_DataOfBirth .Text = Person.DateOfBirth.ToShortDateString();
+        //        lab_Phone.Text = Person.Phone;
+        //        lab_Country.Text = Person.NationalityCountry;
+        //        pB_Image.ImageLocation = Person.ImagePath;
                
-            }
+        //    }
 
 
-        }
+        //}
         public frmPersonDetails(int PersonId)
         {
             InitializeComponent();
-            _FullPerson(PersonId);
+           // _FullPerson(PersonId);
             _PersonId = PersonId;
+            ucPersonInfo1._FullPerson(PersonId);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -60,7 +61,12 @@ namespace DVLD___WindowsFormsApp.MyFroms.Person
         private void FrmAddUpdate_FormClosed(object sender, FormClosedEventArgs e)
         {
           
-            _FullPerson(_PersonId);
+            //_FullPerson(_PersonId);
+        }
+
+        private void ucPersonInfo1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

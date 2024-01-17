@@ -308,7 +308,16 @@ namespace DVLD___BusinessPresentation
             return clsPeopleDataAccess.GetAllPeople();
         }
 
-
+        /// <summary>
+        /// get all gendor 
+        /// </summary>
+        /// <returns>datatable gendor</returns>
+        static public DataTable GetAllGendor()
+        { 
+        
+        return clsPeopleDataAccess.GetAllGendor();
+        
+        }
 
         }
 }

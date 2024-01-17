@@ -38,3 +38,8 @@ P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsA
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD - WindowsFormsApp.pdb
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Login.frmLogin.resources
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Uesr.frmManageUsers.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Person.UcPersonInfo.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Uesr.frmAddNewUser.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Person.UcFindPersonDetails.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Uesr.frmUserDetails.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Uesr.UcUsernfo.resources

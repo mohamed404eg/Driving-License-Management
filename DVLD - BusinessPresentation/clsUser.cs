@@ -19,20 +19,20 @@ namespace DVLD___BusinessPresentation
         }
         enMode _Mode;
         int _UserID;
-        
+
         public int UserID
         {
             get { return _UserID; }
         }
 
-       public int PersonID { get; set; }
-       public string UserName { get; set; }
+        public int PersonID { get; set; }
+        public string UserName { get; set; }
         public string Password { get; set; }
         public bool IsActive { get; set; }
 
 
 
-        clsUser(int UserID, int PersonID, string UserName , string Password, bool IsActive)
+        clsUser(int UserID, int PersonID, string UserName, string Password, bool IsActive)
         {
             _UserID = UserID;
             this.PersonID = PersonID;
@@ -65,16 +65,16 @@ namespace DVLD___BusinessPresentation
             int UserID = -1;
 
             int PersonID = -1;
-      
+
             string Password = "";
             bool IsActive = false;
 
 
 
-        if(clsUserDataAccess.FindUserName(UserName,ref UserID, ref PersonID, ref Password, ref IsActive))
+            if (clsUserDataAccess.FindUserName(UserName, ref UserID, ref PersonID, ref Password, ref IsActive))
             {
-                return new clsUser(UserID,PersonID,UserName,Password,IsActive);
-            }else
+                return new clsUser(UserID, PersonID, UserName, Password, IsActive);
+            } else
             {
                 return null;
             }
@@ -82,13 +82,16 @@ namespace DVLD___BusinessPresentation
 
 
 
-    }
+        }
+
+
+
         /// <summary>
         /// find user by username and Password
         /// </summary>
         /// <param name="UserName"></param>
         /// <returns>clsUser if found otherwise return null</returns>
-        static public clsUser Find(string UserName , string Password)
+        static public clsUser Find(string UserName, string Password)
         {
             int UserID = -1;
 
@@ -98,7 +101,7 @@ namespace DVLD___BusinessPresentation
 
 
 
-            if (clsUserDataAccess.FindUserNameAndPassword(UserName, ref UserID, ref PersonID,  Password, ref IsActive))
+            if (clsUserDataAccess.FindUserNameAndPassword(UserName, ref UserID, ref PersonID, Password, ref IsActive))
             {
                 return new clsUser(UserID, PersonID, UserName, Password, IsActive);
             }
@@ -113,6 +116,35 @@ namespace DVLD___BusinessPresentation
         }
 
 
+        /// <summary>
+        /// find user by userId
+        /// </summary>
+        /// <param name="UserName"></param>
+        /// <returns>clsUser if found otherwise return null</returns>
+        static public clsUser Find(int UserID)
+        {
+           
+
+            int PersonID = -1;
+            string UserName = "";
+            string Password = "";
+            bool IsActive = false;
+
+
+
+            if (clsUserDataAccess.FindUserId(ref UserName,  UserID, ref PersonID, ref Password, ref IsActive))
+            {
+                return new clsUser(UserID, PersonID, UserName, Password, IsActive);
+            }
+            else
+            {
+                return null;
+            }
+
+
+
+
+        }
 
 
         /// <summary>
@@ -151,13 +183,13 @@ namespace DVLD___BusinessPresentation
             return clsUserDataAccess.FindByIsActiveNonePassword(IsActive);
         }
 
-    
+
 
         bool _AddNew()
         {
             // if this Person arediay conactied other User 
 
-            if(clsUserDataAccess.IsExistPersonId(this.PersonID)) {
+            if (clsUserDataAccess.IsExistPersonId(this.PersonID)) {
                 return false;
             }
 
@@ -167,8 +199,8 @@ namespace DVLD___BusinessPresentation
 
             int USERid = -1;
 
-            USERid = clsUserDataAccess.AddUser(this.PersonID, this.UserName, this.Password,this.IsActive);
-            
+            USERid = clsUserDataAccess.AddUser(this.PersonID, this.UserName, this.Password, this.IsActive);
+
 
             this._UserID = USERid;
 
@@ -178,11 +210,11 @@ namespace DVLD___BusinessPresentation
 
         bool _Update()
         {
-            return clsUserDataAccess.UpdateUser(this.UserID,this.PersonID,this.UserName,this.Password,this.IsActive);
+            return clsUserDataAccess.UpdateUser(this.UserID, this.PersonID, this.UserName, this.Password, this.IsActive);
         }
         public bool Save()
         {
-            switch(_Mode){
+            switch (_Mode) {
 
                 case enMode.Add:
 
@@ -199,22 +231,22 @@ namespace DVLD___BusinessPresentation
 
 
                     break;
-            
-            
-            
-            
-            
-            case enMode.Update :
+
+
+
+
+
+                case enMode.Update:
 
                     return _Update();
-                    
-                    
+
+
                     break;
-            
-            
-            
-            
-            
+
+
+
+
+
             }
 
 
@@ -227,10 +259,38 @@ namespace DVLD___BusinessPresentation
 
 
 
-
+       
         public static bool DeleteUser(int UserID)
         {
             return clsUserDataAccess.DeleteUser(UserID);
         }
+
+
+        /// <summary>
+        /// if this PersonId Exist Contact user  Already
+        /// </summary>
+        /// <param name="PersonID"></param>
+        /// <returns>true if Exist otherwise False</returns>
+        static public bool IsExist(int PersonID)
+        {
+            return clsUserDataAccess.IsExistPersonId(PersonID);
+        }
+
+
+        /// <summary>
+        /// if this UserName Exist Contact user  Already
+        /// </summary>
+        /// <param name="UserName"></param>
+        /// <returns>true if Exist otherwise False</returns>
+        static public bool IsExist(string UserName)
+        {
+            return clsUserDataAccess.IsExistUserName(UserName);
+        }
+
+
+
+
+
+
     }
 }

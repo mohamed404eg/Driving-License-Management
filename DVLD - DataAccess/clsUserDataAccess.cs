@@ -116,6 +116,69 @@ where UserName = @UserName";
             return isFound;
         }
 
+
+        /// <summary>
+        /// Find User By User ID
+        /// </summary>
+        /// <param name="UserName"></param>
+        /// <param name="UserID"></param>
+        /// <param name="PersonId"></param>
+        /// <param name="Password"></param>
+        /// <param name="isActive"></param>
+        /// <returns>true if Found Otherwise return false </returns>
+        static public bool FindUserId(ref string UserName,  int UserID, ref int PersonId, ref string Password, ref bool isActive)
+        {
+            bool isFound = false;
+            SqlConnection sqlConnection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"select * from Users
+where UserID = @UserID";
+            SqlCommand sqlCommand = new SqlCommand(Query, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@UserID", UserID);
+
+            try
+            {
+                sqlConnection.Open();
+
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    isFound = true;
+
+                    UserName = (string)reader["UserName"];
+                    PersonId = (int)reader["PersonID"];
+                    Password = (string)reader["Password"];
+                    isActive = (bool)reader["IsActive"];
+
+
+                }
+                else
+                {
+                    isFound = false;
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+
+            {
+                sqlConnection.Close();
+            }
+
+
+
+
+
+            return isFound;
+        }
+
+
         static public bool FindUserNameAndPassword(string UserName, ref int UserId, ref int PersonId,  string Password, ref bool isActive)
         {
             bool isFound = false;
@@ -339,7 +402,7 @@ where UserName = @UserName
 
             string Query = @"
 select * from V_Users
-where FullName = @FullName
+where FullName Like ''+ @FullName + '%'
 
 ";
 
@@ -575,61 +638,125 @@ where PersonID = @PersonID
 
         }
 
+        /// <summary>
+        /// if this UserName Exist Contact user  Already
+        /// </summary>
+        /// <param name="UserName"></param>
+        /// <returns>true if Exist otherwise False</returns>
+        static public bool IsExistUserName(string UserName)
+        {
 
-//        static bool ChangeUserPassword(string UserID, string Password)
-//        {
-//            bool IsChange = false;
+            bool IsExist = false;
 
+            SqlConnection sqlConnection = new SqlConnection(clsConnectionsString.ConnectionsString);
 
-//            SqlConnection sqlConnection = new SqlConnection(clsConnectionsString.ConnectionsString);
+            string Query = @"
+select Found = 1 from V_Users
+where UserName = @UserName
 
-//            string query = @"
-//UPDATE [dbo].[Users]
-//   SET [Password] = @Password
-      
-// WHERE UsersID = @UsersID
+";
 
-//";
-
-//            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
-//            sqlCommand.Parameters.AddWithValue("@Password", Password);
-//            sqlCommand.Parameters.AddWithValue("@UsersID", UserID);
-
-//            try
-//            {
-//                sqlConnection.Open();
-                
-
-//                int rowEffected = sqlCommand.ExecuteNonQuery();
+            SqlCommand sqlCommand = new SqlCommand(Query, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@UserName", UserName);
 
 
-//                if (rowEffected > 0)
-//                {
-//                    IsChange = true;
+            try
+            {
+                sqlConnection.Open();
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    IsExist = true;
 
-//                }
-//                else
-//                {
-//                    IsChange= false;
-//                }
 
-//            }
-//            catch (Exception ex)
-//            {
-//                Console.WriteLine(ex.ToString() );
+                }
+                else
+                {
+                    IsExist = false;
 
-//            }finally {
-//                sqlConnection.Close();
-//            }
-            
-            
-//            return IsChange;
+                }
 
-//        }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
 
 
 
-      public  static bool UpdateUser(int UserID, int PersonId, string UserName, string Password, bool IsActive)
+
+
+
+
+
+
+
+
+            return IsExist;
+
+        }
+
+
+
+        //        static bool ChangeUserPassword(string UserID, string Password)
+        //        {
+        //            bool IsChange = false;
+
+
+        //            SqlConnection sqlConnection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+        //            string query = @"
+        //UPDATE [dbo].[Users]
+        //   SET [Password] = @Password
+
+        // WHERE UsersID = @UsersID
+
+        //";
+
+        //            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+        //            sqlCommand.Parameters.AddWithValue("@Password", Password);
+        //            sqlCommand.Parameters.AddWithValue("@UsersID", UserID);
+
+        //            try
+        //            {
+        //                sqlConnection.Open();
+
+
+        //                int rowEffected = sqlCommand.ExecuteNonQuery();
+
+
+        //                if (rowEffected > 0)
+        //                {
+        //                    IsChange = true;
+
+        //                }
+        //                else
+        //                {
+        //                    IsChange= false;
+        //                }
+
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                Console.WriteLine(ex.ToString() );
+
+        //            }finally {
+        //                sqlConnection.Close();
+        //            }
+
+
+        //            return IsChange;
+
+        //        }
+
+
+
+        public  static bool UpdateUser(int UserID, int PersonId, string UserName, string Password, bool IsActive)
         {
             bool isUpdate= false;
 

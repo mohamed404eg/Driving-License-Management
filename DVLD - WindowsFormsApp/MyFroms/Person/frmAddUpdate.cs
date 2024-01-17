@@ -16,6 +16,18 @@ namespace DVLD___WindowsFormsApp.MyFroms.Person
 {
     public partial class frmAddUpdate : Form
     {
+        // Declare a delegate
+        // if send Persion Id equal -1 then Person Not add
+        public delegate void DataBackEventHandler(object sender, int PersonID);
+
+        // Declare an event using the delegate
+        public event DataBackEventHandler DataBack;
+
+
+
+
+
+
         enum enMode
         {
             Add,
@@ -108,6 +120,20 @@ namespace DVLD___WindowsFormsApp.MyFroms.Person
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (DataBack != null)
+            {
+
+
+                if (_Person != null)
+                {
+                    DataBack.Invoke(this, _Person.PersonID);
+
+                }
+                else
+                {
+                    DataBack.Invoke(this, -1);
+                }
+            }
             this.Close();
         }
 

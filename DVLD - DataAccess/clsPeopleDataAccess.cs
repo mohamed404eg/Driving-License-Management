@@ -1198,5 +1198,58 @@ DELETE FROM [dbo].[People]
             return dt;
 
         }
+
+
+
+        /// <summary>
+        /// get all gendor 
+        /// </summary>
+        /// <returns>datatable gendor</returns>
+        static public DataTable GetAllGendor()
+        {
+            DataTable dt = new DataTable();
+
+            SqlConnection sqlConnection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+
+            string query = @"
+
+select distinct Gendor from V_People
+
+";
+
+            SqlCommand sqlCommand = new SqlCommand(query,sqlConnection);
+
+
+            try
+            {
+                sqlConnection.Open();
+
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    dt.Load(reader);   
+                }
+
+
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+
+
+            return dt;
+        }
+        
+
+
+
     }
+
+    
 }
