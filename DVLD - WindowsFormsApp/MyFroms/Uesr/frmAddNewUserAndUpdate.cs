@@ -227,7 +227,27 @@ namespace DVLD___WindowsFormsApp.MyFroms.Uesr
                 MessageBox.Show("Faild Save");
 
             }
-        }
+            }
+            else
+            {
+                // update
+                clsUser User = clsUser.Find(_UserId);
+                User.UserName = tB_UserName.Text;
+                User.Password = tB_Password.Text;
+                User.IsActive = cB_IsActive.Checked;
+
+                if (User.Save())
+                {
+                    MessageBox.Show("Successfully Save");
+                }
+                else
+                {
+                    MessageBox.Show("Faild Save");
+
+                }
+
+
+            }
 
 
 

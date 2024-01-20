@@ -783,6 +783,67 @@ string ImagePath)
             }
 
         }
+
+
+
+
+        static void TestclsApplicationTypesGetAll()
+        {
+            DataTable dt = new DataTable();
+            dt = clsApplicationTypes.GetAll();
+
+            foreach (DataRow item in dt.Rows)
+            {
+                Console.WriteLine(item["ApplicationTypeID"]);
+                Console.WriteLine(item["ApplicationTypeTitle"]);
+                Console.WriteLine(item["ApplicationFees"]);
+
+
+
+
+            }
+        }
+
+        static void TestclsApplicationTypesFind(int Id)
+        {
+            clsApplicationTypes item = clsApplicationTypes.Find(Id);
+
+           if(item != null) { 
+
+                Console.WriteLine(item.ApplicationTypeId);
+                Console.WriteLine(item.ApplicationTypeTitle);
+                Console.WriteLine(item.ApplicationTypeFees);
+
+
+
+
+            }
+        }
+
+        static void TestclsApplicationTypesUpdate(int ApplicationTypeId, string ApplicationTypeTitle, decimal ApplicationTypeFees)
+        {
+            clsApplicationTypes item = clsApplicationTypes.Find(ApplicationTypeId);
+         
+            if (item != null)
+            {
+                item.ApplicationTypeTitle = ApplicationTypeTitle;
+                item.ApplicationTypeFees = ApplicationTypeFees;
+
+                if (item.Save())
+                {
+                    Console.WriteLine("Successfully Update");
+                }
+                else
+                {
+                    Console.WriteLine("Faild Update");
+
+                }
+
+
+
+
+            }
+        }
         static void Main(string[] args)
         {
 
@@ -884,16 +945,18 @@ string ImagePath)
             //TestDeleteUser(324);
 
 
-           // TestGetGendor();
+            // TestGetGendor();
 
 
 
 
+            // TestclsApplicationTypesGetAll();
 
+            // TestclsApplicationTypesFind(1);
 
+            // TestclsApplicationTypesFind(166);
 
-
-
+            TestclsApplicationTypesUpdate(1, "New Local Driving License Service", 10);
 
             Console.ReadKey();
         }

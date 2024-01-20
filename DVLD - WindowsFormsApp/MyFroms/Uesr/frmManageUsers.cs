@@ -254,6 +254,31 @@ namespace DVLD___WindowsFormsApp.MyFroms.Uesr
                 return -1;
             }
         }
+
+        /// <summary>
+        ///  Get Seconde Cell In Row DataGridView
+        /// </summary>
+        /// <returns>value if successfully otherwise return -1 if not found</returns>
+        int _GetSecondeCellInRow()
+        {
+            object cellValue = null;
+            if (dGV_Users.SelectedCells.Count > 0)
+            {
+                DataGridViewCell selectedCell = dGV_Users.SelectedCells[0];
+                DataGridViewRow selectedRow = selectedCell.OwningRow;
+                DataGridViewCell firstCellInRow = selectedRow.Cells[1];
+                cellValue = firstCellInRow.Value;
+            }
+            if (cellValue != null)
+            {
+                return (int)cellValue;
+
+            }
+            else
+            {
+                return -1;
+            }
+        }
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int UserId = _GetfirstCellInRow();
@@ -279,5 +304,75 @@ namespace DVLD___WindowsFormsApp.MyFroms.Uesr
             _LoadDateGridAllUsers();
         }
 
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int UserId = _GetfirstCellInRow();
+            int PersonId = _GetSecondeCellInRow();
+
+            if (UserId != -1 && PersonId!= -1)
+            {
+
+
+                frmAddNewUserAndUpdate frmAddNewUserAndUpdate = new frmAddNewUserAndUpdate( PersonId, UserId);
+
+                frmAddNewUserAndUpdate.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_Closed);
+
+
+                frmAddNewUserAndUpdate.ShowDialog();
+
+
+            }
+
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int UserId = _GetfirstCellInRow();
+
+            if(MessageBox.Show("Are you sure delete this user ?","Delete",MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+
+                if (clsUser.DeleteUser(UserId))
+                {
+                    MessageBox.Show("Successfully Delete");
+                    _LoadDateGridAllUsers();
+                }
+                else
+                {
+                    MessageBox.Show("Faild Delete");
+                }
+            }
+           
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int UserId = _GetfirstCellInRow();
+            int PersonId = _GetSecondeCellInRow();
+
+            if (UserId != -1 && PersonId != -1)
+            {
+
+
+                frmAddNewUserAndUpdate frmAddNewUserAndUpdate = new frmAddNewUserAndUpdate(PersonId, UserId);
+
+                frmAddNewUserAndUpdate.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_Closed);
+               
+
+                frmAddNewUserAndUpdate.ShowDialog();
+
+
+            }
+        }
+
+        private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not Implemented");
+        }
+
+        private void phoneCallToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not Implemented");
+        }
     }
 }
