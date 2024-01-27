@@ -1,4 +1,4 @@
-﻿namespace DVLD___WindowsFormsApp.MyFroms.ApplicationTypes
+﻿namespace DVLD___WindowsFormsApp.MyFroms.frmApplicationTypes
 {
     partial class frmApplicationTypes
     {

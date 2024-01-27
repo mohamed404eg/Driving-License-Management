@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DVLD___WindowsFormsApp.MyFroms.ApplicationTypes
+namespace DVLD___WindowsFormsApp.MyFroms.frmApplicationTypes
 {
     public partial class frmApplicationTypes : Form
     {
@@ -77,8 +77,8 @@ namespace DVLD___WindowsFormsApp.MyFroms.ApplicationTypes
             int ApplicationTypeID = _GetfirstCellInRow();
             if(ApplicationTypeID != -1)
             {
-
-                frmUpdateApplicationType UpdateApplicationType = new frmUpdateApplicationType(ApplicationTypeID);
+    
+                frmUpdateApplicationType.frmUpdateApplicationType UpdateApplicationType = new frmUpdateApplicationType.frmUpdateApplicationType(ApplicationTypeID);
                 UpdateApplicationType.FormClosed += UpdateApplicationType_FormClosed;
                 UpdateApplicationType.ShowDialog();
             }

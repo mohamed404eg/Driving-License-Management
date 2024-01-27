@@ -818,6 +818,10 @@ string ImagePath)
 
 
             }
+            else
+            {
+                Console.WriteLine("Not Found");
+            }
         }
 
         static void TestclsApplicationTypesUpdate(int ApplicationTypeId, string ApplicationTypeTitle, decimal ApplicationTypeFees)
@@ -843,6 +847,64 @@ string ImagePath)
 
 
             }
+        }
+
+
+
+        static void TestclsTestTypesFind(int id)
+        {
+            clsTestTypes testTypes = clsTestTypes.Find(id);
+            if (testTypes != null)
+            {
+
+                Console.WriteLine(testTypes.TestTypeTypeID);
+                Console.WriteLine(testTypes.TestTypeTitle);
+                Console.WriteLine(testTypes.TestTypeDescription);
+                Console.WriteLine(testTypes.TestTypeFees);
+
+            }
+            else
+            {
+                Console.WriteLine("Not Found");
+            }
+        }
+
+
+        static void TestGetAllTestTypes()
+        {
+            DataTable dt = clsTestTypes.GetAllTestTypes();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                Console.WriteLine(row["TestTypeTitle"]);
+                Console.WriteLine(row["TestTypeDescription"]);
+                Console.WriteLine(row["TestTypeFees"]);
+
+            }
+        }
+
+
+        static void TestUpdateTestType(int TestTypeTypeID,string TestTypeTitle,string TestTypeDescription,decimal TestTypeFees)
+        {
+            clsTestTypes testTypes = clsTestTypes.Find(TestTypeTypeID);
+
+            if (testTypes != null)
+            {
+                testTypes.TestTypeTitle = TestTypeTitle;
+                testTypes.TestTypeDescription = TestTypeDescription;
+                testTypes.TestTypeFees = TestTypeFees;
+            }
+
+            if (testTypes.Save())
+            {
+                Console.WriteLine("Successfully Update");
+            }
+            else
+            {
+                Console.WriteLine("Faild Update");
+            }
+
+
         }
         static void Main(string[] args)
         {
@@ -954,9 +1016,24 @@ string ImagePath)
 
             // TestclsApplicationTypesFind(1);
 
-            // TestclsApplicationTypesFind(166);
+            //   TestclsApplicationTypesFind(166);
 
-            TestclsApplicationTypesUpdate(1, "New Local Driving License Service", 10);
+            //TestclsApplicationTypesUpdate(1, "New Local Driving License Service", (decimal)9.50);
+
+
+
+
+
+
+
+
+
+            //  TestclsTestTypesFind(1);
+            //  TestGetAllTestTypes();
+
+           // TestUpdateTestType(1, "Vision Test", "This assesses the applicant's visual acuity to ensure they have sufficient vision to drive safely.", (decimal)9.2);
+
+
 
             Console.ReadKey();
         }

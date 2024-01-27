@@ -68,7 +68,7 @@ namespace DVLD___DataAccess
         /// <param name="ApplicationTypeTitle"></param>
         /// <param name="ApplicationTypeFees"></param>
         /// <returns>true if found otherwise false</returns>
-        public static bool FindById(int ApplicationTypeId , ref string ApplicationTypeTitle ,ref decimal ApplicationTypeFees)
+        public static bool FindById(int ApplicationTypeId, ref string ApplicationTypeTitle, ref decimal ApplicationTypeFees)
         {
             bool isFound = false;
 
@@ -93,7 +93,6 @@ where ApplicationTypeID = @ApplicationTypeID
                     isFound = true;
                     ApplicationTypeTitle = (string)reader["ApplicationTypeTitle"];
                     ApplicationTypeFees = (decimal)reader["ApplicationFees"];
-
                 }
                 else
                 {
@@ -126,24 +125,26 @@ where ApplicationTypeID = @ApplicationTypeID
         /// <param name="ApplicationTypeTitle"></param>
         /// <param name="ApplicationTypeFees"></param>
         /// <returns>true if Update otherwise false</returns>
-        public static bool UpdateById(int ApplicationTypeId,  string ApplicationTypeTitle,  decimal ApplicationTypeFees)
+        public static bool UpdateById(int ApplicationTypeId,  string ApplicationTypeTitle, decimal ApplicationFees)
         {
             bool isUpdate = false;
 
             SqlConnection sqlConnection = new SqlConnection(clsConnectionsString.ConnectionsString);
 
             string Query = @"
+
 UPDATE [dbo].[ApplicationTypes]
-   SET [ApplicationTypeTitle] = @ApplicationTypeTitle,
-      [ApplicationFees] = @ApplicationFees
-where ApplicationTypeID = @ApplicationTypeID
+   SET [ApplicationTypeTitle] = @ApplicationTypeTitle
+      ,[ApplicationFees] = @ApplicationFees
+ WHERE ApplicationTypeId = @ApplicationTypeId
+
 
 ";
             SqlCommand sqlCommand = new SqlCommand(Query, sqlConnection);
-            sqlCommand.Parameters.AddWithValue("@ApplicationTypeID", ApplicationTypeId);
-            sqlCommand.Parameters.AddWithValue("@ApplicationFees", ApplicationTypeFees);
+            sqlCommand.Parameters.AddWithValue("@ApplicationTypeId", ApplicationTypeId);
             sqlCommand.Parameters.AddWithValue("@ApplicationTypeTitle", ApplicationTypeTitle);
-
+            sqlCommand.Parameters.AddWithValue("@ApplicationFees", ApplicationFees);
+        
 
             try
             {
@@ -179,6 +180,9 @@ where ApplicationTypeID = @ApplicationTypeID
             return isUpdate;
 
         }
+
+
+
 
 
     }

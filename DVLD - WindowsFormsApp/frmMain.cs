@@ -1,8 +1,8 @@
 ﻿using DVLD___BusinessPresentation;
 using DVLD___WindowsFormsApp.MyFroms;
-using DVLD___WindowsFormsApp.MyFroms.ApplicationTypes;
 using DVLD___WindowsFormsApp.MyFroms.Login;
 using DVLD___WindowsFormsApp.MyFroms.Uesr;
+using DVLD___WindowsFormsApp.MyFroms.frmApplicationTypes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +12,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace DVLD___WindowsFormsApp
 {
 

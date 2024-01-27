@@ -43,5 +43,7 @@ P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsA
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Uesr.frmUserDetails.resources
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Uesr.UcUsernfo.resources
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Uesr.frmAddNewUserAndUpdate.resources
-P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.ApplicationTypes.frmApplicationTypes.resources
-P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.ApplicationTypes.frmUpdateApplicationType.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.ManageTestTypes.frmManageTestTypes.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.frmApplicationTypes.frmApplicationTypes.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.frmUpdateApplicationType.frmUpdateApplicationType.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.ManageTestTypes.frmUpdateTestType.resources

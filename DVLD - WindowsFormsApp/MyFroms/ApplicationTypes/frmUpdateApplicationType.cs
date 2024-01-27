@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DVLD___WindowsFormsApp.MyFroms.ApplicationTypes
+namespace DVLD___WindowsFormsApp.MyFroms.frmUpdateApplicationType
 {
     public partial class frmUpdateApplicationType : Form
     {

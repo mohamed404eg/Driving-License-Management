@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.applToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageAplicationTypesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.peopleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.currentUserInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageAplicationTypesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,16 @@
             this.applToolStripMenuItem.Size = new System.Drawing.Size(178, 84);
             this.applToolStripMenuItem.Text = "Applications";
             this.applToolStripMenuItem.Click += new System.EventHandler(this.applToolStripMenuItem_Click);
+            // 
+            // manageAplicationTypesToolStripMenuItem
+            // 
+            this.manageAplicationTypesToolStripMenuItem.AutoSize = false;
+            this.manageAplicationTypesToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.manageAplicationTypesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("manageAplicationTypesToolStripMenuItem.Image")));
+            this.manageAplicationTypesToolStripMenuItem.Name = "manageAplicationTypesToolStripMenuItem";
+            this.manageAplicationTypesToolStripMenuItem.Size = new System.Drawing.Size(329, 86);
+            this.manageAplicationTypesToolStripMenuItem.Text = "Manage Aplication Types";
+            this.manageAplicationTypesToolStripMenuItem.Click += new System.EventHandler(this.manageAplicationTypesToolStripMenuItem_Click);
             // 
             // peopleToolStripMenuItem
             // 
@@ -120,16 +130,6 @@
             this.signOutToolStripMenuItem1.Text = "Sign Out";
             this.signOutToolStripMenuItem1.Click += new System.EventHandler(this.signOutToolStripMenuItem1_Click);
             // 
-            // manageAplicationTypesToolStripMenuItem
-            // 
-            this.manageAplicationTypesToolStripMenuItem.AutoSize = false;
-            this.manageAplicationTypesToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.manageAplicationTypesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("manageAplicationTypesToolStripMenuItem.Image")));
-            this.manageAplicationTypesToolStripMenuItem.Name = "manageAplicationTypesToolStripMenuItem";
-            this.manageAplicationTypesToolStripMenuItem.Size = new System.Drawing.Size(329, 86);
-            this.manageAplicationTypesToolStripMenuItem.Text = "Manage Aplication Types";
-            this.manageAplicationTypesToolStripMenuItem.Click += new System.EventHandler(this.manageAplicationTypesToolStripMenuItem_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,7 +138,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMain";
             this.Text = "FormMain";
             this.Load += new System.EventHandler(this.frmMain_Load);

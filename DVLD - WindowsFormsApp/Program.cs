@@ -1,5 +1,6 @@
-﻿using DVLD___WindowsFormsApp.MyFroms.ApplicationTypes;
+﻿
 using DVLD___WindowsFormsApp.MyFroms.Login;
+using DVLD___WindowsFormsApp.MyFroms.ManageTestTypes;
 using DVLD___WindowsFormsApp.MyFroms.Person;
 using DVLD___WindowsFormsApp.MyFroms.Uesr;
 using System;
@@ -20,7 +21,7 @@ namespace DVLD___WindowsFormsApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new frmManageTestTypes());
         }
     }
 }
