@@ -906,6 +906,78 @@ string ImagePath)
 
 
         }
+
+
+        static void TestGetAllLocalDrivingLicenseApplications_View()
+        {
+            DataTable dt = new DataTable();
+
+            dt = clsLocalDrivingLicenseApplications.GetAllLocalDrivingLicenseApplications_View();
+
+
+            foreach (DataRow row in dt.Rows)
+            {
+
+                Console.WriteLine(row["LocalDrivingLicenseApplicationID"]);
+                Console.WriteLine(row["ClassName"]);
+                Console.WriteLine(row["NationalNo"]);
+                Console.WriteLine(row["ApplicationDate"]);
+                Console.WriteLine(row["Status"]);
+              
+            }
+
+        }
+
+
+        static void TestAddNewApplication(int ApplicantPersonID, DateTime ApplicationDate,
+            int ApplicationTypeID, byte
+             ApplicationStatus, DateTime LastStatusDate,
+            decimal PaidFees, int CreatedByUserID)
+        {
+            clsApplications applications = new clsApplications();
+            applications.ApplicantPersonID = ApplicantPersonID;
+            applications.ApplicationDate = ApplicationDate;
+            applications.ApplicationTypeID = ApplicationTypeID;
+            applications.ApplicationStatus = ApplicationStatus;
+            applications.LastStatusDate = LastStatusDate;
+            applications.PaidFees = PaidFees;
+            applications.CreatedByUserID = CreatedByUserID;
+
+            if(applications.Save())
+            {
+                Console.WriteLine("Successfully add :)");
+            }
+            else
+            {
+                Console.WriteLine("Faild add :)");
+            }
+        }
+
+
+        static void TestUpdateApplicationStatus(int ApplicationID, byte ApplicationStatus)
+        {
+            clsApplications applications = clsApplications.Find(ApplicationID);
+
+            if(applications != null)
+            {
+                applications.ApplicationStatus = ApplicationStatus;
+                if (applications.Save())
+                {
+                    Console.WriteLine("Update Successfully");
+                }
+                else
+                {
+                    Console.WriteLine("Update Faild");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Not Found");
+
+            }
+
+
+        }
         static void Main(string[] args)
         {
 
@@ -1031,8 +1103,17 @@ string ImagePath)
             //  TestclsTestTypesFind(1);
             //  TestGetAllTestTypes();
 
-           // TestUpdateTestType(1, "Vision Test", "This assesses the applicant's visual acuity to ensure they have sufficient vision to drive safely.", (decimal)9.2);
+            // TestUpdateTestType(1, "Vision Test", "This assesses the applicant's visual acuity to ensure they have sufficient vision to drive safely.", (decimal)9.2);
 
+
+            //  TestGetAllLocalDrivingLicenseApplications_View();
+
+
+            //TestAddNewApplication(1163,DateTime.Now,1,1,DateTime.Now.AddDays(30),20,19);
+
+            //  TestUpdateApplicationStatus(74, 1);
+
+            //TestUpdateApplicationStatus(744, 1);
 
 
             Console.ReadKey();

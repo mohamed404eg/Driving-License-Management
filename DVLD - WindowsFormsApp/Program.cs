@@ -21,7 +21,7 @@ namespace DVLD___WindowsFormsApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmManageTestTypes());
+            Application.Run(new frmLogin());
         }
     }
 }

@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLD___WindowsFormsApp.MyFroms.ManageTestTypes;
 namespace DVLD___WindowsFormsApp
 {
 
@@ -156,6 +157,27 @@ namespace DVLD___WindowsFormsApp
         }
 
         private void ApplicationTypes_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            applicationTypes = null;
+        }
+
+        frmManageTestTypes frmManageTest; 
+        private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmManageTest == null || frmManageTest.IsDisposed)
+            {
+                frmManageTest = new frmManageTestTypes();
+                frmManageTest.MdiParent = this;
+                frmManageTest.FormClosed += FrmManageTest_FormClosed; ;
+                frmManageTest.Show();
+            }
+            else
+            {
+                applicationTypes.BringToFront();
+            }
+        }
+
+        private void FrmManageTest_FormClosed(object sender, FormClosedEventArgs e)
         {
             applicationTypes = null;
         }

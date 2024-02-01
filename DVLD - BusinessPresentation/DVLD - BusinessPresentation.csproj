@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsApplicationTypes.cs" />
+    <Compile Include="Applications\clsApplications.cs" />
+    <Compile Include="Applications\clsApplicationTypes.cs" />
     <Compile Include="clsCountries.cs" />
+    <Compile Include="Applications\clsLocalDrivingLicenseApplications.cs" />
     <Compile Include="clsPeople.cs" />
     <Compile Include="clsTestTypes.cs" />
     <Compile Include="clsUser.cs" />

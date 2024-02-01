@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADwTSURBVHhe7d15
+        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADwTSURBVHhe7d15
         kBznmed37XgmvDtej71hOxz27nrDMeFxhL2x3nDE2us/vDGO4YwGK7HR4CWSOqiTlETd1EmJK4oUh9RJ
         jUaUCBAECOI+CYIACYIgwANXoxtnd1dfaDQafZ+F6vt+nG91NQkCT3VXVmdl5pvv9xfxiVEM2dXVVcl8
         fnW8b36IEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhHwwQ31Df5FJZ3507dq1
@@ -386,13 +386,13 @@
   </metadata>
   <data name="editTestTypeToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAAHUAAAB1AePCB2UAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAAA8klEQVQ4T6XSMWoCQRiG4TGNiI1owICFYCd4BAsLmxQ2XiBoIB7AE4hiLRailpbeQQQbQVAIRkxI
-        1MbOS/j+My67ibg7kg8e+Gdhvhl2V5EyvrGzMEMSv/KFhBkDU0PLjG7kdNsUMDSjG6cgi6KPCHwL3jC4
-        oY80fAts8u+CPHpmdOMUtOH9ZO8Iw5sQombUs849N5BkIOUH5OTBPQUpnDDHM35gXSCbt6hgjDWmsCp4
-        wgde9EqpJo54lEVQgWzeQH5jSQMrxPWKBBWMUDejPnmBmF5d8gl9lRtZ4hVdXG2WlCAvx/sPiCoesMcE
-        HfzZrNQZ0thAD1UvB/8AAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        dAAAAHQBMYXlgQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADySURBVDhPpdIx
+        agJBGIbhMY2IjWjAgIVgJ3gECwubFDZeIGggHsATiGItFqKWlt5BBBtBUAhGTEjUxs5L+P4zLruJuDuS
+        Dx74Z2G+GXZXkTK+sbMwQxK/8oWEGQNTQ8uMbuR02xQwNKMbpyCLoo8IfAveMLihjzR8C2zy74I8emZ0
+        4xS04f1k7wjDmxCiZtSzzj03kGQg5Qfk5ME9BSmcMMczfmBdIJu3qGCMNaawKnjCB170SqkmjniURVCB
+        bN5AfmNJAyvE9YoEFYxQN6M+eYGYXl3yCX2VG1niFV1cbZaUIC/H+w+IKh6wxwQd/Nms1BnS2EAPVS8H
+        /wAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>
