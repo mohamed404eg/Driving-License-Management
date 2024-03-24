@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Applications\clsApplicationsDataAccess.cs" />
     <Compile Include="Applications\clsApplicationTypesDataAccess.cs" />
+    <Compile Include="Applications\LicenseClass\clsLicenseClassDA.cs" />
     <Compile Include="clsCountriesDateAccess.cs" />
     <Compile Include="Applications\clsLocalDrivingLicenseApplicationsDataAccess.cs" />
     <Compile Include="clsPeopleDataAccess.cs" />

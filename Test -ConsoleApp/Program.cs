@@ -7,6 +7,7 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Test__ConsoleApp.Applications.LicenseClass;
 
 namespace Test__ConsoleApp
 {
@@ -973,7 +974,7 @@ string ImagePath)
             else
             {
                 Console.WriteLine("Not Found");
-
+                 
             }
 
 
@@ -1114,6 +1115,19 @@ string ImagePath)
             //  TestUpdateApplicationStatus(74, 1);
 
             //TestUpdateApplicationStatus(744, 1);
+
+
+
+
+            //clsLicenseClass//
+
+            //TestclsLicenseClass.FindByid(1);
+            // TestclsLicenseClass.FindByid(20);
+
+            //TestclsLicenseClass.FindByName("Class 3 - Ordinary driving licens");
+            //TestclsLicenseClass.FindByName("Class 3 - Ordinary driving license");
+
+           // TestclsLicenseClass.GetAll();
 
 
             Console.ReadKey();
