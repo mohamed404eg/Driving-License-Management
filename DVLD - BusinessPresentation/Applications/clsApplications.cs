@@ -158,5 +158,18 @@ namespace DVLD___BusinessPresentation
 
 
 
+        /// <summary>
+        /// check if Person has Application on this Type or has complete or Not complete , if cancelled you can create
+        /// </summary>
+        /// <param name="ApplicantPersonID"></param>
+        /// <param name="ApplicationTypeID"></param>
+        /// <returns>if Person has Application on this Type or has complete or Not complete return true otherwise return false</returns>
+        static public bool isHasApplicationsActive(int ApplicantPersonID , int ApplicationTypeID)
+        {
+            return clsApplicationsDataAccess.isHasApplicationsActive(ApplicantPersonID,ApplicationTypeID);
+        }
+
+
+
     }
 }

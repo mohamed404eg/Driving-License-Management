@@ -7,6 +7,7 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Test__ConsoleApp.Applications;
 using Test__ConsoleApp.Applications.LicenseClass;
 
 namespace Test__ConsoleApp
@@ -1127,8 +1128,13 @@ string ImagePath)
             //TestclsLicenseClass.FindByName("Class 3 - Ordinary driving licens");
             //TestclsLicenseClass.FindByName("Class 3 - Ordinary driving license");
 
-           // TestclsLicenseClass.GetAll();
+            // TestclsLicenseClass.GetAll();
 
+
+
+
+            TestclsApplications.TestisHasApplicationsActive(1, 3);
+            TestclsApplications.TestisHasApplicationsActive(1, 5);
 
             Console.ReadKey();
         }

@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Applications\LicenseClass\TestclsLicenseClass.cs" />
+    <Compile Include="Applications\TestclsApplications.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -227,5 +227,77 @@ where ApplicationID =@ApplicationID
 
 
 
+
+        /// <summary>
+        /// if Person has Application on this Type and Not complete 
+        /// </summary>
+        /// <param name="ApplicantPersonID"></param>
+        /// <param name="ApplicationTypeID"></param>
+        /// <returns>if Person has Application on this Type and Not complete return true otherwise return false</returns>
+        static public bool isHasApplicationsActive(int ApplicantPersonID, int ApplicationTypeID)
+        {
+            //Noetic
+            //Applications.ApplicationStatus = 1 THEN 'New'
+            //WHEN Applications.ApplicationStatus = 2 THEN 'Cancelled'
+            //WHEN Applications.ApplicationStatus = 3 THEN 'Completed'
+            //END AS Status
+
+
+            bool status = false;
+
+
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+
+SELECT DISTINCT  Has = 1 FROM [dbo].[Applications]
+  where ApplicantPersonID = @ApplicantPersonID and ApplicationTypeID  = @ApplicationTypeID and ApplicationStatus in (1)
+
+
+
+
+";
+
+
+            SqlCommand command = new SqlCommand(Query, connection);
+
+
+            command.Parameters.AddWithValue("@ApplicantPersonID", ApplicantPersonID);
+            command.Parameters.AddWithValue("@ApplicationTypeID", ApplicationTypeID);
+
+            try
+            {
+                connection.Open();
+
+                object Result = command.ExecuteScalar();
+                if(Result  != null &&  int.TryParse(Result.ToString(), out int Number))
+                {
+                    status = true;
+                }
+                else
+                {
+                    status = false;
+                }
+                
+
+
+
+              
+            }catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+
+
+            return status;
+        }
+
+
+
     }
 }

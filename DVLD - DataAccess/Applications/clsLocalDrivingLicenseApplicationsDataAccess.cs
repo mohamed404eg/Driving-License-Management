@@ -57,6 +57,61 @@ select * from LocalDrivingLicenseApplications_View
 
 
 
+        /// <summary>
+        /// add LocalDrivingLicenseApplications
+        /// </summary>
+        /// <param name="ApplicationID"></param>
+        /// <param name="LicenseClassID"></param>
+        /// <returns>if succesfully return LocalDrivingLicenseApplicationID otherwise -1</returns>
+        static public int AddLocalDrivingLicenseApplications(int ApplicationID ,int LicenseClassID)
+        {
+            int LocalDrivingLicenseApplicationID = -1;
+
+           SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+
+INSERT INTO [dbo].[LocalDrivingLicenseApplications]
+           ([ApplicationID]
+           ,[LicenseClassID])
+     VALUES
+           (@ApplicationID>
+           ,@LicenseClassID)
+
+		    select SCOPE_IDENTITY ()
+
+";
+
+
+
+            SqlCommand cmd = new SqlCommand(Query, connection);
+            cmd.Parameters.AddWithValue("@ApplicationID", ApplicationID);
+            cmd.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
+
+            try
+            {
+                connection.Open();
+
+                object Number = cmd.ExecuteScalar();
+
+                LocalDrivingLicenseApplicationID= int.Parse(Number.ToString());
+
+
+
+            }catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return LocalDrivingLicenseApplicationID;
+
+
+
+        }
 
 
     }
