@@ -299,5 +299,7 @@ SELECT DISTINCT  Has = 1 FROM [dbo].[Applications]
 
 
 
+   
+
     }
 }

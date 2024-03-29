@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using Test__ConsoleApp.Applications;
 using Test__ConsoleApp.Applications.LicenseClass;
+using Test__ConsoleApp.Applications.LocalDrivingLicenseApplications;
 
 namespace Test__ConsoleApp
 {
@@ -1133,8 +1134,15 @@ string ImagePath)
 
 
 
-            TestclsApplications.TestisHasApplicationsActive(1, 3);
-            TestclsApplications.TestisHasApplicationsActive(1, 5);
+            //TestclsApplications.TestisHasApplicationsActive(1, 3);
+            //TestclsApplications.TestisHasApplicationsActive(1, 5);
+
+
+            //TestclsLicenseClass.TestisHasLicense(1, 3);
+            //TestclsLicenseClass.TestisHasLicense(1, 1);
+
+            TestclsLocalDrivingLicenseApplications.Create();
+
 
             Console.ReadKey();
         }

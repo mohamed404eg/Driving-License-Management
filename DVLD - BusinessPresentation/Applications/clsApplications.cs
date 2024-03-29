@@ -10,14 +10,14 @@ namespace DVLD___BusinessPresentation
     public class clsApplications
     {
         int _ApplicationID;
-
+        decimal _PaidFees;
           public int ApplicationID {  get { return _ApplicationID; }  }
           public  int ApplicantPersonID;
           public  DateTime ApplicationDate;
           public  int ApplicationTypeID;
           public  byte ApplicationStatus;
           public  DateTime LastStatusDate;
-          public  decimal PaidFees;
+        public  decimal PaidFees { get { return _PaidFees; } }
           public int CreatedByUserID;
 
         enum enMode
@@ -39,7 +39,7 @@ namespace DVLD___BusinessPresentation
             this.ApplicationTypeID = ApplicationTypeID;
             this.ApplicationStatus = ApplicationStatus;
             this.LastStatusDate = LastStatusDate;
-            this.PaidFees = PaidFees;
+            this._PaidFees = PaidFees;
             this.CreatedByUserID = CreatedByUserID;
 
             _Mode = enMode.update;
@@ -50,9 +50,9 @@ namespace DVLD___BusinessPresentation
             this.ApplicantPersonID = -1;
             this.ApplicationDate = DateTime.Now;
             this.ApplicationTypeID = -1;
-            this.ApplicationStatus = 0;
+            this.ApplicationStatus = 1;
             this.LastStatusDate = DateTime.Now;
-            this.PaidFees = -1;
+            this._PaidFees = 5;
             this.CreatedByUserID = -1;
 
             _Mode = enMode.add;

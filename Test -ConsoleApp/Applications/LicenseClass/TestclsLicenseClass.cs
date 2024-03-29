@@ -90,5 +90,29 @@ namespace Test__ConsoleApp.Applications.LicenseClass
         }
 
 
+
+
+
+
+
+
+
+        static public void TestisHasLicense(int PersonID, int LicenseClassID)
+        {
+            if (clsLicenseClass.isHasLicense(PersonID, LicenseClassID))
+            {
+                Console.WriteLine("true");
+            }
+            else
+            {
+                Console.WriteLine("false");
+            }
+        }
+
+
+
+
+
+        // end
     }
 }

@@ -1,4 +1,5 @@
-﻿using DVLD___DataAccess;
+﻿using DVLD___BusinessPresentation.Applications.LicenseClass;
+using DVLD___DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,8 +15,8 @@ namespace DVLD___BusinessPresentation
         int LocalDrivingLicenseApplicationID;
 
         // create clsApplications
-        clsApplications applications = null;
-        int LicenseClassID;
+      public  clsApplications applications = null;
+        public int LicenseClassID;
       
 
 
@@ -60,7 +61,7 @@ namespace DVLD___BusinessPresentation
         /// <summary>
         /// new class class
         /// </summary>
-        clsLocalDrivingLicenseApplications()
+     public   clsLocalDrivingLicenseApplications()
         {
 
             this.LocalDrivingLicenseApplicationID = -1;
@@ -93,15 +94,22 @@ namespace DVLD___BusinessPresentation
             if (applications.ApplicantPersonID != -1 && applications != null)
             {
 
-                // check befor create
+                // check befor create if has ApplicationsActive in same type
                 if (clsApplications.isHasApplicationsActive(applications.ApplicantPersonID, applications.ApplicationTypeID))
                 {
 
                     return false;
                 }
 
+                // check if Person has License on this classes
+                if (clsLicenseClass.isHasLicense(applications.ApplicantPersonID, LicenseClassID))
+                {
 
-                if( applications.Save())
+                    return false;
+                }
+
+                // applications save and create LocalDrivingLicenseApplications by applicationsId
+                if ( applications.Save())
                 {
                   return  SaveLocalDrivingLicenseApplications();
 
@@ -114,8 +122,7 @@ namespace DVLD___BusinessPresentation
 
             }
 
-
-return false;
+            return false;
         }
 
 
@@ -127,10 +134,13 @@ return false;
             {
                 case enMode.add:
 
-                    AddNew();
+                    if (AddNew())
+                    {
                     _Mode = enMode.update;
-
+                        return true;
+                    }
                     break;
+
 
                     case enMode.update:
 

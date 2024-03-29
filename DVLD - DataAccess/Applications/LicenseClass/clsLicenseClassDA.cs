@@ -222,6 +222,71 @@ SELECT *
         }
 
 
+        /// <summary>
+        /// check if Person has License on this classes
+        /// </summary>
+        /// <param name="PersonID"></param>
+        /// <param name="LicenseClassID"></param>
+        /// <returns>if Person has License on this classes return true otherwise return false</returns>
+        static public bool isHasLicense(int PersonID, int LicenseClassID)
+        {
+
+
+
+            bool status = false;
+
+
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+
+
+SELECT DISTINCT  Has = 1
+  FROM [dbo].[Licenses]
+  join Drivers on Drivers.PersonID = @PersonID AND LicenseClass = @LicenseClassID
+
+
+";
+
+
+            SqlCommand command = new SqlCommand(Query, connection);
+
+
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+            command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
+
+            try
+            {
+                connection.Open();
+
+                object Result = command.ExecuteScalar();
+                if (Result != null && int.TryParse(Result.ToString(), out int Number))
+                {
+                    status = true;
+                }
+                else
+                {
+                    status = false;
+                }
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+
+
+            return status;
+        }
 
     }
 }

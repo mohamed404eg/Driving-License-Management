@@ -1,4 +1,5 @@
-﻿using DVLD___DataAccess.Applications.LicenseClass;
+﻿using DVLD___DataAccess;
+using DVLD___DataAccess.Applications.LicenseClass;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -116,6 +117,22 @@ namespace DVLD___BusinessPresentation.Applications.LicenseClass
            
             return clsLicenseClassDA.GetAll();
         }
+
+
+
+
+
+        /// <summary>
+        /// check if Person has License on this classes
+        /// </summary>
+        /// <param name="PersonID"></param>
+        /// <param name="LicenseClassID"></param>
+        /// <returns>if Person has License on this classes return true otherwise return false</returns>
+        static public bool isHasLicense(int PersonID, int LicenseClassID)
+        {
+            return clsLicenseClassDA.isHasLicense(PersonID, LicenseClassID);
+        }
+
 
 
 
