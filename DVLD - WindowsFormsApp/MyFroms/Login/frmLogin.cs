@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Microsoft.Win32;
+using DVLD___WindowsFormsApp.MyFroms.Application.LocalApplication;
 namespace DVLD___WindowsFormsApp.MyFroms.Login
 {
     public partial class frmLogin : Form
@@ -83,9 +84,18 @@ namespace DVLD___WindowsFormsApp.MyFroms.Login
                 {
                     // show next form
 
-                    frmMain frmMain = new frmMain();
-                    frmMain.Show();
-                   this.Hide();
+                    // frmMain frmMain = new frmMain();
+                    // frmMain.Show();
+                    //this.Hide();
+
+
+
+                    // Test
+
+                    frmNewLocalDrivingApplication LocalDrivingApplication = new frmNewLocalDrivingApplication();
+                    LocalDrivingApplication.Show();
+                    this.Hide();
+
 
                 }
                 else

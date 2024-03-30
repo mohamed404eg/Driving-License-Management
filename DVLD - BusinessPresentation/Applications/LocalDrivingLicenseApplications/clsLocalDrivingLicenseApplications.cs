@@ -12,7 +12,7 @@ namespace DVLD___BusinessPresentation
     public class clsLocalDrivingLicenseApplications  
     {
 
-        int LocalDrivingLicenseApplicationID;
+       public int LocalDrivingLicenseApplicationID;
 
         // create clsApplications
       public  clsApplications applications = null;
@@ -94,7 +94,7 @@ namespace DVLD___BusinessPresentation
             if (applications.ApplicantPersonID != -1 && applications != null)
             {
 
-                // check befor create if has ApplicationsActive in same type
+                // check befor create if has ApplicationsActive in same type on this classes
                 if (clsApplications.isHasApplicationsActive(applications.ApplicantPersonID, applications.ApplicationTypeID))
                 {
 

@@ -75,7 +75,7 @@ INSERT INTO [dbo].[LocalDrivingLicenseApplications]
            ([ApplicationID]
            ,[LicenseClassID])
      VALUES
-           (@ApplicationID>
+           (@ApplicationID
            ,@LicenseClassID)
 
 		    select SCOPE_IDENTITY ()

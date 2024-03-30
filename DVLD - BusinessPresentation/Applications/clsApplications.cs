@@ -67,13 +67,13 @@ namespace DVLD___BusinessPresentation
 
 
 
-            int ApplicationID = clsApplicationsDataAccess.AddNewApplication(ApplicantPersonID, ApplicationDate,
+            _ApplicationID = clsApplicationsDataAccess.AddNewApplication(ApplicantPersonID, ApplicationDate,
                         ApplicationTypeID, ApplicationStatus, LastStatusDate, PaidFees, CreatedByUserID);
 
 
 
 
-                return (ApplicationID != -1);
+                return (_ApplicationID != -1);
 
         }
 

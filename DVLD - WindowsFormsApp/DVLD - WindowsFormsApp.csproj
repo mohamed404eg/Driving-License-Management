@@ -64,6 +64,12 @@
     <Compile Include="MyFroms\ApplicationTypes\frmUpdateApplicationType.Designer.cs">
       <DependentUpon>frmUpdateApplicationType.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyFroms\Application\LocalApplication\frmNewLocalDrivingApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Application\LocalApplication\frmNewLocalDrivingApplication.Designer.cs">
+      <DependentUpon>frmNewLocalDrivingApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyFroms\CurrentUser.cs" />
     <Compile Include="MyFroms\Login\frmLogin.cs">
       <SubType>Form</SubType>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\ApplicationTypes\frmUpdateApplicationType.resx">
       <DependentUpon>frmUpdateApplicationType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Application\LocalApplication\frmNewLocalDrivingApplication.resx">
+      <DependentUpon>frmNewLocalDrivingApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
