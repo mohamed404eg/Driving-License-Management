@@ -15,6 +15,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.LocalApplication
     public partial class frmNewLocalDrivingApplication : Form
     {
         clsLocalDrivingLicenseApplications LocalApplications;
+        int _PersonId = -1;
         public frmNewLocalDrivingApplication()
         {
             LocalApplications  = new clsLocalDrivingLicenseApplications();
@@ -30,9 +31,18 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.LocalApplication
 
             lab_Create_by.Text = CurrentUser.User.UserName.ToString();
         }
+
+        void Clear()
+        {
+            LocalApplications = new clsLocalDrivingLicenseApplications();
+        }
         private void ucFindPersonDetails1_DataBack(object sender, int PersonID)
         {
-            LocalApplications.applications.ApplicantPersonID = PersonID;
+            _PersonId = PersonID;
+           
+
+
+            
 
         }
 
@@ -53,6 +63,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.LocalApplication
         void FillDate()
         {
             // New Local Driving License Service
+            LocalApplications.applications.ApplicantPersonID = _PersonId;
             LocalApplications.applications.ApplicationTypeID = 1;
             LocalApplications.applications.CreatedByUserID = CurrentUser.User.UserID;
 
@@ -91,15 +102,19 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.LocalApplication
 
            if (!CheckDate() )
             {
-                MessageBox.Show("Date Not Complate");
+                MessageBox.Show("Data Not Complate");
                 return;
             }
 
             Save();
 
-
+            // clear after new screach
+            Clear();
         }
 
-      
+        private void frmNewLocalDrivingApplication_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

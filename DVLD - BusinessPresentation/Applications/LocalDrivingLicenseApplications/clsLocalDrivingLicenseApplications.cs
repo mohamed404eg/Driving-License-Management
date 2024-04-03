@@ -95,7 +95,7 @@ namespace DVLD___BusinessPresentation
             {
 
                 // check befor create if has ApplicationsActive in same type on this classes
-                if (clsApplications.isHasApplicationsActive(applications.ApplicantPersonID, applications.ApplicationTypeID))
+                if (clsApplications.isHasApplicationsActive(applications.ApplicantPersonID, applications.ApplicationTypeID , LicenseClassID))
                 {
 
                     return false;
@@ -159,7 +159,17 @@ namespace DVLD___BusinessPresentation
 
 
 
+        /// <summary>
+        /// Find By Id 
+        /// </summary>
+        /// <param name="LocalDrivingLicenseApplicationID"></param>
+        /// <returns>DataTable</returns>
+        static public DataTable Find(int LocalDrivingLicenseApplicationID)
+        {
 
+            return clsLocalDrivingLicenseApplicationsDataAccess.FindById(int LocalDrivingLicenseApplicationID);
+
+        }
 
 
 

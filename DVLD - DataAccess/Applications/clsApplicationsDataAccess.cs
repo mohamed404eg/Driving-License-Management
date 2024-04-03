@@ -229,12 +229,13 @@ where ApplicationID =@ApplicationID
 
 
         /// <summary>
-        /// if Person has Application on this Type and Not complete 
+        /// if Person has Application on this Type and  classes Not complete Not complete 
         /// </summary>
         /// <param name="ApplicantPersonID"></param>
-        /// <param name="ApplicationTypeID"></param>
-        /// <returns>if Person has Application on this Type and Not complete return true otherwise return false</returns>
-        static public bool isHasApplicationsActive(int ApplicantPersonID, int ApplicationTypeID)
+        /// <param name="ApplicationTypeID"></param> 
+        /// /// <param name="LicenseClassID"></param>
+        /// <returns>if Person has Application on this Type  and  classes Not complete Not complete return true otherwise return false</returns>
+        static public bool isHasApplicationsActive(int ApplicantPersonID, int ApplicationTypeID , int LicenseClassID)
         {
             //Noetic
             //Applications.ApplicationStatus = 1 THEN 'New'
@@ -250,8 +251,10 @@ where ApplicationID =@ApplicationID
 
             string Query = @"
 
+
 SELECT DISTINCT  Has = 1 FROM [dbo].[Applications]
-  where ApplicantPersonID = @ApplicantPersonID and ApplicationTypeID  = @ApplicationTypeID and ApplicationStatus in (1)
+join LocalDrivingLicenseApplications on LocalDrivingLicenseApplications.ApplicationID = Applications.ApplicationID 
+  where ApplicantPersonID = @ApplicantPersonID and ApplicationTypeID  =  @ApplicationTypeID and ApplicationStatus in (1) and  LocalDrivingLicenseApplications.LicenseClassID = @LicenseClassID
 
 
 
@@ -264,7 +267,7 @@ SELECT DISTINCT  Has = 1 FROM [dbo].[Applications]
 
             command.Parameters.AddWithValue("@ApplicantPersonID", ApplicantPersonID);
             command.Parameters.AddWithValue("@ApplicationTypeID", ApplicationTypeID);
-
+            command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
             try
             {
                 connection.Open();

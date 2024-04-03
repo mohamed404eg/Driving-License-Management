@@ -943,7 +943,7 @@ string ImagePath)
             applications.ApplicationTypeID = ApplicationTypeID;
             applications.ApplicationStatus = ApplicationStatus;
             applications.LastStatusDate = LastStatusDate;
-            applications.PaidFees = PaidFees;
+         //   applications.PaidFees = PaidFees;
             applications.CreatedByUserID = CreatedByUserID;
 
             if(applications.Save())

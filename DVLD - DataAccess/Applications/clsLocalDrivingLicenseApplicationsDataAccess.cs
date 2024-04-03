@@ -114,5 +114,44 @@ INSERT INTO [dbo].[LocalDrivingLicenseApplications]
         }
 
 
+        /// <summary>
+        /// Find By Id 
+        /// </summary>
+        /// <param name="LocalDrivingLicenseApplicationID"></param>
+        /// <returns>DataTable</returns>
+        public static   DataTable FindById(int LocalDrivingLicenseApplicationID)
+        {
+
+            DataTable dt = new DataTable();
+
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+
+SELECT [LocalDrivingLicenseApplicationID]
+      ,[ClassName]
+      ,[NationalNo]
+      ,[FullName]
+      ,[ApplicationDate]
+      ,[PassedTestCount]
+      ,[Status]
+  FROM [dbo].[LocalDrivingLicenseApplications_View]
+  where LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID
+
+
+
+";
+
+            
+
+
+
+
+        }
+
+
+
+
+
     }
 }

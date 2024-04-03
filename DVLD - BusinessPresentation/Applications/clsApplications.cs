@@ -159,14 +159,15 @@ namespace DVLD___BusinessPresentation
 
 
         /// <summary>
-        /// check if Person has Application on this Type or has complete or Not complete , if cancelled you can create
+        /// check if Person has Application on this Type and  classes Not complete , if cancelled you can create
         /// </summary>
         /// <param name="ApplicantPersonID"></param>
         /// <param name="ApplicationTypeID"></param>
-        /// <returns>if Person has Application on this Type or has complete or Not complete return true otherwise return false</returns>
-        static public bool isHasApplicationsActive(int ApplicantPersonID , int ApplicationTypeID)
+        /// /// <param name="LicenseClassID"></param>
+        /// <returns>if Person has Application on this Type  and  classes  Not complete return true otherwise return false</returns>
+        static public bool isHasApplicationsActive(int ApplicantPersonID , int ApplicationTypeID , int LicenseClassID)
         {
-            return clsApplicationsDataAccess.isHasApplicationsActive(ApplicantPersonID,ApplicationTypeID);
+            return clsApplicationsDataAccess.isHasApplicationsActive(ApplicantPersonID,ApplicationTypeID ,LicenseClassID);
         }
 
 

@@ -84,16 +84,16 @@ namespace DVLD___WindowsFormsApp.MyFroms.Login
                 {
                     // show next form
 
-                    // frmMain frmMain = new frmMain();
-                    // frmMain.Show();
+                    //frmMain frmMain = new frmMain();
+                    //frmMain.Show();
                     //this.Hide();
 
 
 
                     // Test
 
-                    frmNewLocalDrivingApplication LocalDrivingApplication = new frmNewLocalDrivingApplication();
-                    LocalDrivingApplication.Show();
+                    frmManageLocalDrivingApplication ManageLocalDrivingApplication = new frmManageLocalDrivingApplication();
+                    ManageLocalDrivingApplication.Show();
                     this.Hide();
 
 

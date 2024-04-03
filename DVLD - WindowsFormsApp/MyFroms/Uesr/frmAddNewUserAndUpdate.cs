@@ -38,6 +38,10 @@ namespace DVLD___WindowsFormsApp.MyFroms.Uesr
             _UserId = UserId;
             FullDate();
             _UpdateUi();
+
+
+            //
+            tabControl1.SelectedTab= tabPage_LoginInfo;
         }
 
 

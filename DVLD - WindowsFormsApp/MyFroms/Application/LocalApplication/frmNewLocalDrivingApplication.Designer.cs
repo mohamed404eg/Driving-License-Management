@@ -121,7 +121,6 @@
             this.CB_LicenseClass.Name = "CB_LicenseClass";
             this.CB_LicenseClass.Size = new System.Drawing.Size(249, 28);
             this.CB_LicenseClass.TabIndex = 1;
-          
             // 
             // lab_Create_by
             // 
@@ -253,7 +252,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmNewLocalDrivingApplication";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Local Driving Application";
+            this.Load += new System.EventHandler(this.frmNewLocalDrivingApplication_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);

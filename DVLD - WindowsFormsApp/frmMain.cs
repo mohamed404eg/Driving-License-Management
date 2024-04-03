@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD___WindowsFormsApp.MyFroms.ManageTestTypes;
+using DVLD___WindowsFormsApp.MyFroms.Application.LocalApplication;
 namespace DVLD___WindowsFormsApp
 {
 
@@ -129,7 +130,7 @@ namespace DVLD___WindowsFormsApp
 
                 frmAddNewUserAndUpdate frmAddNewUserAndUpdate = new frmAddNewUserAndUpdate(PersonId, UserId);
 
-
+           
                 frmAddNewUserAndUpdate.ShowDialog();
 
 
@@ -180,6 +181,35 @@ namespace DVLD___WindowsFormsApp
         private void FrmManageTest_FormClosed(object sender, FormClosedEventArgs e)
         {
             applicationTypes = null;
+        }
+
+
+
+        /// <summary>
+        /// Add New Local Driving Application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        frmNewLocalDrivingApplication newLocalDrivingApplication;
+        private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (newLocalDrivingApplication == null || newLocalDrivingApplication.IsDisposed)
+            {
+                newLocalDrivingApplication = new frmNewLocalDrivingApplication();
+                newLocalDrivingApplication.MdiParent = this;
+                newLocalDrivingApplication.FormClosed += NewLocalDrivingApplication_FormClosed;
+                newLocalDrivingApplication.Show();
+            }
+            else
+            {
+                newLocalDrivingApplication.BringToFront();
+            }
+
+        }
+
+        private void NewLocalDrivingApplication_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            newLocalDrivingApplication = null;
         }
     }
 }
