@@ -45,6 +45,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Person
             enFilterBy FilterBy = (enFilterBy)cb_FilterBy.SelectedIndex;
             clsPeople Person = null;
 
+            if (String.IsNullOrEmpty(tb_FilterBy.Text)) return;
 
              if (FilterBy == enFilterBy.PersonId)
             {

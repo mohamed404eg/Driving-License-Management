@@ -77,6 +77,7 @@
       <DependentUpon>frmNewLocalDrivingApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="MyFroms\CurrentUser.cs" />
+    <Compile Include="MyFroms\Functions\Multi.cs" />
     <Compile Include="MyFroms\Login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>

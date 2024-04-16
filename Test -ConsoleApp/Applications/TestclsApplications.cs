@@ -13,17 +13,17 @@ namespace Test__ConsoleApp.Applications
 
 
 
-        static public void TestisHasApplicationsActive(int ApplicantPersonID, int ApplicationTypeID)
-        {
-           if(clsApplications.isHasApplicationsActive(ApplicantPersonID, ApplicationTypeID))
-            {
-                Console.WriteLine("true");
-            }
-            else
-            {
-                Console.WriteLine("false");
-            }
-        }
+        //static public void TestisHasApplicationsActive(int ApplicantPersonID, int ApplicationTypeID)
+        //{
+        //   if(clsApplications.isHasApplicationsActive(ApplicantPersonID, ApplicationTypeID))
+        //    {
+        //        Console.WriteLine("true");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("false");
+        //    }
+        //}
 
 
      

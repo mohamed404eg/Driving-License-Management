@@ -35,6 +35,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.LocalApplication
         void Clear()
         {
             LocalApplications = new clsLocalDrivingLicenseApplications();
+            
         }
         private void ucFindPersonDetails1_DataBack(object sender, int PersonID)
         {
@@ -63,17 +64,17 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.LocalApplication
         void FillDate()
         {
             // New Local Driving License Service
-            LocalApplications.applications.ApplicantPersonID = _PersonId;
-            LocalApplications.applications.ApplicationTypeID = 1;
-            LocalApplications.applications.CreatedByUserID = CurrentUser.User.UserID;
-
+            LocalApplications.ApplicantPersonID = _PersonId;
+            LocalApplications.ApplicationTypeID = 1;
+            LocalApplications.CreatedByUserID = CurrentUser.User.UserID;
+            LocalApplications.ApplicationStatus = 1;
             LocalApplications.LicenseClassID = (CB_LicenseClass.SelectedIndex + 1);
         }
 
 
         bool CheckDate()
         {
-            if (LocalApplications.applications.ApplicantPersonID == -1)
+            if (LocalApplications.ApplicantPersonID == -1)
             {
                 return false;
             }

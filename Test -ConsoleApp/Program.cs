@@ -1141,8 +1141,14 @@ string ImagePath)
             //TestclsLicenseClass.TestisHasLicense(1, 3);
             //TestclsLicenseClass.TestisHasLicense(1, 1);
 
-            TestclsLocalDrivingLicenseApplications.Create();
+            //  TestclsLocalDrivingLicenseApplications.Create();
 
+            // TestclsLocalDrivingLicenseApplications.Find(30);
+
+            //TestclsLocalDrivingLicenseApplications.UpdateStatus(30,3);
+
+
+            //TestclsLocalDrivingLicenseApplications.TestFind_DataTable(3);
 
             Console.ReadKey();
         }
