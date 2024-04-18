@@ -10,6 +10,7 @@ using System.Xml.Linq;
 using Test__ConsoleApp.Applications;
 using Test__ConsoleApp.Applications.LicenseClass;
 using Test__ConsoleApp.Applications.LocalDrivingLicenseApplications;
+using Test__ConsoleApp.Driver;
 
 namespace Test__ConsoleApp
 {
@@ -1149,6 +1150,33 @@ string ImagePath)
 
 
             //TestclsLocalDrivingLicenseApplications.TestFind_DataTable(3);
+
+
+
+
+            // DriverTest //
+
+            //  DriverTest.GetAll();
+
+            //DriverTest.Find(8);
+            //DriverTest.Find(1);
+
+
+            //DriverTest.FindByPersonID(1);
+            // DriverTest.FindByPersonID(100);
+
+
+            // DriverTest.FindByNationalNo("n1");
+
+            ///   DriverTest.FindByNationalNo("n1f");
+
+
+           // DriverTest.FindByFullName("Mhamed");
+          //  DriverTest.FindByFullName("Khalid ALi Maher hamed");
+
+
+
+
 
             Console.ReadKey();
         }
