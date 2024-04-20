@@ -179,7 +179,7 @@ namespace DVLD___BusinessPresentation
 
 
         /// <summary>
-        /// Add Person 
+        /// _Add Person 
         /// </summary>
         /// <returns>true if successfully otherwise false</returns>
         bool _AddNewPerson()
