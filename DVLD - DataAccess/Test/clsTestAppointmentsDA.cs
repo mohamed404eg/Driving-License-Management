@@ -44,11 +44,12 @@ INSERT INTO [dbo].[TestAppointments]
            ,[CreatedByUserID]
            ,[IsLocked])
      VALUES
-           (@TestTypeID,
-           @LocalDrivingLicenseApplicationID,
-           ,@AppointmentDate,                                     
-           ,@PaidFees,
-           ,@CreatedByUserID,
+           (
+            @TestTypeID
+           ,@LocalDrivingLicenseApplicationID
+           ,@AppointmentDate                                   
+           ,@PaidFees
+           ,@CreatedByUserID
            ,@IsLocked)
 
 select SCOPE_IDENTITY ()
@@ -70,10 +71,10 @@ select SCOPE_IDENTITY ()
 
                 object obj = command.ExecuteScalar();
 
-                if (!int.TryParse(Query, out TestAppointmentID))
+                if (int.TryParse(obj.ToString(), out int ID))
                 {
 
-                    TestAppointmentID = -1;
+                    TestAppointmentID = ID;
                 }
 
 
@@ -259,13 +260,14 @@ SELECT [TestAppointmentID]
 
 
         /// <summary>
-        /// updata AppointmentDate by TestAppointmentID
+        /// updata AppointmentDate and IsLocked by TestAppointmentID
         /// </summary>
         /// <param name="TestAppointmentID"></param>
         /// <param name="AppointmentDate"></param>
+        /// <param name="IsLocked"></param>
         /// <returns>if successfully return true otherwise return false</returns>
         static public bool UpadataDateByTestAppointmentID(int TestAppointmentID,DateTime AppointmentDate
-  )
+  , bool IsLocked)
         {
 
             bool IsUpdata = false;
@@ -274,7 +276,8 @@ SELECT [TestAppointmentID]
 
             string Qurey = @"          
 UPDATE [dbo].[TestAppointments]
-   SET  [AppointmentDate] = @AppointmentDate
+   SET  [AppointmentDate] = @AppointmentDate,
+IsLocked = @IsLocked
   
  WHERE TestAppointmentID =@TestAppointmentID
 ";
@@ -283,7 +286,7 @@ UPDATE [dbo].[TestAppointments]
 
             command.Parameters.AddWithValue("@TestAppointmentID", TestAppointmentID);
             command.Parameters.AddWithValue("@AppointmentDate", AppointmentDate);
-
+            command.Parameters.AddWithValue("@IsLocked", IsLocked);
 
             try
             {
@@ -323,8 +326,112 @@ UPDATE [dbo].[TestAppointments]
         }
 
 
+        /// <summary>
+        /// check have TestAppointments Same Stauts (IsLocked = 1 or 0) On this TestType
+        /// </summary>
+        /// <param name="LocalDrivingLicenseApplicationID"></param>
+        /// <param name="TestTypeID"></param>
+        /// <param name="IsLocked"></param>
+        /// <returns>if has retrun true otherwise return false</returns>
+        static public bool haveTestAppointmentsSameStautsOnTestType(int LocalDrivingLicenseApplicationID, int TestTypeID,bool IsLocked = false)
+        {
+            bool have = false;
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+
+SELECT DISTINCT  result = 1
+  FROM [dbo].[TestAppointments]
+  where LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID and IsLocked = @IsLocked and TestTypeID =@TestTypeID
 
 
+";  
+
+
+            SqlCommand command = new SqlCommand(Query, connection);
+            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+            command.Parameters.AddWithValue("@IsLocked", IsLocked);
+            command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
+
+
+            try
+            {
+                connection.Open();
+
+                object obj = command.ExecuteScalar();
+
+                if(int.TryParse(obj.ToString(),out int Num))
+                {
+                    have = Convert.ToBoolean(Num);
+                }
+
+
+            }catch(Exception ex) { Console.WriteLine(ex.ToString())}
+            finally
+            {
+                connection.Close();
+            }
+
+
+
+            return have;
+
+
+        }
+
+
+
+        /// <summary>
+        /// check the reuslt of test of the top result TestAppointments
+        /// if 0 meaing no test sucessfully yet
+        /// </summary>
+        /// <param name="LocalDrivingLicenseApplicationID"></param>
+        /// <returns>number of TestTypeID Top Test Successfully Achving</returns>
+        static public int TopTestSuccessfullyAchving(int LocalDrivingLicenseApplicationID)
+        {
+            int Number = 0;
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+
+SELECT max(TestTypeID) as TopTestSuccessfullyAchving
+  FROM [dbo].[TestAppointments]
+  join Tests on Tests.TestAppointmentID  = TestAppointments.TestAppointmentID
+  where LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID and TestResult  =1
+
+";
+
+
+            SqlCommand command = new SqlCommand(Query, connection);
+            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+
+
+
+            try
+            {
+                connection.Open();
+
+                object obj = command.ExecuteScalar();
+
+                if (int.TryParse(obj.ToString(), out int Num))
+                {
+                    Number = Num;
+                }
+
+
+            }
+            catch (Exception ex) { Console.WriteLine(ex.ToString())}
+            finally
+            {
+                connection.Close();
+            }
+
+
+
+            return Number;
+
+
+        }
 
 
 

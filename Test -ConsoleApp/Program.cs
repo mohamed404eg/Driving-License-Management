@@ -11,6 +11,7 @@ using Test__ConsoleApp.Applications;
 using Test__ConsoleApp.Applications.LicenseClass;
 using Test__ConsoleApp.Applications.LocalDrivingLicenseApplications;
 using Test__ConsoleApp.Driver;
+using Test__ConsoleApp.Test;
 
 namespace Test__ConsoleApp
 {
@@ -1171,11 +1172,11 @@ string ImagePath)
             ///   DriverTest.FindByNationalNo("n1f");
 
 
-           // DriverTest.FindByFullName("Mhamed");
-          //  DriverTest.FindByFullName("Khalid ALi Maher hamed");
+            // DriverTest.FindByFullName("Mhamed");
+            //  DriverTest.FindByFullName("Khalid ALi Maher hamed");
 
 
-
+            clsTestAppointmentsTest.CreateTestAppointments();
 
 
             Console.ReadKey();
