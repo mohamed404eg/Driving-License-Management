@@ -10,10 +10,10 @@ namespace Test__ConsoleApp.Test
     public class clsTestAppointmentsTest
     {
 
-     static public   void CreateTestAppointments()
+     static public   void CreateTestAppointments(int LocalDrivingLicenseApplicationID)
         {
             clsTestAppointments testAppointments = new clsTestAppointments();
-            testAppointments.LocalDrivingLicenseApplicationID = 1038;
+            testAppointments.LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
             testAppointments.AppointmentDate = DateTime.Now;
             testAppointments.PaidFees = 30;
             testAppointments.CreatedByUserID = 1;
@@ -30,6 +30,51 @@ namespace Test__ConsoleApp.Test
             }
 
         }
+
+        static public void UpdateTestAppointments()
+        {
+            clsTestAppointments testAppointments = clsTestAppointments.Find(85);
+
+            if (testAppointments != null)
+            {
+
+
+
+                testAppointments.IsLocked = true;
+
+                    Console.WriteLine("found");
+
+                if (testAppointments.Save())
+                {
+                    Console.WriteLine("update");
+                    Console.WriteLine(testAppointments.TestAppointmentID);
+                    Console.WriteLine(testAppointments.IsLocked);
+                }
+                else
+                {
+                    Console.WriteLine("not update");
+                }
+
+
+
+            }
+            else
+            {
+
+                    Console.WriteLine("not found");
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
 
 
 

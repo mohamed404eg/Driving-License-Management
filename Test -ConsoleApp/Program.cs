@@ -1176,7 +1176,23 @@ string ImagePath)
             //  DriverTest.FindByFullName("Khalid ALi Maher hamed");
 
 
-            clsTestAppointmentsTest.CreateTestAppointments();
+            // clsTestAppointmentsTest.CreateTestAppointments(LocalDrivingLicenseApplicationID1038);
+
+            //clsTestAppointmentsTest.CreateTestAppointments(30);
+
+
+            // clsTestAppointmentsTest.UpdateTestAppointments();
+
+
+            // TestclsTakeTest \\
+
+            // TestclsTakeTest.Find(65);
+
+            //TestclsTakeTest.Find(100);
+
+            //   TestclsTakeTest.Add(74);
+
+
 
 
             Console.ReadKey();

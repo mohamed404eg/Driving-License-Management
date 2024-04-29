@@ -51,6 +51,7 @@
     <Compile Include="clsUser.cs" />
     <Compile Include="Driver\clsDriver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test\clsTakeTest.cs" />
     <Compile Include="Test\clsTestAppointments.cs" />
   </ItemGroup>
   <ItemGroup>

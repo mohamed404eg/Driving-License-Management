@@ -49,3 +49,4 @@ P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsA
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD - W.056B8C14.Up2Date
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Application.LocalApplication.frmNewLocalDrivingApplication.resources
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Application.LocalApplication.frmManageLocalDrivingApplication.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Application.Control.UCdrivingAndAppInfo.resources

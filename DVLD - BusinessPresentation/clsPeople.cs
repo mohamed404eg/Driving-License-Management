@@ -319,5 +319,16 @@ namespace DVLD___BusinessPresentation
         
         }
 
+        /// <summary>
+        /// FullName
+        /// </summary>
+        /// <returns>string FullName</returns>
+        public string FullName()
+        {
+            return FirstName + " " + SecondName + " " + ThirdName + " " + LastName ;
+        }
+
+
+
         }
 }

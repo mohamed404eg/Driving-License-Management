@@ -27,7 +27,7 @@ namespace DVLD___DataAccess.Test
         int TestTypeID,
         int LocalDrivingLicenseApplicationID,
         DateTime AppointmentDate,
-        double PaidFees,
+        decimal PaidFees,
         int CreatedByUserID,
         bool IsLocked)
         {
@@ -111,7 +111,7 @@ select SCOPE_IDENTITY ()
          ref int TestTypeID,
         ref int LocalDrivingLicenseApplicationID,
         ref DateTime AppointmentDate,
-        ref double PaidFees,
+        ref decimal PaidFees,
        ref int CreatedByUserID,
           ref bool IsLocked)
         {
@@ -151,7 +151,7 @@ SELECT [TestAppointmentID]
                     TestTypeID = (int)reader["TestTypeID"];
                     LocalDrivingLicenseApplicationID = (int)reader["LocalDrivingLicenseApplicationID"];
                     AppointmentDate = (DateTime)reader["AppointmentDate"];
-                    PaidFees = (double)reader["PaidFees"];
+                    PaidFees = (decimal)reader["PaidFees"];
                     CreatedByUserID = (int)reader["CreatedByUserID"];
                     IsLocked = (bool)reader["IsLocked"];
                 
@@ -359,14 +359,19 @@ SELECT DISTINCT  result = 1
                 connection.Open();
 
                 object obj = command.ExecuteScalar();
-
-                if(int.TryParse(obj.ToString(),out int Num))
+               if(obj == null)
+                {
+                    have = false;
+                }
+               else if(int.TryParse(obj.ToString(),out int Num))
                 {
                     have = Convert.ToBoolean(Num);
                 }
 
 
-            }catch(Exception ex) { Console.WriteLine(ex.ToString())}
+            }catch(Exception ex) {
+                Console.WriteLine(ex.ToString());
+                    }
             finally
             {
                 connection.Close();
@@ -420,7 +425,9 @@ SELECT max(TestTypeID) as TopTestSuccessfullyAchving
 
 
             }
-            catch (Exception ex) { Console.WriteLine(ex.ToString())}
+            catch (Exception ex) {
+                Console.WriteLine(ex.ToString());
+                    }
             finally
             {
                 connection.Close();

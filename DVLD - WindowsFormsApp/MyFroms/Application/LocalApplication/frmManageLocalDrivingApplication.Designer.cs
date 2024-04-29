@@ -33,13 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dGV = new System.Windows.Forms.DataGridView();
-            this.btn_New = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.COBX_Filter = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labRecords = new System.Windows.Forms.Label();
-            this.tB_FilterBy = new System.Windows.Forms.TextBox();
-            this.CB_Status = new System.Windows.Forms.ComboBox();
             this.cMS_AllApplication = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +42,16 @@
             this.issuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eDrivingLiceseFirstTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showPersonLicenseHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_New = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.COBX_Filter = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labRecords = new System.Windows.Forms.Label();
+            this.tB_FilterBy = new System.Windows.Forms.TextBox();
+            this.CB_Status = new System.Windows.Forms.ComboBox();
+            this.scheduleVisionTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scheduleWritenTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scheduleStreetTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGV)).BeginInit();
             this.cMS_AllApplication.SuspendLayout();
@@ -92,6 +95,81 @@
             this.dGV.Size = new System.Drawing.Size(1237, 393);
             this.dGV.TabIndex = 2;
             this.dGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // cMS_AllApplication
+            // 
+            this.cMS_AllApplication.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cMS_AllApplication.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.cMS_AllApplication.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showToolStripMenuItem,
+            this.editApplicationToolStripMenuItem,
+            this.deleteApplicationToolStripMenuItem,
+            this.cancelApplicationToolStripMenuItem,
+            this.sechduleTaskToolStripMenuItem,
+            this.issuToolStripMenuItem,
+            this.eDrivingLiceseFirstTimeToolStripMenuItem,
+            this.showPersonLicenseHistoryToolStripMenuItem});
+            this.cMS_AllApplication.Name = "cMS_AllApplication";
+            this.cMS_AllApplication.Size = new System.Drawing.Size(327, 314);
+            this.cMS_AllApplication.Opening += new System.ComponentModel.CancelEventHandler(this.cMS_AllApplication_Opening);
+            // 
+            // showToolStripMenuItem
+            // 
+            this.showToolStripMenuItem.Name = "showToolStripMenuItem";
+            this.showToolStripMenuItem.Size = new System.Drawing.Size(326, 38);
+            this.showToolStripMenuItem.Text = "show appleication details";
+            this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
+            // 
+            // editApplicationToolStripMenuItem
+            // 
+            this.editApplicationToolStripMenuItem.Name = "editApplicationToolStripMenuItem";
+            this.editApplicationToolStripMenuItem.Size = new System.Drawing.Size(326, 38);
+            this.editApplicationToolStripMenuItem.Text = "Edit Application";
+            // 
+            // deleteApplicationToolStripMenuItem
+            // 
+            this.deleteApplicationToolStripMenuItem.Name = "deleteApplicationToolStripMenuItem";
+            this.deleteApplicationToolStripMenuItem.Size = new System.Drawing.Size(326, 38);
+            this.deleteApplicationToolStripMenuItem.Text = "Delete Application";
+            // 
+            // cancelApplicationToolStripMenuItem
+            // 
+            this.cancelApplicationToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelApplicationToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cancelApplicationToolStripMenuItem.Image")));
+            this.cancelApplicationToolStripMenuItem.Name = "cancelApplicationToolStripMenuItem";
+            this.cancelApplicationToolStripMenuItem.Size = new System.Drawing.Size(326, 38);
+            this.cancelApplicationToolStripMenuItem.Text = "Cancel Application";
+            this.cancelApplicationToolStripMenuItem.Click += new System.EventHandler(this.cancelApplicationToolStripMenuItem_Click);
+            // 
+            // sechduleTaskToolStripMenuItem
+            // 
+            this.sechduleTaskToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.scheduleVisionTestToolStripMenuItem,
+            this.scheduleWritenTestToolStripMenuItem,
+            this.scheduleStreetTestToolStripMenuItem});
+            this.sechduleTaskToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sechduleTaskToolStripMenuItem.Image")));
+            this.sechduleTaskToolStripMenuItem.Name = "sechduleTaskToolStripMenuItem";
+            this.sechduleTaskToolStripMenuItem.Size = new System.Drawing.Size(326, 38);
+            this.sechduleTaskToolStripMenuItem.Text = "Sechdule Tasks";
+            // 
+            // issuToolStripMenuItem
+            // 
+            this.issuToolStripMenuItem.Name = "issuToolStripMenuItem";
+            this.issuToolStripMenuItem.Size = new System.Drawing.Size(326, 38);
+            this.issuToolStripMenuItem.Text = "Issue e Driving Licese (First Time)";
+            // 
+            // eDrivingLiceseFirstTimeToolStripMenuItem
+            // 
+            this.eDrivingLiceseFirstTimeToolStripMenuItem.Name = "eDrivingLiceseFirstTimeToolStripMenuItem";
+            this.eDrivingLiceseFirstTimeToolStripMenuItem.Size = new System.Drawing.Size(326, 38);
+            this.eDrivingLiceseFirstTimeToolStripMenuItem.Text = "Show License";
+            this.eDrivingLiceseFirstTimeToolStripMenuItem.Click += new System.EventHandler(this.eDrivingLiceseFirstTimeToolStripMenuItem_Click);
+            // 
+            // showPersonLicenseHistoryToolStripMenuItem
+            // 
+            this.showPersonLicenseHistoryToolStripMenuItem.Name = "showPersonLicenseHistoryToolStripMenuItem";
+            this.showPersonLicenseHistoryToolStripMenuItem.Size = new System.Drawing.Size(326, 38);
+            this.showPersonLicenseHistoryToolStripMenuItem.Text = "Show Person License History";
             // 
             // btn_New
             // 
@@ -171,74 +249,26 @@
             this.CB_Status.TabIndex = 8;
             this.CB_Status.SelectedIndexChanged += new System.EventHandler(this.CB_Status_SelectedIndexChanged);
             // 
-            // cMS_AllApplication
+            // scheduleVisionTestToolStripMenuItem
             // 
-            this.cMS_AllApplication.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cMS_AllApplication.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.cMS_AllApplication.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showToolStripMenuItem,
-            this.editApplicationToolStripMenuItem,
-            this.deleteApplicationToolStripMenuItem,
-            this.cancelApplicationToolStripMenuItem,
-            this.sechduleTaskToolStripMenuItem,
-            this.issuToolStripMenuItem,
-            this.eDrivingLiceseFirstTimeToolStripMenuItem,
-            this.showPersonLicenseHistoryToolStripMenuItem});
-            this.cMS_AllApplication.Name = "cMS_AllApplication";
-            this.cMS_AllApplication.Size = new System.Drawing.Size(327, 330);
+            this.scheduleVisionTestToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("scheduleVisionTestToolStripMenuItem.Image")));
+            this.scheduleVisionTestToolStripMenuItem.Name = "scheduleVisionTestToolStripMenuItem";
+            this.scheduleVisionTestToolStripMenuItem.Size = new System.Drawing.Size(245, 38);
+            this.scheduleVisionTestToolStripMenuItem.Text = "Schedule VisionTest";
             // 
-            // showToolStripMenuItem
+            // scheduleWritenTestToolStripMenuItem
             // 
-            this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
-            this.showToolStripMenuItem.Text = "show appleication details";
-            this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
+            this.scheduleWritenTestToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("scheduleWritenTestToolStripMenuItem.Image")));
+            this.scheduleWritenTestToolStripMenuItem.Name = "scheduleWritenTestToolStripMenuItem";
+            this.scheduleWritenTestToolStripMenuItem.Size = new System.Drawing.Size(245, 38);
+            this.scheduleWritenTestToolStripMenuItem.Text = "Schedule Written Test";
             // 
-            // editApplicationToolStripMenuItem
+            // scheduleStreetTestToolStripMenuItem
             // 
-            this.editApplicationToolStripMenuItem.Name = "editApplicationToolStripMenuItem";
-            this.editApplicationToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
-            this.editApplicationToolStripMenuItem.Text = "Edit Application";
-            // 
-            // deleteApplicationToolStripMenuItem
-            // 
-            this.deleteApplicationToolStripMenuItem.Name = "deleteApplicationToolStripMenuItem";
-            this.deleteApplicationToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
-            this.deleteApplicationToolStripMenuItem.Text = "Delete Application";
-            // 
-            // cancelApplicationToolStripMenuItem
-            // 
-            this.cancelApplicationToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelApplicationToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cancelApplicationToolStripMenuItem.Image")));
-            this.cancelApplicationToolStripMenuItem.Name = "cancelApplicationToolStripMenuItem";
-            this.cancelApplicationToolStripMenuItem.Size = new System.Drawing.Size(326, 38);
-            this.cancelApplicationToolStripMenuItem.Text = "Cancel Application";
-            this.cancelApplicationToolStripMenuItem.Click += new System.EventHandler(this.cancelApplicationToolStripMenuItem_Click);
-            // 
-            // sechduleTaskToolStripMenuItem
-            // 
-            this.sechduleTaskToolStripMenuItem.Name = "sechduleTaskToolStripMenuItem";
-            this.sechduleTaskToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
-            this.sechduleTaskToolStripMenuItem.Text = "Sechdule Task";
-            // 
-            // issuToolStripMenuItem
-            // 
-            this.issuToolStripMenuItem.Name = "issuToolStripMenuItem";
-            this.issuToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
-            this.issuToolStripMenuItem.Text = "Issue e Driving Licese (First Time)";
-            // 
-            // eDrivingLiceseFirstTimeToolStripMenuItem
-            // 
-            this.eDrivingLiceseFirstTimeToolStripMenuItem.Name = "eDrivingLiceseFirstTimeToolStripMenuItem";
-            this.eDrivingLiceseFirstTimeToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
-            this.eDrivingLiceseFirstTimeToolStripMenuItem.Text = "Show License";
-            this.eDrivingLiceseFirstTimeToolStripMenuItem.Click += new System.EventHandler(this.eDrivingLiceseFirstTimeToolStripMenuItem_Click);
-            // 
-            // showPersonLicenseHistoryToolStripMenuItem
-            // 
-            this.showPersonLicenseHistoryToolStripMenuItem.Name = "showPersonLicenseHistoryToolStripMenuItem";
-            this.showPersonLicenseHistoryToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
-            this.showPersonLicenseHistoryToolStripMenuItem.Text = "Show Person License History";
+            this.scheduleStreetTestToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("scheduleStreetTestToolStripMenuItem.Image")));
+            this.scheduleStreetTestToolStripMenuItem.Name = "scheduleStreetTestToolStripMenuItem";
+            this.scheduleStreetTestToolStripMenuItem.Size = new System.Drawing.Size(245, 38);
+            this.scheduleStreetTestToolStripMenuItem.Text = "Schedule Street Test";
             // 
             // frmManageLocalDrivingApplication
             // 
@@ -287,5 +317,8 @@
         private System.Windows.Forms.ToolStripMenuItem issuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eDrivingLiceseFirstTimeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showPersonLicenseHistoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scheduleVisionTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scheduleWritenTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scheduleStreetTestToolStripMenuItem;
     }
 }

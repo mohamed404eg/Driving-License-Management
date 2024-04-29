@@ -13,3 +13,9 @@ This my project to Driving License Management in country ;
 //WHEN Applications.ApplicationStatus = 2 THEN 'Cancelled'
 //WHEN Applications.ApplicationStatus = 3 THEN 'Completed'
 //END AS Status
+
+# Image Size
+
+large 64px
+medium 32px
+small 24px

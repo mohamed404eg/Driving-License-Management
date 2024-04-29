@@ -64,6 +64,12 @@
     <Compile Include="MyFroms\ApplicationTypes\frmUpdateApplicationType.Designer.cs">
       <DependentUpon>frmUpdateApplicationType.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyFroms\Application\Control\UCdrivingAndAppInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Application\Control\UCdrivingAndAppInfo.Designer.cs">
+      <DependentUpon>UCdrivingAndAppInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyFroms\Application\LocalApplication\frmManageLocalDrivingApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     <EmbeddedResource Include="MyFroms\ApplicationTypes\frmUpdateApplicationType.resx">
       <DependentUpon>frmUpdateApplicationType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Application\Control\UCdrivingAndAppInfo.resx">
+      <DependentUpon>UCdrivingAndAppInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Application\LocalApplication\frmManageLocalDrivingApplication.resx">
       <DependentUpon>frmManageLocalDrivingApplication.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,5 +249,6 @@
       <Name>DVLD - BusinessPresentation</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

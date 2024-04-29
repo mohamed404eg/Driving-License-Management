@@ -52,6 +52,7 @@
     <Compile Include="clsUserDataAccess.cs" />
     <Compile Include="Driver\clsDriverDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test\clsTakeTestDA.cs" />
     <Compile Include="Test\clsTestAppointmentsDA.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

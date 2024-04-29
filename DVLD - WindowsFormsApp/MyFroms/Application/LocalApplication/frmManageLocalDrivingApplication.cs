@@ -1,4 +1,5 @@
 ﻿using DVLD___BusinessPresentation;
+using DVLD___BusinessPresentation.Test;
 using DVLD___WindowsFormsApp.MyFroms.Functions;
 using System;
 using System.Collections.Generic;
@@ -233,6 +234,70 @@ Status
 
                 }
             }
+
+        }
+
+        void _SheduleCheckAvailable()
+        {
+            int ApplicationId = Multi._GetfirstCellInRow(dGV);
+
+            if(ApplicationId != -1)
+            {
+
+                int TopTestSuccessfullyAchving = clsTestAppointments.TopTestSuccessfullyAchving(ApplicationId);
+                
+                if(TopTestSuccessfullyAchving >= 3)
+                {
+                    sechduleTaskToolStripMenuItem.Enabled = false;
+                }
+                else
+                {
+                    sechduleTaskToolStripMenuItem.Enabled = true;
+
+                }
+
+
+                if(TopTestSuccessfullyAchving == 0)
+                {
+                    // scheduleVisionTest
+                    scheduleVisionTestToolStripMenuItem.Enabled = true;
+
+                    // end else false
+                    scheduleWritenTestToolStripMenuItem.Enabled = false;
+                    scheduleStreetTestToolStripMenuItem.Enabled = false;
+
+                }
+
+               else if (TopTestSuccessfullyAchving == 1)
+                {
+                    // scheduleWritenTest
+                    scheduleWritenTestToolStripMenuItem.Enabled = true;
+
+                    // end else false
+                    scheduleVisionTestToolStripMenuItem.Enabled = false;
+                    scheduleStreetTestToolStripMenuItem.Enabled = false;
+
+                }
+
+                else if(TopTestSuccessfullyAchving == 2)
+                {
+                    //  scheduleStreetTest
+                    scheduleStreetTestToolStripMenuItem.Enabled = true;
+
+                    // end else false
+                    scheduleVisionTestToolStripMenuItem.Enabled = false;
+                    scheduleWritenTestToolStripMenuItem.Enabled = false;
+
+                }
+
+
+            }
+
+        }
+        private void cMS_AllApplication_Opening(object sender, CancelEventArgs e)
+        {
+            // 
+            _SheduleCheckAvailable();
 
         }
     }

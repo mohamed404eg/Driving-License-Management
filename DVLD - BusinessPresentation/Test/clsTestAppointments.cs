@@ -23,12 +23,39 @@ namespace DVLD___BusinessPresentation.Test
 
        public int TestAppointmentID;
        public int TestTypeID;
-       public int LocalDrivingLicenseApplicationID;
        public DateTime AppointmentDate;
-       public double PaidFees;
+       public decimal PaidFees;
        public int CreatedByUserID;
        public bool IsLocked;
         _enMode _Mode;
+       public int _LocalDrivingLicenseApplicationID;
+        bool _RetakeTestBool;
+
+        public int LocalDrivingLicenseApplicationID
+        {
+            get
+            {
+                return _LocalDrivingLicenseApplicationID;
+            }
+            set
+            {
+                _LocalDrivingLicenseApplicationID = value;
+
+                // check if this retake test add extry fees
+                if (_RetakeTest() && _Mode == _enMode.Add)
+                {
+                    PaidFees += 5;
+                    //Caching result
+                    _RetakeTestBool = true;
+                }
+                else
+                {
+                    _RetakeTestBool = false;
+
+                }
+
+            }
+        }
         enum _enMode
         {
             Add, Updata
@@ -38,7 +65,9 @@ namespace DVLD___BusinessPresentation.Test
 
 
         // fill object when load
-        clsTestAppointments(int testAppointmentID, int testTypeID, int localDrivingLicenseApplicationID, DateTime appointmentDate, double paidFees, int createdByUserID, bool isLocked, _enMode mode)
+        clsTestAppointments(int testAppointmentID, int testTypeID, 
+            int localDrivingLicenseApplicationID, DateTime appointmentDate,
+            decimal paidFees, int createdByUserID, bool isLocked, _enMode mode)
         {
             TestAppointmentID = testAppointmentID;
             TestTypeID = testTypeID;
@@ -47,7 +76,7 @@ namespace DVLD___BusinessPresentation.Test
             PaidFees = paidFees;
             CreatedByUserID = createdByUserID;
             IsLocked = isLocked;
-            _Mode = _enMode.Updata;
+            _Mode = mode;
         }
 
       public  clsTestAppointments()
@@ -89,6 +118,15 @@ namespace DVLD___BusinessPresentation.Test
         }
 
 
+        /// <summary>
+        /// if Retake Test return true  
+        /// </summary>
+        /// <returns></returns>
+        bool _RetakeTest()
+        {
+           return clsTestAppointmentsDA.haveTestAppointmentsSameStautsOnTestType(LocalDrivingLicenseApplicationID,
+                TestTypeID,true);
+        }
 
         /// <summary>
         /// 
@@ -164,7 +202,11 @@ namespace DVLD___BusinessPresentation.Test
 
 
 
-
+        /// <summary>
+        /// updata is available to updata AppointmentDate and IsLocked 
+        /// and add new
+        /// </summary>
+        /// <returns></returns>
         public bool Save()
         {
             switch (_Mode)
@@ -179,6 +221,13 @@ namespace DVLD___BusinessPresentation.Test
                     {
                         return false;
                     }
+
+                    break;
+
+                case _enMode.Updata:
+                    return _Updata();
+
+
 
                     break;
             }
@@ -200,7 +249,7 @@ namespace DVLD___BusinessPresentation.Test
             int TestTypeID = -1;
             int LocalDrivingLicenseApplicationID = -1;
             DateTime AppointmentDate = DateTime.Now;
-            double PaidFees = -1;
+            decimal PaidFees = -1;
             int CreatedByUserID = -1;
             bool IsLocked = false;
 

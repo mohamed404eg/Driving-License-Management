@@ -30,7 +30,12 @@ namespace DVLD___BusinessPresentation
         public int ApplicantPersonID;
         public DateTime ApplicationDate;
         public int ApplicationTypeID;
+
+        /// //Applications.ApplicationStatus = 1 THEN 'New'
+        //   WHEN Applications.ApplicationStatus = 2 THEN 'Cancelled'
+        //  WHEN Applications.ApplicationStatus = 3 THEN 'Completed'
         public byte ApplicationStatus;
+
         public DateTime LastStatusDate;
         public int CreatedByUserID;
         public int ApplicationID { get { return _ApplicationID; } }
