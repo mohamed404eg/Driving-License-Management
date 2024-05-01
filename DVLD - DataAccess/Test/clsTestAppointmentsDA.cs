@@ -450,6 +450,59 @@ SELECT max(TestTypeID) as TopTestSuccessfullyAchving
 
 
 
+        /// <summary>
+        /// the number of TestAppointments he trial
+        /// </summary>
+        /// <returns></returns>
+        static public int NumberOfTrial(int LocalDrivingLicenseApplicationID , int TestTypeID)
+        {
+
+            int Number = 0;
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+
+SELECT COUNT(*)
+  FROM [dbo].[TestAppointments]
+  where LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID and TestTypeID = @TestTypeID
+
+";
+
+
+            SqlCommand command = new SqlCommand(Query, connection);
+            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+            command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
+
+
+
+            try
+            {
+                connection.Open();
+
+                object obj = command.ExecuteScalar();
+
+                if (int.TryParse(obj.ToString(), out int Num))
+                {
+                    Number = Num;
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+
+
+            return Number;
+
+
+        }
 
 
 
@@ -482,7 +535,7 @@ SELECT max(TestTypeID) as TopTestSuccessfullyAchving
 
 
 
-    }
+        }
 
 
 

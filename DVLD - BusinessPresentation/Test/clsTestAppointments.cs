@@ -21,14 +21,14 @@ namespace DVLD___BusinessPresentation.Test
     public class clsTestAppointments
     {
 
-       public int TestAppointmentID;
-       public int TestTypeID;
-       public DateTime AppointmentDate;
-       public decimal PaidFees;
-       public int CreatedByUserID;
-       public bool IsLocked;
+        public int TestAppointmentID;
+        public int TestTypeID;
+        public DateTime AppointmentDate;
+        public decimal PaidFees;
+        public int CreatedByUserID;
+        public bool IsLocked;
         _enMode _Mode;
-       public int _LocalDrivingLicenseApplicationID;
+        public int _LocalDrivingLicenseApplicationID;
         bool _RetakeTestBool;
 
         public int LocalDrivingLicenseApplicationID
@@ -65,7 +65,7 @@ namespace DVLD___BusinessPresentation.Test
 
 
         // fill object when load
-        clsTestAppointments(int testAppointmentID, int testTypeID, 
+        clsTestAppointments(int testAppointmentID, int testTypeID,
             int localDrivingLicenseApplicationID, DateTime appointmentDate,
             decimal paidFees, int createdByUserID, bool isLocked, _enMode mode)
         {
@@ -79,7 +79,7 @@ namespace DVLD___BusinessPresentation.Test
             _Mode = mode;
         }
 
-      public  clsTestAppointments()
+        public clsTestAppointments()
         {
             TestAppointmentID = -1;
             TestTypeID = -1;
@@ -100,12 +100,12 @@ namespace DVLD___BusinessPresentation.Test
         /// <returns>if faild return true otherwise retrun false</returns>
         bool _CheckTestType()
         {
-            int TopTestSuccessfullyAchving =  clsTestAppointmentsDA.TopTestSuccessfullyAchving(LocalDrivingLicenseApplicationID);
+            int TopTestSuccessfullyAchving = clsTestAppointmentsDA.TopTestSuccessfullyAchving(LocalDrivingLicenseApplicationID);
 
 
             // check if having type of the   Appointment is seccssfully 
             // check if the TestTypeID is the next 
-            if (TopTestSuccessfullyAchving > TestTypeID )
+            if (TopTestSuccessfullyAchving > TestTypeID)
             {
                 return true;
             }
@@ -124,8 +124,8 @@ namespace DVLD___BusinessPresentation.Test
         /// <returns></returns>
         bool _RetakeTest()
         {
-           return clsTestAppointmentsDA.haveTestAppointmentsSameStautsOnTestType(LocalDrivingLicenseApplicationID,
-                TestTypeID,true);
+            return clsTestAppointmentsDA.haveTestAppointmentsSameStautsOnTestType(LocalDrivingLicenseApplicationID,
+                 TestTypeID, true);
         }
 
         /// <summary>
@@ -133,21 +133,21 @@ namespace DVLD___BusinessPresentation.Test
         /// </summary>
         /// <returns>if have return true otherwise retrun false</returns>
         bool _CheckHasOpenAppomentSameType()
-        { 
+        {
 
             return clsTestAppointmentsDA.haveTestAppointmentsSameStautsOnTestType(LocalDrivingLicenseApplicationID,
                 TestTypeID);
-        
-        
+
+
         }
 
 
 
-            /// <summary>
-            /// check if this object valid condition
-            /// </summary>
-            /// <returns></returns>
-            bool Cehck_Add_New()
+        /// <summary>
+        /// check if this object valid condition
+        /// </summary>
+        /// <returns></returns>
+        bool Cehck_Add_New()
         {
 
             // check TestTypeID is Sequence ( 1 > 2 > 3) if 3 is end 
@@ -170,13 +170,13 @@ namespace DVLD___BusinessPresentation.Test
             // check condition before add to database
             if (!Cehck_Add_New())
             {
-                return false;   
+                return false;
             }
 
 
 
 
-            TestAppointmentID = clsTestAppointmentsDA.AddNew(TestTypeID, LocalDrivingLicenseApplicationID, 
+            TestAppointmentID = clsTestAppointmentsDA.AddNew(TestTypeID, LocalDrivingLicenseApplicationID,
                 AppointmentDate, PaidFees,
                CreatedByUserID, IsLocked
                 );
@@ -194,7 +194,7 @@ namespace DVLD___BusinessPresentation.Test
         /// <returns></returns>
         bool _Updata()
         {
-            return clsTestAppointmentsDA.UpadataDateByTestAppointmentID(TestAppointmentID, AppointmentDate,IsLocked);
+            return clsTestAppointmentsDA.UpadataDateByTestAppointmentID(TestAppointmentID, AppointmentDate, IsLocked);
         }
 
 
@@ -243,9 +243,9 @@ namespace DVLD___BusinessPresentation.Test
         /// </summary>
         /// <param name="TestAppointmentID"></param>
         /// <returns>if found return clsTestAppointments else null</returns>
-       static public clsTestAppointments Find(int TestAppointmentID)
+        static public clsTestAppointments Find(int TestAppointmentID)
         {
-    
+
             int TestTypeID = -1;
             int LocalDrivingLicenseApplicationID = -1;
             DateTime AppointmentDate = DateTime.Now;
@@ -253,13 +253,13 @@ namespace DVLD___BusinessPresentation.Test
             int CreatedByUserID = -1;
             bool IsLocked = false;
 
-            if(clsTestAppointmentsDA.Find(TestAppointmentID,ref  TestTypeID , ref LocalDrivingLicenseApplicationID, 
-                ref AppointmentDate, ref PaidFees , ref CreatedByUserID, ref IsLocked))
+            if (clsTestAppointmentsDA.Find(TestAppointmentID, ref TestTypeID, ref LocalDrivingLicenseApplicationID,
+                ref AppointmentDate, ref PaidFees, ref CreatedByUserID, ref IsLocked))
             {
 
                 return new clsTestAppointments(
-                    TestAppointmentID,TestTypeID,
-                    LocalDrivingLicenseApplicationID, 
+                    TestAppointmentID, TestTypeID,
+                    LocalDrivingLicenseApplicationID,
                     AppointmentDate, PaidFees,
                     CreatedByUserID, IsLocked, _enMode.Updata);
             }
@@ -314,7 +314,7 @@ namespace DVLD___BusinessPresentation.Test
         static public bool haveTestAppointmentsSameStautsOnTestType(int LocalDrivingLicenseApplicationID, int TestTypeID, bool IsLocked = false)
         {
 
-            return clsTestAppointmentsDA.haveTestAppointmentsSameStautsOnTestType(LocalDrivingLicenseApplicationID , TestTypeID, IsLocked); 
+            return clsTestAppointmentsDA.haveTestAppointmentsSameStautsOnTestType(LocalDrivingLicenseApplicationID, TestTypeID, IsLocked);
         }
 
 
@@ -324,5 +324,33 @@ namespace DVLD___BusinessPresentation.Test
 
 
 
+
+
+
+        /// <summary>
+        /// the number of TestAppointments he trial
+        /// </summary>
+        /// <returns></returns>
+        static public int NumberOfTrial(int LocalDrivingLicenseApplicationID, int TestTypeID)
+        {
+            return clsTestAppointmentsDA.NumberOfTrial(LocalDrivingLicenseApplicationID, TestTypeID);
         }
-}
+
+
+        public int NumberOfTrial()
+        {
+            return clsTestAppointmentsDA.NumberOfTrial(_LocalDrivingLicenseApplicationID, TestTypeID);
+        }
+
+
+
+
+
+
+
+
+
+
+    }}
+
+

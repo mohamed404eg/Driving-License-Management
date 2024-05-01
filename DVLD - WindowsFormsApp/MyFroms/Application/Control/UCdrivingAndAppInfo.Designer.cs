@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCdrivingAndAppInfo));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel_ShowLicense = new System.Windows.Forms.Panel();
+            this.lab_LicenseInfo = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lab_LicenseInfo = new System.Windows.Forms.Label();
             this.lab_CountPassedTest = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lab_ClassOfLicense = new System.Windows.Forms.Label();
@@ -59,14 +60,29 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel_ShowLicense = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            this.panel_ShowLicense.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.panel_ShowLicense.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -83,15 +99,43 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(773, 193);
+            this.groupBox1.Size = new System.Drawing.Size(773, 145);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Driving Licesne Application Info";
             // 
+            // panel_ShowLicense
+            // 
+            this.panel_ShowLicense.Controls.Add(this.lab_LicenseInfo);
+            this.panel_ShowLicense.Controls.Add(this.pictureBox2);
+            this.panel_ShowLicense.Location = new System.Drawing.Point(9, 70);
+            this.panel_ShowLicense.Name = "panel_ShowLicense";
+            this.panel_ShowLicense.Size = new System.Drawing.Size(194, 65);
+            this.panel_ShowLicense.TabIndex = 3;
+            // 
+            // lab_LicenseInfo
+            // 
+            this.lab_LicenseInfo.AutoSize = true;
+            this.lab_LicenseInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_LicenseInfo.Location = new System.Drawing.Point(51, 24);
+            this.lab_LicenseInfo.Name = "lab_LicenseInfo";
+            this.lab_LicenseInfo.Size = new System.Drawing.Size(140, 20);
+            this.lab_LicenseInfo.TabIndex = 0;
+            this.lab_LicenseInfo.Text = "ShowCustom License Info";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(6, 24);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(39, 25);
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(333, 141);
+            this.pictureBox4.Location = new System.Drawing.Point(333, 89);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(24, 24);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -108,15 +152,6 @@
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(6, 24);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(39, 25);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -127,21 +162,11 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // lab_LicenseInfo
-            // 
-            this.lab_LicenseInfo.AutoSize = true;
-            this.lab_LicenseInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_LicenseInfo.Location = new System.Drawing.Point(51, 24);
-            this.lab_LicenseInfo.Name = "lab_LicenseInfo";
-            this.lab_LicenseInfo.Size = new System.Drawing.Size(140, 20);
-            this.lab_LicenseInfo.TabIndex = 0;
-            this.lab_LicenseInfo.Text = "Show License Info";
-            // 
             // lab_CountPassedTest
             // 
             this.lab_CountPassedTest.AutoSize = true;
             this.lab_CountPassedTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_CountPassedTest.Location = new System.Drawing.Point(363, 145);
+            this.lab_CountPassedTest.Location = new System.Drawing.Point(363, 93);
             this.lab_CountPassedTest.Name = "lab_CountPassedTest";
             this.lab_CountPassedTest.Size = new System.Drawing.Size(31, 20);
             this.lab_CountPassedTest.TabIndex = 0;
@@ -151,7 +176,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(226, 140);
+            this.label5.Location = new System.Drawing.Point(226, 88);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 20);
             this.label5.TabIndex = 0;
@@ -201,6 +226,14 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.pictureBox12);
+            this.groupBox2.Controls.Add(this.pictureBox11);
+            this.groupBox2.Controls.Add(this.pictureBox10);
+            this.groupBox2.Controls.Add(this.pictureBox9);
+            this.groupBox2.Controls.Add(this.pictureBox8);
+            this.groupBox2.Controls.Add(this.pictureBox7);
+            this.groupBox2.Controls.Add(this.pictureBox6);
+            this.groupBox2.Controls.Add(this.pictureBox5);
             this.groupBox2.Controls.Add(this.lLab_View_Person);
             this.groupBox2.Controls.Add(this.lab__Applicant);
             this.groupBox2.Controls.Add(this.lab_StatusDate);
@@ -218,7 +251,7 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(2, 200);
+            this.groupBox2.Location = new System.Drawing.Point(3, 154);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(774, 227);
             this.groupBox2.TabIndex = 0;
@@ -229,7 +262,7 @@
             // 
             this.lLab_View_Person.AutoSize = true;
             this.lLab_View_Person.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lLab_View_Person.Location = new System.Drawing.Point(586, 206);
+            this.lLab_View_Person.Location = new System.Drawing.Point(515, 171);
             this.lLab_View_Person.Name = "lLab_View_Person";
             this.lLab_View_Person.Size = new System.Drawing.Size(119, 18);
             this.lLab_View_Person.TabIndex = 1;
@@ -242,7 +275,7 @@
             this.lab__Applicant.AutoSize = true;
             this.lab__Applicant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab__Applicant.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lab__Applicant.Location = new System.Drawing.Point(116, 169);
+            this.lab__Applicant.Location = new System.Drawing.Point(137, 169);
             this.lab__Applicant.Name = "lab__Applicant";
             this.lab__Applicant.Size = new System.Drawing.Size(54, 20);
             this.lab__Applicant.TabIndex = 0;
@@ -253,7 +286,7 @@
             this.lab_StatusDate.AutoSize = true;
             this.lab_StatusDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_StatusDate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lab_StatusDate.Location = new System.Drawing.Point(642, 76);
+            this.lab_StatusDate.Location = new System.Drawing.Point(620, 66);
             this.lab_StatusDate.Name = "lab_StatusDate";
             this.lab_StatusDate.Size = new System.Drawing.Size(89, 20);
             this.lab_StatusDate.TabIndex = 0;
@@ -264,7 +297,7 @@
             this.lab_CreatedBy.AutoSize = true;
             this.lab_CreatedBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_CreatedBy.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lab_CreatedBy.Location = new System.Drawing.Point(642, 116);
+            this.lab_CreatedBy.Location = new System.Drawing.Point(620, 106);
             this.lab_CreatedBy.Name = "lab_CreatedBy";
             this.lab_CreatedBy.Size = new System.Drawing.Size(63, 20);
             this.lab_CreatedBy.TabIndex = 0;
@@ -275,7 +308,7 @@
             this.lab_Date.AutoSize = true;
             this.lab_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_Date.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lab_Date.Location = new System.Drawing.Point(642, 27);
+            this.lab_Date.Location = new System.Drawing.Point(594, 17);
             this.lab_Date.Name = "lab_Date";
             this.lab_Date.Size = new System.Drawing.Size(89, 20);
             this.lab_Date.TabIndex = 0;
@@ -286,7 +319,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label16.Location = new System.Drawing.Point(538, 116);
+            this.label16.Location = new System.Drawing.Point(490, 106);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(96, 20);
             this.label16.TabIndex = 0;
@@ -297,18 +330,18 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label15.Location = new System.Drawing.Point(538, 76);
+            this.label15.Location = new System.Drawing.Point(490, 66);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(95, 20);
+            this.label15.Size = new System.Drawing.Size(99, 20);
             this.label15.TabIndex = 0;
-            this.label15.Text = "Status Date";
+            this.label15.Text = "Status Date:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label13.Location = new System.Drawing.Point(538, 27);
+            this.label13.Location = new System.Drawing.Point(490, 17);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(48, 20);
             this.label13.TabIndex = 0;
@@ -319,7 +352,7 @@
             this.lab_TypeOfApp.AutoSize = true;
             this.lab_TypeOfApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_TypeOfApp.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lab_TypeOfApp.Location = new System.Drawing.Point(116, 134);
+            this.lab_TypeOfApp.Location = new System.Drawing.Point(102, 134);
             this.lab_TypeOfApp.Name = "lab_TypeOfApp";
             this.lab_TypeOfApp.Size = new System.Drawing.Size(54, 20);
             this.lab_TypeOfApp.TabIndex = 0;
@@ -330,7 +363,7 @@
             this.lab_Fees.AutoSize = true;
             this.lab_Fees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_Fees.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lab_Fees.Location = new System.Drawing.Point(116, 97);
+            this.lab_Fees.Location = new System.Drawing.Point(102, 99);
             this.lab_Fees.Name = "lab_Fees";
             this.lab_Fees.Size = new System.Drawing.Size(36, 20);
             this.lab_Fees.TabIndex = 0;
@@ -341,7 +374,7 @@
             this.lab_Status.AutoSize = true;
             this.lab_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_Status.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lab_Status.Location = new System.Drawing.Point(88, 66);
+            this.lab_Status.Location = new System.Drawing.Point(107, 66);
             this.lab_Status.Name = "lab_Status";
             this.lab_Status.Size = new System.Drawing.Size(40, 20);
             this.lab_Status.TabIndex = 0;
@@ -352,7 +385,7 @@
             this.lab_AppId.AutoSize = true;
             this.lab_AppId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_AppId.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lab_AppId.Location = new System.Drawing.Point(56, 27);
+            this.lab_AppId.Location = new System.Drawing.Point(83, 27);
             this.lab_AppId.Name = "lab_AppId";
             this.lab_AppId.Size = new System.Drawing.Size(36, 20);
             this.lab_AppId.TabIndex = 0;
@@ -413,14 +446,84 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "ID :";
             // 
-            // panel_ShowLicense
+            // pictureBox5
             // 
-            this.panel_ShowLicense.Controls.Add(this.lab_LicenseInfo);
-            this.panel_ShowLicense.Controls.Add(this.pictureBox2);
-            this.panel_ShowLicense.Location = new System.Drawing.Point(9, 122);
-            this.panel_ShowLicense.Name = "panel_ShowLicense";
-            this.panel_ShowLicense.Size = new System.Drawing.Size(194, 65);
-            this.panel_ShowLicense.TabIndex = 3;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(544, 17);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox5.TabIndex = 2;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(591, 63);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox6.TabIndex = 3;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(591, 106);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(23, 27);
+            this.pictureBox7.TabIndex = 3;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(53, 27);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox8.TabIndex = 3;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(77, 66);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox9.TabIndex = 3;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(72, 99);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox10.TabIndex = 3;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(72, 134);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox11.TabIndex = 3;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(106, 169);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox12.TabIndex = 3;
+            this.pictureBox12.TabStop = false;
             // 
             // UCdrivingAndAppInfo
             // 
@@ -429,17 +532,25 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "UCdrivingAndAppInfo";
-            this.Size = new System.Drawing.Size(777, 428);
+            this.Size = new System.Drawing.Size(777, 382);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel_ShowLicense.ResumeLayout(false);
+            this.panel_ShowLicense.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.panel_ShowLicense.ResumeLayout(false);
-            this.panel_ShowLicense.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -477,5 +588,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel lLab_View_Person;
         private System.Windows.Forms.Panel panel_ShowLicense;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

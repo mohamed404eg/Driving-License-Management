@@ -162,14 +162,14 @@
             // 
             this.eDrivingLiceseFirstTimeToolStripMenuItem.Name = "eDrivingLiceseFirstTimeToolStripMenuItem";
             this.eDrivingLiceseFirstTimeToolStripMenuItem.Size = new System.Drawing.Size(326, 38);
-            this.eDrivingLiceseFirstTimeToolStripMenuItem.Text = "Show License";
+            this.eDrivingLiceseFirstTimeToolStripMenuItem.Text = "ShowCustom License";
             this.eDrivingLiceseFirstTimeToolStripMenuItem.Click += new System.EventHandler(this.eDrivingLiceseFirstTimeToolStripMenuItem_Click);
             // 
             // showPersonLicenseHistoryToolStripMenuItem
             // 
             this.showPersonLicenseHistoryToolStripMenuItem.Name = "showPersonLicenseHistoryToolStripMenuItem";
             this.showPersonLicenseHistoryToolStripMenuItem.Size = new System.Drawing.Size(326, 38);
-            this.showPersonLicenseHistoryToolStripMenuItem.Text = "Show Person License History";
+            this.showPersonLicenseHistoryToolStripMenuItem.Text = "ShowCustom Person License History";
             // 
             // btn_New
             // 

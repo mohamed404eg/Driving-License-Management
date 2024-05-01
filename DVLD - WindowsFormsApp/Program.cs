@@ -1,5 +1,7 @@
 ﻿
 using DVLD___WindowsFormsApp.MyFroms.Application.LocalApplication;
+using DVLD___WindowsFormsApp.MyFroms.Application.Test;
+using DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision;
 using DVLD___WindowsFormsApp.MyFroms.Login;
 using DVLD___WindowsFormsApp.MyFroms.ManageTestTypes;
 using DVLD___WindowsFormsApp.MyFroms.Person;
@@ -26,7 +28,7 @@ namespace DVLD___WindowsFormsApp
 
 
             //test
-              Application.Run(new frmLogin());
+              Application.Run(new frmScheduleTest());
 
            // Application.Run(new frmManageLocalDrivingApplication());
         }

@@ -82,6 +82,18 @@
     <Compile Include="MyFroms\Application\LocalApplication\frmNewLocalDrivingApplication.Designer.cs">
       <DependentUpon>frmNewLocalDrivingApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyFroms\Application\Test\Vision\frmScheduleTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Application\Test\Vision\frmScheduleTest.Designer.cs">
+      <DependentUpon>frmScheduleTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyFroms\Application\Test\Vision\frmVisionTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Application\Test\Vision\frmVisionTest.Designer.cs">
+      <DependentUpon>frmVisionTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyFroms\CurrentUser.cs" />
     <Compile Include="MyFroms\Functions\Multi.cs" />
     <Compile Include="MyFroms\Login\frmLogin.cs">
@@ -185,6 +197,12 @@
     <EmbeddedResource Include="MyFroms\Application\LocalApplication\frmNewLocalDrivingApplication.resx">
       <DependentUpon>frmNewLocalDrivingApplication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Application\Test\Vision\frmScheduleTest.resx">
+      <DependentUpon>frmScheduleTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Application\Test\Vision\frmVisionTest.resx">
+      <DependentUpon>frmVisionTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +267,23 @@
       <Name>DVLD - BusinessPresentation</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VisionTestLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shared-vision %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Written %28Theory%29 Test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\writing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vehicles.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

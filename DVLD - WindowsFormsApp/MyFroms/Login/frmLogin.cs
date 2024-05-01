@@ -85,7 +85,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Login
                     // show next form
 
                     //frmMain frmMain = new frmMain();
-                    //frmMain.Show();
+                    //frmMain.ShowCustom();
                     //this.Hide();
 
 

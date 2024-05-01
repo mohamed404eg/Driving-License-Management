@@ -16,6 +16,7 @@ This my project to Driving License Management in country ;
 
 # Image Size
 
-large 64px
-medium 32px
-small 24px
+- large x2 128px
+- large 64px
+- medium 32px
+- small 24px

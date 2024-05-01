@@ -198,7 +198,7 @@ Email,
             enFilterBy IndexFilterBy = (enFilterBy)cb_FilterBy.SelectedIndex;
 
 
-            //MessageBox.Show(cb_FilterBy.SelectedIndex.ToString());
+            //MessageBox.ShowCustom(cb_FilterBy.SelectedIndex.ToString());
 
          
             // send action update
