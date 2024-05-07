@@ -104,7 +104,7 @@ SELECT [DriverID]
             return dt;
         }
   
-     static public DataTable FindByPersonID(int PersonID)
+     static public DataTable FindByPersonIdDataTable(int PersonID)
         {
 
             DataTable dt = new DataTable();
@@ -151,7 +151,70 @@ SELECT [DriverID]
 
             return dt;
         }
-     static public DataTable FindByNationalNo( string NationalNo)
+
+        /// <summary>
+        /// Find By PersonID
+        /// </summary>
+        /// <param name="PersonID"></param>
+        /// <param name="DriverID"></param>
+        /// <param name="CreatedByUserID"></param>
+        /// <param name="CreatedDate"></param>
+        /// <returns>true if found otherwise return false</returns>
+        static public bool FindByPersonID(int PersonID ,ref int DriverID ,ref int CreatedByUserID,ref DateTime CreatedDate)
+        {
+
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+SELECT [DriverID]
+      ,[PersonID]
+      ,[CreatedByUserID]
+      ,[CreatedDate]
+  FROM [dbo].[Drivers]
+
+  where PersonID = @PersonID
+";
+
+            SqlCommand command = new SqlCommand(Query, connection);
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    isFound = true;
+                    DriverID = (int)reader["DriverID"];
+                    CreatedByUserID = (int)reader["CreatedByUserID"];
+                    CreatedDate = (DateTime)reader["CreatedDate"];
+                
+
+                    
+
+                }
+
+                reader.Close();
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
+
+        static public DataTable FindByNationalNo( string NationalNo)
         {
 
 
@@ -249,6 +312,117 @@ SELECT [DriverID]
         }
 
 
+        
+
+        /// <summary>
+        /// add new recored
+        /// </summary>
+        /// <param name="PersonID"></param>
+        /// <param name="CreatedByUserID"></param>
+        /// <param name="CreatedDate"></param>
+        /// <returns>if successfully return DriverID otherwise return -1</returns>
+      static public  int AddNew(int PersonID,
+     int   CreatedByUserID ,
+           DateTime  CreatedDate )
+        {
+            int DriverID = -1;
+
+
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Qurey = @"
+
+INSERT INTO [dbo].[Drivers]
+           ([PersonID]
+           ,[CreatedByUserID]
+           ,[CreatedDate])
+     VALUES
+           (@PersonID
+           ,@CreatedByUserID
+           ,@CreatedDate)
+select SCOPE_IDENTITY ()
+";
+
+
+            SqlCommand command = new SqlCommand(Qurey, connection);
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+            command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+            command.Parameters.AddWithValue("@CreatedDate", CreatedDate);
+            try
+            {
+                connection.Open();
+
+                object obj = command.ExecuteScalar();
+
+                if (obj != null && int.TryParse(obj.ToString(),out int Number))
+                {
+                    DriverID = Number;
+
+                }
+
+
+
+            }catch(Exception ex)
+            {
+                Console.WriteLine (ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return DriverID;
+
+        }
+
+
+
+        /// <summary>
+        /// find by PersonID
+        /// </summary>
+        /// <param name="PersonID"></param>
+        /// <returns>return true if successfully otherwise return false</returns>
+        static public bool IsFindByPersonID(int PersonID)
+        {
+
+            bool IsFound = false;
+
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+SELECT R = 1
+  FROM [dbo].[Drivers_View]
+  where PersonID = @PersonID
+";
+
+            SqlCommand command = new SqlCommand(Query, connection);
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+
+            try
+            {
+                connection.Open();
+                object R = command.ExecuteScalar();
+
+                if (R != null && int.TryParse(R.ToString(),out int Num))
+                {
+                    IsFound = true;
+                }
+
+              
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return IsFound;
+        }
 
 
     }

@@ -51,6 +51,7 @@
     <Compile Include="clsTestTypesDateAccess.cs" />
     <Compile Include="clsUserDataAccess.cs" />
     <Compile Include="Driver\clsDriverDA.cs" />
+    <Compile Include="Driver\clsLicensesDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test\clsTakeTestDA.cs" />
     <Compile Include="Test\clsTestAppointmentsDA.cs" />

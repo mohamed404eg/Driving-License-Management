@@ -87,11 +87,11 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Control
         {
             lab_CountPassedTest.Text = "";
 
-            string StPassed = "0/";
+            string StPassed = "";
 
           StPassed+= clsTestAppointments.TopTestSuccessfullyAchving(_LocalDrivingLicenseApplication).ToString();
 
-            StPassed += "";
+            StPassed += "/3";
 
             lab_CountPassedTest.Text = StPassed;
 
@@ -104,12 +104,13 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Control
 
 
             // ApplicationStatus
-            lab_Status.Text = app.ApplicationStatus.ToString();
+            ShowApplicationStatus(app);
+          
             // PaidFees
             lab_Fees.Text = app.PaidFees.ToString();
 
             // Application Type Title
-            lab_TypeOfApp.Text = clsTestTypes.Find(app.ApplicationTypeID).TestTypeTitle;
+            lab_TypeOfApp.Text = clsApplicationTypes.Find(app.ApplicationTypeID).ApplicationTypeTitle;
 
             // Applicant FullName
             lab__Applicant.Text = clsPeople.Find(app.ApplicantPersonID).FullName();
@@ -125,7 +126,30 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Control
 
 
         }
+        void ShowApplicationStatus(clsLocalDrivingLicenseApplications app)
+        {
+            // ## Applications Status
 
+            //Applications.ApplicationStatus = 1 THEN 'New'
+            //WHEN Applications.ApplicationStatus = 2 THEN 'Cancelled'
+            //WHEN Applications.ApplicationStatus = 3 THEN 'Completed'
+            //END AS Status
+            if(app.ApplicationStatus == 1)
+            {
+            lab_Status.Text = "New";
+
+            }else if(app.ApplicationStatus == 2)
+            {
+                lab_Status.Text = "Cancelled";
+
+            }
+            else if (app.ApplicationStatus == 3)
+            {
+                lab_Status.Text = "Completed";
+
+            }
+
+        }
         private void lLab_View_Person_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if(_app != null)

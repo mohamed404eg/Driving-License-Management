@@ -1,6 +1,7 @@
 ﻿using DVLD___BusinessPresentation.Test;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,7 +69,23 @@ namespace Test__ConsoleApp.Test
         }
 
 
+        static public void TestFindByLocalDrivingLicenseApplicationIdAndTestTypeID(int LocalDrivingLicenseApplicationID, int TestTypeID)
+        {
 
+            DataTable dt = clsTestAppointments.FindByLocalDrivingLicenseApplicationIdAndTestTypeID(LocalDrivingLicenseApplicationID, TestTypeID);
+
+          foreach(DataRow row in dt.Rows)
+            {
+
+                foreach(DataColumn c in dt.Columns)
+
+                {
+                    Console.WriteLine(row[c].ToString());
+                }
+
+            }
+
+        }
 
 
 

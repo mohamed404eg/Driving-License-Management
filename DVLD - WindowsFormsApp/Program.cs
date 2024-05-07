@@ -27,10 +27,10 @@ namespace DVLD___WindowsFormsApp
             //   Application.Run(new frmLogin());
 
 
-            //test
-              Application.Run(new frmScheduleTest());
+            // == test ===
+              //Application.Run(new frmVisionTest(35,frmVisionTest.enTestType.VisionTest));
 
-           // Application.Run(new frmManageLocalDrivingApplication());
+           Application.Run(new frmManageLocalDrivingApplication());
         }
     }
 }

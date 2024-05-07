@@ -29,7 +29,7 @@ namespace DVLD___BusinessPresentation.Test
         public bool IsLocked;
         _enMode _Mode;
         public int _LocalDrivingLicenseApplicationID;
-        bool _RetakeTestBool;
+   
 
         public int LocalDrivingLicenseApplicationID
         {
@@ -41,18 +41,7 @@ namespace DVLD___BusinessPresentation.Test
             {
                 _LocalDrivingLicenseApplicationID = value;
 
-                // check if this retake test add extry fees
-                if (_RetakeTest() && _Mode == _enMode.Add)
-                {
-                    PaidFees += 5;
-                    //Caching result
-                    _RetakeTestBool = true;
-                }
-                else
-                {
-                    _RetakeTestBool = false;
-
-                }
+             
 
             }
         }
@@ -85,7 +74,7 @@ namespace DVLD___BusinessPresentation.Test
             TestTypeID = -1;
             LocalDrivingLicenseApplicationID = -1;
             AppointmentDate = DateTime.Now;
-            PaidFees = -1;
+            PaidFees = 0;
             CreatedByUserID = -1;
             IsLocked = false;
             _Mode = _enMode.Add;
@@ -122,10 +111,11 @@ namespace DVLD___BusinessPresentation.Test
         /// if Retake Test return true  
         /// </summary>
         /// <returns></returns>
-        bool _RetakeTest()
+      public  bool RetakeTest()
         {
-            return clsTestAppointmentsDA.haveTestAppointmentsSameStautsOnTestType(LocalDrivingLicenseApplicationID,
-                 TestTypeID, true);
+            int NumberOfTrial = clsTestAppointmentsDA.NumberOfTrial(LocalDrivingLicenseApplicationID,
+                 TestTypeID);
+            return (NumberOfTrial > 0);
         }
 
         /// <summary>
@@ -285,6 +275,19 @@ namespace DVLD___BusinessPresentation.Test
         }
 
 
+        /// <summary>
+        /// find by LocalDrivingLicenseApplicationID and TestTypeID
+        /// </summary>
+        /// <param name="LocalDrivingLicenseApplicationID"></param>
+        /// <returns>DataTable</returns>
+        static public DataTable FindByLocalDrivingLicenseApplicationIdAndTestTypeID(int LocalDrivingLicenseApplicationID , int TestTypeID)
+        {
+
+
+            return clsTestAppointmentsDA.FindByLocalDrivingLicenseApplicationIdAndTestTypeID
+                (LocalDrivingLicenseApplicationID , TestTypeID);
+        }
+
 
 
 
@@ -319,6 +322,18 @@ namespace DVLD___BusinessPresentation.Test
 
 
 
+        /// <summary>
+        /// count have TestAppointments Same Stauts (IsLocked = 1 or 0) On this TestType
+        /// </summary>
+        /// <param name="LocalDrivingLicenseApplicationID"></param>
+        /// <param name="TestTypeID"></param>
+        /// <param name="IsLocked"></param>
+        /// <returns>return count have TestAppointments Same Stauts (IsLocked = 1 or 0) On this TestType</returns>
+        static public int CounthaveTestAppointmentsSameStautsOnTestType(int LocalDrivingLicenseApplicationID, int TestTypeID, bool IsLocked = false)
+        {
+
+            return clsTestAppointmentsDA.CounthaveTestAppointmentsSameStautsOnTestType(LocalDrivingLicenseApplicationID, TestTypeID, IsLocked);
+        }
 
 
 
@@ -343,7 +358,7 @@ namespace DVLD___BusinessPresentation.Test
         }
 
 
-
+        
 
 
 

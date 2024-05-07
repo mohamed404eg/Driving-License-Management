@@ -221,7 +221,7 @@ SELECT [TestAppointmentID]
 
                 SqlDataReader reader = command.ExecuteReader();
 
-                while (reader.HasRows)
+                if (reader.HasRows)
                 {
                  
                     dt.Load(reader);
@@ -254,6 +254,77 @@ SELECT [TestAppointmentID]
 
 
 
+
+
+        /// <summary>
+        /// find by LocalDrivingLicenseApplicationID and TestTypeID
+        /// </summary>
+        /// <param name="LocalDrivingLicenseApplicationID"></param>
+        /// <param name="TestTypeID"></param>
+        /// <returns>DataTable</returns>
+        static public DataTable FindByLocalDrivingLicenseApplicationIdAndTestTypeID(int LocalDrivingLicenseApplicationID, int TestTypeID)
+        {
+            DataTable dt = new DataTable();
+
+
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Qurey = @"          
+
+SELECT [TestAppointmentID]
+      ,[TestTypeID]
+      ,[LocalDrivingLicenseApplicationID]
+      ,[AppointmentDate]
+      ,[PaidFees]
+      ,[CreatedByUserID]
+      ,[IsLocked]
+  FROM [dbo].[TestAppointments]
+  WHERE LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID And TestTypeID = @TestTypeID 
+
+";
+
+            SqlCommand command = new SqlCommand(Qurey, connection);
+
+            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+            command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
+
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+
+                    dt.Load(reader);
+
+
+                }
+
+                reader.Close();
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.ToString());
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+
+
+
+
+            return dt;
+        }
 
 
 
@@ -508,34 +579,90 @@ SELECT COUNT(*)
 
 
 
+        /// <summary>
+        /// count have TestAppointments Same Stauts (IsLocked = 1 or 0) On this TestType
+        /// </summary>
+        /// <param name="LocalDrivingLicenseApplicationID"></param>
+        /// <param name="TestTypeID"></param>
+        /// <param name="IsLocked"></param>
+        /// <returns>if has retrun count have TestAppointments Same Stauts (IsLocked = 1 or 0) On this TestType</returns>
+        static public int CounthaveTestAppointmentsSameStautsOnTestType(int LocalDrivingLicenseApplicationID, int TestTypeID, bool IsLocked = false)
+        {
+            int Count = 0;
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+
+SELECT DISTINCT  Count(*)
+  FROM [dbo].[TestAppointments]
+  where LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID and IsLocked = @IsLocked and TestTypeID =@TestTypeID
+
+
+";
+
+
+            SqlCommand command = new SqlCommand(Query, connection);
+            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+            command.Parameters.AddWithValue("@IsLocked", IsLocked);
+            command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
+
+
+            try
+            {
+                connection.Open();
+
+                object obj = command.ExecuteScalar();
+                if (obj != null && int.TryParse(obj.ToString(),out int Num))
+                {
+                    Count = Num;
+                }
+              
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            return Count;
 
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
 
 
 

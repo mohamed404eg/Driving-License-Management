@@ -1,4 +1,5 @@
 ﻿using DVLD___BusinessPresentation;
+using DVLD___BusinessPresentation.Applications.LicenseClass;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,6 +16,9 @@ using Test__ConsoleApp.Test;
 
 namespace Test__ConsoleApp
 {
+
+   
+
     internal class Program
     {
 
@@ -1175,6 +1179,15 @@ string ImagePath)
             // DriverTest.FindByFullName("Mhamed");
             //  DriverTest.FindByFullName("Khalid ALi Maher hamed");
 
+            //DriverTest._Add(1025, 1, DateTime.Now);
+
+
+
+
+
+
+
+
 
             // clsTestAppointmentsTest.CreateTestAppointments(LocalDrivingLicenseApplicationID1038);
 
@@ -1182,6 +1195,12 @@ string ImagePath)
 
 
             // clsTestAppointmentsTest.UpdateTestAppointments();
+
+            // clsTestAppointmentsTest.TestFindByLocalDrivingLicenseApplicationIdAndTestTypeID(31, 1);
+            // clsTestAppointmentsTest.TestFindByLocalDrivingLicenseApplicationIdAndTestTypeID(34, 1);
+
+
+
 
 
             // TestclsTakeTest \\
@@ -1193,9 +1212,34 @@ string ImagePath)
             //   TestclsTakeTest.Add(74);
 
 
+            // TestclsLicenses //
+
+            // id = 12 // DriverTest._Add(1159, 1, DateTime.Now);
+            // clsLicenseClass licenseClass = clsLicenseClass.Find(3);
+            //// id = 19 // TestclsLicenses.addNew(1088, 12, 3, DateTime.Now, DateTime.Now.AddYears(licenseClass.DefaultValidityLength), ""
+            //     , licenseClass.ClassFees, true, 1, 1);
+
+
+
+
+
+
+
+
+            TestclsLicenses.FindByApplicationID(1088);
 
 
             Console.ReadKey();
         }
     }
+
+
+
+
+
+
+
+
+
+
 }

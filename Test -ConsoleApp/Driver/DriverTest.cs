@@ -102,6 +102,39 @@ namespace Test__ConsoleApp.Driver
 
             }
         }
+        static public void _Add(int PersonID,
+     int CreatedByUserID,
+           DateTime CreatedDate)
+        {
+            clsDriver driver = new clsDriver();
+
+            driver.PersonID = PersonID;
+            driver.CreatedByUserID = CreatedByUserID;
+            driver.CreatedDate = CreatedDate;
+
+            if (driver.Save())
+            {
+                Console.WriteLine("Successfully id = " + driver.PersonID);
+            }
+            else
+            {
+                Console.WriteLine("Faild");
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }

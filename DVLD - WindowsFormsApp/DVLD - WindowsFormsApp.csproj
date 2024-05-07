@@ -82,19 +82,45 @@
     <Compile Include="MyFroms\Application\LocalApplication\frmNewLocalDrivingApplication.Designer.cs">
       <DependentUpon>frmNewLocalDrivingApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyFroms\Application\Test\Vision\frmScheduleTest.cs">
+    <Compile Include="MyFroms\Application\Test\FactionTest.cs" />
+    <Compile Include="MyFroms\Application\Test\frmTakeTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyFroms\Application\Test\Vision\frmScheduleTest.Designer.cs">
+    <Compile Include="MyFroms\Application\Test\frmTakeTest.Designer.cs">
+      <DependentUpon>frmTakeTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyFroms\Application\Test\frmScheduleTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Application\Test\frmScheduleTest.Designer.cs">
       <DependentUpon>frmScheduleTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyFroms\Application\Test\Vision\frmVisionTest.cs">
+    <Compile Include="MyFroms\Application\Test\frmTestAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyFroms\Application\Test\Vision\frmVisionTest.Designer.cs">
-      <DependentUpon>frmVisionTest.cs</DependentUpon>
+    <Compile Include="MyFroms\Application\Test\frmTestAppointment.Designer.cs">
+      <DependentUpon>frmTestAppointment.cs</DependentUpon>
     </Compile>
     <Compile Include="MyFroms\CurrentUser.cs" />
+    <Compile Include="MyFroms\Driver\Issue License\IssueDriverLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Driver\Issue License\IssueDriverLicense.Designer.cs">
+      <DependentUpon>IssueDriverLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyFroms\Driver\ShowLicense\frmShowLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Driver\ShowLicense\frmShowLicense.Designer.cs">
+      <DependentUpon>frmShowLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyFroms\Driver\ShowLicense\IssueReason.cs" />
+    <Compile Include="MyFroms\Driver\ShowLicense\uCDriverLicenseInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Driver\ShowLicense\uCDriverLicenseInfo.Designer.cs">
+      <DependentUpon>uCDriverLicenseInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyFroms\Functions\Multi.cs" />
     <Compile Include="MyFroms\Login\frmLogin.cs">
       <SubType>Form</SubType>
@@ -176,6 +202,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\RImage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RImage.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,11 +228,23 @@
     <EmbeddedResource Include="MyFroms\Application\LocalApplication\frmNewLocalDrivingApplication.resx">
       <DependentUpon>frmNewLocalDrivingApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyFroms\Application\Test\Vision\frmScheduleTest.resx">
+    <EmbeddedResource Include="MyFroms\Application\Test\frmTakeTest.resx">
+      <DependentUpon>frmTakeTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Application\Test\frmScheduleTest.resx">
       <DependentUpon>frmScheduleTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyFroms\Application\Test\Vision\frmVisionTest.resx">
-      <DependentUpon>frmVisionTest.cs</DependentUpon>
+    <EmbeddedResource Include="MyFroms\Application\Test\frmTestAppointment.resx">
+      <DependentUpon>frmTestAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Driver\Issue License\IssueDriverLicense.resx">
+      <DependentUpon>IssueDriverLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Driver\ShowLicense\frmShowLicense.resx">
+      <DependentUpon>frmShowLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Driver\ShowLicense\uCDriverLicenseInfo.resx">
+      <DependentUpon>uCDriverLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -247,7 +290,12 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources\RImage.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RImage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -284,6 +332,102 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\vehicles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\writing %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-type-definition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\approved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sticky-notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\licensing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drivers-license.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sticky-notes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drivers-license %28128px%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\certificate-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passport-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\issueeReason-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Date OfBirth-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drivers-license-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expired-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ban-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no-image-128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

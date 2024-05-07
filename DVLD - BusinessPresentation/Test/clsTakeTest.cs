@@ -1,6 +1,7 @@
 ﻿using DVLD___DataAccess.Test;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -113,6 +114,43 @@ namespace DVLD___BusinessPresentation.Test
 
             return false;
         }
+
+
+        void UpdateApplicationStatus()
+        {
+            if (TestResult == false) return;
+
+
+            //check is if this last test type
+
+            clsTestAppointments testAppointments = clsTestAppointments.Find(this.TestAppointmentID);
+
+            int TestTypeId = testAppointments.TestTypeID;
+            // if equal 3 then update ApplicationStatus to Completed (ApplicationStatus = 3)
+            if (TestTypeId == 3) {
+                
+                // Find clsLocalDrivingLicenseApplications 
+                clsLocalDrivingLicenseApplications LApplications = clsLocalDrivingLicenseApplications.Find(testAppointments.LocalDrivingLicenseApplicationID);
+               
+                // Find applications 
+                clsApplications applications = clsApplications.Find(LApplications.ApplicationID);
+
+                // change ApplicationStatus = 3
+                if (applications != null)
+                {
+                    applications.ApplicationStatus = 3;
+
+                }
+
+                // save
+                applications.Save();
+
+
+
+            }
+
+
+        }
        public bool Save()
         {
             switch (_Mode)
@@ -123,7 +161,8 @@ namespace DVLD___BusinessPresentation.Test
                         // locked TestAppointment
                         _LockedTestAppointment();
 
-
+                        // Update ApplicationStatus
+                        UpdateApplicationStatus();
                         return true;
                     }
                 

@@ -41,7 +41,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Person
             this.lab_Title.ForeColor = System.Drawing.Color.Brown;
             this.lab_Title.Location = new System.Drawing.Point(266, 24);
             this.lab_Title.Name = "lab_Title";
-            this.lab_Title.Size = new System.Drawing.Size(280, 46);
+            this.lab_Title.Size = new System.Drawing.Size(224, 37);
             this.lab_Title.TabIndex = 1;
             this.lab_Title.Text = "Person Details";
             // 
@@ -61,16 +61,16 @@ namespace DVLD___WindowsFormsApp.MyFroms.Person
             this.ucPersonInfo1.Location = new System.Drawing.Point(2, 75);
             this.ucPersonInfo1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ucPersonInfo1.Name = "ucPersonInfo1";
-            this.ucPersonInfo1.Size = new System.Drawing.Size(791, 395);
+            this.ucPersonInfo1.Size = new System.Drawing.Size(837, 395);
             this.ucPersonInfo1.TabIndex = 45;
             this.ucPersonInfo1.Load += new System.EventHandler(this.ucPersonInfo1_Load);
             // 
             // frmPersonDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(795, 525);
+            this.ClientSize = new System.Drawing.Size(852, 525);
             this.Controls.Add(this.ucPersonInfo1);
             this.Controls.Add(this.lab_Title);
             this.Controls.Add(this.button1);

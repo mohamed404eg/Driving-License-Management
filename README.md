@@ -20,3 +20,14 @@ This my project to Driving License Management in country ;
 - large 64px
 - medium 32px
 - small 24px
+
+
+# IssueReason
+
+- 1 License issuance service for the first time. Application fee is $5.
+- 2 Re-inspection service. Application fee is $5.
+- 3 Driving license renewal service. Application fee is $5.
+- 4 Issuing a replacement for a lost license service. Application fee is $5.
+- 5 Service for issuing a replacement for a damaged license. Application fee is $5.
+- 6 Driving license cancellation service. Application fee is $5.
+- 7 International license issuance service. Application fee is $5.

@@ -48,6 +48,7 @@
             this.lable34 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lab_IsLocked = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pB_Logo = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -63,7 +64,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btn_Save = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.lab_IsLocked = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -287,6 +287,18 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "D.L.App.ID:";
             // 
+            // lab_IsLocked
+            // 
+            this.lab_IsLocked.AutoSize = true;
+            this.lab_IsLocked.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_IsLocked.ForeColor = System.Drawing.Color.Brown;
+            this.lab_IsLocked.Location = new System.Drawing.Point(162, 119);
+            this.lab_IsLocked.Name = "lab_IsLocked";
+            this.lab_IsLocked.Size = new System.Drawing.Size(82, 20);
+            this.lab_IsLocked.TabIndex = 1;
+            this.lab_IsLocked.Text = "IsLocked";
+            this.lab_IsLocked.Visible = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -328,7 +340,7 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(339, 19);
+            this.pictureBox10.Location = new System.Drawing.Point(330, 31);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(24, 24);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -359,7 +371,7 @@
             // 
             this.lab_TotalFees.AutoSize = true;
             this.lab_TotalFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_TotalFees.Location = new System.Drawing.Point(369, 23);
+            this.lab_TotalFees.Location = new System.Drawing.Point(360, 35);
             this.lab_TotalFees.Name = "lab_TotalFees";
             this.lab_TotalFees.Size = new System.Drawing.Size(36, 20);
             this.lab_TotalFees.TabIndex = 2;
@@ -369,7 +381,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(245, 16);
+            this.label11.Location = new System.Drawing.Point(236, 31);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(88, 20);
             this.label11.TabIndex = 2;
@@ -434,18 +446,6 @@
             this.button2.Text = "Close";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // lab_IsLocked
-            // 
-            this.lab_IsLocked.AutoSize = true;
-            this.lab_IsLocked.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_IsLocked.ForeColor = System.Drawing.Color.Brown;
-            this.lab_IsLocked.Location = new System.Drawing.Point(162, 119);
-            this.lab_IsLocked.Name = "lab_IsLocked";
-            this.lab_IsLocked.Size = new System.Drawing.Size(82, 20);
-            this.lab_IsLocked.TabIndex = 1;
-            this.lab_IsLocked.Text = "IsLocked";
-            this.lab_IsLocked.Visible = false;
             // 
             // frmScheduleTest
             // 

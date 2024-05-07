@@ -12,6 +12,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using System.Resources;
+using System.Reflection;
+using System.Threading;
+using System.Globalization;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision
 {
@@ -24,7 +29,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision
         enum enMode
         {
             New,Update , IsLocked
-
+               
         }
         enMode _Mode;
 
@@ -32,7 +37,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision
         {
             InitializeComponent();
             LoadDataUpdate( TestAppointmentId);
-
+            
         }
 
         public frmScheduleTest()
@@ -47,12 +52,24 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision
             LoadData(LocalAppId,TestType);
         }
 
-        public void LoadData(int LocalAppId, int TestType)
+        void SetData(int LocalAppId, int TestType)
         {
             _tA = new clsTestAppointments();
             _LocalAppId = LocalAppId;
             _tA.TestTypeID = TestType;
             _Mode = enMode.New;
+
+            _tA.LocalDrivingLicenseApplicationID = _LocalAppId;
+
+            //_tA.CreatedByUserID = CurrentUser.User.UserID;
+            // for test
+            _tA.CreatedByUserID = 1;
+
+        }
+        public void LoadData(int LocalAppId, int TestType)
+        {
+            // set initl data
+            SetData(LocalAppId,TestType);
 
             // show header logo
             ShowCustom();
@@ -64,44 +81,67 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision
 
             if(LDLApp != null )
             {
-                lab_D_L_App_ID.Text = LDLApp.ApplicationID.ToString();
-                labe_Dclass.Text = clsLicenseClass.Find(LDLApp.LicenseClassID).ClassName;
-                lab_Trial.Text = clsTestAppointments.NumberOfTrial(LDLApp.LocalDrivingLicenseApplicationID,
-                    LDLApp.ApplicationTypeID).ToString();
-                 
-                
+                ShowData(LDLApp);
+
+
             }
+            // set fees on _tA
+            SetFees(LDLApp);
             // set fees on screen
-            ShowFees(LDLApp);
-            ShowRetakeTest(LDLApp);
+            
+            ShowRetakeTest();
 
 
 
         }
 
+        void ShowData(clsLocalDrivingLicenseApplications LDLApp)
+        {
+            lab_D_L_App_ID.Text = LDLApp.ApplicationID.ToString();
+            labe_Dclass.Text = clsLicenseClass.Find(LDLApp.LicenseClassID).ClassName;
+            lab_Trial.Text = clsTestAppointments.NumberOfTrial(LDLApp.LocalDrivingLicenseApplicationID,
+                LDLApp.ApplicationTypeID).ToString();
+            lab_Name.Text = clsPeople.Find(LDLApp.ApplicantPersonID).FullName();
+
+        }
       
+        void SetFees(clsLocalDrivingLicenseApplications LDLApp)
+        {
+            _tA.PaidFees += clsTestTypes.Find(_tA.TestTypeID).TestTypeFees;
+
+            ShowFees(LDLApp);
+
+            if (_tA.RetakeTest())
+            {
+                _tA.PaidFees += 5;
+            }
+        }
         void ShowLogo()
         {
-              const string resxFile = @".\frmScheduleTest.resx";
             // Get resources from .resx file.
-            using (ResXResourceSet resxSet = new ResXResourceSet(resxFile))
-            {
+            ResourceManager resourceManager = new ResourceManager("DVLD___WindowsFormsApp.Resources.RImage", Assembly.GetExecutingAssembly());
+
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("en-US");
+       
                 if (_tA.TestTypeID == 1)
                 {
-                 
-                    pB_Logo.Image = (Bitmap)resxSet.GetObject("shared-vision (1)", true);
-                }else if (_tA.TestTypeID == 2)
-                {
-                    pB_Logo.Image = (Bitmap)resxSet.GetObject("writing", true);
 
+                pB_Logo.Image =(Bitmap) resourceManager.GetObject("vision_Test", new CultureInfo("en-US"));
                 }
-                else
+                else if (_tA.TestTypeID == 2)
                 {
-                    pB_Logo.Image = (Bitmap)resxSet.GetObject("vehicles", true);
+                pB_Logo.Image = (Bitmap)resourceManager.GetObject("writing__1_", new CultureInfo("en-US"));
 
-                }
 
             }
+            else
+                {
+                pB_Logo.Image = (Bitmap)resourceManager.GetObject("car", new CultureInfo("en-US"));
+                
+
+            }
+
+            
 
         }
 
@@ -138,16 +178,15 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision
         void ShowFees(clsLocalDrivingLicenseApplications LDLApp)
         {
             // fees of Test TestAppointment (diif of fees of application) by type of the test not type application
-            lab_Fees.Text = clsTestTypes.Find(_tA.TestTypeID).ToString();
+            lab_Fees.Text = _tA.PaidFees.ToString(("0.00"));
         }
 
          
 
-        void ShowRetakeTest(clsLocalDrivingLicenseApplications LDLApp)
+        void ShowRetakeTest()
         {
-            bool isRetake =  clsTestAppointments.haveTestAppointmentsSameStautsOnTestType(LDLApp.LocalDrivingLicenseApplicationID, _tA.TestTypeID, false);
 
-            if (isRetake)
+            if (_tA.RetakeTest())
             {
 
                 FeesRetake();
@@ -175,18 +214,16 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision
             // _tA.PaidFees += 5; paidfess fees update auto in class
 
             // update fees on screen
-            lab_TotalFees.Text += (Convert.ToInt32(lab_Fees.Text) + 5).ToString();
+            lab_TotalFees.Text = _tA.PaidFees.ToString(("0.00"));
 
         }
-        void SetDataInAppointments()
+        void SetDateInAppointments()
         {
-            _tA.LocalDrivingLicenseApplicationID = _LocalAppId;
+         
             _tA.AppointmentDate = DTP_Date.Value;
-            _tA.PaidFees += clsTestTypes.Find(_tA.TestTypeID).TestTypeFees;
+           
 
-            //_tA.CreatedByUserID = CurrentUser.User.UserID;
-            // for test
-            _tA.CreatedByUserID = 1;
+          
 
 
 
@@ -198,7 +235,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision
             {
                 case enMode.New:
                     // load data to object
-                    SetDataInAppointments(); 
+                    SetDateInAppointments(); 
                     break;
 
                 case enMode.Update:
@@ -280,7 +317,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision
 
             lab_Fees.Text = _tA.PaidFees.ToString();
 
-            ShowRetakeTest(LocalDriving);
+            ShowRetakeTest();
 
             lab_R_Test_Id.Text = _tA.TestAppointmentID.ToString();
 

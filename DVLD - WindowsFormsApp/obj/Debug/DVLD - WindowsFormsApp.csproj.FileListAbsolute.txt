@@ -50,4 +50,10 @@ P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsA
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Application.LocalApplication.frmNewLocalDrivingApplication.resources
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Application.LocalApplication.frmManageLocalDrivingApplication.resources
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Application.Control.UCdrivingAndAppInfo.resources
-P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Application.Test.frmVisionTest.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision.frmScheduleTest.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.Resources.RImage.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Application.Test.frmTakeTest.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Application.Test.frmTestAppointment.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Driver.Issue_License.frmIssueDriverLicense.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense.frmShowLicense.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense.uCDriverLicenseInfo.resources

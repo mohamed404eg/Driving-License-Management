@@ -1,5 +1,8 @@
 ﻿using DVLD___BusinessPresentation;
+using DVLD___BusinessPresentation.Driver;
 using DVLD___BusinessPresentation.Test;
+using DVLD___WindowsFormsApp.MyFroms.Application.Test;
+using DVLD___WindowsFormsApp.MyFroms.Driver.Issue_License;
 using DVLD___WindowsFormsApp.MyFroms.Functions;
 using System;
 using System.Collections.Generic;
@@ -12,6 +15,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DVLD___WindowsFormsApp.MyFroms.Application.Test.frmTestAppointment;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -237,14 +241,14 @@ Status
 
         }
 
-        void _SheduleCheckAvailable()
+        void _SheduleCheckAvailable(int LocalApplicationId)
         {
-            int ApplicationId = Multi._GetfirstCellInRow(dGV);
+       
 
-            if(ApplicationId != -1)
+            if(LocalApplicationId != -1)
             {
 
-                int TopTestSuccessfullyAchving = clsTestAppointments.TopTestSuccessfullyAchving(ApplicationId);
+                int TopTestSuccessfullyAchving = clsTestAppointments.TopTestSuccessfullyAchving(LocalApplicationId);
                 
                 if(TopTestSuccessfullyAchving >= 3)
                 {
@@ -294,11 +298,136 @@ Status
             }
 
         }
+
+        void IssueeDrivingLiceseCheckAvailable(int LocalApplicationId)
+        {
+            clsLocalDrivingLicenseApplications localDrivingLicenseApplications = clsLocalDrivingLicenseApplications.Find(LocalApplicationId);
+
+            clsApplications application = clsApplications.Find(localDrivingLicenseApplications.ApplicationID);
+
+            if (application == null) return;
+            if(application.ApplicationStatus >= 3)
+            {
+                issuToolStripMenuItem.Enabled = true;
+            }
+            else
+            {
+                issuToolStripMenuItem.Enabled = false;
+            }
+            if(clsLicenses.FindByApplicationID(localDrivingLicenseApplications.ApplicationID) != null)
+            {
+                issuToolStripMenuItem.Enabled = false;
+            }
+            else
+            {
+                issuToolStripMenuItem.Enabled = true;
+            }
+
+        }
+
+
+        void CheckIfIssued(int LocalApplicationId)
+        {
+            clsLocalDrivingLicenseApplications localDrivingLicenseApplications = clsLocalDrivingLicenseApplications.Find(LocalApplicationId);
+
+          
+
+            if (clsLicenses.FindByApplicationID(localDrivingLicenseApplications.ApplicationID) != null)
+            {
+                editApplicationToolStripMenuItem.Enabled = false;
+                deleteApplicationToolStripMenuItem.Enabled = false;
+                cancelApplicationToolStripMenuItem.Enabled = false;
+                sechduleTaskToolStripMenuItem.Enabled = false;
+                issuToolStripMenuItem.Enabled = false;
+            }
+            else
+            {
+                editApplicationToolStripMenuItem.Enabled = true;
+                deleteApplicationToolStripMenuItem.Enabled = true;
+                cancelApplicationToolStripMenuItem.Enabled = true;
+                sechduleTaskToolStripMenuItem.Enabled = true;
+                issuToolStripMenuItem.Enabled = true;
+                
+            }
+
+
+
+        }
         private void cMS_AllApplication_Opening(object sender, CancelEventArgs e)
         {
-            // 
-            _SheduleCheckAvailable();
+            int LocalApplicationId = Multi._GetfirstCellInRow(dGV);
 
+            if (LocalApplicationId == -1)
+            {
+                return;
+            }
+
+                
+                _SheduleCheckAvailable(LocalApplicationId);
+
+            IssueeDrivingLiceseCheckAvailable(LocalApplicationId);
+
+            CheckIfIssued(LocalApplicationId);
+
+        }
+
+        private void sechduleTaskToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void scheduleVisionTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int Id = Multi._GetfirstCellInRow(dGV);
+            if(Id != -1)
+            {
+                frmTestAppointment TestAppointment
+                    = new frmTestAppointment(Id, enTestType.VisionTest);;
+                TestAppointment.FormClosed += TestAppointment_FormClosed;
+                TestAppointment.ShowDialog();
+            }
+        }
+
+        private void TestAppointment_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+            // update data grid view 
+            ChangeDataGrid();
+
+        }
+
+        private void scheduleWritenTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int Id = Multi._GetfirstCellInRow(dGV);
+            if (Id != -1)
+            {
+                frmTestAppointment TestAppointment
+                    = new frmTestAppointment(Id, enTestType.WrittenTest); 
+                TestAppointment.FormClosed += TestAppointment_FormClosed;
+                TestAppointment.ShowDialog();
+            }
+        }
+
+        private void scheduleStreetTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int Id = Multi._GetfirstCellInRow(dGV);
+            if (Id != -1)
+            {
+                frmTestAppointment TestAppointment
+                    = new frmTestAppointment(Id, enTestType.PracticalStreetTest); ;
+                TestAppointment.FormClosed += TestAppointment_FormClosed;
+                TestAppointment.ShowDialog();
+            }
+        }
+
+        private void issuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LocalAppId = Multi._GetfirstCellInRow(dGV);
+            if (LocalAppId != -1)
+            {
+                frmIssueDriverLicense issueDriverLicense = new frmIssueDriverLicense(LocalAppId);
+                issueDriverLicense.ShowDialog();
+            }
         }
     }
 }
