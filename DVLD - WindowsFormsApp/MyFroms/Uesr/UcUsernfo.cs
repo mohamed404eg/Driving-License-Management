@@ -33,7 +33,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Uesr
             User = clsUser.Find(UserId);
             if (User != null)
             {
-                ucPersonInfo1._FullPerson(User.PersonID);
+                ucPersonInfo1.FullPerson(User.PersonID);
 
                 _FullLable(User);
 

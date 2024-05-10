@@ -2,6 +2,7 @@
 using DVLD___BusinessPresentation.Driver;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,5 +69,32 @@ namespace Test__ConsoleApp.Driver
 
 
         }
-    }
+
+
+        static public void FindByDriverID(int DriverID)
+        {
+            DataTable dt = clsLicenses
+                .FindByDriverID(DriverID);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                foreach (DataColumn column in dt.Columns)
+                {
+                    Console.WriteLine(row[column].ToString());  
+                }
+
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+        //end
+       }
 }

@@ -1,5 +1,6 @@
 ﻿using DVLD___BusinessPresentation;
 using DVLD___BusinessPresentation.Applications.LicenseClass;
+using DVLD___BusinessPresentation.Driver;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,6 +13,7 @@ using Test__ConsoleApp.Applications;
 using Test__ConsoleApp.Applications.LicenseClass;
 using Test__ConsoleApp.Applications.LocalDrivingLicenseApplications;
 using Test__ConsoleApp.Driver;
+using Test__ConsoleApp.Driver.InternationalLicenses;
 using Test__ConsoleApp.Test;
 
 namespace Test__ConsoleApp
@@ -1219,14 +1221,16 @@ string ImagePath)
             //// id = 19 // TestclsLicenses.addNew(1088, 12, 3, DateTime.Now, DateTime.Now.AddYears(licenseClass.DefaultValidityLength), ""
             //     , licenseClass.ClassFees, true, 1, 1);
 
+            //  TestclsLicenses.FindByApplicationID(1088);
+            //   TestclsLicenses.FindByDriverID(8);
 
 
 
+            // clsInternationalLicenses //
+          //  TestclsInternationalLicenses.FindByDriverID(9);
 
 
 
-
-            TestclsLicenses.FindByApplicationID(1088);
 
 
             Console.ReadKey();

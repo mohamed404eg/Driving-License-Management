@@ -52,6 +52,7 @@
     <Compile Include="clsUserDataAccess.cs" />
     <Compile Include="Driver\clsDriverDA.cs" />
     <Compile Include="Driver\clsLicensesDA.cs" />
+    <Compile Include="Driver\InternationalLicenses\clsInternationalLicensesDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test\clsTakeTestDA.cs" />
     <Compile Include="Test\clsTestAppointmentsDA.cs" />

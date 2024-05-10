@@ -108,6 +108,12 @@
     <Compile Include="MyFroms\Driver\Issue License\IssueDriverLicense.Designer.cs">
       <DependentUpon>IssueDriverLicense.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyFroms\Driver\License History\frmLicenseHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Driver\License History\frmLicenseHistory.Designer.cs">
+      <DependentUpon>frmLicenseHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyFroms\Driver\ShowLicense\frmShowLicense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Driver\Issue License\IssueDriverLicense.resx">
       <DependentUpon>IssueDriverLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Driver\License History\frmLicenseHistory.resx">
+      <DependentUpon>frmLicenseHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Driver\ShowLicense\frmShowLicense.resx">
       <DependentUpon>frmShowLicense.cs</DependentUpon>
@@ -428,6 +437,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\no-image-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock -128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock-512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

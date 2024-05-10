@@ -22,9 +22,11 @@ namespace DVLD___WindowsFormsApp.MyFroms.Person
         {
             InitializeComponent();
             _PersonId = PersonId;
-            _FullPerson(_PersonId);
+            FullPerson(_PersonId);
         }
-       public void _FullPerson(int PersonId)
+
+        // call to load Data and send PersonId
+        public void FullPerson(int PersonId)
         {
             _PersonId = PersonId;
 
@@ -61,7 +63,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Person
         private void FrmAddUpdate_FormClosed(object sender, FormClosedEventArgs e)
         {
 
-            _FullPerson(_PersonId);
+            FullPerson(_PersonId);
         }
 
       

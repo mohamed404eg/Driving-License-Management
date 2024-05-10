@@ -51,7 +51,7 @@ namespace Test__ConsoleApp.Driver
 
        static public void FindByPersonID(int PersonID)
         {
-            DataTable dt = clsDriver.FindByPersonID(PersonID);
+            DataTable dt = clsDriver.FindByPersonIdDataTable(PersonID);
 
             foreach (DataRow item in dt.Rows)
             {

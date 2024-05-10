@@ -3,6 +3,7 @@ using DVLD___BusinessPresentation.Driver;
 using DVLD___BusinessPresentation.Test;
 using DVLD___WindowsFormsApp.MyFroms.Application.Test;
 using DVLD___WindowsFormsApp.MyFroms.Driver.Issue_License;
+using DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense;
 using DVLD___WindowsFormsApp.MyFroms.Functions;
 using System;
 using System.Collections.Generic;
@@ -215,6 +216,14 @@ Status
         private void eDrivingLiceseFirstTimeToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+            int LocalApplicationId = Multi._GetfirstCellInRow(dGV);
+
+            if(LocalApplicationId != -1)
+            {
+                frmShowLicense showLicense = new frmShowLicense(LocalApplicationId);
+                showLicense.ShowDialog();
+            }
+
         }
 
       
@@ -306,6 +315,7 @@ Status
             clsApplications application = clsApplications.Find(localDrivingLicenseApplications.ApplicationID);
 
             if (application == null) return;
+
             if(application.ApplicationStatus >= 3)
             {
                 issuToolStripMenuItem.Enabled = true;
@@ -316,43 +326,21 @@ Status
             }
             if(clsLicenses.FindByApplicationID(localDrivingLicenseApplications.ApplicationID) != null)
             {
+
                 issuToolStripMenuItem.Enabled = false;
+
+                licensesIsIssued(true);
             }
             else
             {
-                issuToolStripMenuItem.Enabled = true;
-            }
-
-        }
-
-
-        void CheckIfIssued(int LocalApplicationId)
-        {
-            clsLocalDrivingLicenseApplications localDrivingLicenseApplications = clsLocalDrivingLicenseApplications.Find(LocalApplicationId);
-
-          
-
-            if (clsLicenses.FindByApplicationID(localDrivingLicenseApplications.ApplicationID) != null)
-            {
-                editApplicationToolStripMenuItem.Enabled = false;
-                deleteApplicationToolStripMenuItem.Enabled = false;
-                cancelApplicationToolStripMenuItem.Enabled = false;
-                sechduleTaskToolStripMenuItem.Enabled = false;
-                issuToolStripMenuItem.Enabled = false;
-            }
-            else
-            {
-                editApplicationToolStripMenuItem.Enabled = true;
-                deleteApplicationToolStripMenuItem.Enabled = true;
-                cancelApplicationToolStripMenuItem.Enabled = true;
-                sechduleTaskToolStripMenuItem.Enabled = true;
-                issuToolStripMenuItem.Enabled = true;
                 
+                licensesIsIssued(false);
             }
 
-
-
         }
+
+
+     
         private void cMS_AllApplication_Opening(object sender, CancelEventArgs e)
         {
             int LocalApplicationId = Multi._GetfirstCellInRow(dGV);
@@ -367,10 +355,40 @@ Status
 
             IssueeDrivingLiceseCheckAvailable(LocalApplicationId);
 
-            CheckIfIssued(LocalApplicationId);
-
+    
         }
 
+
+
+        void licensesIsIssued(bool IsIssued)
+        {
+            if (!IsIssued)
+            {
+
+
+
+                eDrivingShowLicenseMenuItem.Enabled = false;
+
+                // on 
+                editApplicationToolStripMenuItem.Enabled = true;
+                deleteApplicationToolStripMenuItem.Enabled = true;
+                cancelApplicationToolStripMenuItem.Enabled = true;
+              
+            }
+            else
+            {
+                eDrivingShowLicenseMenuItem.Enabled = true;
+
+                // off all tools for application
+                editApplicationToolStripMenuItem.Enabled = false;
+                deleteApplicationToolStripMenuItem.Enabled = false;
+                cancelApplicationToolStripMenuItem.Enabled = false;
+               
+
+            }
+
+        }
+ 
         private void sechduleTaskToolStripMenuItem_Click(object sender, EventArgs e)
         {
 

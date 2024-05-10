@@ -15,7 +15,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Person
     {
        public static int _PersonId;
 
-        //void _FullPerson(int PersonId)
+        //void FullPerson(int PersonId)
         //{
         //    clsPeople Person = clsPeople.Find(PersonId);
         //    if(Person != null)
@@ -38,9 +38,9 @@ namespace DVLD___WindowsFormsApp.MyFroms.Person
         public frmPersonDetails(int PersonId)
         {
             InitializeComponent();
-           // _FullPerson(PersonId);
+           // FullPerson(PersonId);
             _PersonId = PersonId;
-            ucPersonInfo1._FullPerson(PersonId);
+            ucPersonInfo1.FullPerson(PersonId);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Person
         private void FrmAddUpdate_FormClosed(object sender, FormClosedEventArgs e)
         {
           
-            //_FullPerson(_PersonId);
+            //FullPerson(_PersonId);
         }
 
         private void ucPersonInfo1_Load(object sender, EventArgs e)

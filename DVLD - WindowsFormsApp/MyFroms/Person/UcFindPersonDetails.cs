@@ -63,7 +63,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Person
 
             if (Person != null)
             {
-                ucPersonInfo1._FullPerson(Person.PersonID);
+                ucPersonInfo1.FullPerson(Person.PersonID);
                 
                 if(DataBack != null)
                 {

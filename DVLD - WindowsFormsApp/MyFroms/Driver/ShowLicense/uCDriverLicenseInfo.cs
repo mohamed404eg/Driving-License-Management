@@ -26,7 +26,10 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense
             InitializeComponent();
             LoadData(LocalAppId);
         }
-        void LoadData(int LocalAppId)
+
+
+
+       public void LoadData(int LocalAppId)
         {
             _LocalAppId = LocalAppId;
 
@@ -45,6 +48,9 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense
 
             clsLicenses licenses = clsLicenses.FindByApplicationID(localDrivingLicenseApplications.ApplicationID);
             
+
+
+
                 lab_Class.Text = licenseClass.ClassName;
 
            
@@ -72,7 +78,12 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense
 
             lab_IsDetained.Text = (licenses.IsActive ? "Yes" : "No");
 
+            if (!string.IsNullOrWhiteSpace(people.ImagePath))
+            {
+
             PB_ImagePerson.ImageLocation = people.ImagePath;
+            }
+
 
 
         }
