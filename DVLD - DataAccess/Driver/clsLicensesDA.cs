@@ -305,32 +305,104 @@ SELECT [LicenseID]
 
 
 
+        /// <summary>
+        /// Find By DriverID
+        /// </summary>
+        /// <param name="DriverID"></param>
+        /// <returns>return DataTable :
+        /// - LicenseID
+        /// - ApplicationID
+        /// - ClassName
+        /// - IssueDate
+        /// - ExpirationDate
+        /// </returns>
+        static public DataTable FindByDriverIDShort(int DriverID)
+        {
+            DataTable dt = new DataTable();
+
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+    
+SELECT [LicenseID]
+      ,[ApplicationID]
+      , (select ClassName from LicenseClasses Where LicenseClasses.LicenseClassID = Licenses.LicenseClass)  as ClassName
+      ,[IssueDate]
+      ,[ExpirationDate]
+      ,[IsActive]
+
+  FROM [dbo].[Licenses]
+  where DriverID = @DriverID
+
+
+";
+
+            SqlCommand command = new SqlCommand(Query, connection);
+
+            command.Parameters.AddWithValue("@DriverID", DriverID);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    dt.Load(reader);
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            return dt;
 
 
 
 
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
 }

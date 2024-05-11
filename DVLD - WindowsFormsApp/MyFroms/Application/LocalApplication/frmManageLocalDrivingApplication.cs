@@ -3,6 +3,7 @@ using DVLD___BusinessPresentation.Driver;
 using DVLD___BusinessPresentation.Test;
 using DVLD___WindowsFormsApp.MyFroms.Application.Test;
 using DVLD___WindowsFormsApp.MyFroms.Driver.Issue_License;
+using DVLD___WindowsFormsApp.MyFroms.Driver.License_History;
 using DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense;
 using DVLD___WindowsFormsApp.MyFroms.Functions;
 using System;
@@ -210,7 +211,7 @@ Status
 
         private void showToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Not implemented"); ;
         }
 
         private void eDrivingLiceseFirstTimeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -446,6 +447,28 @@ Status
                 frmIssueDriverLicense issueDriverLicense = new frmIssueDriverLicense(LocalAppId);
                 issueDriverLicense.ShowDialog();
             }
+        }
+
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LocalAppId = Multi._GetfirstCellInRow(dGV);
+            if (LocalAppId != -1)
+            {
+              frmLicenseHistory licenseHistory = new frmLicenseHistory(LocalAppId);
+                licenseHistory.ShowDialog();
+            }
+        }
+
+        private void editApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("Not implemented"); ;
+
+        }
+
+        private void deleteApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not implemented"); ;
         }
     }
 }

@@ -148,10 +148,27 @@ namespace DVLD___BusinessPresentation.Driver
         }
 
 
+        /// <summary>
+        /// Find By DriverID
+        /// </summary>
+        /// <param name="DriverID"></param>
+        /// <returns>return DataTable :
+        /// - LicenseID
+        /// - ApplicationID
+        /// - ClassName
+        /// - IssueDate
+        /// - ExpirationDate
+        /// </returns>
+        static public DataTable FindByDriverIDShort(int DriverID)
+        {
 
 
 
-      public  bool Save()
+            return clsLicensesDA.FindByDriverIDShort(DriverID);
+        }
+
+
+        public bool Save()
         {
             switch(_Mode)
             {

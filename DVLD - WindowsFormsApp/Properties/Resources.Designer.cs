@@ -73,6 +73,36 @@ namespace DVLD___WindowsFormsApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap applicationManage_128 {
+            get {
+                object obj = ResourceManager.GetObject("applicationManage-128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap applicationManage_64 {
+            get {
+                object obj = ResourceManager.GetObject("applicationManage-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Applications_128 {
+            get {
+                object obj = ResourceManager.GetObject("Applications-128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap approved {
             get {
                 object obj = ResourceManager.GetObject("approved", resourceCulture);
@@ -286,6 +316,26 @@ namespace DVLD___WindowsFormsApp.Properties {
         internal static System.Drawing.Bitmap issueeReason_24 {
             get {
                 object obj = ResourceManager.GetObject("issueeReason-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lDrivings_512 {
+            get {
+                object obj = ResourceManager.GetObject("lDrivings-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lDrivings_64 {
+            get {
+                object obj = ResourceManager.GetObject("lDrivings-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

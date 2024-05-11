@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD___WindowsFormsApp.MyFroms.ManageTestTypes;
 using DVLD___WindowsFormsApp.MyFroms.Application.LocalApplication;
+using DVLD___WindowsFormsApp.MyFroms.Driver.List_Drivers;
 namespace DVLD___WindowsFormsApp
 {
 
@@ -210,6 +211,40 @@ namespace DVLD___WindowsFormsApp
         private void NewLocalDrivingApplication_FormClosed(object sender, FormClosedEventArgs e)
         {
             newLocalDrivingApplication = null;
+        }
+
+
+        frmManageLocalDrivingApplication frmManageLocalDrivingApplication;
+        private void localDrivingLicenseApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmManageLocalDrivingApplication == null || frmManageLocalDrivingApplication.IsDisposed)
+            {
+                frmManageLocalDrivingApplication = new frmManageLocalDrivingApplication();
+                frmManageLocalDrivingApplication.MdiParent = this;
+                frmManageLocalDrivingApplication.FormClosed += NewLocalDrivingApplication_FormClosed;
+                frmManageLocalDrivingApplication.Show();
+            }
+            else
+            {
+                frmManageLocalDrivingApplication.BringToFront();
+            }
+
+        }
+
+        frmListDrivers frmListDrivers;
+        private void drivingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmListDrivers == null || frmListDrivers.IsDisposed)
+            {
+                frmListDrivers = new frmListDrivers();
+                frmListDrivers.MdiParent = this;
+                frmListDrivers.FormClosed += NewLocalDrivingApplication_FormClosed;
+                frmListDrivers.Show();
+            }
+            else
+            {
+                frmListDrivers.BringToFront();
+            }
         }
     }
 }

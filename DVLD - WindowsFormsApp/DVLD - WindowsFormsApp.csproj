@@ -114,6 +114,12 @@
     <Compile Include="MyFroms\Driver\License History\frmLicenseHistory.Designer.cs">
       <DependentUpon>frmLicenseHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyFroms\Driver\List Drivers\frmListDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Driver\List Drivers\frmListDrivers.Designer.cs">
+      <DependentUpon>frmListDrivers.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyFroms\Driver\ShowLicense\frmShowLicense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Driver\License History\frmLicenseHistory.resx">
       <DependentUpon>frmLicenseHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Driver\List Drivers\frmListDrivers.resx">
+      <DependentUpon>frmListDrivers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Driver\ShowLicense\frmShowLicense.resx">
       <DependentUpon>frmShowLicense.cs</DependentUpon>
@@ -443,6 +452,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\clock-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Applications-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applicationManage-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applicationManage-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lDrivings-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lDrivings-512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

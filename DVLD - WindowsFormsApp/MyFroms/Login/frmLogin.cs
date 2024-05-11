@@ -31,7 +31,9 @@ namespace DVLD___WindowsFormsApp.MyFroms.Login
             {
                 tB_Pass.Text = savedPassword;
             }
+         
         }
+
         public frmLogin()
         {
             InitializeComponent();
@@ -39,6 +41,8 @@ namespace DVLD___WindowsFormsApp.MyFroms.Login
 
             // load value of Registry
             _LoadValueRegistry();
+           
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -77,24 +81,24 @@ namespace DVLD___WindowsFormsApp.MyFroms.Login
             if(CurrentUser.User != null )
             {
 
-                MessageBox.Show("Successfully");
+               // MessageBox.Show("Successfully");
 
                 // and User Is Active
                 if(CurrentUser.User.IsActive == true)
                 {
                     // show next form
 
-                    //frmMain frmMain = new frmMain();
-                    //frmMain.ShowCustom();
-                    //this.Hide();
+                    frmMain frmMain = new frmMain();
+                    frmMain.Show();
+                    this.Hide();
 
 
 
                     // Test
 
-                    frmManageLocalDrivingApplication ManageLocalDrivingApplication = new frmManageLocalDrivingApplication();
-                    ManageLocalDrivingApplication.Show();
-                    this.Hide();
+                    //frmManageLocalDrivingApplication ManageLocalDrivingApplication = new frmManageLocalDrivingApplication();
+                    //ManageLocalDrivingApplication.Show();
+                    //this.Hide();
 
 
                 }
