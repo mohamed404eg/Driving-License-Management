@@ -234,6 +234,120 @@ SELECT [LicenseID]
 
 
 
+
+
+        /// <summary>
+        /// find by LicenseID
+        /// </summary>
+        /// <param name="LicenseID"></param>
+        /// <param name="ApplicationID"></param>
+        /// <param name="DriverID"></param>
+        /// <param name="LicenseClass"></param>
+        /// <param name="IssueDate"></param>
+        /// <param name="ExpirationDate"></param>
+        /// <param name="Notes"></param>
+        /// <param name="PaidFees"></param>
+        /// <param name="IsActive"></param>
+        /// <param name="IssueReason"></param>
+        /// <param name="CreatedByUserID"></param>
+        /// <returns>if found return true otherwise return false</returns>
+        static public bool FindByLicenseID(
+            int LicenseID,
+            ref int ApplicationID,
+      ref int DriverID,
+      ref int LicenseClass,
+      ref DateTime IssueDate,
+      ref DateTime ExpirationDate,
+      ref string Notes,
+      ref decimal PaidFees,
+      ref bool IsActive,
+      ref byte IssueReason,
+      ref int CreatedByUserID)
+        {
+            bool IsFound = false;
+
+
+
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+
+SELECT [LicenseID]
+      ,[ApplicationID]
+      ,[DriverID]
+      ,[LicenseClass]
+      ,[IssueDate]
+      ,[ExpirationDate]
+      ,[Notes]
+      ,[PaidFees]
+      ,[IsActive]
+      ,[IssueReason]
+      ,[CreatedByUserID]
+  FROM [dbo].[Licenses]
+  where LicenseID =  @LicenseID
+
+";
+
+            SqlCommand command = new SqlCommand(Query, connection);
+
+            command.Parameters.AddWithValue("@LicenseID", LicenseID);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    IsFound = true;
+                    ApplicationID = (int)reader["ApplicationID"];
+                    DriverID = (int)reader["DriverID"];
+                    LicenseClass = (int)reader["LicenseClass"];
+                    IssueDate = (DateTime)reader["IssueDate"];
+                    ExpirationDate = (DateTime)reader["ExpirationDate"];
+
+                    if (reader["Notes"] != DBNull.Value)
+                    {
+                        Notes = (string)reader["Notes"];
+                    }
+                    else
+                    {
+                        Notes = "";
+                    }
+
+                    PaidFees = (decimal)reader["PaidFees"];
+                    IsActive = (bool)reader["IsActive"];
+                    IssueReason = (byte)reader["IssueReason"];
+                    CreatedByUserID = (int)reader["CreatedByUserID"];
+
+
+
+
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+
+
+            return IsFound;
+
+        }
+
+
+
+
+
         /// <summary>
         /// Find By DriverID
         /// </summary>

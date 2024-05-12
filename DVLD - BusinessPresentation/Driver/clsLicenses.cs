@@ -135,6 +135,45 @@ namespace DVLD___BusinessPresentation.Driver
 
 
         /// <summary>
+        /// find by LicenseID
+        /// </summary>
+        /// <param name="LicenseID"></param>
+        /// <returns>if found return clsLicenses object otherwise return null </returns>
+        static public clsLicenses Find(int LicenseID)
+        {
+            int ApplicationID = -1;
+
+            int DriverID = -1;
+            int LicenseClass = -1;
+            DateTime IssueDate = DateTime.Now;
+            DateTime ExpirationDate = DateTime.Now;
+
+            string Notes = "";
+            decimal PaidFees = 0;
+            bool IsActive = false;
+            byte IssueReason = 0;
+            int CreatedByUserID = -1;
+
+
+            if (clsLicensesDA.FindByLicenseID(LicenseID, ref ApplicationID, ref DriverID, ref LicenseClass,
+                ref IssueDate, ref ExpirationDate, ref Notes, ref PaidFees, ref IsActive,
+                ref IssueReason, ref CreatedByUserID))
+            {
+                return new clsLicenses(LicenseID, ApplicationID, DriverID, LicenseClass,
+                 IssueDate, ExpirationDate, Notes, PaidFees, IsActive,
+                 IssueReason, CreatedByUserID);
+            }
+            else
+            {
+                return null;
+            }
+
+
+        }
+
+
+
+        /// <summary>
         /// Find By DriverID
         /// </summary>
         /// <param name="DriverID"></param>

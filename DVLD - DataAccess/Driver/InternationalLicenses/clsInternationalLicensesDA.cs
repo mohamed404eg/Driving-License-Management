@@ -77,6 +77,157 @@ SELECT [InternationalLicenseID]
 
 
 
+        /// <summary>
+        /// add new  InternationalLicense
+        /// </summary>
+        /// <param name="ApplicationID"></param>
+        /// <param name="DriverID"></param>
+        /// <param name="IssuedUsingLocalLicenseID"></param>
+        /// <param name="IssueDate"></param>
+        /// <param name="ExpirationDate"></param>
+        /// <param name="IsActive"></param>
+        /// <param name="CreatedByUserID"></param>
+        /// <returns>if Successfully return InternationalLicenseID otherwise retrun -1</returns>
+        static public int AddNew(   int ApplicationID,
+         int DriverID,
+         int IssuedUsingLocalLicenseID,
+         DateTime IssueDate,
+         DateTime ExpirationDate,
+         bool IsActive,
+         int CreatedByUserID)
+        {
+            int InternationalLicenseID = -1;
+
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+
+            string Query = @"
+
+INSERT INTO [dbo].[InternationalLicenses]
+           ([ApplicationID]
+           ,[DriverID]
+           ,[IssuedUsingLocalLicenseID]
+           ,[IssueDate]
+           ,[ExpirationDate]
+           ,[IsActive]
+           ,[CreatedByUserID])
+     VALUES
+           (@ApplicationID
+           ,@DriverID
+           ,@IssuedUsingLocalLicenseID
+           ,@IssueDate
+           ,@ExpirationDate
+           ,@IsActive
+           ,@CreatedByUserID)
+ select SCOPE_IDENTITY()  
+
+";
+
+            SqlCommand command = new SqlCommand(Query, connection);
+
+            command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
+            command.Parameters.AddWithValue("@DriverID", DriverID);
+            command.Parameters.AddWithValue("@IssuedUsingLocalLicenseID", IssuedUsingLocalLicenseID);
+            command.Parameters.AddWithValue("@IssueDate", IssueDate);
+            command.Parameters.AddWithValue("@ExpirationDate", ExpirationDate);
+            command.Parameters.AddWithValue("@IsActive", IsActive);
+            command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+            try
+            {
+                connection.Open();  
+
+                object obj = command.ExecuteScalar();
+                if (obj != null && int.TryParse(obj.ToString(),out int num))
+                {
+                    InternationalLicenseID =num;
+
+                }
+
+
+
+
+            }catch(
+            Exception ex)
+            { Console.WriteLine(ex.ToString())}
+            finally
+            {
+                connection.Close();
+            }
+
+
+
+
+
+            return InternationalLicenseID;
+
+        }
+
+
+        /// <summary>
+        /// check if have license find by DriverID
+        /// </summary>
+        /// <param name="DriverID"></param>
+        /// <param name="IsActive"></param>
+        /// <returns>if found return InternationalLicenseID otherwise return -1</returns>
+        static public int isHaveInternationalLicenses(int DriverID, bool IsActive = true)
+        {
+
+            int InternationalLicenseID = -1;
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Qurey = @"
+SELECT [InternationalLicenseID]
+  FROM [dbo].[InternationalLicenses]
+  where DriverID = @DriverID and IsActive = @IsActive
+";
+
+
+            SqlCommand command = new SqlCommand(@Qurey, connection);
+            command.Parameters.AddWithValue("@DriverID", DriverID);
+            command.Parameters.AddWithValue("@IsActive", IsActive);
+
+
+            try
+            {
+                connection.Open ();
+
+
+                object obj = command.ExecuteScalar();
+
+                if (obj != null && int.TryParse(obj.ToString(),out int num))
+                {
+                    InternationalLicenseID = num;
+                }
+
+
+
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+
+
+            return InternationalLicenseID;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }
