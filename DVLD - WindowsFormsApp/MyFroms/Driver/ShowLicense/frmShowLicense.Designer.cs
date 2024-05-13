@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.uCDriverLicenseInfo1 = new DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense.uCDriverLicenseInfo();
+            this.uCDriverLicenseInfo1 = new DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense.uCDriverLicensenfo();
             this.btn_Close = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -96,7 +96,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private uCDriverLicenseInfo uCDriverLicenseInfo1;
+        private uCDriverLicensenfo uCDriverLicenseInfo1;
         private System.Windows.Forms.Button btn_Close;
     }
 }

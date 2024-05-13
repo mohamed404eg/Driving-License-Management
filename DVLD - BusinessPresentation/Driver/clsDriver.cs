@@ -47,12 +47,39 @@ namespace DVLD___BusinessPresentation.Driver
             return clsDriverDA.GetAll();
         }
 
-        static public DataTable Find(int DriverID)
+        static public DataTable FindByDriverIdDataTable(int DriverID)
         {
 
 
-            return clsDriverDA.Find(DriverID);
+            return clsDriverDA.FindByDriverIdDataTable(DriverID);
         }
+
+
+        /// <summary>
+        /// Find By PersonID 
+        /// </summary>
+        /// <param name="DriverID"></param>
+        /// <returns>clsDriver if found otherwise return null</returns>
+        static public clsDriver Find(int DriverID)
+        {
+            int PersonID = -1;
+
+            int CreatedByUserID = -1;
+            DateTime CreatedDate = DateTime.MinValue;
+
+            if (clsDriverDA.Find(DriverID, ref PersonID, ref CreatedByUserID, ref CreatedDate))
+            {
+                return new clsDriver(DriverID, PersonID, CreatedByUserID, CreatedDate);
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
+
+
 
         /// <summary>
         /// Find By PersonID 

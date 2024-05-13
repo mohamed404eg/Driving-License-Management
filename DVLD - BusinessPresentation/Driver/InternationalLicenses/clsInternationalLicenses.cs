@@ -1,4 +1,5 @@
-﻿using DVLD___DataAccess.Driver.InternationalLicenses;
+﻿using DVLD___BusinessPresentation.Applications.LicenseClass;
+using DVLD___DataAccess.Driver.InternationalLicenses;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -29,8 +30,12 @@ namespace DVLD___BusinessPresentation.Driver.InternationalLicenses
             }
           
         }
-      public  int ApplicationID;
-      public  int DriverID;
+        int _ApplicationID;
+        public int ApplicationID
+        {
+            get { return _ApplicationID; }
+        }
+        public  int DriverID;
       public  int IssuedUsingLocalLicenseID;
       public  DateTime IssueDate;
       public  DateTime ExpirationDate;
@@ -47,7 +52,8 @@ namespace DVLD___BusinessPresentation.Driver.InternationalLicenses
         enstatusRejected {
         ClassLicsnes,
             IsActive,
-            IsHave
+            IsHave,
+            ApplicationID
 
 
 
@@ -121,7 +127,7 @@ namespace DVLD___BusinessPresentation.Driver.InternationalLicenses
                 return false;
 
             }
-            if (!_HaveInternationalLicenseActive())
+            if (_HaveInternationalLicenseActive())
             {
                 statusRejected = enstatusRejected.IsHave;
 
@@ -131,6 +137,43 @@ namespace DVLD___BusinessPresentation.Driver.InternationalLicenses
             return true;
 
         }
+
+        /// <summary>
+        /// create applications
+        /// </summary>
+        /// <returns>is successfully return ApplicationID oherwise return -1</returns>
+        int _CreateApplication()
+        {
+            clsApplications applications = new clsApplications();
+
+            clsDriver driver = clsDriver.Find(DriverID);
+            if (driver != null)
+            {
+
+                applications.ApplicantPersonID = driver.PersonID;
+
+                applications.ApplicationDate = IssueDate;
+                applications.ApplicationTypeID = 6; // InternationalLicense
+                applications.ApplicationStatus = 3;  // Completed;
+                applications.PaidFees = clsApplicationTypes.Find(6).ApplicationTypeFees; // New International License
+
+                applications.CreatedByUserID = CreatedByUserID;
+
+            }
+
+
+            if (applications.Save())
+            {
+                return applications.ApplicationID;
+            }
+            else
+            {
+                return -1;
+            }
+
+
+        }
+
         bool Add()
         {
 
@@ -138,6 +181,17 @@ namespace DVLD___BusinessPresentation.Driver.InternationalLicenses
             {
                 return false;
             }
+
+            _ApplicationID = _CreateApplication();
+
+            if (ApplicationID == -1) {
+
+                statusRejected = enstatusRejected.ApplicationID;
+
+                return false; 
+            
+            };
+
 
             _InternationalLicenseID = clsInternationalLicensesDA.AddNew(ApplicationID, DriverID,IssuedUsingLocalLicenseID,IssueDate,
                 ExpirationDate,IsActive,CreatedByUserID);
@@ -173,6 +227,14 @@ namespace DVLD___BusinessPresentation.Driver.InternationalLicenses
         }
 
 
+        /// <summary>
+        /// Get AllInternationalLicenses
+        /// </summary>
+        /// <returns>DataTable</returns>
+        static public DataTable GetAll()
+        {
+            return clsInternationalLicensesDA.GetAll();
+        }
 
 
 

@@ -56,6 +56,9 @@ P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsA
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Application.Test.frmTestAppointment.resources
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Driver.Issue_License.frmIssueDriverLicense.resources
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense.frmShowLicense.resources
-P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense.uCDriverLicenseInfo.resources
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Driver.License_History.frmLicenseHistory.resources
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Driver.List_Drivers.frmListDrivers.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Driver.International_License.frmIssueeInternationalLicense.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Driver.International_License.uCDriverInternationalLicenseinfo.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Driver.International_License.UcFindInternationalLicense.resources
+P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense.uCDriverLicensenfo.resources

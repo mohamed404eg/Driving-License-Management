@@ -246,5 +246,10 @@ namespace DVLD___WindowsFormsApp
                 frmListDrivers.BringToFront();
             }
         }
+
+        private void internationalLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

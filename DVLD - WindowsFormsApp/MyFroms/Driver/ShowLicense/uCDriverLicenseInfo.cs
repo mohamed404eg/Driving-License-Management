@@ -13,15 +13,15 @@ using System.Windows.Forms;
 
 namespace DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense
 {
-    public partial class uCDriverLicenseInfo : UserControl
+    public partial class uCDriverLicensenfo : UserControl
     {
         int _LocalAppId;
-        public uCDriverLicenseInfo()
+        public uCDriverLicensenfo()
         {
             InitializeComponent();
           
         }
-        public uCDriverLicenseInfo(int LocalAppId)
+        public uCDriverLicensenfo(int LocalAppId)
         {
             InitializeComponent();
             LoadData(LocalAppId);

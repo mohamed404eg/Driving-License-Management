@@ -56,7 +56,7 @@ SELECT [DriverID]
             return dt;
         }
 
-     static public DataTable Find(int DriverID)
+     static public DataTable FindByDriverIdDataTable(int DriverID)
         {
 
             DataTable dt = new DataTable();
@@ -213,6 +213,74 @@ SELECT [DriverID]
 
             return isFound;
         }
+
+
+
+        /// <summary>
+        /// Find By DriverID
+        /// </summary>
+        /// <param name="DriverID"></param>
+        /// <param name="PersonID"></param>
+        /// <param name="CreatedByUserID"></param>
+        /// <param name="CreatedDate"></param>
+        /// <returns>true if found otherwise return false</returns>
+        static public bool Find(int DriverID, ref int PersonID, ref int CreatedByUserID, ref DateTime CreatedDate)
+        {
+
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+SELECT [DriverID]
+      ,[PersonID]
+      ,[CreatedByUserID]
+      ,[CreatedDate]
+  FROM [dbo].[Drivers]
+
+  where DriverID = @DriverID
+";
+
+            SqlCommand command = new SqlCommand(Query, connection);
+            command.Parameters.AddWithValue("@DriverID", DriverID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    isFound = true;
+                    PersonID = (int)reader["PersonID"];
+                    CreatedByUserID = (int)reader["CreatedByUserID"];
+                    CreatedDate = (DateTime)reader["CreatedDate"];
+
+
+
+
+                }
+
+                reader.Close();
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
+
+
+
+
 
         static public DataTable FindByNationalNo( string NationalNo)
         {

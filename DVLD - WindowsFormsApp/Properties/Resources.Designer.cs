@@ -283,6 +283,16 @@ namespace DVLD___WindowsFormsApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap find_32 {
+            get {
+                object obj = ResourceManager.GetObject("find-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gender_24 {
             get {
                 object obj = ResourceManager.GetObject("gender-24", resourceCulture);
@@ -306,6 +316,16 @@ namespace DVLD___WindowsFormsApp.Properties {
         internal static System.Drawing.Bitmap image {
             get {
                 object obj = ResourceManager.GetObject("image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap international_license_32 {
+            get {
+                object obj = ResourceManager.GetObject("international-license-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

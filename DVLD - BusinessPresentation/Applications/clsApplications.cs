@@ -17,7 +17,10 @@ namespace DVLD___BusinessPresentation
           public  int ApplicationTypeID;
           public  byte ApplicationStatus;
           public  DateTime LastStatusDate;
-        public  decimal PaidFees { get { return _PaidFees; } }
+        public  decimal PaidFees { get { return _PaidFees; }
+        
+        set { _PaidFees = value; }
+        }
           public int CreatedByUserID;
 
         enum enMode

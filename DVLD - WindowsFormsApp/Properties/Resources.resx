@@ -124,14 +124,14 @@
   <data name="drivers-license (128px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\drivers-license (128px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="lDrivings-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lDrivings-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="trial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="expired-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\expired-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sticky-notes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sticky-notes1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="approved" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\approved.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,6 +142,9 @@
   <data name="ban-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ban-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="international-license-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\international-license-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="applicationManage-128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\applicationManage-128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -150,6 +153,9 @@
   </data>
   <data name="Date OfBirth-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Date OfBirth-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gender-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gender-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,14 +190,14 @@
   <data name="sticky-notes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sticky-notes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="schedule" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\schedule.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="lDrivings-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lDrivings-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="id" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\id.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="schedule" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\schedule.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="clock-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clock-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,8 +208,8 @@
   <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sticky-notes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sticky-notes1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="applicationManage-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\applicationManage-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,7 +232,7 @@
   <data name="licensing" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\licensing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lDrivings-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lDrivings-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="find-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\find-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

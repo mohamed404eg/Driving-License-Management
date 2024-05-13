@@ -1,6 +1,6 @@
 ﻿namespace DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense
 {
-    partial class uCDriverLicenseInfo
+    partial class uCDriverLicensenfo
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,32 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lab_Class = new System.Windows.Forms.Label();
-            this.lab_Name = new System.Windows.Forms.Label();
-            this.lab_LicenseId = new System.Windows.Forms.Label();
-            this.lab_NationalNo = new System.Windows.Forms.Label();
-            this.lab_Gendor = new System.Windows.Forms.Label();
-            this.lab_IssueDate = new System.Windows.Forms.Label();
-            this.lab_IssueReason = new System.Windows.Forms.Label();
-            this.lab_Notes = new System.Windows.Forms.Label();
-            this.lable23 = new System.Windows.Forms.Label();
-            this.lab_IsActive = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lab_DateOfBirth = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lab_DriverId = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lab_ExpirationDate = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.lab_IsDetained = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -69,6 +43,32 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PB_ImagePerson = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lab_Notes = new System.Windows.Forms.Label();
+            this.lab_IssueReason = new System.Windows.Forms.Label();
+            this.lab_IssueDate = new System.Windows.Forms.Label();
+            this.lab_Gendor = new System.Windows.Forms.Label();
+            this.lab_NationalNo = new System.Windows.Forms.Label();
+            this.lab_LicenseId = new System.Windows.Forms.Label();
+            this.lab_IsDetained = new System.Windows.Forms.Label();
+            this.lab_ExpirationDate = new System.Windows.Forms.Label();
+            this.lab_DriverId = new System.Windows.Forms.Label();
+            this.lab_DateOfBirth = new System.Windows.Forms.Label();
+            this.lab_IsActive = new System.Windows.Forms.Label();
+            this.lab_Name = new System.Windows.Forms.Label();
+            this.lab_Class = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lable23 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -135,265 +135,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Driver License Info";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Class:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Name:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 115);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "License ID:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 147);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 16);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "National No:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 179);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 16);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Gendor:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(25, 211);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 16);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Issuee Date:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(25, 243);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 16);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Issuee Reason:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(25, 275);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 16);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Notes:";
-            // 
-            // lab_Class
-            // 
-            this.lab_Class.AutoSize = true;
-            this.lab_Class.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_Class.Location = new System.Drawing.Point(116, 51);
-            this.lab_Class.Name = "lab_Class";
-            this.lab_Class.Size = new System.Drawing.Size(107, 16);
-            this.lab_Class.TabIndex = 0;
-            this.lab_Class.Text = "??? ???? ??? ???";
-            // 
-            // lab_Name
-            // 
-            this.lab_Name.AutoSize = true;
-            this.lab_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_Name.Location = new System.Drawing.Point(116, 83);
-            this.lab_Name.Name = "lab_Name";
-            this.lab_Name.Size = new System.Drawing.Size(86, 16);
-            this.lab_Name.TabIndex = 0;
-            this.lab_Name.Text = "???? ??? ??? ";
-            // 
-            // lab_LicenseId
-            // 
-            this.lab_LicenseId.AutoSize = true;
-            this.lab_LicenseId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_LicenseId.Location = new System.Drawing.Point(151, 115);
-            this.lab_LicenseId.Name = "lab_LicenseId";
-            this.lab_LicenseId.Size = new System.Drawing.Size(21, 16);
-            this.lab_LicenseId.TabIndex = 0;
-            this.lab_LicenseId.Text = "??";
-            // 
-            // lab_NationalNo
-            // 
-            this.lab_NationalNo.AutoSize = true;
-            this.lab_NationalNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_NationalNo.Location = new System.Drawing.Point(151, 147);
-            this.lab_NationalNo.Name = "lab_NationalNo";
-            this.lab_NationalNo.Size = new System.Drawing.Size(35, 16);
-            this.lab_NationalNo.TabIndex = 0;
-            this.lab_NationalNo.Text = "????";
-            // 
-            // lab_Gendor
-            // 
-            this.lab_Gendor.AutoSize = true;
-            this.lab_Gendor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_Gendor.Location = new System.Drawing.Point(124, 179);
-            this.lab_Gendor.Name = "lab_Gendor";
-            this.lab_Gendor.Size = new System.Drawing.Size(42, 16);
-            this.lab_Gendor.TabIndex = 0;
-            this.lab_Gendor.Text = "?????";
-            // 
-            // lab_IssueDate
-            // 
-            this.lab_IssueDate.AutoSize = true;
-            this.lab_IssueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_IssueDate.Location = new System.Drawing.Point(155, 211);
-            this.lab_IssueDate.Name = "lab_IssueDate";
-            this.lab_IssueDate.Size = new System.Drawing.Size(57, 16);
-            this.lab_IssueDate.TabIndex = 0;
-            this.lab_IssueDate.Text = "??/??/??";
-            // 
-            // lab_IssueReason
-            // 
-            this.lab_IssueReason.AutoSize = true;
-            this.lab_IssueReason.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_IssueReason.Location = new System.Drawing.Point(181, 243);
-            this.lab_IssueReason.Name = "lab_IssueReason";
-            this.lab_IssueReason.Size = new System.Drawing.Size(42, 16);
-            this.lab_IssueReason.TabIndex = 0;
-            this.lab_IssueReason.Text = "?????";
-            // 
-            // lab_Notes
-            // 
-            this.lab_Notes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_Notes.Location = new System.Drawing.Point(115, 275);
-            this.lab_Notes.Name = "lab_Notes";
-            this.lab_Notes.Size = new System.Drawing.Size(239, 100);
-            this.lab_Notes.TabIndex = 0;
-            this.lab_Notes.Text = "No Notes";
-            // 
-            // lable23
-            // 
-            this.lable23.AutoSize = true;
-            this.lable23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lable23.Location = new System.Drawing.Point(360, 189);
-            this.lable23.Name = "lable23";
-            this.lable23.Size = new System.Drawing.Size(70, 16);
-            this.lable23.TabIndex = 0;
-            this.lable23.Text = "Is Active:";
-            // 
-            // lab_IsActive
-            // 
-            this.lab_IsActive.AutoSize = true;
-            this.lab_IsActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_IsActive.Location = new System.Drawing.Point(464, 189);
-            this.lab_IsActive.Name = "lab_IsActive";
-            this.lab_IsActive.Size = new System.Drawing.Size(86, 16);
-            this.lab_IsActive.TabIndex = 0;
-            this.lab_IsActive.Text = "???? ??? ??? ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(360, 226);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 16);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Date Of Birth:";
-            // 
-            // lab_DateOfBirth
-            // 
-            this.lab_DateOfBirth.AutoSize = true;
-            this.lab_DateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_DateOfBirth.Location = new System.Drawing.Point(497, 226);
-            this.lab_DateOfBirth.Name = "lab_DateOfBirth";
-            this.lab_DateOfBirth.Size = new System.Drawing.Size(57, 16);
-            this.lab_DateOfBirth.TabIndex = 0;
-            this.lab_DateOfBirth.Text = "??/??/??";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(360, 263);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 16);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Driver ID:";
-            // 
-            // lab_DriverId
-            // 
-            this.lab_DriverId.AutoSize = true;
-            this.lab_DriverId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_DriverId.Location = new System.Drawing.Point(469, 263);
-            this.lab_DriverId.Name = "lab_DriverId";
-            this.lab_DriverId.Size = new System.Drawing.Size(35, 16);
-            this.lab_DriverId.TabIndex = 0;
-            this.lab_DriverId.Text = "????";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(360, 300);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(117, 16);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Expiration Date:";
-            // 
-            // lab_ExpirationDate
-            // 
-            this.lab_ExpirationDate.AutoSize = true;
-            this.lab_ExpirationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_ExpirationDate.Location = new System.Drawing.Point(517, 300);
-            this.lab_ExpirationDate.Name = "lab_ExpirationDate";
-            this.lab_ExpirationDate.Size = new System.Drawing.Size(57, 16);
-            this.lab_ExpirationDate.TabIndex = 0;
-            this.lab_ExpirationDate.Text = "??/??/??";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(360, 337);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(98, 16);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Is Detained?:";
-            // 
-            // lab_IsDetained
-            // 
-            this.lab_IsDetained.AutoSize = true;
-            this.lab_IsDetained.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_IsDetained.Location = new System.Drawing.Point(517, 338);
-            this.lab_IsDetained.Name = "lab_IsDetained";
-            this.lab_IsDetained.Size = new System.Drawing.Size(28, 16);
-            this.lab_IsDetained.TabIndex = 0;
-            this.lab_IsDetained.Text = "???";
             // 
             // pictureBox13
             // 
@@ -535,12 +276,271 @@
             this.PB_ImagePerson.TabIndex = 1;
             this.PB_ImagePerson.TabStop = false;
             // 
-            // uCDriverLicenseInfo
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(25, 275);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 16);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Notes:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(25, 243);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(115, 16);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Issuee Reason:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(25, 211);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 16);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Issuee Date:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(25, 179);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 16);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Gendor:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(25, 147);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 16);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "National No:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(25, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "License ID:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(25, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Name:";
+            // 
+            // lab_Notes
+            // 
+            this.lab_Notes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Notes.Location = new System.Drawing.Point(115, 275);
+            this.lab_Notes.Name = "lab_Notes";
+            this.lab_Notes.Size = new System.Drawing.Size(239, 100);
+            this.lab_Notes.TabIndex = 0;
+            this.lab_Notes.Text = "No Notes";
+            // 
+            // lab_IssueReason
+            // 
+            this.lab_IssueReason.AutoSize = true;
+            this.lab_IssueReason.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_IssueReason.Location = new System.Drawing.Point(181, 243);
+            this.lab_IssueReason.Name = "lab_IssueReason";
+            this.lab_IssueReason.Size = new System.Drawing.Size(42, 16);
+            this.lab_IssueReason.TabIndex = 0;
+            this.lab_IssueReason.Text = "?????";
+            // 
+            // lab_IssueDate
+            // 
+            this.lab_IssueDate.AutoSize = true;
+            this.lab_IssueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_IssueDate.Location = new System.Drawing.Point(155, 211);
+            this.lab_IssueDate.Name = "lab_IssueDate";
+            this.lab_IssueDate.Size = new System.Drawing.Size(57, 16);
+            this.lab_IssueDate.TabIndex = 0;
+            this.lab_IssueDate.Text = "??/??/??";
+            // 
+            // lab_Gendor
+            // 
+            this.lab_Gendor.AutoSize = true;
+            this.lab_Gendor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Gendor.Location = new System.Drawing.Point(124, 179);
+            this.lab_Gendor.Name = "lab_Gendor";
+            this.lab_Gendor.Size = new System.Drawing.Size(42, 16);
+            this.lab_Gendor.TabIndex = 0;
+            this.lab_Gendor.Text = "?????";
+            // 
+            // lab_NationalNo
+            // 
+            this.lab_NationalNo.AutoSize = true;
+            this.lab_NationalNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_NationalNo.Location = new System.Drawing.Point(151, 147);
+            this.lab_NationalNo.Name = "lab_NationalNo";
+            this.lab_NationalNo.Size = new System.Drawing.Size(35, 16);
+            this.lab_NationalNo.TabIndex = 0;
+            this.lab_NationalNo.Text = "????";
+            // 
+            // lab_LicenseId
+            // 
+            this.lab_LicenseId.AutoSize = true;
+            this.lab_LicenseId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_LicenseId.Location = new System.Drawing.Point(151, 115);
+            this.lab_LicenseId.Name = "lab_LicenseId";
+            this.lab_LicenseId.Size = new System.Drawing.Size(21, 16);
+            this.lab_LicenseId.TabIndex = 0;
+            this.lab_LicenseId.Text = "??";
+            // 
+            // lab_IsDetained
+            // 
+            this.lab_IsDetained.AutoSize = true;
+            this.lab_IsDetained.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_IsDetained.Location = new System.Drawing.Point(517, 338);
+            this.lab_IsDetained.Name = "lab_IsDetained";
+            this.lab_IsDetained.Size = new System.Drawing.Size(28, 16);
+            this.lab_IsDetained.TabIndex = 0;
+            this.lab_IsDetained.Text = "???";
+            // 
+            // lab_ExpirationDate
+            // 
+            this.lab_ExpirationDate.AutoSize = true;
+            this.lab_ExpirationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_ExpirationDate.Location = new System.Drawing.Point(517, 300);
+            this.lab_ExpirationDate.Name = "lab_ExpirationDate";
+            this.lab_ExpirationDate.Size = new System.Drawing.Size(57, 16);
+            this.lab_ExpirationDate.TabIndex = 0;
+            this.lab_ExpirationDate.Text = "??/??/??";
+            // 
+            // lab_DriverId
+            // 
+            this.lab_DriverId.AutoSize = true;
+            this.lab_DriverId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_DriverId.Location = new System.Drawing.Point(469, 263);
+            this.lab_DriverId.Name = "lab_DriverId";
+            this.lab_DriverId.Size = new System.Drawing.Size(35, 16);
+            this.lab_DriverId.TabIndex = 0;
+            this.lab_DriverId.Text = "????";
+            // 
+            // lab_DateOfBirth
+            // 
+            this.lab_DateOfBirth.AutoSize = true;
+            this.lab_DateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_DateOfBirth.Location = new System.Drawing.Point(497, 226);
+            this.lab_DateOfBirth.Name = "lab_DateOfBirth";
+            this.lab_DateOfBirth.Size = new System.Drawing.Size(57, 16);
+            this.lab_DateOfBirth.TabIndex = 0;
+            this.lab_DateOfBirth.Text = "??/??/??";
+            // 
+            // lab_IsActive
+            // 
+            this.lab_IsActive.AutoSize = true;
+            this.lab_IsActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_IsActive.Location = new System.Drawing.Point(464, 189);
+            this.lab_IsActive.Name = "lab_IsActive";
+            this.lab_IsActive.Size = new System.Drawing.Size(86, 16);
+            this.lab_IsActive.TabIndex = 0;
+            this.lab_IsActive.Text = "???? ??? ??? ";
+            // 
+            // lab_Name
+            // 
+            this.lab_Name.AutoSize = true;
+            this.lab_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Name.Location = new System.Drawing.Point(116, 83);
+            this.lab_Name.Name = "lab_Name";
+            this.lab_Name.Size = new System.Drawing.Size(86, 16);
+            this.lab_Name.TabIndex = 0;
+            this.lab_Name.Text = "???? ??? ??? ";
+            // 
+            // lab_Class
+            // 
+            this.lab_Class.AutoSize = true;
+            this.lab_Class.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Class.Location = new System.Drawing.Point(116, 51);
+            this.lab_Class.Name = "lab_Class";
+            this.lab_Class.Size = new System.Drawing.Size(107, 16);
+            this.lab_Class.TabIndex = 0;
+            this.lab_Class.Text = "??? ???? ??? ???";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(360, 337);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(98, 16);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Is Detained?:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(360, 300);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(117, 16);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Expiration Date:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(360, 263);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 16);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Driver ID:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(360, 226);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(98, 16);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Date Of Birth:";
+            // 
+            // lable23
+            // 
+            this.lable23.AutoSize = true;
+            this.lable23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lable23.Location = new System.Drawing.Point(360, 189);
+            this.lable23.Name = "lable23";
+            this.lable23.Size = new System.Drawing.Size(70, 16);
+            this.lable23.TabIndex = 0;
+            this.lable23.Text = "Is Active:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(25, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Class:";
+            // 
+            // uCDriverLicensenfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
-            this.Name = "uCDriverLicenseInfo";
+            this.Name = "uCDriverLicensenfo";
             this.Size = new System.Drawing.Size(690, 384);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

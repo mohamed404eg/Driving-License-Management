@@ -148,7 +148,11 @@ INSERT INTO [dbo].[InternationalLicenses]
 
             }catch(
             Exception ex)
-            { Console.WriteLine(ex.ToString())}
+            {
+                
+                
+                Console.WriteLine(ex.ToString());
+            }
             finally
             {
                 connection.Close();
@@ -222,7 +226,56 @@ SELECT [InternationalLicenseID]
 
 
 
+        static public DataTable GetAll()
+        {
 
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+SELECT *
+  FROM [dbo].[InternationalLicenses]
+
+";
+
+            SqlCommand command = new SqlCommand(Query, connection);
+            
+            
+            try
+            {
+                connection.Open ();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+
+                if (reader.HasRows)
+                {
+                    dt.Load (reader);
+
+                }
+
+            }catch(Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+
+
+
+
+
+
+
+
+
+            return dt;
+
+
+        }
 
 
 

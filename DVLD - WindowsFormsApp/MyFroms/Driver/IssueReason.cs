@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense
+namespace DVLD___WindowsFormsApp.MyFroms.Driver
 {
     internal class IssueReason
     {

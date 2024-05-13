@@ -31,6 +31,53 @@ namespace Test__ConsoleApp.Driver.InternationalLicenses
         }
 
 
+        static public void AddNew()
+        {
+            clsInternationalLicenses internationalLicenses = new clsInternationalLicenses();
+
+            internationalLicenses.DriverID = 12;
+            internationalLicenses.IssuedUsingLocalLicenseID = 23;
+            internationalLicenses.IssueDate = DateTime.Now;
+            internationalLicenses.ExpirationDate = DateTime.Now.AddYears(1);
+            internationalLicenses.IsActive = true;
+            internationalLicenses.CreatedByUserID = 1;
+
+
+            if (internationalLicenses.Save())
+            {
+                Console.WriteLine("InternationalLicenseID : " + internationalLicenses.InternationalLicenseID.ToString());
+            }
+            else
+            {
+                Console.WriteLine("faild");
+                Console.WriteLine(internationalLicenses.statusRejected.ToString());
+            }
+
+
+
+        }
+
+
+
+
+        static public void GetAll()
+        {
+            DataTable dt = new DataTable();
+
+            dt = clsInternationalLicenses.GetAll();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                foreach (DataColumn column in dt.Columns)
+                {
+                    Console.WriteLine(row[column].ToString());
+                    
+                }
+            }
+
+        }
+
+
 
     }
 }
