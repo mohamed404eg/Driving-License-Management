@@ -1,6 +1,6 @@
-﻿namespace DVLD___WindowsFormsApp.MyFroms.Driver.International_License
+﻿namespace DVLD___WindowsFormsApp.MyFroms.Driver.uC
 {
-    partial class UcFindInternationalLicense
+    partial class UcFindLicense
     {
         /// <summary> 
         /// Required designer variable.
@@ -32,7 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.uCDriverLicensenfo1 = new DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense.uCDriverLicensenfo();
+            this.ucFindLicensenfo = new DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense.uCDriverLicensenfo();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,10 +60,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(114, 41);
+            this.textBox1.Location = new System.Drawing.Point(92, 45);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(267, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBox1.Size = new System.Drawing.Size(299, 20);
+            this.textBox1.TabIndex = 3;
             // 
             // label1
             // 
@@ -75,20 +75,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "LicenseID:";
             // 
-            // uCDriverLicensenfo1
+            // ucFindLicensenfo
             // 
-            this.uCDriverLicensenfo1.Location = new System.Drawing.Point(13, 112);
-            this.uCDriverLicensenfo1.Name = "uCDriverLicensenfo1";
-            this.uCDriverLicensenfo1.Size = new System.Drawing.Size(692, 386);
-            this.uCDriverLicensenfo1.TabIndex = 1;
+            this.ucFindLicensenfo.Location = new System.Drawing.Point(13, 112);
+            this.ucFindLicensenfo.Name = "ucFindLicensenfo";
+            this.ucFindLicensenfo.Size = new System.Drawing.Size(692, 386);
+            this.ucFindLicensenfo.TabIndex = 1;
             // 
-            // UcFindInternationalLicense
+            // UcFindLicense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.uCDriverLicensenfo1);
+            this.Controls.Add(this.ucFindLicensenfo);
             this.Controls.Add(this.groupBox1);
-            this.Name = "UcFindInternationalLicense";
+            this.Name = "UcFindLicense";
             this.Size = new System.Drawing.Size(702, 495);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -102,6 +102,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private ShowLicense.uCDriverLicensenfo uCDriverLicensenfo1;
+        private ShowLicense.uCDriverLicensenfo ucFindLicensenfo;
     }
 }

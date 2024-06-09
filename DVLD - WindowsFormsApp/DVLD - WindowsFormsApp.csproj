@@ -108,12 +108,6 @@
     <Compile Include="MyFroms\Driver\International License\frmIssueeInternationalLicense.Designer.cs">
       <DependentUpon>frmIssueeInternationalLicense.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyFroms\Driver\International License\uCDriverInternationalLicenseinfo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="MyFroms\Driver\International License\uCDriverInternationalLicenseinfo.Designer.cs">
-      <DependentUpon>uCDriverInternationalLicenseinfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="MyFroms\Driver\uC\UcFindLicense.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -269,9 +263,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Driver\International License\frmIssueeInternationalLicense.resx">
       <DependentUpon>frmIssueeInternationalLicense.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyFroms\Driver\International License\uCDriverInternationalLicenseinfo.resx">
-      <DependentUpon>uCDriverInternationalLicenseinfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Driver\uC\UcFindLicense.resx">
       <DependentUpon>UcFindLicense.cs</DependentUpon>
@@ -500,6 +491,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\find-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\international license 24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

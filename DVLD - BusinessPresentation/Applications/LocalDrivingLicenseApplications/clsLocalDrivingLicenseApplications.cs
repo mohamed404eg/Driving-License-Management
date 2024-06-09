@@ -354,12 +354,44 @@ namespace DVLD___BusinessPresentation
 
 
 
+        /// <summary>
+        /// Find By ApplicationID 
+        /// </summary>
+        /// <param name="ApplicationID"></param>
+        /// <returns>clsApplications if not found retrun null</returns>
+        static public clsLocalDrivingLicenseApplications FindByApplicationID(int ApplicationID)
+        {
 
 
 
+            int LicenseClassID = -1;
+            int LocalDrivingLicenseApplicationID = -1;
+            clsApplications applications = null;
+            if (clsLocalDrivingLicenseApplicationsDataAccess.FindByApplicationID(ApplicationID,ref LocalDrivingLicenseApplicationID, ref LicenseClassID))
+            {
+                applications = clsApplications.Find(ApplicationID);
+
+                if (applications != null)
+                {
+
+                    return new clsLocalDrivingLicenseApplications(LocalDrivingLicenseApplicationID, LicenseClassID, applications);
+
+                }
 
 
 
+            }
 
+
+
+            // if not succesfully 
+            return null;
         }
+
+
+
+
+
+
+    }
     }

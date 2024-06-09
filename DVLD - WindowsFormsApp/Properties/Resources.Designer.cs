@@ -323,6 +323,16 @@ namespace DVLD___WindowsFormsApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap international_license_24 {
+            get {
+                object obj = ResourceManager.GetObject("international license 24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap international_license_32 {
             get {
                 object obj = ResourceManager.GetObject("international-license-32", resourceCulture);
@@ -366,6 +376,26 @@ namespace DVLD___WindowsFormsApp.Properties {
         internal static System.Drawing.Bitmap licensing {
             get {
                 object obj = ResourceManager.GetObject("licensing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap money_24 {
+            get {
+                object obj = ResourceManager.GetObject("money-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap money_32 {
+            get {
+                object obj = ResourceManager.GetObject("money-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

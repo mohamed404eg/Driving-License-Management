@@ -16,3 +16,12 @@ P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - BusinessPrese
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - BusinessPresentation\obj\Debug\DVLD - BusinessPresentation.dll
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - BusinessPresentation\obj\Debug\DVLD - BusinessPresentation.pdb
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - BusinessPresentation\obj\Debug\DVLD - B.B96F8EBB.Up2Date
+F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - BusinessPresentation\bin\Debug\DVLD - BusinessPresentation.dll
+F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - BusinessPresentation\bin\Debug\DVLD - BusinessPresentation.pdb
+F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - BusinessPresentation\bin\Debug\DVLD - DataAccess.dll
+F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - BusinessPresentation\bin\Debug\DVLD - DataAccess.pdb
+F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - BusinessPresentation\obj\Debug\DVLD - BusinessPresentation.csproj.AssemblyReference.cache
+F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - BusinessPresentation\obj\Debug\DVLD - BusinessPresentation.csproj.CoreCompileInputs.cache
+F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - BusinessPresentation\obj\Debug\DVLD - B.B96F8EBB.Up2Date
+F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - BusinessPresentation\obj\Debug\DVLD - BusinessPresentation.dll
+F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - BusinessPresentation\obj\Debug\DVLD - BusinessPresentation.pdb

@@ -487,5 +487,72 @@ UPDATE [dbo].[Applications]
 
 
 
+        /// <summary>
+        /// Find By Id 
+        /// </summary>
+        /// <param name="ApplicationID"></param>
+        /// <returns>ApplicationID if  return true  otherwsie fasle</returns>
+        public static bool FindByApplicationID( int ApplicationID,ref int LocalDrivingLicenseApplicationID , ref int LicenseClassID)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+
+SELECT *
+  FROM LocalDrivingLicenseApplications
+  where ApplicationID = @ApplicationID
+
+";
+
+            SqlCommand command = new SqlCommand(Query, connection);
+            command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
+
+
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    LocalDrivingLicenseApplicationID = (int)reader["LocalDrivingLicenseApplicationID"];
+                    LicenseClassID = (int)reader["LicenseClassID"];
+                    isFound = true;
+                }
+
+                reader.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+
+
+
+
+            return isFound;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
     }
 }

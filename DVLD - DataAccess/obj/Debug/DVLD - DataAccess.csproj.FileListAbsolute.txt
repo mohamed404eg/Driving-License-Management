@@ -10,3 +10,9 @@ P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - DataAccess\ob
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - DataAccess\obj\Debug\DVLD - DataAccess.csproj.CoreCompileInputs.cache
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - DataAccess\obj\Debug\DVLD - DataAccess.dll
 P:\DVLD - Driving License Management\DVLD - WindowsFormsApp\DVLD - DataAccess\obj\Debug\DVLD - DataAccess.pdb
+F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - DataAccess\bin\Debug\DVLD - DataAccess.dll
+F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - DataAccess\bin\Debug\DVLD - DataAccess.pdb
+F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - DataAccess\obj\Debug\DVLD - DataAccess.csproj.AssemblyReference.cache
+F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - DataAccess\obj\Debug\DVLD - DataAccess.csproj.CoreCompileInputs.cache
+F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - DataAccess\obj\Debug\DVLD - DataAccess.dll
+F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - DataAccess\obj\Debug\DVLD - DataAccess.pdb
