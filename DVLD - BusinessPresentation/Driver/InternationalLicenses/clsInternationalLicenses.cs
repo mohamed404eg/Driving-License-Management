@@ -58,8 +58,23 @@ namespace DVLD___BusinessPresentation.Driver.InternationalLicenses
 
 
         }
-        public enstatusRejected statusRejected;
+        public enstatusRejected ReasonRejected;
 
+
+
+          public     clsInternationalLicenses()
+        {
+            _InternationalLicenseID = -1;
+            _ApplicationID = -1;
+            DriverID = -1;
+            IssuedUsingLocalLicenseID = -1;
+
+            IssueDate = DateTime.Now;
+            ExpirationDate = DateTime.Now.AddYears(1);
+            IsActive = true;
+            CreatedByUserID = -1;
+
+        }
 
         /// <summary>
         /// Find By DriverID
@@ -109,12 +124,12 @@ namespace DVLD___BusinessPresentation.Driver.InternationalLicenses
             return (clsInternationalLicenses.isHaveInternationalLicenses(DriverID, true) != -1) ;
         }
 
-        bool CheckReqBeforeAdd()
+        bool _CheckReqBeforeAdd()
         {
 
             if (!_LocaLicenseClass_3())
             {
-                statusRejected = enstatusRejected.ClassLicsnes;
+                ReasonRejected = enstatusRejected.ClassLicsnes;
 
                 return false;
 
@@ -122,14 +137,14 @@ namespace DVLD___BusinessPresentation.Driver.InternationalLicenses
 
             if (!_LocaLicenseNotActive())
             {
-                statusRejected = enstatusRejected.IsActive;
+                ReasonRejected = enstatusRejected.IsActive;
 
                 return false;
 
             }
             if (_HaveInternationalLicenseActive())
             {
-                statusRejected = enstatusRejected.IsHave;
+                ReasonRejected = enstatusRejected.IsHave;
 
                 return false;
 
@@ -177,7 +192,7 @@ namespace DVLD___BusinessPresentation.Driver.InternationalLicenses
         bool Add()
         {
 
-            if(!CheckReqBeforeAdd())
+            if(!_CheckReqBeforeAdd())
             {
                 return false;
             }
@@ -186,7 +201,7 @@ namespace DVLD___BusinessPresentation.Driver.InternationalLicenses
 
             if (ApplicationID == -1) {
 
-                statusRejected = enstatusRejected.ApplicationID;
+                ReasonRejected = enstatusRejected.ApplicationID;
 
                 return false; 
             
@@ -235,6 +250,10 @@ namespace DVLD___BusinessPresentation.Driver.InternationalLicenses
         {
             return clsInternationalLicensesDA.GetAll();
         }
+
+        bool Find(int IssuedUsingLocalLicenseID)
+
+
 
 
 

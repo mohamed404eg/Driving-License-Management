@@ -50,7 +50,7 @@ namespace Test__ConsoleApp.Driver.InternationalLicenses
             else
             {
                 Console.WriteLine("faild");
-                Console.WriteLine(internationalLicenses.statusRejected.ToString());
+                Console.WriteLine(internationalLicenses.ReasonRejected.ToString());
             }
 
 

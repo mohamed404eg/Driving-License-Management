@@ -193,6 +193,16 @@ namespace DVLD___WindowsFormsApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap create_24 {
+            get {
+                object obj = ResourceManager.GetObject("create_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Date_OfBirth_24 {
             get {
                 object obj = ResourceManager.GetObject("Date OfBirth-24", resourceCulture);

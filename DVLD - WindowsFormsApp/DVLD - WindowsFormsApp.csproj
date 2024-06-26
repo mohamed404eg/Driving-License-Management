@@ -501,5 +501,8 @@
   <ItemGroup>
     <None Include="Resources\international license 24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\create_24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
