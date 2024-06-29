@@ -7,13 +7,21 @@ This my project to Driving License Management in country ;
 
 # noetic
 
+
 ## Applications Status
+- Applications.ApplicationStatus = 1 THEN 'New'
+- WHEN Applications.ApplicationStatus = 2 THEN 'Cancelled'
+- WHEN Applications.ApplicationStatus = 3 THEN 'Completed'
+- END AS Status
 
-//Applications.ApplicationStatus = 1 THEN 'New'
-//WHEN Applications.ApplicationStatus = 2 THEN 'Cancelled'
-//WHEN Applications.ApplicationStatus = 3 THEN 'Completed'
-//END AS Status
-
+# Main Features 
+## create Applications
+by Applications you can create withe Appointments or  InternationalLicenses or Local Licenses.
+## TestAppointments
+create TestAppointments to Take all Tetst in oreder to pass Test And Take Licenses
+## Users and People
+User is User work in Cmopany and administrator.
+People is administrator User And Normal User Like driver.
 # Image Size
 
 - large x2 128px
