@@ -288,7 +288,7 @@ join LocalDrivingLicenseApplications on LocalDrivingLicenseApplications.Applicat
               
             }catch(Exception ex)
             {
-
+                Console.WriteLine(ex.ToString());
             }
             finally
             {

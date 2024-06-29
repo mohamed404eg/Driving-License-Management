@@ -74,6 +74,7 @@ SELECT [LicenseClassID]
 
             }catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
 
             }
             finally
@@ -150,6 +151,7 @@ SELECT [LicenseClassID]
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
 
             }
             finally
@@ -209,6 +211,7 @@ SELECT *
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
 
             }
             finally
@@ -276,6 +279,7 @@ SELECT DISTINCT  Has = 1
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
 
             }
             finally

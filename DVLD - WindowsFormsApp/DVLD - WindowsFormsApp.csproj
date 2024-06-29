@@ -108,6 +108,12 @@
     <Compile Include="MyFroms\Driver\International License\frmIssueeInternationalLicense.Designer.cs">
       <DependentUpon>frmIssueeInternationalLicense.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyFroms\Driver\International License\UcInternationalLicenseDriverInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Driver\International License\UcInternationalLicenseDriverInfo.Designer.cs">
+      <DependentUpon>UcInternationalLicenseDriverInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyFroms\Driver\uC\UcFindLicense.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Driver\International License\frmIssueeInternationalLicense.resx">
       <DependentUpon>frmIssueeInternationalLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Driver\International License\UcInternationalLicenseDriverInfo.resx">
+      <DependentUpon>UcInternationalLicenseDriverInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Driver\uC\UcFindLicense.resx">
       <DependentUpon>UcFindLicense.cs</DependentUpon>

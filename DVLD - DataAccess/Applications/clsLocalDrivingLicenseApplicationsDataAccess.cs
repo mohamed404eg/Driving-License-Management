@@ -101,6 +101,7 @@ INSERT INTO [dbo].[LocalDrivingLicenseApplications]
 
             }catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
 
             }
             finally
@@ -222,8 +223,10 @@ SELECT [LocalDrivingLicenseApplicationID]
 
             }catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
 
-            }finally {
+            }
+            finally {
                 connection.Close(); 
             }
 
@@ -283,6 +286,7 @@ SELECT [LocalDrivingLicenseApplicationID]
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
 
             }
             finally
@@ -346,6 +350,7 @@ SELECT [LocalDrivingLicenseApplicationID]
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
 
             }
             finally
@@ -410,6 +415,7 @@ SELECT [LocalDrivingLicenseApplicationID]
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
 
             }
             finally
@@ -470,6 +476,7 @@ UPDATE [dbo].[Applications]
 
             }catch(Exception ex)
             {
+                Console.WriteLine(ex.ToString());
 
             }
             finally { connection.Close(); }

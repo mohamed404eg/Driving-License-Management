@@ -77,6 +77,30 @@ namespace Test__ConsoleApp.Driver.InternationalLicenses
 
         }
 
+        static public void FindByInternationalLicenseID(int InternationalLicenseID)
+        {
+            clsInternationalLicenses internationalLicenses = clsInternationalLicenses.Find(InternationalLicenseID);
+            if(internationalLicenses != null)
+            {
+
+               Console.WriteLine("InternationalLicenseID : " + internationalLicenses.InternationalLicenseID);
+                Console.WriteLine("ApplicationID : " + internationalLicenses.ApplicationID);
+            
+                Console.WriteLine("DriverID : " + internationalLicenses.DriverID);
+               Console.WriteLine("IssuedUsingLocalLicenseID : "+internationalLicenses.IssuedUsingLocalLicenseID);
+                Console.WriteLine("IssueDate : " + internationalLicenses.IssueDate);
+                Console.WriteLine("ExpirationDate : " + internationalLicenses.ExpirationDate);
+                Console.WriteLine("IsActive : " + internationalLicenses.IsActive);
+                Console.WriteLine("CreatedByUserID : "+internationalLicenses.CreatedByUserID);
+
+
+            }
+            else
+            {
+                Console.WriteLine("Not Found");
+            }
+
+        }
 
 
     }

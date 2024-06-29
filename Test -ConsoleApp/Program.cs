@@ -1226,12 +1226,14 @@ string ImagePath)
 
 
 
-            // clsInternationalLicenses //
+            //* clsInternationalLicenses *//
             //  TestclsInternationalLicenses.FindByDriverID(9);
 
 
             // TestclsInternationalLicenses.AddNew();
-           // TestclsInternationalLicenses.GetAll();
+            // TestclsInternationalLicenses.GetAll();
+            //TestclsInternationalLicenses.FindByInternationalLicenseID(11);
+           // TestclsInternationalLicenses.FindByInternationalLicenseID(12);
 
 
             Console.ReadKey();

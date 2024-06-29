@@ -76,6 +76,24 @@ namespace DVLD___BusinessPresentation.Driver.InternationalLicenses
 
         }
 
+
+
+
+         clsInternationalLicenses(int InternationalLicenseID,  int ApplicationID,  int DriverID,  int IssuedUsingLocalLicenseID
+            ,  DateTime IssueDate,  DateTime ExpirationDate,  bool IsActive,  int CreatedByUserID)
+        {
+            this._InternationalLicenseID = InternationalLicenseID;
+           this._ApplicationID = ApplicationID;
+            this.DriverID = DriverID;
+            this._InternationalLicenseID = IssuedUsingLocalLicenseID;
+            this.IssueDate = IssueDate;
+            this.ExpirationDate = ExpirationDate;
+            this.IsActive = IsActive;
+            this.CreatedByUserID = CreatedByUserID;
+
+        }
+
+
         /// <summary>
         /// Find By DriverID
         /// </summary>
@@ -235,7 +253,7 @@ namespace DVLD___BusinessPresentation.Driver.InternationalLicenses
             {
                 case enMode.Add:
                     return Add();
-                    break;
+                   
             }
 
             return false;
@@ -251,7 +269,39 @@ namespace DVLD___BusinessPresentation.Driver.InternationalLicenses
             return clsInternationalLicensesDA.GetAll();
         }
 
-        bool Find(int IssuedUsingLocalLicenseID)
+
+
+        /// <summary>
+        /// find nternationalLicense by nternationalLicenseID
+        /// </summary>
+        /// <param name="InternationalLicenseID"></param>
+        /// <returns>if found retrun fill object clsInternationalLicenses otherwise return null </returns>
+        static public clsInternationalLicenses Find(int InternationalLicenseID)
+        {
+            int ApplicationID = -1;
+
+            int DriverID = -1;
+            int IssuedUsingLocalLicenseID = -1;
+            DateTime IssueDate = DateTime.MinValue;
+
+                 DateTime ExpirationDate = DateTime.MinValue; ;
+            bool IsActive = false;
+            int CreatedByUserID = -1;
+
+            if(clsInternationalLicensesDA.Find(InternationalLicenseID,ref ApplicationID,ref DriverID,ref IssuedUsingLocalLicenseID
+               , ref IssueDate,  ref ExpirationDate,ref IsActive , ref CreatedByUserID ))
+            {
+                return new clsInternationalLicenses(InternationalLicenseID, ApplicationID, DriverID, IssuedUsingLocalLicenseID
+                    , IssueDate, ExpirationDate, IsActive, CreatedByUserID);
+            }
+            else
+            {
+                return null;
+            }
+
+
+
+        }
 
 
 

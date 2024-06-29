@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DVLD___DataAccess.Driver.InternationalLicenses
 {
@@ -262,22 +263,97 @@ SELECT *
             {
                 connection.Close();
             }
-
-
-
-
-
-
-
-
-
-
             return dt;
-
-
         }
 
 
+
+        /// <summary>
+        /// find InternationalLicense by InternationalLicenseID
+        /// </summary>
+        /// <param name="InternationalLicenseID"></param>
+        /// <param name="ApplicationID"></param>
+        /// <param name="DriverID"></param>
+        /// <param name="IssuedUsingLocalLicenseID"></param>
+        /// <param name="IssueDate"></param>
+        /// <param name="ExpirationDate"></param>
+        /// <param name="IsActive"></param>
+        /// <param name="CreatedByUserID"></param>
+        /// <returns>if found return true otherwise return false</returns>
+
+    static public   bool Find(int InternationalLicenseID , ref int ApplicationID , ref int DriverID , ref int IssuedUsingLocalLicenseID
+            ,ref DateTime IssueDate , ref DateTime ExpirationDate ,ref bool IsActive , ref int CreatedByUserID)
+        {
+            bool isFound = false;
+
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+SELECT [InternationalLicenseID]
+      ,[ApplicationID]
+      ,[DriverID]
+      ,[IssuedUsingLocalLicenseID]
+      ,[IssueDate]
+      ,[ExpirationDate]
+      ,[IsActive]
+      ,[CreatedByUserID]
+  FROM [dbo].[InternationalLicenses]
+  where InternationalLicenseID = @InternationalLicenseID
+
+";
+
+            SqlCommand command = new SqlCommand(Query, connection);
+
+            command.Parameters.AddWithValue("@InternationalLicenseID", InternationalLicenseID);
+
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+
+                if (reader.Read())
+                {
+                    ApplicationID = (int)reader["ApplicationID"];
+                    DriverID = (int)reader["DriverID"];
+
+                    IssuedUsingLocalLicenseID = (int)reader["IssuedUsingLocalLicenseID"];
+                    IssueDate = (DateTime)reader["IssueDate"];
+                    ExpirationDate = (DateTime)reader["ExpirationDate"];
+                    IsActive = (bool)reader["IsActive"];
+                    CreatedByUserID = (int)reader["CreatedByUserID"];
+
+
+
+                    isFound = true;
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+
+
+
+
+
+
+
+
+
+            return isFound;
+
+        }
 
 
 
