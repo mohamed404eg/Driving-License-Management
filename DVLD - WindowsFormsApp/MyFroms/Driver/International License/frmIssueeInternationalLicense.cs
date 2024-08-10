@@ -25,6 +25,8 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.International_License
             InitializeComponent();
         }
 
+
+        // firt fuction call after click button find license
         private void ucFindLicense1_MyCustomEvent(object sender, uC.UcFindLicense.MyCustomEventArgs e)
         {
             _LicenseId = e.Id;
@@ -59,6 +61,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.International_License
 
              btn_Issue.Enabled = true;
             LL_ShowLicenseHistory.Enabled = true;
+            InternationalLicenses = new clsInternationalLicenses(); // new info
             FillInternationalLicenses();
             ShowApplicationInfo();
         }
@@ -66,7 +69,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.International_License
 
         void ShowApplicationInfo()
         {
-            InternationalLicenses = new clsInternationalLicenses();
+           
 
             lab_Application_Date.Text = InternationalLicenses.IssueDate.ToShortDateString();
             lab_IssueDate.Text = InternationalLicenses.IssueDate.ToShortDateString();
@@ -140,6 +143,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.International_License
         {
             btn_Issue.Enabled = false;
             ucFindLicense1.Enabled = false;
+            LL_ShowLicenseInfo.Enabled = true;
 
         }
         private void LL_ShowLicenseHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -156,11 +160,21 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.International_License
                    frmLicenseHistory frmLicenseHistory = 
                         new frmLicenseHistory(localDrivingLicenseApplications.LocalDrivingLicenseApplicationID);
 
-
+                    frmLicenseHistory.ShowDialog();
                 }
 
 
                     }
+
+
+        }
+
+        private void LL_ShowLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmInternationalLicenseInfo frmInternationalLicenseInfo = new frmInternationalLicenseInfo(InternationalLicenses.InternationalLicenseID);
+          
+
+            frmInternationalLicenseInfo.ShowDialog();
 
 
         }

@@ -25,3 +25,12 @@ F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - B
 F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - BusinessPresentation\obj\Debug\DVLD - B.B96F8EBB.Up2Date
 F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - BusinessPresentation\obj\Debug\DVLD - BusinessPresentation.dll
 F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - BusinessPresentation\obj\Debug\DVLD - BusinessPresentation.pdb
+C:\Users\otg43\source\repos\Driving-License-Management\DVLD - BusinessPresentation\bin\Debug\DVLD - BusinessPresentation.dll
+C:\Users\otg43\source\repos\Driving-License-Management\DVLD - BusinessPresentation\bin\Debug\DVLD - BusinessPresentation.pdb
+C:\Users\otg43\source\repos\Driving-License-Management\DVLD - BusinessPresentation\bin\Debug\DVLD - DataAccess.dll
+C:\Users\otg43\source\repos\Driving-License-Management\DVLD - BusinessPresentation\bin\Debug\DVLD - DataAccess.pdb
+C:\Users\otg43\source\repos\Driving-License-Management\DVLD - BusinessPresentation\obj\Debug\DVLD - BusinessPresentation.csproj.AssemblyReference.cache
+C:\Users\otg43\source\repos\Driving-License-Management\DVLD - BusinessPresentation\obj\Debug\DVLD - BusinessPresentation.csproj.CoreCompileInputs.cache
+C:\Users\otg43\source\repos\Driving-License-Management\DVLD - BusinessPresentation\obj\Debug\DVLD - B.B96F8EBB.Up2Date
+C:\Users\otg43\source\repos\Driving-License-Management\DVLD - BusinessPresentation\obj\Debug\DVLD - BusinessPresentation.dll
+C:\Users\otg43\source\repos\Driving-License-Management\DVLD - BusinessPresentation\obj\Debug\DVLD - BusinessPresentation.pdb

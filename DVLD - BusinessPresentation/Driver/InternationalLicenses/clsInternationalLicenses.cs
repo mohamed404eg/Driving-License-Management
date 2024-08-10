@@ -85,7 +85,7 @@ namespace DVLD___BusinessPresentation.Driver.InternationalLicenses
             this._InternationalLicenseID = InternationalLicenseID;
            this._ApplicationID = ApplicationID;
             this.DriverID = DriverID;
-            this._InternationalLicenseID = IssuedUsingLocalLicenseID;
+            this.IssuedUsingLocalLicenseID = IssuedUsingLocalLicenseID;
             this.IssueDate = IssueDate;
             this.ExpirationDate = ExpirationDate;
             this.IsActive = IsActive;

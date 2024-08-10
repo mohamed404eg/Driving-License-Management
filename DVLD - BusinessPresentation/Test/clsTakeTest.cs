@@ -1,4 +1,5 @@
-﻿using DVLD___DataAccess.Test;
+﻿using DVLD___BusinessPresentation.Driver;
+using DVLD___DataAccess.Test;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -118,6 +119,7 @@ namespace DVLD___BusinessPresentation.Test
 
         void UpdateApplicationStatus()
         {
+            // if successfully
             if (TestResult == false) return;
 
 
@@ -145,6 +147,20 @@ namespace DVLD___BusinessPresentation.Test
                 // save
                 applications.Save();
 
+
+                //// create Dirver Perosn if is not has driver 
+                clsDriver driver = clsDriver.FindByPersonID(LApplications.ApplicantPersonID);
+                if (driver == null)
+                {
+                    driver = new clsDriver();
+
+                    driver.PersonID = LApplications.ApplicantPersonID;
+                    driver.CreatedByUserID = CreatedByUserID;
+                    driver.CreatedDate = DateTime.Now;
+
+                    driver.Save();
+
+                }
 
 
             }

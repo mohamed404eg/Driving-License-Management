@@ -66,6 +66,9 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.Issue_License
             clsApplications applications = clsApplications.Find(LocalDrivingApp.ApplicationID);
 
             clsDriver driver = clsDriver.FindByPersonID(applications.ApplicantPersonID);
+
+
+
             if (driver == null) return;
 
             clsLicenseClass licenseClass = clsLicenseClass.Find(LocalDrivingApp.LicenseClassID);

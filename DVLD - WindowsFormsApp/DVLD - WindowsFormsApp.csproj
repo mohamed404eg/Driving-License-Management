@@ -102,6 +102,12 @@
       <DependentUpon>frmTestAppointment.cs</DependentUpon>
     </Compile>
     <Compile Include="MyFroms\CurrentUser.cs" />
+    <Compile Include="MyFroms\Driver\International License\frmInternationalLicenseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Driver\International License\frmInternationalLicenseInfo.Designer.cs">
+      <DependentUpon>frmInternationalLicenseInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyFroms\Driver\International License\frmIssueeInternationalLicense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Application\Test\frmTestAppointment.resx">
       <DependentUpon>frmTestAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Driver\International License\frmInternationalLicenseInfo.resx">
+      <DependentUpon>frmInternationalLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Driver\International License\frmIssueeInternationalLicense.resx">
       <DependentUpon>frmIssueeInternationalLicense.cs</DependentUpon>

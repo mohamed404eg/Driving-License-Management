@@ -16,3 +16,9 @@ F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - D
 F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - DataAccess\obj\Debug\DVLD - DataAccess.csproj.CoreCompileInputs.cache
 F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - DataAccess\obj\Debug\DVLD - DataAccess.dll
 F:\Project\DVLD - Driving License Management\Driving-License-Management\DVLD - DataAccess\obj\Debug\DVLD - DataAccess.pdb
+C:\Users\otg43\source\repos\Driving-License-Management\DVLD - DataAccess\bin\Debug\DVLD - DataAccess.dll
+C:\Users\otg43\source\repos\Driving-License-Management\DVLD - DataAccess\bin\Debug\DVLD - DataAccess.pdb
+C:\Users\otg43\source\repos\Driving-License-Management\DVLD - DataAccess\obj\Debug\DVLD - DataAccess.csproj.AssemblyReference.cache
+C:\Users\otg43\source\repos\Driving-License-Management\DVLD - DataAccess\obj\Debug\DVLD - DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\otg43\source\repos\Driving-License-Management\DVLD - DataAccess\obj\Debug\DVLD - DataAccess.dll
+C:\Users\otg43\source\repos\Driving-License-Management\DVLD - DataAccess\obj\Debug\DVLD - DataAccess.pdb

@@ -357,6 +357,7 @@
             // ucFindLicense1
             // 
             this.ucFindLicense1.Location = new System.Drawing.Point(21, 37);
+            this.ucFindLicense1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ucFindLicense1.Name = "ucFindLicense1";
             this.ucFindLicense1.Size = new System.Drawing.Size(702, 495);
             this.ucFindLicense1.TabIndex = 1;
@@ -379,7 +380,6 @@
             // 
             // btn_close
             // 
-            this.btn_close.Enabled = false;
             this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_close.Image = global::DVLD___WindowsFormsApp.Properties.Resources.close;
             this.btn_close.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -415,12 +415,13 @@
             this.LL_ShowLicenseInfo.TabIndex = 4;
             this.LL_ShowLicenseInfo.TabStop = true;
             this.LL_ShowLicenseInfo.Text = "Show License Info";
+            this.LL_ShowLicenseInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LL_ShowLicenseInfo_LinkClicked);
             // 
             // frmIssueeInternationalLicense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(756, 748);
+            this.ClientSize = new System.Drawing.Size(756, 747);
             this.Controls.Add(this.LL_ShowLicenseInfo);
             this.Controls.Add(this.LL_ShowLicenseHistory);
             this.Controls.Add(this.btn_close);

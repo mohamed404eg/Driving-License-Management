@@ -10,6 +10,6 @@ namespace DVLD___DataAccess
     {
 
 
-        static public string ConnectionsString = "Server=.;Database=DVLD;User Id=sa;Password=123456;\r\n";
+        static public string ConnectionsString = "Server=192.168.1.110,1433;Database=DVLD2;User Id=sa;Password=sL^L6x{*51~J;\r\n";
     }
 }

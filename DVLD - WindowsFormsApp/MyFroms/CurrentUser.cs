@@ -9,6 +9,12 @@ namespace DVLD___WindowsFormsApp.MyFroms
 {
     public class CurrentUser
     {
-        public static clsUser User = null;
+        ////public static clsUser User = null;
+
+
+      
+        
+        public static clsUser User = clsUser.Find(1); // dev
+       
     }
 }
