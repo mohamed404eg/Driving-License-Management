@@ -63,6 +63,16 @@ namespace DVLD___WindowsFormsApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_file_128 {
+            get {
+                object obj = ResourceManager.GetObject("add-file-128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap application {
             get {
                 object obj = ResourceManager.GetObject("application", resourceCulture);
@@ -333,6 +343,16 @@ namespace DVLD___WindowsFormsApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap international_512 {
+            get {
+                object obj = ResourceManager.GetObject("international-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap international_license_24 {
             get {
                 object obj = ResourceManager.GetObject("international license 24", resourceCulture);
@@ -426,6 +446,16 @@ namespace DVLD___WindowsFormsApp.Properties {
         internal static System.Drawing.Bitmap passport_24 {
             get {
                 object obj = ResourceManager.GetObject("passport-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_128 {
+            get {
+                object obj = ResourceManager.GetObject("plus-128", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

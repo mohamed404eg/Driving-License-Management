@@ -33,7 +33,7 @@ namespace DVLD___WindowsFormsApp
             //Application.Run(new frmVisionTest(35,frmVisionTest.enTestType.VisionTest));
             //Application.Run(new frmListDrivers());
             // Application.Run(new frmManageLocalDrivingApplication());
-            Application.Run(new frmInternationalLicenseInfo(15  ));
+            Application.Run(new frmIssueeInternationalLicense(  ));
         }
     }
 }

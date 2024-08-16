@@ -29,6 +29,17 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label_ApplicationID = new System.Windows.Forms.Label();
+            this.label_IsActive = new System.Windows.Forms.Label();
+            this.label_DateOfBirth = new System.Windows.Forms.Label();
+            this.label_DriverID = new System.Windows.Forms.Label();
+            this.label_ExpirationDate = new System.Windows.Forms.Label();
+            this.label_IssueDate = new System.Windows.Forms.Label();
+            this.label_Gendor = new System.Windows.Forms.Label();
+            this.label_NationalNo = new System.Windows.Forms.Label();
+            this.label_LicenseID = new System.Windows.Forms.Label();
+            this.label_IntLicenseID = new System.Windows.Forms.Label();
+            this.lable_Name = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -52,17 +63,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lable_Name = new System.Windows.Forms.Label();
-            this.label_IntLicenseID = new System.Windows.Forms.Label();
-            this.label_LicenseID = new System.Windows.Forms.Label();
-            this.label_NationalNo = new System.Windows.Forms.Label();
-            this.label_Gendor = new System.Windows.Forms.Label();
-            this.label_IssueDate = new System.Windows.Forms.Label();
-            this.label_ExpirationDate = new System.Windows.Forms.Label();
-            this.label_DriverID = new System.Windows.Forms.Label();
-            this.label_DateOfBirth = new System.Windows.Forms.Label();
-            this.label_IsActive = new System.Windows.Forms.Label();
-            this.label_ApplicationID = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -121,6 +121,105 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Driver International License Info";
+            // 
+            // label_ApplicationID
+            // 
+            this.label_ApplicationID.AutoSize = true;
+            this.label_ApplicationID.Location = new System.Drawing.Point(435, 80);
+            this.label_ApplicationID.Name = "label_ApplicationID";
+            this.label_ApplicationID.Size = new System.Drawing.Size(90, 15);
+            this.label_ApplicationID.TabIndex = 3;
+            this.label_ApplicationID.Text = "\"Application ID\"";
+            // 
+            // label_IsActive
+            // 
+            this.label_IsActive.AutoSize = true;
+            this.label_IsActive.Location = new System.Drawing.Point(435, 119);
+            this.label_IsActive.Name = "label_IsActive";
+            this.label_IsActive.Size = new System.Drawing.Size(58, 15);
+            this.label_IsActive.TabIndex = 3;
+            this.label_IsActive.Text = "\"Is Active\"";
+            // 
+            // label_DateOfBirth
+            // 
+            this.label_DateOfBirth.AutoSize = true;
+            this.label_DateOfBirth.Location = new System.Drawing.Point(435, 158);
+            this.label_DateOfBirth.Name = "label_DateOfBirth";
+            this.label_DateOfBirth.Size = new System.Drawing.Size(84, 15);
+            this.label_DateOfBirth.TabIndex = 3;
+            this.label_DateOfBirth.Text = "\"Date Of Birth\"";
+            // 
+            // label_DriverID
+            // 
+            this.label_DriverID.AutoSize = true;
+            this.label_DriverID.Location = new System.Drawing.Point(435, 197);
+            this.label_DriverID.Name = "label_DriverID";
+            this.label_DriverID.Size = new System.Drawing.Size(62, 15);
+            this.label_DriverID.TabIndex = 3;
+            this.label_DriverID.Text = "\"Driver ID\"";
+            // 
+            // label_ExpirationDate
+            // 
+            this.label_ExpirationDate.AutoSize = true;
+            this.label_ExpirationDate.Location = new System.Drawing.Point(435, 236);
+            this.label_ExpirationDate.Name = "label_ExpirationDate";
+            this.label_ExpirationDate.Size = new System.Drawing.Size(102, 15);
+            this.label_ExpirationDate.TabIndex = 3;
+            this.label_ExpirationDate.Text = "\"Expiration Date:\"";
+            // 
+            // label_IssueDate
+            // 
+            this.label_IssueDate.AutoSize = true;
+            this.label_IssueDate.Location = new System.Drawing.Point(169, 227);
+            this.label_IssueDate.Name = "label_IssueDate";
+            this.label_IssueDate.Size = new System.Drawing.Size(73, 15);
+            this.label_IssueDate.TabIndex = 3;
+            this.label_IssueDate.Text = "\"Issue Date\"";
+            // 
+            // label_Gendor
+            // 
+            this.label_Gendor.AutoSize = true;
+            this.label_Gendor.Location = new System.Drawing.Point(169, 197);
+            this.label_Gendor.Name = "label_Gendor";
+            this.label_Gendor.Size = new System.Drawing.Size(56, 15);
+            this.label_Gendor.TabIndex = 3;
+            this.label_Gendor.Text = "\"Gendor\"";
+            // 
+            // label_NationalNo
+            // 
+            this.label_NationalNo.AutoSize = true;
+            this.label_NationalNo.Location = new System.Drawing.Point(169, 158);
+            this.label_NationalNo.Name = "label_NationalNo";
+            this.label_NationalNo.Size = new System.Drawing.Size(80, 15);
+            this.label_NationalNo.TabIndex = 3;
+            this.label_NationalNo.Text = "\"National No\"";
+            // 
+            // label_LicenseID
+            // 
+            this.label_LicenseID.AutoSize = true;
+            this.label_LicenseID.Location = new System.Drawing.Point(169, 110);
+            this.label_LicenseID.Name = "label_LicenseID";
+            this.label_LicenseID.Size = new System.Drawing.Size(73, 15);
+            this.label_LicenseID.TabIndex = 3;
+            this.label_LicenseID.Text = "\"License ID\"";
+            // 
+            // label_IntLicenseID
+            // 
+            this.label_IntLicenseID.AutoSize = true;
+            this.label_IntLicenseID.Location = new System.Drawing.Point(169, 71);
+            this.label_IntLicenseID.Name = "label_IntLicenseID";
+            this.label_IntLicenseID.Size = new System.Drawing.Size(89, 15);
+            this.label_IntLicenseID.TabIndex = 3;
+            this.label_IntLicenseID.Text = "\"Int.License ID\"";
+            // 
+            // lable_Name
+            // 
+            this.lable_Name.AutoSize = true;
+            this.lable_Name.Location = new System.Drawing.Point(169, 32);
+            this.lable_Name.Name = "lable_Name";
+            this.lable_Name.Size = new System.Drawing.Size(49, 15);
+            this.lable_Name.TabIndex = 3;
+            this.lable_Name.Text = "\"Name\"";
             // 
             // pictureBox12
             // 
@@ -362,105 +461,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lable_Name
-            // 
-            this.lable_Name.AutoSize = true;
-            this.lable_Name.Location = new System.Drawing.Point(169, 32);
-            this.lable_Name.Name = "lable_Name";
-            this.lable_Name.Size = new System.Drawing.Size(49, 15);
-            this.lable_Name.TabIndex = 3;
-            this.lable_Name.Text = "\"Name\"";
-            // 
-            // label_IntLicenseID
-            // 
-            this.label_IntLicenseID.AutoSize = true;
-            this.label_IntLicenseID.Location = new System.Drawing.Point(169, 71);
-            this.label_IntLicenseID.Name = "label_IntLicenseID";
-            this.label_IntLicenseID.Size = new System.Drawing.Size(89, 15);
-            this.label_IntLicenseID.TabIndex = 3;
-            this.label_IntLicenseID.Text = "\"Int.License ID\"";
-            // 
-            // label_LicenseID
-            // 
-            this.label_LicenseID.AutoSize = true;
-            this.label_LicenseID.Location = new System.Drawing.Point(169, 110);
-            this.label_LicenseID.Name = "label_LicenseID";
-            this.label_LicenseID.Size = new System.Drawing.Size(73, 15);
-            this.label_LicenseID.TabIndex = 3;
-            this.label_LicenseID.Text = "\"License ID\"";
-            // 
-            // label_NationalNo
-            // 
-            this.label_NationalNo.AutoSize = true;
-            this.label_NationalNo.Location = new System.Drawing.Point(169, 158);
-            this.label_NationalNo.Name = "label_NationalNo";
-            this.label_NationalNo.Size = new System.Drawing.Size(80, 15);
-            this.label_NationalNo.TabIndex = 3;
-            this.label_NationalNo.Text = "\"National No\"";
-            // 
-            // label_Gendor
-            // 
-            this.label_Gendor.AutoSize = true;
-            this.label_Gendor.Location = new System.Drawing.Point(169, 197);
-            this.label_Gendor.Name = "label_Gendor";
-            this.label_Gendor.Size = new System.Drawing.Size(56, 15);
-            this.label_Gendor.TabIndex = 3;
-            this.label_Gendor.Text = "\"Gendor\"";
-            // 
-            // label_IssueDate
-            // 
-            this.label_IssueDate.AutoSize = true;
-            this.label_IssueDate.Location = new System.Drawing.Point(169, 236);
-            this.label_IssueDate.Name = "label_IssueDate";
-            this.label_IssueDate.Size = new System.Drawing.Size(73, 15);
-            this.label_IssueDate.TabIndex = 3;
-            this.label_IssueDate.Text = "\"Issue Date\"";
-            // 
-            // label_ExpirationDate
-            // 
-            this.label_ExpirationDate.AutoSize = true;
-            this.label_ExpirationDate.Location = new System.Drawing.Point(435, 245);
-            this.label_ExpirationDate.Name = "label_ExpirationDate";
-            this.label_ExpirationDate.Size = new System.Drawing.Size(102, 15);
-            this.label_ExpirationDate.TabIndex = 3;
-            this.label_ExpirationDate.Text = "\"Expiration Date:\"";
-            // 
-            // label_DriverID
-            // 
-            this.label_DriverID.AutoSize = true;
-            this.label_DriverID.Location = new System.Drawing.Point(435, 197);
-            this.label_DriverID.Name = "label_DriverID";
-            this.label_DriverID.Size = new System.Drawing.Size(62, 15);
-            this.label_DriverID.TabIndex = 3;
-            this.label_DriverID.Text = "\"Driver ID\"";
-            // 
-            // label_DateOfBirth
-            // 
-            this.label_DateOfBirth.AutoSize = true;
-            this.label_DateOfBirth.Location = new System.Drawing.Point(435, 158);
-            this.label_DateOfBirth.Name = "label_DateOfBirth";
-            this.label_DateOfBirth.Size = new System.Drawing.Size(84, 15);
-            this.label_DateOfBirth.TabIndex = 3;
-            this.label_DateOfBirth.Text = "\"Date Of Birth\"";
-            // 
-            // label_IsActive
-            // 
-            this.label_IsActive.AutoSize = true;
-            this.label_IsActive.Location = new System.Drawing.Point(435, 119);
-            this.label_IsActive.Name = "label_IsActive";
-            this.label_IsActive.Size = new System.Drawing.Size(58, 15);
-            this.label_IsActive.TabIndex = 3;
-            this.label_IsActive.Text = "\"Is Active\"";
-            // 
-            // label_ApplicationID
-            // 
-            this.label_ApplicationID.AutoSize = true;
-            this.label_ApplicationID.Location = new System.Drawing.Point(435, 80);
-            this.label_ApplicationID.Name = "label_ApplicationID";
-            this.label_ApplicationID.Size = new System.Drawing.Size(90, 15);
-            this.label_ApplicationID.TabIndex = 3;
-            this.label_ApplicationID.Text = "\"Application ID\"";
             // 
             // UcInternationalLicenseDriverInfo
             // 

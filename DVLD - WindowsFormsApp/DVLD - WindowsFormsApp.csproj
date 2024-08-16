@@ -70,6 +70,12 @@
     <Compile Include="MyFroms\Application\Control\UCdrivingAndAppInfo.Designer.cs">
       <DependentUpon>UCdrivingAndAppInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyFroms\Application\International\frmManageInternationalDrivingApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Application\International\frmManageInternationalDrivingApplication.Designer.cs">
+      <DependentUpon>frmManageInternationalDrivingApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyFroms\Application\LocalApplication\frmManageLocalDrivingApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Application\Control\UCdrivingAndAppInfo.resx">
       <DependentUpon>UCdrivingAndAppInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Application\International\frmManageInternationalDrivingApplication.resx">
+      <DependentUpon>frmManageInternationalDrivingApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Application\LocalApplication\frmManageLocalDrivingApplication.resx">
       <DependentUpon>frmManageLocalDrivingApplication.cs</DependentUpon>
@@ -521,6 +530,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\create_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\international-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-file-128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

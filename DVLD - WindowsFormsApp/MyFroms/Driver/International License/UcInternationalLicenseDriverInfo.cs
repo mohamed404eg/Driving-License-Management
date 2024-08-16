@@ -51,7 +51,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.International_License
             label_DateOfBirth.Text = people.DateOfBirth.ToShortDateString();
             label_DriverID.Text = driver.DriverID.ToString();
             label_ExpirationDate.Text =internationalLicenses.ExpirationDate.ToShortDateString();
-
+            pictureBox12.ImageLocation = people.ImagePath; 
 
 
         }
