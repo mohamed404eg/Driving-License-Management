@@ -1233,9 +1233,13 @@ string ImagePath)
             // TestclsInternationalLicenses.AddNew();
             // TestclsInternationalLicenses.GetAll();
             //TestclsInternationalLicenses.FindByInternationalLicenseID(11);
-           // TestclsInternationalLicenses.FindByInternationalLicenseID(12);
-
-
+            // TestclsInternationalLicenses.FindByInternationalLicenseID(12);
+            //  TestclsInternationalLicenses.GetFindRdataTable(17);
+            //TestclsInternationalLicenses.GetFindRdataTable(1200);
+            
+            
+            
+            
             Console.ReadKey();
         }
     }

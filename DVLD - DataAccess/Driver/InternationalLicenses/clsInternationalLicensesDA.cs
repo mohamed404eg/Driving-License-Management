@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
+using System.Runtime.Remoting.Messaging;
 
 namespace DVLD___DataAccess.Driver.InternationalLicenses
 {
@@ -355,6 +356,62 @@ SELECT [InternationalLicenseID]
 
         }
 
+        static public DataTable FindRdataTable(int InternationalLicenseID)
+        {
+         
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+             SELECT *
+             FROM [dbo].[InternationalLicenses]
+             where InternationalLicenseID = @InternationalLicenseID
+
+";
+
+            SqlCommand command = new SqlCommand(Query, connection);
+
+            command.Parameters.AddWithValue("@InternationalLicenseID", InternationalLicenseID);
+
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+
+                if (reader.HasRows)
+                {
+
+                    dt.Load(reader);
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+
+
+
+
+
+
+
+
+
+            return dt;
+
+
+
+        }
 
 
 

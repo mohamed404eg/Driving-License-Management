@@ -103,5 +103,27 @@ namespace Test__ConsoleApp.Driver.InternationalLicenses
         }
 
 
+
+        static public void GetFindRdataTable(int InternationalLicenseID)
+        {
+            DataTable dt = new DataTable();
+
+            dt = clsInternationalLicenses.FindRdataTable(InternationalLicenseID);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                foreach (DataColumn column in dt.Columns)
+                {
+                    Console.WriteLine(row[column].ToString());
+
+                }
+            }
+
+        }
+
+
+
+
+
     }
 }

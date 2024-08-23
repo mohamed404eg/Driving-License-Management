@@ -1,4 +1,5 @@
 ﻿
+using DVLD___WindowsFormsApp.MyFroms.Application.International;
 using DVLD___WindowsFormsApp.MyFroms.Application.LocalApplication;
 using DVLD___WindowsFormsApp.MyFroms.Application.Test;
 using DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision;
@@ -33,7 +34,7 @@ namespace DVLD___WindowsFormsApp
             //Application.Run(new frmVisionTest(35,frmVisionTest.enTestType.VisionTest));
             //Application.Run(new frmListDrivers());
             // Application.Run(new frmManageLocalDrivingApplication());
-            Application.Run(new frmIssueeInternationalLicense(  ));
+            Application.Run(new frmManageInternationalDrivingApplication(  ));
         }
     }
 }

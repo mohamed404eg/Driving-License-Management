@@ -305,6 +305,20 @@ namespace DVLD___BusinessPresentation.Driver.InternationalLicenses
 
 
 
+        /// <summary>
+        /// find nternationalLicense by nternationalLicenseID
+        /// </summary>
+        /// <param name="InternationalLicenseID"></param>
+        /// <returns>if found retrun fill DataTable otherwise return empyt DataTable </returns>
+        static public DataTable FindRdataTable(int InternationalLicenseID)
+        { 
+          
+            return clsInternationalLicensesDA.FindRdataTable(InternationalLicenseID);
+
+
+        }
+
+
 
 
     }

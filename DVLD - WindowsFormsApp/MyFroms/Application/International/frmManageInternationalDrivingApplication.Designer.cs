@@ -37,6 +37,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btn_AddNew = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TbFiterValue = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +56,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 301);
             this.dataGridView1.Name = "dataGridView1";
@@ -73,6 +75,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Close";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -113,6 +116,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(169, 21);
             this.comboBox1.TabIndex = 5;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // btn_AddNew
             // 
@@ -125,6 +129,7 @@
             this.btn_AddNew.Size = new System.Drawing.Size(55, 52);
             this.btn_AddNew.TabIndex = 3;
             this.btn_AddNew.UseVisualStyleBackColor = true;
+            this.btn_AddNew.Click += new System.EventHandler(this.btn_AddNew_Click);
             // 
             // pictureBox1
             // 
@@ -137,11 +142,21 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // TbFiterValue
+            // 
+            this.TbFiterValue.Enabled = false;
+            this.TbFiterValue.Location = new System.Drawing.Point(256, 275);
+            this.TbFiterValue.Name = "TbFiterValue";
+            this.TbFiterValue.Size = new System.Drawing.Size(236, 20);
+            this.TbFiterValue.TabIndex = 6;
+            this.TbFiterValue.TextChanged += new System.EventHandler(this.TbFiterValue_TextChanged);
+            // 
             // frmManageInternationalDrivingApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(930, 666);
+            this.Controls.Add(this.TbFiterValue);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lab_CountRecords);
             this.Controls.Add(this.label3);
@@ -171,5 +186,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lab_CountRecords;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox TbFiterValue;
     }
 }
