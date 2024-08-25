@@ -1,6 +1,9 @@
 ﻿using DVLD___BusinessPresentation;
+using DVLD___BusinessPresentation.Driver;
 using DVLD___BusinessPresentation.Driver.InternationalLicenses;
 using DVLD___WindowsFormsApp.MyFroms.Driver.International_License;
+using DVLD___WindowsFormsApp.MyFroms.Functions;
+using DVLD___WindowsFormsApp.MyFroms.Person;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +38,10 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.International
         void SetDefiltFilterNone()
         {
             comboBox1.SelectedIndex = 0;
+            FullGridView();
+            SetNumberRecords();
+          
+
         }
         void SetNumberRecords()
         {
@@ -62,14 +69,15 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.International
 
         private void FrmIssueeInternationalLicense_FormClosed(object sender, FormClosedEventArgs e)
         {
-            FullGridView();
-            SetNumberRecords();
+            SetDefiltFilterNone();
+        
 
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == 1) {
+            if (comboBox1.SelectedIndex == 1)
+            {
 
                 TbFiterValue.Enabled = true;
 
@@ -82,6 +90,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.International
             {
                 TbFiterValue.Enabled = false;
                 RestFullGridView();
+                TbFiterValue.Text = string.Empty;
             }
         }
 
@@ -90,8 +99,43 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.International
             if (int.TryParse(TbFiterValue.Text, out int InternationalLicenseID))
             {
 
-            dataGridView1.DataSource = clsInternationalLicenses.FindRdataTable(InternationalLicenseID);
+                dataGridView1.DataSource = clsInternationalLicenses.FindRdataTable(InternationalLicenseID);
+            }
+            if (string.IsNullOrEmpty(TbFiterValue.Text))
+            {
+                RestFullGridView();
+
             }
         }
+
+        private void showPersonLicenseHistorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showPersonDerailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int DriverId = Multi._GetByIndextCellInRow(dataGridView1, 2);
+            if (DriverId != -1)
+            {
+                clsDriver driver = clsDriver.Find(DriverId);
+                if (driver != null)
+                {
+                    frmPersonDetails frmPersonDetails = new frmPersonDetails(driver.PersonID);
+                    frmPersonDetails.ShowDialog();
+
+
+                }
+
+
+                // MessageBox.Show(Multi._GetByIndextCellInRow(dataGridView1, 2).ToString());
+
+            }
+        }
+
+        private void showLicenseDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
-    }
+}

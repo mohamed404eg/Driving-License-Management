@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
@@ -38,8 +39,13 @@
             this.btn_AddNew = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TbFiterValue = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showPersonDerailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showLicenseDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showPersonLicenseHistorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -58,6 +64,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 301);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -151,6 +158,40 @@
             this.TbFiterValue.TabIndex = 6;
             this.TbFiterValue.TextChanged += new System.EventHandler(this.TbFiterValue_TextChanged);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showPersonDerailsToolStripMenuItem,
+            this.showLicenseDetailsToolStripMenuItem,
+            this.showPersonLicenseHistorToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(230, 104);
+            // 
+            // showPersonDerailsToolStripMenuItem
+            // 
+            this.showPersonDerailsToolStripMenuItem.Image = global::DVLD___WindowsFormsApp.Properties.Resources.user__1_;
+            this.showPersonDerailsToolStripMenuItem.Name = "showPersonDerailsToolStripMenuItem";
+            this.showPersonDerailsToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
+            this.showPersonDerailsToolStripMenuItem.Text = "Show Person Derails";
+            this.showPersonDerailsToolStripMenuItem.Click += new System.EventHandler(this.showPersonDerailsToolStripMenuItem_Click);
+            // 
+            // showLicenseDetailsToolStripMenuItem
+            // 
+            this.showLicenseDetailsToolStripMenuItem.Image = global::DVLD___WindowsFormsApp.Properties.Resources.lDrivings_64;
+            this.showLicenseDetailsToolStripMenuItem.Name = "showLicenseDetailsToolStripMenuItem";
+            this.showLicenseDetailsToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
+            this.showLicenseDetailsToolStripMenuItem.Text = "Show License Details";
+            this.showLicenseDetailsToolStripMenuItem.Click += new System.EventHandler(this.showLicenseDetailsToolStripMenuItem_Click);
+            // 
+            // showPersonLicenseHistorToolStripMenuItem
+            // 
+            this.showPersonLicenseHistorToolStripMenuItem.Image = global::DVLD___WindowsFormsApp.Properties.Resources.clock;
+            this.showPersonLicenseHistorToolStripMenuItem.Name = "showPersonLicenseHistorToolStripMenuItem";
+            this.showPersonLicenseHistorToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
+            this.showPersonLicenseHistorToolStripMenuItem.Text = "Show Person License History";
+            this.showPersonLicenseHistorToolStripMenuItem.Click += new System.EventHandler(this.showPersonLicenseHistorToolStripMenuItem_Click);
+            // 
             // frmManageInternationalDrivingApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,6 +211,7 @@
             this.Text = "frmManageInternationalDrivingApplication";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,5 +229,9 @@
         private System.Windows.Forms.Label lab_CountRecords;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox TbFiterValue;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem showPersonDerailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showLicenseDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showPersonLicenseHistorToolStripMenuItem;
     }
 }

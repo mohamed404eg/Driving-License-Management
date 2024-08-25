@@ -235,7 +235,14 @@ SELECT [InternationalLicenseID]
             SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
 
             string Query = @"
-SELECT *
+SELECT  [InternationalLicenseID]
+      ,[ApplicationID]
+      ,[DriverID]
+      ,[IssuedUsingLocalLicenseID]
+      ,[IssueDate]
+      ,[ExpirationDate]
+      ,[IsActive]
+      
   FROM [dbo].[InternationalLicenses]
 
 ";
@@ -363,7 +370,14 @@ SELECT [InternationalLicenseID]
             SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
 
             string Query = @"
-             SELECT *
+             SELECT  [InternationalLicenseID]
+      ,[ApplicationID]
+      ,[DriverID]
+      ,[IssuedUsingLocalLicenseID]
+      ,[IssueDate]
+      ,[ExpirationDate]
+      ,[IsActive]
+      
              FROM [dbo].[InternationalLicenses]
              where InternationalLicenseID = @InternationalLicenseID
 

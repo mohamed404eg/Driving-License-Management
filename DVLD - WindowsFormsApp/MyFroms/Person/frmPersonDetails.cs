@@ -67,6 +67,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Person
         private void ucPersonInfo1_Load(object sender, EventArgs e)
         {
 
+
         }
     }
 }
