@@ -21,13 +21,22 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.License_History
             InitializeComponent();
         }
 
-        public frmLicenseHistory(int LocalAppId)
+        public frmLicenseHistory(int LocalAppId , int DriverId = -1, bool IsLocalAppId = true)
         {
             InitializeComponent();
             _LocalAppId = LocalAppId;
-            LoadData();
-        }
 
+            if (IsLocalAppId)
+            {
+            LoadData();
+
+            }
+            else
+            {
+                LoadDataByDriverId( DriverId);
+            }
+        }
+  
         void LoadData()
         {
             clsLocalDrivingLicenseApplications localDrivingLicenseApplications = clsLocalDrivingLicenseApplications.Find(_LocalAppId);
@@ -37,6 +46,42 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.License_History
 
             clsDriver driver = clsDriver.FindByPersonID(localDrivingLicenseApplications.ApplicantPersonID);
             if(driver != null)
+            {
+
+                // load Data Grid View 
+                // Local
+
+                DGV_LicenseLocal.DataSource = clsLicenses.FindByDriverIDShort(driver.DriverID);
+
+
+
+                // number of record
+                lab_Recored_Local.Text = DGV_LicenseLocal.RowCount.ToString();
+
+                // international
+                DGV_LicenseInternational.DataSource = clsInternationalLicenses.FindByDriverID(driver.DriverID);
+                // number of record
+
+                lab_Records_International.Text = DGV_LicenseInternational.RowCount.ToString();
+
+
+
+
+
+            }
+        }
+        void LoadDataByDriverId(int DriverId)
+        {
+            //clsLocalDrivingLicenseApplications localDrivingLicenseApplications = clsLocalDrivingLicenseApplications.Find(_LocalAppId);
+            clsDriver driver = clsDriver.Find(DriverId);
+
+            if (driver != null)
+            {
+                ucPersonInfo1.FullPerson(driver.PersonID);
+            }
+
+          
+            if (driver != null)
             {
 
                 // load Data Grid View 

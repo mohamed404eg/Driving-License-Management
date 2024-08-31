@@ -2,6 +2,7 @@
 using DVLD___BusinessPresentation.Driver;
 using DVLD___BusinessPresentation.Driver.InternationalLicenses;
 using DVLD___WindowsFormsApp.MyFroms.Driver.International_License;
+using DVLD___WindowsFormsApp.MyFroms.Driver.License_History;
 using DVLD___WindowsFormsApp.MyFroms.Functions;
 using DVLD___WindowsFormsApp.MyFroms.Person;
 using System;
@@ -110,7 +111,13 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.International
 
         private void showPersonLicenseHistorToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            int DriverId = Multi._GetByIndextCellInRow(dataGridView1, 2);
+            if (DriverId != -1)
+            {
+                frmLicenseHistory frmLicenseHistory = new frmLicenseHistory(-1,DriverId,false);
+                frmLicenseHistory.ShowDialog();
 
+            }
         }
 
         private void showPersonDerailsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -135,6 +142,21 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.International
 
         private void showLicenseDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            int InternationalLicenseID = Multi._GetByIndextCellInRow(dataGridView1, 0);
+            if (InternationalLicenseID != -1)
+            {
+
+                //    MessageBox.Show(InternationalLicenseID.ToString());
+
+                frmInternationalLicenseInfo frmInternationalLicenseInfo = new frmInternationalLicenseInfo();
+                frmInternationalLicenseInfo.FullNewData(InternationalLicenseID);
+                frmInternationalLicenseInfo.ShowDialog();
+
+
+
+
+
+            }
 
         }
     }
