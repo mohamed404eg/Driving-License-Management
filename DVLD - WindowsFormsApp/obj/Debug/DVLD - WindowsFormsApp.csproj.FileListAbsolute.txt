@@ -153,3 +153,4 @@ C:\Users\otg43\source\repos\Driving-License-Management\DVLD - WindowsFormsApp\ob
 C:\Users\otg43\source\repos\Driving-License-Management\DVLD - WindowsFormsApp\obj\Debug\DVLD - WindowsFormsApp.pdb
 C:\Users\otg43\source\repos\Driving-License-Management\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Driver.International_License.frmInternationalLicenseInfo.resources
 C:\Users\otg43\source\repos\Driving-License-Management\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Application.International.frmManageInternationalDrivingApplication.resources
+C:\Users\otg43\source\repos\Driving-License-Management\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Driver.Renew_License.frmRenewLocalLicense.resources
