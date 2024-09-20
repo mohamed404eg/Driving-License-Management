@@ -166,8 +166,8 @@ namespace DVLD___BusinessPresentation
                     return false;
                 }
 
-                // check if Person has License on this classes
-                if (clsLicenseClass.isHasLicense(this.ApplicantPersonID, LicenseClassID))
+                // check if Person has License on this classes not expiared
+                if (clsLicenseClass.isHasLicenseNotExpirationDate(this.ApplicantPersonID, LicenseClassID,DateTime.Now))
                 {
 
                     return false;

@@ -28,14 +28,14 @@ namespace DVLD___WindowsFormsApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmLogin());
+          //  Application.Run(new frmLogin());
 
 
             // == test ===
             //Application.Run(new frmVisionTest(35,frmVisionTest.enTestType.VisionTest));
             //Application.Run(new frmListDrivers());
             // Application.Run(new frmManageLocalDrivingApplication());
-            Application.Run(new frmRenewLocalLicense(  ));
+           Application.Run(new frmRenewLocalLicense(  ));
         }
     }
 }

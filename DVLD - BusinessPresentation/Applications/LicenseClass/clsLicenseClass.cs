@@ -135,6 +135,17 @@ namespace DVLD___BusinessPresentation.Applications.LicenseClass
 
 
 
+        /// <summary>
+        /// check if Person has License on this classes
+        /// </summary>
+        /// <param name="PersonID"></param>
+        /// <param name="LicenseClassID"></param>
+        /// <returns>if Person has License on this classes return true otherwise return false</returns>
+        static public bool isHasLicenseNotExpirationDate(int PersonID, int LicenseClassID, DateTime DATETIME)
+        {
+            return clsLicenseClassDA.isHasLicenseNotExpirationDate(PersonID, LicenseClassID,DATETIME);
+        }
+
 
     }
 }

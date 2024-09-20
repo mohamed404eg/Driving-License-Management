@@ -292,5 +292,79 @@ SELECT DISTINCT  Has = 1
             return status;
         }
 
+
+
+
+
+        /// <summary>
+        /// check if Person has License on this classes
+        /// </summary>
+        /// <param name="PersonID"></param>
+        /// <param name="LicenseClassID"></param>
+        /// <returns>if Person has License on this classes return true otherwise return false</returns>
+        static public bool isHasLicenseNotExpirationDate(int PersonID, int LicenseClassID , DateTime DATETIME )
+        {
+
+
+
+            bool status = false;
+
+
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+
+
+
+SELECT DISTINCT  has = 1
+  FROM [dbo].[Licenses]
+  join Drivers on Licenses.DriverID = Drivers.DriverID and Drivers.PersonID = @PersonID and ExpirationDate > CAST(@DATETIME as DATETIME) and LicenseClass = @LicenseClassID
+
+
+";
+
+
+            SqlCommand command = new SqlCommand(Query, connection);
+
+
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+            command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
+            command.Parameters.AddWithValue("@DATETIME", DATETIME);
+
+            try
+            {
+                connection.Open();
+
+                object Result = command.ExecuteScalar();
+                if (Result != null && int.TryParse(Result.ToString(), out int Number))
+                {
+                    status = true;
+                }
+                else
+                {
+                    status = false;
+                }
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+
+
+            return status;
+        }
+
+
     }
 }
