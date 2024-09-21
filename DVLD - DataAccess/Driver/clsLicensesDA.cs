@@ -500,6 +500,64 @@ SELECT [LicenseID]
 
 
 
+        /// <summary>
+        /// Update by LicenseID *update available for (IsActive) only*
+        /// </summary>
+        /// <param name="LicenseID"></param>
+        /// <param name="IsActive"></param>
+        /// <returns>Update by LicenseID if successfully return true otherwise return false</returns>
+        static public bool UpdateByLicenseID(int LicenseID , bool IsActive )
+        {
+           bool IsUpdate = false;
+
+
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+
+     UPDATE [dbo].[Licenses]
+   SET [IsActive] = @IsActive
+
+ WHERE LicenseID = @LicenseID
+
+
+";
+
+
+            SqlCommand command = new SqlCommand(Query, connection);
+
+            command.Parameters.AddWithValue("@IsActive", IsActive);
+            command.Parameters.AddWithValue("@LicenseID", LicenseID);
+     
+            try
+            {
+                connection.Open();
+
+                int RowAffected = command.ExecuteNonQuery();
+                if (RowAffected >0)
+                {
+                    IsUpdate = true;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+
+
+            return IsUpdate;
+
+        }
+
+
+
 
 
 

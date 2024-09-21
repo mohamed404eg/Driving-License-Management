@@ -92,7 +92,40 @@ namespace Test__ConsoleApp.Driver
 
 
 
+        static public void UpdateByLicensesId(int LicensesId, bool isActive)
+        {
+            clsLicenses licenses = clsLicenses.Find(LicensesId);
 
+            if (licenses != null)
+            {
+
+                licenses.IsActive = isActive;
+
+                if (licenses.Save())
+                {
+                    Console.WriteLine("License Update");
+                    Console.WriteLine($"IsActive : {licenses.IsActive}");
+
+                }
+                else
+                {
+                    Console.WriteLine("failed");
+                }
+
+
+
+            }
+            else
+            {
+                Console.WriteLine("License ID not found or something wrong");
+            }
+
+
+
+
+
+
+        }
 
 
         //end

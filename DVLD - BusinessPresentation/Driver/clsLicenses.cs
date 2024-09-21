@@ -49,7 +49,8 @@ namespace DVLD___BusinessPresentation.Driver
 
         enum enMode
         {
-            Add
+            Add,
+            Update
         }
         enMode _Mode;
 
@@ -71,7 +72,7 @@ namespace DVLD___BusinessPresentation.Driver
         }
         clsLicenses(int LicenseID , int ApplicationID,int DriverID,int LicenseClass,
                 DateTime IssueDate,DateTime ExpirationDate,string Notes,decimal PaidFees, bool IsActive,
-                byte IssueReason,int CreatedByUserID)
+                byte IssueReason,int CreatedByUserID, enMode Mode)
         {
             this.LicenseID = LicenseID ;
             this.ApplicationID = ApplicationID;
@@ -84,7 +85,7 @@ namespace DVLD___BusinessPresentation.Driver
             this.IsActive = IsActive;
             this.IssueReason = IssueReason;
             this.CreatedByUserID = CreatedByUserID;
-         
+            this._Mode = Mode;
         }
 
         bool _Add()
@@ -123,7 +124,7 @@ namespace DVLD___BusinessPresentation.Driver
             {
                 return new clsLicenses( LicenseID ,ApplicationID, DriverID, LicenseClass,
                  IssueDate, ExpirationDate, Notes, PaidFees, IsActive,
-                 IssueReason, CreatedByUserID);
+                 IssueReason, CreatedByUserID,enMode.Update);
             }
             else
             {
@@ -161,7 +162,7 @@ namespace DVLD___BusinessPresentation.Driver
             {
                 return new clsLicenses(LicenseID, ApplicationID, DriverID, LicenseClass,
                  IssueDate, ExpirationDate, Notes, PaidFees, IsActive,
-                 IssueReason, CreatedByUserID);
+                 IssueReason, CreatedByUserID,enMode.Update);
             }
             else
             {
@@ -207,6 +208,16 @@ namespace DVLD___BusinessPresentation.Driver
         }
 
 
+
+        /// <summary>
+        /// *update available for (IsActive) only*
+        /// </summary>
+        /// <returns></returns>
+        bool _Update()
+        {
+            return clsLicensesDA.UpdateByLicenseID(LicenseID,IsActive);
+
+        }
         public bool Save()
         {
             switch(_Mode)
@@ -214,7 +225,11 @@ namespace DVLD___BusinessPresentation.Driver
                 case enMode.Add:
                  return   _Add();
                     break;
+                case enMode.Update:
+                    return _Update();
+                    break;
             }
+            
 
 
             return false;

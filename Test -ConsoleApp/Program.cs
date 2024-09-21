@@ -1224,7 +1224,8 @@ string ImagePath)
             //  TestclsLicenses.FindByApplicationID(1088);
             //   TestclsLicenses.FindByDriverID(8);
 
-
+            // TestclsLicenses.UpdateByLicensesId(2314, true);
+            TestclsLicenses.UpdateByLicensesId(24, false);
 
             //* clsInternationalLicenses *//
             //  TestclsInternationalLicenses.FindByDriverID(9);
@@ -1236,10 +1237,10 @@ string ImagePath)
             // TestclsInternationalLicenses.FindByInternationalLicenseID(12);
             //  TestclsInternationalLicenses.GetFindRdataTable(17);
             //TestclsInternationalLicenses.GetFindRdataTable(1200);
-            
-            
-            
-            
+
+
+
+
             Console.ReadKey();
         }
     }
