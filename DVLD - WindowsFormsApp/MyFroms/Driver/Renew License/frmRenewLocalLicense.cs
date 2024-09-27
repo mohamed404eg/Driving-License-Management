@@ -230,7 +230,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.Renew_License
 
         private void lLab_ShowNewLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmShowLicense frmShowLicense = new frmShowLicense(_NewLocalDrivingLicenseApplications.ApplicationID);
+            frmShowLicense frmShowLicense = new frmShowLicense(_NewLocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID);
             frmShowLicense.ShowDialog();
         }
     }

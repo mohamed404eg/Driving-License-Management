@@ -1225,7 +1225,7 @@ string ImagePath)
             //   TestclsLicenses.FindByDriverID(8);
 
             // TestclsLicenses.UpdateByLicensesId(2314, true);
-            TestclsLicenses.UpdateByLicensesId(24, false);
+            //    TestclsLicenses.UpdateByLicensesId(24, false);
 
             //* clsInternationalLicenses *//
             //  TestclsInternationalLicenses.FindByDriverID(9);
@@ -1237,6 +1237,12 @@ string ImagePath)
             // TestclsInternationalLicenses.FindByInternationalLicenseID(12);
             //  TestclsInternationalLicenses.GetFindRdataTable(17);
             //TestclsInternationalLicenses.GetFindRdataTable(1200);
+
+
+            //* TestclsDetainedLicenses *//
+            // TestclsDetainedLicenses.TestFindDetainedLicenses(5);
+            // TestclsDetainedLicenses.TestFindDetainedLicenses(53);
+            //TestclsDetainedLicenses.TestAddDetainedLicenses(24, DateTime.Now, 50, 1, false, DateTime.MinValue, -1,- 1);
 
 
 

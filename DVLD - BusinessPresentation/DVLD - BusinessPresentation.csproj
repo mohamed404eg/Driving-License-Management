@@ -51,6 +51,7 @@
     <Compile Include="clsPeople.cs" />
     <Compile Include="clsTestTypes.cs" />
     <Compile Include="clsUser.cs" />
+    <Compile Include="Driver\clsDetainedLicenses.cs" />
     <Compile Include="Driver\clsDriver.cs" />
     <Compile Include="Driver\clsLicenses.cs" />
     <Compile Include="Driver\InternationalLicenses\clsInternationalLicenses.cs" />

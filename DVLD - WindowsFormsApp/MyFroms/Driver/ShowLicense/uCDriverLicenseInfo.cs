@@ -76,7 +76,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense
 
             lab_ExpirationDate.Text = licenses.ExpirationDate.ToShortDateString();
 
-            lab_IsDetained.Text = (licenses.IsActive ? "Yes" : "No");
+            lab_IsDetained.Text = (licenses.IsActive ? "Yes" : "No"); // something wrong // need fix
 
             if (!string.IsNullOrWhiteSpace(people.ImagePath))
             {
