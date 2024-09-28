@@ -81,6 +81,14 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.uC
 
         }
 
-     
+        private void UcFindLicense_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

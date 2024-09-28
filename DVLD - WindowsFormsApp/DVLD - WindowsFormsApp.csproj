@@ -132,6 +132,12 @@
     <Compile Include="MyFroms\Driver\Renew License\frmRenewLocalLicense.Designer.cs">
       <DependentUpon>frmRenewLocalLicense.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyFroms\Driver\Replacement\frmReplacment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Driver\Replacement\frmReplacment.Designer.cs">
+      <DependentUpon>frmReplacment.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyFroms\Driver\uC\UcFindLicense.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Driver\Renew License\frmRenewLocalLicense.resx">
       <DependentUpon>frmRenewLocalLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Driver\Replacement\frmReplacment.resx">
+      <DependentUpon>frmReplacment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Driver\uC\UcFindLicense.resx">
       <DependentUpon>UcFindLicense.cs</DependentUpon>

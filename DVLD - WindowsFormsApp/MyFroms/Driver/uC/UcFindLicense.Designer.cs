@@ -41,17 +41,18 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(17, 3);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(566, 103);
+            this.groupBox1.Size = new System.Drawing.Size(484, 76);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // button1
             // 
             this.button1.Image = global::DVLD___WindowsFormsApp.Properties.Resources.find_32;
-            this.button1.Location = new System.Drawing.Point(397, 29);
+            this.button1.Location = new System.Drawing.Point(398, 20);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(69, 42);
             this.button1.TabIndex = 2;
@@ -60,7 +61,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 45);
+            this.textBox1.Location = new System.Drawing.Point(93, 36);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(299, 20);
             this.textBox1.TabIndex = 3;
@@ -69,7 +70,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 46);
+            this.label1.Location = new System.Drawing.Point(22, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 15);
             this.label1.TabIndex = 0;
@@ -77,9 +78,9 @@
             // 
             // ucFindLicensenfo
             // 
-            this.ucFindLicensenfo.Location = new System.Drawing.Point(13, 112);
+            this.ucFindLicensenfo.Location = new System.Drawing.Point(0, 85);
             this.ucFindLicensenfo.Name = "ucFindLicensenfo";
-            this.ucFindLicensenfo.Size = new System.Drawing.Size(692, 386);
+            this.ucFindLicensenfo.Size = new System.Drawing.Size(744, 384);
             this.ucFindLicensenfo.TabIndex = 1;
             // 
             // UcFindLicense
@@ -89,7 +90,8 @@
             this.Controls.Add(this.ucFindLicensenfo);
             this.Controls.Add(this.groupBox1);
             this.Name = "UcFindLicense";
-            this.Size = new System.Drawing.Size(702, 495);
+            this.Size = new System.Drawing.Size(744, 464);
+            this.Load += new System.EventHandler(this.UcFindLicense_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

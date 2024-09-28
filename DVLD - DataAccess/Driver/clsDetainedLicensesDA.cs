@@ -251,7 +251,71 @@ SELECT *
 
 
 
+        /// <summary>
+        /// find if DetainedLicense Found return true otherwise return false
+        /// </summary>
+        /// <param name="LicenseID"></param>
+        /// <returns></returns>
+        static public bool IsDetainedLicense(int LicenseID)
+        {
+            bool isFound = false;
 
+
+
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+
+
+SELECT isDetainedLicenses = 1
+  FROM [dbo].[DetainedLicenses]
+  where LicenseID = @LicenseID and IsReleased = 0
+
+";
+
+
+
+
+            SqlCommand command = new SqlCommand(Query, connection);
+
+            command.Parameters.AddWithValue("@LicenseID", LicenseID);
+
+            try
+            {
+
+                connection.Open();
+
+                object obj = command.ExecuteScalar();
+
+                if (obj  != null && int.TryParse(obj.ToString(),out int Result) )
+                {
+
+                    if (Result == 1) {
+
+                        isFound = true;
+                    }
+
+
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+
+
+
+            return isFound;
+
+        }
 
 
 

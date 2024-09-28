@@ -154,6 +154,20 @@ namespace DVLD___BusinessPresentation.Driver
 
         }
 
+
+
+        /// <summary>
+        /// find if DetainedLicense Found return true otherwise return false
+        /// </summary>
+        /// <param name="LicenseID"></param>
+        /// <returns></returns>
+        static public bool IsDetainedLicense(int LicenseID)
+        {
+            return clsDetainedLicensesDA.IsDetainedLicense(LicenseID);
+        }
+
+
+
         public bool Svae()
         {
             switch (this._Mode)
@@ -187,15 +201,16 @@ namespace DVLD___BusinessPresentation.Driver
 
 
         }
+
+
+
+
+
+
+
+
+
+
+
     }
-
-
-
-
-
-
-
-
-
-
 }

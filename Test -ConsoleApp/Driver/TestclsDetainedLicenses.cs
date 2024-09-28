@@ -87,6 +87,21 @@ namespace Test__ConsoleApp.Driver
 
         }
 
+        static public void TestIsDetainedLicense(int LicenseID)
+        {
+
+            if (clsDetainedLicenses.IsDetainedLicense(LicenseID))
+            {
+                Console.WriteLine("True, Is DetainedLicens");
+            }
+            else
+            {
+                Console.WriteLine("Is notDetainedLicens ");
+            }
+
+        }
+
+
 
 
 

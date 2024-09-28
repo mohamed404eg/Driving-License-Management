@@ -1243,7 +1243,8 @@ string ImagePath)
             // TestclsDetainedLicenses.TestFindDetainedLicenses(5);
             // TestclsDetainedLicenses.TestFindDetainedLicenses(53);
             //TestclsDetainedLicenses.TestAddDetainedLicenses(24, DateTime.Now, 50, 1, false, DateTime.MinValue, -1,- 1);
-
+            //TestclsDetainedLicenses.TestIsDetainedLicense(20);
+           // TestclsDetainedLicenses.TestIsDetainedLicense(24);
 
 
 
