@@ -54,6 +54,7 @@
     <Compile Include="Driver\clsDetainedLicenses.cs" />
     <Compile Include="Driver\clsDriver.cs" />
     <Compile Include="Driver\clsLicenses.cs" />
+    <Compile Include="Driver\Detain\clsDetain.cs" />
     <Compile Include="Driver\InternationalLicenses\clsInternationalLicenses.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test\clsTakeTest.cs" />
