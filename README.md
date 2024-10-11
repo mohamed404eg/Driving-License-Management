@@ -43,6 +43,6 @@ People is administrator User And Normal User Like driver.
 # Main features
 
 ##    Applications: Replacement for Damaged or Lost Licenses 
-![Screenshot](Media/Screenshot/Main features/Applications Replacement for Damaged or Lost Licenses/Applications Replacement for Damaged or Lost Licenses.png)
+![Screenshot](Media/Screenshot/Main%20features/Applications%20Replacement%20for%20Damaged%20or%20Lost%20Licenses/Applications%20Replacement%20for%20Damaged%20or%20Lost%20Licenses.png)
 https://whimsical.com/applications-replacement-for-damaged-or-lost-licenses-48AfgRiDmYSdKnKKwf9hTJ
 
