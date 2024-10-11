@@ -42,7 +42,7 @@ namespace DVLD___BusinessPresentation
         public decimal PaidFees { get { return _PaidFees; } }
 
         ///
-
+        public bool isReplacement = false;
 
 
 
@@ -166,11 +166,15 @@ namespace DVLD___BusinessPresentation
                     return false;
                 }
 
-                // check if Person has License on this classes not expiared
-                if (clsLicenseClass.isHasLicenseNotExpirationDate(this.ApplicantPersonID, LicenseClassID,DateTime.Now))
+
+                // check if Person has License on this classes not expiared and this not replacement Application
+                if(isReplacement == false)
                 {
 
-                    return false;
+                    if (clsLicenseClass.isHasLicenseNotExpirationDate(this.ApplicantPersonID, LicenseClassID,DateTime.Now))
+                    {
+                        return false;
+                    }
                 }
 
 
