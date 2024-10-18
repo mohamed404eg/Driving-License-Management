@@ -12,10 +12,14 @@ namespace DVLD___BusinessPresentation.Driver.Detain
     {
 
 
-        
 
 
-    static public    DataTable FindByDetainIdDataTable()
+        static public DataTable GetAll()
+        {
+            return clsDetainDA.GetAll();
+
+        }
+        static public    DataTable FindByDetainIdDataTable()
         {
             return clsDetainDA.FindByDetainIdDataTable();
 
