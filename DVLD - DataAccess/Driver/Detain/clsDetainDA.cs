@@ -20,10 +20,16 @@ namespace DVLD___DataAccess.Driver.Detain
 
             string Query = @"
 
-
-
-
-select * from V_DetainedLicensesList
+SELECT [DetainID]
+      ,[LicenseID]
+      ,[DetainDate]
+      ,[IsReleased]
+      ,[FineFees]
+      ,[ReleaseDate]
+      ,[NationalNo]
+      ,[FullName]
+      ,[ReleaseApplicationID]
+  FROM [dbo].[V_DetainedLicensesList]
 
 ";
 
@@ -160,7 +166,7 @@ SELECT [DetainID]
 ";
 
             SqlCommand command = new SqlCommand(Query, connection);
-
+            command.Parameters.AddWithValue("@IsReleased", IsReleased);
 
 
             try
@@ -195,7 +201,7 @@ SELECT [DetainID]
 
             return dt;
         }
-        static public DataTable FindByNationalNoDataTable(int NationalNo)
+        static public DataTable FindByNationalNoDataTable(string NationalNo)
         {
 
             DataTable dt = new DataTable();
@@ -394,6 +400,17 @@ SELECT [DetainID]
 
             return dt;
         }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

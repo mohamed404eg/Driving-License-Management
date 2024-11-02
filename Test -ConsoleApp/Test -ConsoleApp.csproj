@@ -46,6 +46,7 @@
     <Compile Include="Applications\LicenseClass\TestclsLicenseClass.cs" />
     <Compile Include="Applications\LocalDrivingLicenseApplications\TestclsLocalDrivingLicenseApplications.cs" />
     <Compile Include="Applications\TestclsApplications.cs" />
+    <Compile Include="Driver\Detain\TestclsDetain.cs" />
     <Compile Include="Driver\DriverTest.cs" />
     <Compile Include="Driver\InternationalLicenses\TestclsInternationalLicenses.cs" />
     <Compile Include="Driver\TestclsDetainedLicenses.cs" />

@@ -13,6 +13,7 @@ using Test__ConsoleApp.Applications;
 using Test__ConsoleApp.Applications.LicenseClass;
 using Test__ConsoleApp.Applications.LocalDrivingLicenseApplications;
 using Test__ConsoleApp.Driver;
+using Test__ConsoleApp.Driver.Detain;
 using Test__ConsoleApp.Driver.InternationalLicenses;
 using Test__ConsoleApp.Test;
 
@@ -1244,7 +1245,22 @@ string ImagePath)
             // TestclsDetainedLicenses.TestFindDetainedLicenses(53);
             //TestclsDetainedLicenses.TestAddDetainedLicenses(24, DateTime.Now, 50, 1, false, DateTime.MinValue, -1,- 1);
             //TestclsDetainedLicenses.TestIsDetainedLicense(20);
-           // TestclsDetainedLicenses.TestIsDetainedLicense(24);
+            // TestclsDetainedLicenses.TestIsDetainedLicense(24);
+
+
+            //* TestclsDetain *//
+            //  TestclsDetain.GetAll();
+            //TestclsDetain.FindByDetainIdDataTable(8);
+            //TestclsDetain.FindByIsReleaseDataTable(false);
+            //TestclsDetain.FindByNationalNoDataTable("n1"); 
+            //   TestclsDetain.FindByFullNameDataTable("Khalid ALi Maher hamed");
+            //TestclsDetain.FindByReleaseApplicationIdDataTable(3);
+
+
+
+
+
+
 
 
 

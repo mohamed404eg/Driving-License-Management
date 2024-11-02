@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EEB51F48-B962-4D6D-81DF-AD21D8E9C782}|Test -ConsoleApp\\Test -ConsoleApp.csproj|c:\\users\\otg43\\source\\repos\\driving-license-management\\test -consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEB51F48-B962-4D6D-81DF-AD21D8E9C782}|Test -ConsoleApp\\Test -ConsoleApp.csproj|solutionrelative:test -consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEB51F48-B962-4D6D-81DF-AD21D8E9C782}|Test -ConsoleApp\\Test -ConsoleApp.csproj|c:\\users\\otg43\\source\\repos\\driving-license-management\\test -consoleapp\\driver\\detain\\testclsdetain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEB51F48-B962-4D6D-81DF-AD21D8E9C782}|Test -ConsoleApp\\Test -ConsoleApp.csproj|solutionrelative:test -consoleapp\\driver\\detain\\testclsdetain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5D8385AA-DC79-4B8A-8F27-00BE3ADAC7F1}|DVLD - BusinessPresentation\\DVLD - BusinessPresentation.csproj|c:\\users\\otg43\\source\\repos\\driving-license-management\\dvld - businesspresentation\\driver\\detain\\clsdetain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D8385AA-DC79-4B8A-8F27-00BE3ADAC7F1}|DVLD - BusinessPresentation\\DVLD - BusinessPresentation.csproj|solutionrelative:dvld - businesspresentation\\driver\\detain\\clsdetain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2E261DA-11C0-4B50-9983-9C098E3D8A8A}|DVLD - DataAccess\\DVLD - DataAccess.csproj|C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\dvld - dataaccess\\driver\\detain\\clsdetainda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F2E261DA-11C0-4B50-9983-9C098E3D8A8A}|DVLD - DataAccess\\DVLD - DataAccess.csproj|solutionrelative:dvld - dataaccess\\driver\\detain\\clsdetainda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EC19277-DDC8-49AE-8C37-1ECE64A1E43E}|DVLD - WindowsFormsApp\\DVLD - WindowsFormsApp.csproj|C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\dvld - windowsformsapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EC19277-DDC8-49AE-8C37-1ECE64A1E43E}|DVLD - WindowsFormsApp\\DVLD - WindowsFormsApp.csproj|solutionrelative:dvld - windowsformsapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,46 +26,79 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - WindowsFormsApp\\Program.cs",
-              "RelativeDocumentMoniker": "DVLD - WindowsFormsApp\\Program.cs",
-              "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - WindowsFormsApp\\Program.cs",
-              "RelativeToolTip": "DVLD - WindowsFormsApp\\Program.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAACYAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T17:49:25.523Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "clsDetainDA.cs",
-              "DocumentMoniker": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - DataAccess\\Driver\\Detain\\clsDetainDA.cs",
-              "RelativeDocumentMoniker": "DVLD - DataAccess\\Driver\\Detain\\clsDetainDA.cs",
-              "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - DataAccess\\Driver\\Detain\\clsDetainDA.cs",
-              "RelativeToolTip": "DVLD - DataAccess\\Driver\\Detain\\clsDetainDA.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIwBAAAAAAAAAAAAAA==",
+              "Title": "TestclsDetain.cs",
+              "DocumentMoniker": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\Test -ConsoleApp\\Driver\\Detain\\TestclsDetain.cs",
+              "RelativeDocumentMoniker": "Test -ConsoleApp\\Driver\\Detain\\TestclsDetain.cs",
+              "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\Test -ConsoleApp\\Driver\\Detain\\TestclsDetain.cs",
+              "RelativeToolTip": "Test -ConsoleApp\\Driver\\Detain\\TestclsDetain.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwIwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T07:14:32.761Z",
+              "WhenOpened": "2024-11-01T17:41:30.854Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\Test -ConsoleApp\\Program.cs",
+              "RelativeDocumentMoniker": "Test -ConsoleApp\\Program.cs",
+              "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\Test -ConsoleApp\\Program.cs",
+              "RelativeToolTip": "Test -ConsoleApp\\Program.cs",
+              "ViewState": "AgIAANAEAAAAAAAAAAAnwO4EAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T17:40:06.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "clsDetain.cs",
               "DocumentMoniker": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - BusinessPresentation\\Driver\\Detain\\clsDetain.cs",
               "RelativeDocumentMoniker": "DVLD - BusinessPresentation\\Driver\\Detain\\clsDetain.cs",
               "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - BusinessPresentation\\Driver\\Detain\\clsDetain.cs",
               "RelativeToolTip": "DVLD - BusinessPresentation\\Driver\\Detain\\clsDetain.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAApwCwAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-11T07:10:39.939Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "73f71bbe-95f6-4850-8177-22a17f78bdc4",
+        "Display": 0,
+        "X": 955,
+        "Y": 0,
+        "Width": 970,
+        "Height": 1085,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "clsDetainDA.cs",
+              "DocumentMoniker": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - DataAccess\\Driver\\Detain\\clsDetainDA.cs",
+              "RelativeDocumentMoniker": "DVLD - DataAccess\\Driver\\Detain\\clsDetainDA.cs",
+              "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - DataAccess\\Driver\\Detain\\clsDetainDA.cs",
+              "RelativeToolTip": "DVLD - DataAccess\\Driver\\Detain\\clsDetainDA.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwMsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T07:14:32.761Z",
               "EditorCaption": ""
             }
           ]

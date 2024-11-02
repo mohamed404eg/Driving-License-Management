@@ -19,30 +19,30 @@ namespace DVLD___BusinessPresentation.Driver.Detain
             return clsDetainDA.GetAll();
 
         }
-        static public    DataTable FindByDetainIdDataTable()
+        static public    DataTable FindByDetainIdDataTable(int DetainID)
         {
-            return clsDetainDA.FindByDetainIdDataTable();
+            return clsDetainDA.FindByDetainIdDataTable(DetainID);
 
         }
 
-        static public DataTable FindByIsReleaseDataTable()
+        static public DataTable FindByIsReleaseDataTable(bool IsReleased)
         {
-            return clsDetainDA.FindByDetainIdDataTable();
+            return clsDetainDA.FindByIsReleaseDataTable(IsReleased);
         }
-        static public DataTable FindByNationalNoDataTable()
+        static public DataTable FindByNationalNoDataTable(string NationalNo)
         {
-            return clsDetainDA.FindByNationalNoDataTable();
+            return clsDetainDA.FindByNationalNoDataTable(NationalNo);
 
         }
-        static public DataTable FindByFullNameDataTable()
+        static public DataTable FindByFullNameDataTable(string FullName)
         {
-            return clsDetainDA.FindByFullNameDataTable();
+            return clsDetainDA.FindByFullNameDataTable(FullName);
 
         }
     
-        static public DataTable FindByReleaseApplicationIdDataTable()
+        static public DataTable FindByReleaseApplicationIdDataTable(int ReleaseApplicationID)
         {
-            return clsDetainDA.FindByNationalNoDataTable();
+            return clsDetainDA.FindByReleaseApplicationIdDataTable(ReleaseApplicationID);
         }
 
 
