@@ -14,6 +14,17 @@ This my project to Driving License Management in country ;
 - WHEN Applications.ApplicationStatus = 3 THEN 'Completed'
 - END AS Status
 
+
+
+## Applications Type
+- Replacement for a Lost Driving License = 1
+- New Local Driving License Service = 2
+- Renew Driving License Service = 3
+- Replacement for a Damaged Driving License = 4
+- Release Detained Driving Licsense = 5
+- New International License = 6
+
+
 # Main Features 
 ## create Applications
 by Applications you can create withe Appointments or  InternationalLicenses or Local Licenses.

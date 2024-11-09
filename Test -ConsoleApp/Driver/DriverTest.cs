@@ -123,6 +123,28 @@ namespace Test__ConsoleApp.Driver
 
         }
 
+        static public void FindByLicenseID(int LicenseID)
+        {
+            clsDriver driver = clsDriver.FindByLicenseID(LicenseID);
+
+
+            if (driver != null)
+            {
+                Console.WriteLine("DriverID = " + driver.DriverID);
+                Console.WriteLine("PersonID  = " + driver.PersonID);
+                Console.WriteLine("CreatedByUserID  = " + driver.CreatedByUserID);
+                Console.WriteLine("CreatedDate  = " + driver.CreatedDate);
+
+
+            }
+            else
+            {
+                Console.WriteLine("Not Found");
+            }
+
+        }
+
+
 
 
 

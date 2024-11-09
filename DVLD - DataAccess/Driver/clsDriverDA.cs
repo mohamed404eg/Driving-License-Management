@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -277,6 +278,75 @@ SELECT [DriverID]
 
             return isFound;
         }
+
+
+        /// <summary>
+        /// Find By LicenseID
+        /// </summary>
+        /// <param name="LicenseID"></param>
+        /// <param name="DriverID"></param>
+        /// <param name="PersonID"></param>
+        /// <param name="CreatedByUserID"></param>
+        /// <param name="CreatedDate"></param>
+        /// <returns>true if found otherwise return false</returns>
+        static public bool FindByLicenseID(int LicenseID, ref int DriverID, ref int PersonID, ref int CreatedByUserID, ref DateTime CreatedDate)
+        {
+
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+SELECT [Drivers].[DriverID]
+      ,[Drivers].[PersonID]
+      ,[Drivers].[CreatedByUserID]
+      ,[Drivers].[CreatedDate]
+  FROM [dbo].[Drivers]
+  join Licenses on Licenses.DriverID = Drivers.DriverID
+where Licenses.LicenseID = @LicenseID
+
+";
+
+            SqlCommand command = new SqlCommand(Query, connection);
+            command.Parameters.AddWithValue("@LicenseID", LicenseID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    isFound = true;
+                    DriverID = (int)reader["DriverID"];
+                    PersonID = (int)reader["PersonID"];
+                    CreatedByUserID = (int)reader["CreatedByUserID"];
+                    CreatedDate = (DateTime)reader["CreatedDate"];
+
+
+
+
+                }
+
+                reader.Close();
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
+
+
+
 
 
 

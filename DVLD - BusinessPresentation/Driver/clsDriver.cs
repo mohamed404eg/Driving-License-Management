@@ -104,6 +104,34 @@ namespace DVLD___BusinessPresentation.Driver
            
         }
 
+
+        /// <summary>
+        /// Find By LicenseID 
+        /// </summary>
+        /// <param name="LicenseID"></param>
+        /// <returns>clsDriver if found otherwise return null</returns>
+        static public clsDriver FindByLicenseID(int LicenseID)
+        {
+            int DriverID = -1;
+            int PersonID = -1;
+
+            int CreatedByUserID = -1;
+            DateTime CreatedDate = DateTime.MinValue;
+
+            if (clsDriverDA.FindByLicenseID(LicenseID,ref DriverID, ref PersonID, ref CreatedByUserID, ref CreatedDate))
+            {
+                return new clsDriver(DriverID, PersonID, CreatedByUserID, CreatedDate);
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
+
+
+
         static public DataTable FindByPersonIdDataTable(int PersonID)
         {
 

@@ -1183,7 +1183,8 @@ string ImagePath)
             //  DriverTest.FindByFullName("Khalid ALi Maher hamed");
 
             //DriverTest._Add(1025, 1, DateTime.Now);
-
+            //DriverTest.FindByLicenseID(16);
+            // DriverTest.FindByLicenseID(156);
 
 
 
@@ -1255,10 +1256,9 @@ string ImagePath)
             //TestclsDetain.FindByNationalNoDataTable("n1"); 
             //   TestclsDetain.FindByFullNameDataTable("Khalid ALi Maher hamed");
             //TestclsDetain.FindByReleaseApplicationIdDataTable(3);
+            //TestclsDetain.TestDetain(38, DateTime.Now, 100, 1, false, DateTime.MinValue, -1, -1);
 
-
-
-
+            TestclsDetain.UpdateDetain(38);
 
 
 

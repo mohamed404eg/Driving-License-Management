@@ -269,13 +269,13 @@ namespace DVLD___BusinessPresentation
 
 
                     }
-                    break;
+                  
 
                     case enMode.Update:
                     
                     return _UpdatePerson();
 
-                    break;
+                  
 
             }
 
