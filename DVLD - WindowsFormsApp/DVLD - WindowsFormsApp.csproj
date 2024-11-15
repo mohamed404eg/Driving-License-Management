@@ -108,6 +108,12 @@
       <DependentUpon>frmTestAppointment.cs</DependentUpon>
     </Compile>
     <Compile Include="MyFroms\CurrentUser.cs" />
+    <Compile Include="MyFroms\Driver\Detain Licesne\frmDetainLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Driver\Detain Licesne\frmDetainLicense.Designer.cs">
+      <DependentUpon>frmDetainLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyFroms\Driver\International License\frmInternationalLicenseInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -293,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Application\Test\frmTestAppointment.resx">
       <DependentUpon>frmTestAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Driver\Detain Licesne\frmDetainLicense.resx">
+      <DependentUpon>frmDetainLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Driver\International License\frmInternationalLicenseInfo.resx">
       <DependentUpon>frmInternationalLicenseInfo.cs</DependentUpon>
@@ -560,6 +569,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\card-24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\air-conditioner_24px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

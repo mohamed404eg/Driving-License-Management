@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace DVLD___BusinessPresentation.Driver
 {
+
+    /// <summary>
+    /// old class new class name clsDetain
+    /// </summary>
     public class clsDetainedLicenses
     {
 

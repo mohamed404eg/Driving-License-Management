@@ -1258,7 +1258,7 @@ string ImagePath)
             //TestclsDetain.FindByReleaseApplicationIdDataTable(3);
             //TestclsDetain.TestDetain(38, DateTime.Now, 100, 1, false, DateTime.MinValue, -1, -1);
 
-            TestclsDetain.UpdateDetain(38);
+          //  TestclsDetain.UpdateDetain(38);
 
 
 

@@ -21,6 +21,14 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.License_History
             InitializeComponent();
         }
 
+
+
+        /// <summary>
+        /// if need Find by LocalAppId just need send LocalAppId , if find by DriverId , send LocalAppId = -1, then DriverId , and IsLocalAppId = false 
+        /// </summary>
+        /// <param name="LocalAppId"></param>
+        /// <param name="DriverId"></param>
+        /// <param name="IsLocalAppId"></param>
         public frmLicenseHistory(int LocalAppId , int DriverId = -1, bool IsLocalAppId = true)
         {
             InitializeComponent();
