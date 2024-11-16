@@ -156,3 +156,4 @@ C:\Users\otg43\source\repos\Driving-License-Management\DVLD - WindowsFormsApp\ob
 C:\Users\otg43\source\repos\Driving-License-Management\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Driver.Renew_License.frmRenewLocalLicense.resources
 C:\Users\otg43\source\repos\Driving-License-Management\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Driver.Replacement.frmReplacment.resources
 C:\Users\otg43\source\repos\Driving-License-Management\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Driver.Detain_Licesne.frmDetainLicense.resources
+C:\Users\otg43\source\repos\Driving-License-Management\DVLD - WindowsFormsApp\obj\Debug\DVLD___WindowsFormsApp.MyFroms.Driver.Release_Detain_Licenses.frmReleaseDetainLicenses.resources

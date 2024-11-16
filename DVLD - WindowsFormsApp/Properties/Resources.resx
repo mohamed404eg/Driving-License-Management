@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="money-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\money-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="question-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\question-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,14 +154,20 @@
   <data name="international-license-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\international-license-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="find-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\find-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="air-conditioner_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\air-conditioner_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Release-24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Release-24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="applicationManage-128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\applicationManage-128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bill-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bill-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,6 +190,9 @@
   <data name="calendar-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calendar-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="grossMoney-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grossMoney-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="passport-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\passport-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -189,6 +201,9 @@
   </data>
   <data name="issueeReason-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\issueeReason-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="find-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\find-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Applications-128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Applications-128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,17 +226,14 @@
   <data name="Date OfBirth-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Date OfBirth-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="drivers-license-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\drivers-license-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="add-file-128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add-file-128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="clock-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clock-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="money-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\money-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="drivers-license-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\drivers-license-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,7 +271,7 @@
   <data name="licensing" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\licensing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="air-conditioner_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\air-conditioner_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FineDetain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FineDetain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -1,6 +1,8 @@
-﻿using DVLD___BusinessPresentation.Driver;
+﻿using DVLD___BusinessPresentation;
+using DVLD___BusinessPresentation.Driver;
 using DVLD___BusinessPresentation.Driver.Detain;
 using DVLD___WindowsFormsApp.MyFroms.Driver.License_History;
+using DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,8 +85,9 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.Detain_Licesne
             if (_LicenseID != -1) {
 
                 lLab_ShowLicenseHistory.Enabled = true;
+                lL_ShowLicenseInfo.Enabled = true;
 
-              
+
 
             }
 
@@ -115,9 +118,18 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.Detain_Licesne
         }
         private void lLab_ShowLicenseHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           
-            frmLicenseHistory licenseHistory = new frmLicenseHistory(-1,_licenses.DriverID,false); 
-            licenseHistory.ShowDialog();
+
+            clsLocalDrivingLicenseApplications localDrivingLicenseApplications =
+                clsLocalDrivingLicenseApplications.FindByApplicationID(_licenses.ApplicationID);
+            if(localDrivingLicenseApplications != null)
+            {
+
+            frmShowLicense showLicense  = new frmShowLicense(localDrivingLicenseApplications.LocalDrivingLicenseApplicationID);
+            showLicense.ShowDialog();
+
+            }
+
+
         }
 
 

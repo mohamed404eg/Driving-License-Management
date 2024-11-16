@@ -143,6 +143,16 @@ namespace DVLD___WindowsFormsApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bill_24 {
+            get {
+                object obj = ResourceManager.GetObject("bill-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendar_24 {
             get {
                 object obj = ResourceManager.GetObject("calendar-24", resourceCulture);
@@ -333,9 +343,29 @@ namespace DVLD___WindowsFormsApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FineDetain {
+            get {
+                object obj = ResourceManager.GetObject("FineDetain", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gender_24 {
             get {
                 object obj = ResourceManager.GetObject("gender-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap grossMoney_24 {
+            get {
+                object obj = ResourceManager.GetObject("grossMoney-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -486,6 +516,16 @@ namespace DVLD___WindowsFormsApp.Properties {
         internal static System.Drawing.Bitmap question_24 {
             get {
                 object obj = ResourceManager.GetObject("question-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Release_24px {
+            get {
+                object obj = ResourceManager.GetObject("Release-24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

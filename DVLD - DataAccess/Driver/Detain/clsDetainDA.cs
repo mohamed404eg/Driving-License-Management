@@ -635,6 +635,7 @@ UPDATE [dbo].[DetainedLicenses]
             command.Parameters.AddWithValue("@DetainID", DetainID);
             command.Parameters.AddWithValue("@DetainDate", DetainDate);
             command.Parameters.AddWithValue("@FineFees", FineFees);
+            command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
             command.Parameters.AddWithValue("@IsReleased", IsReleased);
 
             if (IsReleased == false)

@@ -7,8 +7,8 @@
       "RelativeMoniker": "D:0:0:{4EC19277-DDC8-49AE-8C37-1ECE64A1E43E}|DVLD - WindowsFormsApp\\DVLD - WindowsFormsApp.csproj|solutionrelative:dvld - windowsformsapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EC19277-DDC8-49AE-8C37-1ECE64A1E43E}|DVLD - WindowsFormsApp\\DVLD - WindowsFormsApp.csproj|c:\\users\\otg43\\source\\repos\\driving-license-management\\dvld - windowsformsapp\\myfroms\\driver\\detain licesne\\frmdetainlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EC19277-DDC8-49AE-8C37-1ECE64A1E43E}|DVLD - WindowsFormsApp\\DVLD - WindowsFormsApp.csproj|solutionrelative:dvld - windowsformsapp\\myfroms\\driver\\detain licesne\\frmdetainlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4EC19277-DDC8-49AE-8C37-1ECE64A1E43E}|DVLD - WindowsFormsApp\\DVLD - WindowsFormsApp.csproj|c:\\users\\otg43\\source\\repos\\driving-license-management\\dvld - windowsformsapp\\myfroms\\driver\\release detain licenses\\frmreleasedetainlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EC19277-DDC8-49AE-8C37-1ECE64A1E43E}|DVLD - WindowsFormsApp\\DVLD - WindowsFormsApp.csproj|solutionrelative:dvld - windowsformsapp\\myfroms\\driver\\release detain licenses\\frmreleasedetainlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "DVLD - WindowsFormsApp\\Program.cs",
               "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - WindowsFormsApp\\Program.cs",
               "RelativeToolTip": "DVLD - WindowsFormsApp\\Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACcAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T13:20:19.096Z",
               "EditorCaption": ""
@@ -41,11 +41,11 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "61fdd7b6-e0e5-414f-b900-844677cde6db",
+        "Id": "b4222b0d-cd8d-4921-a226-8f65b8d8ab86",
         "Display": 0,
-        "X": 577,
+        "X": 327,
         "Y": 184,
-        "Width": 1348,
+        "Width": 1598,
         "Height": 901,
         "WindowState": 0
       },
@@ -57,13 +57,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmDetainLicense.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - WindowsFormsApp\\MyFroms\\Driver\\Detain Licesne\\frmDetainLicense.cs",
-              "RelativeDocumentMoniker": "DVLD - WindowsFormsApp\\MyFroms\\Driver\\Detain Licesne\\frmDetainLicense.cs",
-              "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - WindowsFormsApp\\MyFroms\\Driver\\Detain Licesne\\frmDetainLicense.cs [Design]",
-              "RelativeToolTip": "DVLD - WindowsFormsApp\\MyFroms\\Driver\\Detain Licesne\\frmDetainLicense.cs [Design]",
+              "Title": "frmReleaseDetainLicenses.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - WindowsFormsApp\\MyFroms\\Driver\\Release Detain Licenses\\frmReleaseDetainLicenses.cs",
+              "RelativeDocumentMoniker": "DVLD - WindowsFormsApp\\MyFroms\\Driver\\Release Detain Licenses\\frmReleaseDetainLicenses.cs",
+              "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - WindowsFormsApp\\MyFroms\\Driver\\Release Detain Licenses\\frmReleaseDetainLicenses.cs [Design]",
+              "RelativeToolTip": "DVLD - WindowsFormsApp\\MyFroms\\Driver\\Release Detain Licenses\\frmReleaseDetainLicenses.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T13:01:39.894Z",
+              "WhenOpened": "2024-11-16T14:23:07.942Z",
               "EditorCaption": " [Design]"
             }
           ]

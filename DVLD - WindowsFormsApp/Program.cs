@@ -6,6 +6,7 @@ using DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision;
 using DVLD___WindowsFormsApp.MyFroms.Driver.Detain_Licesne;
 using DVLD___WindowsFormsApp.MyFroms.Driver.International_License;
 using DVLD___WindowsFormsApp.MyFroms.Driver.List_Drivers;
+using DVLD___WindowsFormsApp.MyFroms.Driver.Release_Detain_Licenses;
 using DVLD___WindowsFormsApp.MyFroms.Driver.Renew_License;
 using DVLD___WindowsFormsApp.MyFroms.Driver.Replacement;
 using DVLD___WindowsFormsApp.MyFroms.Login;
@@ -37,7 +38,7 @@ namespace DVLD___WindowsFormsApp
             //Application.Run(new frmVisionTest(35,frmVisionTest.enTestType.VisionTest));
             //Application.Run(new frmListDrivers());
             // Application.Run(new frmManageLocalDrivingApplication());
-           Application.Run(new frmDetainLicense(  ));
+           Application.Run(new frmReleaseDetainLicenses(  ));
 
 
 

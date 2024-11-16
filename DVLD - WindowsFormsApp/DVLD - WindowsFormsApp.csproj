@@ -132,6 +132,12 @@
     <Compile Include="MyFroms\Driver\International License\UcInternationalLicenseDriverInfo.Designer.cs">
       <DependentUpon>UcInternationalLicenseDriverInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyFroms\Driver\Release Detain Licenses\frmReleaseDetainLicenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Driver\Release Detain Licenses\frmReleaseDetainLicenses.Designer.cs">
+      <DependentUpon>frmReleaseDetainLicenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyFroms\Driver\Renew License\frmRenewLocalLicense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Driver\International License\UcInternationalLicenseDriverInfo.resx">
       <DependentUpon>UcInternationalLicenseDriverInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Driver\Release Detain Licenses\frmReleaseDetainLicenses.resx">
+      <DependentUpon>frmReleaseDetainLicenses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Driver\Renew License\frmRenewLocalLicense.resx">
       <DependentUpon>frmRenewLocalLicense.cs</DependentUpon>
@@ -572,6 +581,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\air-conditioner_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Release-24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grossMoney-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FineDetain.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

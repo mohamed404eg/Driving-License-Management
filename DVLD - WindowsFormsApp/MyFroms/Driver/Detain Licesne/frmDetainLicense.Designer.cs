@@ -51,6 +51,7 @@
             this.btn_Close = new System.Windows.Forms.Button();
             this.lLab_ShowLicenseHistory = new System.Windows.Forms.LinkLabel();
             this.lLab_ShowNewLicenseInfo = new System.Windows.Forms.LinkLabel();
+            this.lL_ShowLicenseInfo = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -312,11 +313,24 @@
             this.lLab_ShowNewLicenseInfo.Size = new System.Drawing.Size(0, 13);
             this.lLab_ShowNewLicenseInfo.TabIndex = 7;
             // 
+            // lL_ShowLicenseInfo
+            // 
+            this.lL_ShowLicenseInfo.AutoSize = true;
+            this.lL_ShowLicenseInfo.Enabled = false;
+            this.lL_ShowLicenseInfo.Location = new System.Drawing.Point(124, 700);
+            this.lL_ShowLicenseInfo.Name = "lL_ShowLicenseInfo";
+            this.lL_ShowLicenseInfo.Size = new System.Drawing.Size(95, 13);
+            this.lL_ShowLicenseInfo.TabIndex = 6;
+            this.lL_ShowLicenseInfo.TabStop = true;
+            this.lL_ShowLicenseInfo.Text = "Show License Info";
+            this.lL_ShowLicenseInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lLab_ShowLicenseHistory_LinkClicked);
+            // 
             // frmDetainLicense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(767, 736);
+            this.Controls.Add(this.lL_ShowLicenseInfo);
             this.Controls.Add(this.lLab_ShowLicenseHistory);
             this.Controls.Add(this.lLab_ShowNewLicenseInfo);
             this.Controls.Add(this.btn_Close);
@@ -364,5 +378,6 @@
         private System.Windows.Forms.LinkLabel lLab_ShowLicenseHistory;
         private System.Windows.Forms.LinkLabel lLab_ShowNewLicenseInfo;
         private System.Windows.Forms.TextBox tB_FineFees;
+        private System.Windows.Forms.LinkLabel lL_ShowLicenseInfo;
     }
 }
