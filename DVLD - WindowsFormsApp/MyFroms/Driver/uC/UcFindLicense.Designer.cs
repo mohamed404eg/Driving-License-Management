@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Gb_FilterBox = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ucFindLicensenfo = new DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense.uCDriverLicensenfo();
-            this.groupBox1.SuspendLayout();
+            this.Gb_FilterBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // Gb_FilterBox
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(484, 76);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filter";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.Gb_FilterBox.Controls.Add(this.button1);
+            this.Gb_FilterBox.Controls.Add(this.textBox1);
+            this.Gb_FilterBox.Controls.Add(this.label1);
+            this.Gb_FilterBox.Location = new System.Drawing.Point(3, 3);
+            this.Gb_FilterBox.Name = "Gb_FilterBox";
+            this.Gb_FilterBox.Size = new System.Drawing.Size(484, 76);
+            this.Gb_FilterBox.TabIndex = 0;
+            this.Gb_FilterBox.TabStop = false;
+            this.Gb_FilterBox.Text = "Filter";
+            this.Gb_FilterBox.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // button1
             // 
@@ -82,25 +82,26 @@
             this.ucFindLicensenfo.Name = "ucFindLicensenfo";
             this.ucFindLicensenfo.Size = new System.Drawing.Size(744, 384);
             this.ucFindLicensenfo.TabIndex = 1;
+            this.ucFindLicensenfo.Load += new System.EventHandler(this.ucFindLicensenfo_Load);
             // 
             // UcFindLicense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ucFindLicensenfo);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Gb_FilterBox);
             this.Name = "UcFindLicense";
             this.Size = new System.Drawing.Size(744, 464);
             this.Load += new System.EventHandler(this.UcFindLicense_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Gb_FilterBox.ResumeLayout(false);
+            this.Gb_FilterBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox Gb_FilterBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;

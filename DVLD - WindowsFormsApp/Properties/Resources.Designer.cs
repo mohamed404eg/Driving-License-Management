@@ -143,6 +143,16 @@ namespace DVLD___WindowsFormsApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap banned_64px {
+            get {
+                object obj = ResourceManager.GetObject("banned-64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bill_24 {
             get {
                 object obj = ResourceManager.GetObject("bill-24", resourceCulture);
@@ -296,6 +306,16 @@ namespace DVLD___WindowsFormsApp.Properties {
         internal static System.Drawing.Bitmap drivers_license__128px_ {
             get {
                 object obj = ResourceManager.GetObject("drivers-license (128px)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap drivers_license_128 {
+            get {
+                object obj = ResourceManager.GetObject("drivers-license-128", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -526,6 +546,16 @@ namespace DVLD___WindowsFormsApp.Properties {
         internal static System.Drawing.Bitmap Release_24px {
             get {
                 object obj = ResourceManager.GetObject("Release-24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Release_64px {
+            get {
+                object obj = ResourceManager.GetObject("Release-64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

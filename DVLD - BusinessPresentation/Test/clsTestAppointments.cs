@@ -29,7 +29,9 @@ namespace DVLD___BusinessPresentation.Test
         public bool IsLocked;
         _enMode _Mode;
         public int _LocalDrivingLicenseApplicationID;
-   
+        public int RetakeTestApplicationID;
+
+
 
         public int LocalDrivingLicenseApplicationID
         {
@@ -168,7 +170,7 @@ namespace DVLD___BusinessPresentation.Test
 
             TestAppointmentID = clsTestAppointmentsDA.AddNew(TestTypeID, LocalDrivingLicenseApplicationID,
                 AppointmentDate, PaidFees,
-               CreatedByUserID, IsLocked
+               CreatedByUserID, IsLocked , RetakeTestApplicationID
                 );
 
             return (TestAppointmentID != -1);

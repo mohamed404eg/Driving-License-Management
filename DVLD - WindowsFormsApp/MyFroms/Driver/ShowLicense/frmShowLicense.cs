@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DVLD___BusinessPresentation;
+using DVLD___BusinessPresentation.Driver;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +19,47 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense
         {
             InitializeComponent();
         }
-        public frmShowLicense(int LocalAppId)
+
+        public enum enSlected
+        {
+            LocalAppId,
+
+            IsLicenseId
+        }
+        public frmShowLicense(int Id , enSlected slected = enSlected.LocalAppId)
         {
             InitializeComponent();
 
-            LoadData(LocalAppId);
+            if(slected == enSlected.LocalAppId)
+            {
+            LoadData(Id);
+                    
+            }else if(slected == enSlected.IsLicenseId)
+            {
+
+                IsLicenseId( Id);
+            }
+            
+        }
+      
+        void IsLicenseId(int LicenseId)
+        {
+            clsLicenses licenses = clsLicenses.Find(LicenseId);
+            if (licenses != null)
+            {
+               
+                clsLocalDrivingLicenseApplications localDrivingLicenseApplications = clsLocalDrivingLicenseApplications.FindByApplicationID (licenses.ApplicationID);
+
+
+
+                if(localDrivingLicenseApplications != null)
+                {
+                      LoadData(localDrivingLicenseApplications.LocalDrivingLicenseApplicationID);
+                    
+                }
+
+
+            }
         }
 
         void LoadData(int LocalAppId)

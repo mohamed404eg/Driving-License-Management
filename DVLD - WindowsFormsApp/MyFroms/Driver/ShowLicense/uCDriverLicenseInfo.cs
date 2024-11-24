@@ -1,6 +1,7 @@
 ﻿using DVLD___BusinessPresentation;
 using DVLD___BusinessPresentation.Applications.LicenseClass;
 using DVLD___BusinessPresentation.Driver;
+using DVLD___BusinessPresentation.Driver.Detain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -76,7 +77,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense
 
             lab_ExpirationDate.Text = licenses.ExpirationDate.ToShortDateString();
 
-            lab_IsDetained.Text = (clsDetainedLicenses.IsDetainedLicense(licenses.LicenseID) ? "Yes" : "No"); // something wrong // need fix
+            lab_IsDetained.Text = (clsDetain.IsAlreadyExistsFindByLicenseID(licenses.LicenseID) ? "Yes" : "No"); // something wrong // need fix
 
             if (!string.IsNullOrWhiteSpace(people.ImagePath))
             {

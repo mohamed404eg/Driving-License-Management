@@ -29,7 +29,7 @@ namespace DVLD___DataAccess.Test
         DateTime AppointmentDate,
         decimal PaidFees,
         int CreatedByUserID,
-        bool IsLocked)
+        bool IsLocked,int RetakeTestApplicationID = -1)
         {
             int TestAppointmentID = -1;
 
@@ -42,7 +42,7 @@ INSERT INTO [dbo].[TestAppointments]
            ,[AppointmentDate]
            ,[PaidFees]
            ,[CreatedByUserID]
-           ,[IsLocked])
+           ,[IsLocked],[RetakeTestApplicationID])
      VALUES
            (
             @TestTypeID
@@ -50,7 +50,8 @@ INSERT INTO [dbo].[TestAppointments]
            ,@AppointmentDate                                   
            ,@PaidFees
            ,@CreatedByUserID
-           ,@IsLocked)
+           ,@IsLocked
+            ,@RetakeTestApplicationID)
 
 select SCOPE_IDENTITY ()
 
@@ -63,6 +64,17 @@ select SCOPE_IDENTITY ()
             command.Parameters.AddWithValue("@PaidFees", PaidFees);
             command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
             command.Parameters.AddWithValue("@IsLocked", IsLocked);
+            if(RetakeTestApplicationID == -1)
+            {
+
+            command.Parameters.AddWithValue("@RetakeTestApplicationID", DBNull.Value);
+            }
+            else
+            {
+                command.Parameters.AddWithValue("@RetakeTestApplicationID", RetakeTestApplicationID);
+
+            }
+
 
 
             try

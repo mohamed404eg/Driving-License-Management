@@ -49,6 +49,43 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.uC
             InitializeComponent();
         }
 
+        public void  LoadLienseId(int LienseId)
+        {
+            clsLicenses licenses = clsLicenses.Find(LienseId);
+
+            if (licenses != null)
+            {
+
+                // licenses.ApplicationID;
+                clsLocalDrivingLicenseApplications localDrivingLicenseApplications = clsLocalDrivingLicenseApplications.FindByApplicationID(licenses.ApplicationID);
+
+                if (localDrivingLicenseApplications != null)
+                {
+                    // take local appliacttion id
+                    ucFindLicensenfo.LoadData(localDrivingLicenseApplications.LocalDrivingLicenseApplicationID);
+                 
+              
+
+                }
+
+
+
+            }
+            else
+            {
+                MessageBox.Show("Not Found licenses");
+            }
+
+
+
+            // edtion
+
+            Gb_FilterBox.Enabled = false;
+            textBox1.Text = LienseId.ToString();
+
+
+
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             int LienseId = (int.Parse(textBox1.Text));
@@ -87,6 +124,11 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.uC
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ucFindLicensenfo_Load(object sender, EventArgs e)
         {
 
         }

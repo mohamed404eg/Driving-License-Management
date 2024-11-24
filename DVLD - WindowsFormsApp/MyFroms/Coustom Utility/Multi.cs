@@ -63,6 +63,33 @@ namespace DVLD___WindowsFormsApp.MyFroms.Functions
             }
         }
 
+        /// <summary>
+        ///  Get Index Cell In Row DataGridView
+        /// </summary>
+        /// <returns>value if successfully otherwise return null  if not found</returns>
+        public static string _GetStringByIndextCellInRow(DataGridView dgv, int IndexCell)
+        {
+            object cellValue = null;
+            if (dgv.SelectedCells.Count > 0)
+            {
+                DataGridViewCell selectedCell = dgv.SelectedCells[0];
+                DataGridViewRow selectedRow = selectedCell.OwningRow;
+                DataGridViewCell firstCellInRow = selectedRow.Cells[IndexCell];
+                cellValue = firstCellInRow.Value;
+            }
+            if (cellValue != null)
+            {
+                return (string)cellValue;
+
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
+
 
 
     }

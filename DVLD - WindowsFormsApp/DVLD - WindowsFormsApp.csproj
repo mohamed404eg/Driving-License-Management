@@ -108,11 +108,23 @@
       <DependentUpon>frmTestAppointment.cs</DependentUpon>
     </Compile>
     <Compile Include="MyFroms\CurrentUser.cs" />
-    <Compile Include="MyFroms\Driver\Detain Licesne\frmDetainLicense.cs">
+    <Compile Include="MyFroms\Driver\Detain\detain licesne\frmDetainLicense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyFroms\Driver\Detain Licesne\frmDetainLicense.Designer.cs">
+    <Compile Include="MyFroms\Driver\Detain\detain licesne\frmDetainLicense.Designer.cs">
       <DependentUpon>frmDetainLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyFroms\Driver\Detain\Manage Detain License\frmManageDetainLicenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Driver\Detain\Manage Detain License\frmManageDetainLicenses.Designer.cs">
+      <DependentUpon>frmManageDetainLicenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyFroms\Driver\Detain\release detain licenses\frmReleaseDetainLicenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Driver\Detain\release detain licenses\frmReleaseDetainLicenses.Designer.cs">
+      <DependentUpon>frmReleaseDetainLicenses.cs</DependentUpon>
     </Compile>
     <Compile Include="MyFroms\Driver\International License\frmInternationalLicenseInfo.cs">
       <SubType>Form</SubType>
@@ -131,12 +143,6 @@
     </Compile>
     <Compile Include="MyFroms\Driver\International License\UcInternationalLicenseDriverInfo.Designer.cs">
       <DependentUpon>UcInternationalLicenseDriverInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MyFroms\Driver\Release Detain Licenses\frmReleaseDetainLicenses.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MyFroms\Driver\Release Detain Licenses\frmReleaseDetainLicenses.Designer.cs">
-      <DependentUpon>frmReleaseDetainLicenses.cs</DependentUpon>
     </Compile>
     <Compile Include="MyFroms\Driver\Renew License\frmRenewLocalLicense.cs">
       <SubType>Form</SubType>
@@ -187,7 +193,7 @@
     <Compile Include="MyFroms\Driver\ShowLicense\uCDriverLicenseInfo.Designer.cs">
       <DependentUpon>uCDriverLicenseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyFroms\Functions\Multi.cs" />
+    <Compile Include="MyFroms\Coustom Utility\Multi.cs" />
     <Compile Include="MyFroms\Login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,8 +312,14 @@
     <EmbeddedResource Include="MyFroms\Application\Test\frmTestAppointment.resx">
       <DependentUpon>frmTestAppointment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyFroms\Driver\Detain Licesne\frmDetainLicense.resx">
+    <EmbeddedResource Include="MyFroms\Driver\Detain\detain licesne\frmDetainLicense.resx">
       <DependentUpon>frmDetainLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Driver\Detain\Manage Detain License\frmManageDetainLicenses.resx">
+      <DependentUpon>frmManageDetainLicenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Driver\Detain\release detain licenses\frmReleaseDetainLicenses.resx">
+      <DependentUpon>frmReleaseDetainLicenses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Driver\International License\frmInternationalLicenseInfo.resx">
       <DependentUpon>frmInternationalLicenseInfo.cs</DependentUpon>
@@ -317,9 +329,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Driver\International License\UcInternationalLicenseDriverInfo.resx">
       <DependentUpon>UcInternationalLicenseDriverInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyFroms\Driver\Release Detain Licenses\frmReleaseDetainLicenses.resx">
-      <DependentUpon>frmReleaseDetainLicenses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Driver\Renew License\frmRenewLocalLicense.resx">
       <DependentUpon>frmRenewLocalLicense.cs</DependentUpon>
@@ -593,6 +602,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FineDetain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drivers-license-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Release-64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banned-64px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

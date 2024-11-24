@@ -1,18 +1,6 @@
-﻿
-using DVLD___WindowsFormsApp.MyFroms.Application.International;
-using DVLD___WindowsFormsApp.MyFroms.Application.LocalApplication;
-using DVLD___WindowsFormsApp.MyFroms.Application.Test;
-using DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision;
-using DVLD___WindowsFormsApp.MyFroms.Driver.Detain_Licesne;
-using DVLD___WindowsFormsApp.MyFroms.Driver.International_License;
-using DVLD___WindowsFormsApp.MyFroms.Driver.List_Drivers;
-using DVLD___WindowsFormsApp.MyFroms.Driver.Release_Detain_Licenses;
-using DVLD___WindowsFormsApp.MyFroms.Driver.Renew_License;
-using DVLD___WindowsFormsApp.MyFroms.Driver.Replacement;
+﻿using DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision;
+using DVLD___WindowsFormsApp.MyFroms.Driver.Detain.Manage_Detain_License;
 using DVLD___WindowsFormsApp.MyFroms.Login;
-using DVLD___WindowsFormsApp.MyFroms.ManageTestTypes;
-using DVLD___WindowsFormsApp.MyFroms.Person;
-using DVLD___WindowsFormsApp.MyFroms.Uesr;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,15 +19,16 @@ namespace DVLD___WindowsFormsApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-          //  Application.Run(new frmLogin());
+           Application.Run(new frmLogin());
 
 
             // == test ===
             //Application.Run(new frmVisionTest(35,frmVisionTest.enTestType.VisionTest));
             //Application.Run(new frmListDrivers());
             // Application.Run(new frmManageLocalDrivingApplication());
-           Application.Run(new frmReleaseDetainLicenses(  ));
+            //Application.Run(new frmManageDetainLicenses());
 
+            Application.Run(new frmScheduleTest());
 
 
         }

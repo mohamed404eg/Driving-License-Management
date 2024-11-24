@@ -3,6 +3,7 @@ using DVLD___BusinessPresentation.Driver;
 using DVLD___BusinessPresentation.Driver.Detain;
 using DVLD___WindowsFormsApp.MyFroms.Driver.License_History;
 using DVLD___WindowsFormsApp.MyFroms.Driver.ShowLicense;
+using DVLD___WindowsFormsApp.MyFroms.Driver.uC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +30,15 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.Release_Detain_Licenses
         {
             InitializeComponent();
         }
+        public frmReleaseDetainLicenses(int LicenseId)
+        {
+            InitializeComponent();
+
+         //   ucFindLicense1.Enabled = false;
+            ucFindLicense1.LoadLienseId(LicenseId);
+            ucFindLicense1_MyCustomEvent(LicenseId);
+        }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -47,6 +57,23 @@ namespace DVLD___WindowsFormsApp.MyFroms.Driver.Release_Detain_Licenses
             if(_LicesneId != -1)
             {
             CehckAfterFoundLicense();
+
+            }
+            else
+            {
+                NotFoundLicens();
+            }
+
+
+        }
+
+        private void ucFindLicense1_MyCustomEvent(int LicenseId)
+        {
+            _LicesneId = LicenseId;
+
+            if (_LicesneId != -1)
+            {
+                CehckAfterFoundLicense();
 
             }
             else
