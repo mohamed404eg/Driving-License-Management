@@ -19,7 +19,7 @@ namespace DVLD___WindowsFormsApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           Application.Run(new frmLogin());
+            //  Application.Run(new frmLogin());
 
 
             // == test ===
@@ -28,8 +28,8 @@ namespace DVLD___WindowsFormsApp
             // Application.Run(new frmManageLocalDrivingApplication());
             //Application.Run(new frmManageDetainLicenses());
 
-            Application.Run(new frmScheduleTest());
-
+            //  Application.Run(new frmScheduleTest());
+            Application.Run(new frmMain());
 
         }
     }

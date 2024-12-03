@@ -83,6 +83,16 @@ namespace DVLD___WindowsFormsApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alter_24px {
+            get {
+                object obj = ResourceManager.GetObject("alter-24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap application {
             get {
                 object obj = ResourceManager.GetObject("application", resourceCulture);
@@ -423,6 +433,16 @@ namespace DVLD___WindowsFormsApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap international_driver_license_24 {
+            get {
+                object obj = ResourceManager.GetObject("international-driver-license-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap international_license_24 {
             get {
                 object obj = ResourceManager.GetObject("international license 24", resourceCulture);
@@ -556,6 +576,36 @@ namespace DVLD___WindowsFormsApp.Properties {
         internal static System.Drawing.Bitmap Release_64px {
             get {
                 object obj = ResourceManager.GetObject("Release-64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap renewable_24 {
+            get {
+                object obj = ResourceManager.GetObject("renewable-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap renewable_32 {
+            get {
+                object obj = ResourceManager.GetObject("renewable-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RetakeTest_24px {
+            get {
+                object obj = ResourceManager.GetObject("RetakeTest-24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

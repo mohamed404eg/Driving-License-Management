@@ -85,7 +85,9 @@
             // 
             // ucFindLicense1
             // 
-            this.ucFindLicense1.Location = new System.Drawing.Point(12, 75);
+            this.ucFindLicense1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucFindLicense1.Location = new System.Drawing.Point(14, 49);
             this.ucFindLicense1.Name = "ucFindLicense1";
             this.ucFindLicense1.Size = new System.Drawing.Size(702, 495);
             this.ucFindLicense1.TabIndex = 0;
@@ -93,6 +95,8 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
@@ -104,6 +108,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.richTextBox1);
             this.groupBox1.Controls.Add(this.pictureBox7);
             this.groupBox1.Controls.Add(this.pictureBox5);
@@ -139,7 +145,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(29, 595);
+            this.groupBox1.Location = new System.Drawing.Point(29, 532);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(685, 278);
             this.groupBox1.TabIndex = 2;
@@ -148,6 +154,8 @@
             // 
             // richTextBox1
             // 
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox1.Location = new System.Drawing.Point(119, 198);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(524, 64);
@@ -156,6 +164,8 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox7.Image = global::DVLD___WindowsFormsApp.Properties.Resources.sticky_notes;
             this.pictureBox7.Location = new System.Drawing.Point(75, 198);
             this.pictureBox7.Name = "pictureBox7";
@@ -206,6 +216,7 @@
             // 
             // pictureBox12
             // 
+            this.pictureBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox12.Image = global::DVLD___WindowsFormsApp.Properties.Resources.money_24;
             this.pictureBox12.Location = new System.Drawing.Point(502, 154);
             this.pictureBox12.Name = "pictureBox12";
@@ -216,6 +227,7 @@
             // 
             // pictureBox11
             // 
+            this.pictureBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox11.Image = global::DVLD___WindowsFormsApp.Properties.Resources.user__1_;
             this.pictureBox11.Location = new System.Drawing.Point(502, 124);
             this.pictureBox11.Name = "pictureBox11";
@@ -226,6 +238,7 @@
             // 
             // pictureBox10
             // 
+            this.pictureBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox10.Image = global::DVLD___WindowsFormsApp.Properties.Resources.expired_24;
             this.pictureBox10.Location = new System.Drawing.Point(502, 94);
             this.pictureBox10.Name = "pictureBox10";
@@ -236,6 +249,7 @@
             // 
             // pictureBox9
             // 
+            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox9.Image = global::DVLD___WindowsFormsApp.Properties.Resources.drivers_license_24;
             this.pictureBox9.Location = new System.Drawing.Point(502, 60);
             this.pictureBox9.Name = "pictureBox9";
@@ -246,6 +260,7 @@
             // 
             // pictureBox8
             // 
+            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox8.Image = global::DVLD___WindowsFormsApp.Properties.Resources.drivers_license_24;
             this.pictureBox8.Location = new System.Drawing.Point(502, 30);
             this.pictureBox8.Name = "pictureBox8";
@@ -266,6 +281,8 @@
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(23, 198);
             this.label8.Name = "label8";
@@ -346,6 +363,7 @@
             // 
             // lab_TotalFees
             // 
+            this.lab_TotalFees.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lab_TotalFees.AutoSize = true;
             this.lab_TotalFees.Location = new System.Drawing.Point(532, 154);
             this.lab_TotalFees.Name = "lab_TotalFees";
@@ -355,6 +373,7 @@
             // 
             // label20
             // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(353, 154);
             this.label20.Name = "label20";
@@ -364,6 +383,7 @@
             // 
             // lab_CreatedBy
             // 
+            this.lab_CreatedBy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lab_CreatedBy.AutoSize = true;
             this.lab_CreatedBy.Location = new System.Drawing.Point(532, 124);
             this.lab_CreatedBy.Name = "lab_CreatedBy";
@@ -373,6 +393,7 @@
             // 
             // label19
             // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(353, 124);
             this.label19.Name = "label19";
@@ -382,6 +403,7 @@
             // 
             // lab_ExpirationDate
             // 
+            this.lab_ExpirationDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lab_ExpirationDate.AutoSize = true;
             this.lab_ExpirationDate.Location = new System.Drawing.Point(532, 94);
             this.lab_ExpirationDate.Name = "lab_ExpirationDate";
@@ -391,6 +413,7 @@
             // 
             // lab_OldLicenseID
             // 
+            this.lab_OldLicenseID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lab_OldLicenseID.AutoSize = true;
             this.lab_OldLicenseID.Location = new System.Drawing.Point(532, 59);
             this.lab_OldLicenseID.Name = "lab_OldLicenseID";
@@ -400,6 +423,7 @@
             // 
             // label18
             // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(353, 94);
             this.label18.Name = "label18";
@@ -409,6 +433,7 @@
             // 
             // lab_RenewedLicenseID
             // 
+            this.lab_RenewedLicenseID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lab_RenewedLicenseID.AutoSize = true;
             this.lab_RenewedLicenseID.Location = new System.Drawing.Point(532, 33);
             this.lab_RenewedLicenseID.Name = "lab_RenewedLicenseID";
@@ -418,6 +443,7 @@
             // 
             // label17
             // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(353, 60);
             this.label17.Name = "label17";
@@ -427,6 +453,7 @@
             // 
             // label16
             // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(353, 31);
             this.label16.Name = "label16";
@@ -463,9 +490,10 @@
             // 
             // lLab_ShowNewLicenseInfo
             // 
+            this.lLab_ShowNewLicenseInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lLab_ShowNewLicenseInfo.AutoSize = true;
             this.lLab_ShowNewLicenseInfo.Enabled = false;
-            this.lLab_ShowNewLicenseInfo.Location = new System.Drawing.Point(149, 899);
+            this.lLab_ShowNewLicenseInfo.Location = new System.Drawing.Point(149, 837);
             this.lLab_ShowNewLicenseInfo.Name = "lLab_ShowNewLicenseInfo";
             this.lLab_ShowNewLicenseInfo.Size = new System.Drawing.Size(120, 13);
             this.lLab_ShowNewLicenseInfo.TabIndex = 5;
@@ -475,9 +503,10 @@
             // 
             // lLab_ShowLicenseHistory
             // 
+            this.lLab_ShowLicenseHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lLab_ShowLicenseHistory.AutoSize = true;
             this.lLab_ShowLicenseHistory.Enabled = false;
-            this.lLab_ShowLicenseHistory.Location = new System.Drawing.Point(26, 899);
+            this.lLab_ShowLicenseHistory.Location = new System.Drawing.Point(26, 837);
             this.lLab_ShowLicenseHistory.Name = "lLab_ShowLicenseHistory";
             this.lLab_ShowLicenseHistory.Size = new System.Drawing.Size(109, 13);
             this.lLab_ShowLicenseHistory.TabIndex = 5;
@@ -487,10 +516,11 @@
             // 
             // btn_Renew
             // 
+            this.btn_Renew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Renew.Enabled = false;
             this.btn_Renew.Image = global::DVLD___WindowsFormsApp.Properties.Resources.card_24px;
             this.btn_Renew.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btn_Renew.Location = new System.Drawing.Point(614, 889);
+            this.btn_Renew.Location = new System.Drawing.Point(614, 827);
             this.btn_Renew.Name = "btn_Renew";
             this.btn_Renew.Size = new System.Drawing.Size(102, 33);
             this.btn_Renew.TabIndex = 4;
@@ -500,9 +530,10 @@
             // 
             // btn_Close
             // 
+            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Close.Image = global::DVLD___WindowsFormsApp.Properties.Resources.cancel;
             this.btn_Close.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btn_Close.Location = new System.Drawing.Point(506, 889);
+            this.btn_Close.Location = new System.Drawing.Point(506, 827);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(102, 33);
             this.btn_Close.TabIndex = 4;
@@ -514,7 +545,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 924);
+            this.ClientSize = new System.Drawing.Size(732, 868);
             this.Controls.Add(this.lLab_ShowLicenseHistory);
             this.Controls.Add(this.lLab_ShowNewLicenseInfo);
             this.Controls.Add(this.btn_Renew);
@@ -522,7 +553,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ucFindLicense1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmRenewLocalLicense";
             this.Text = "frmRenewLocalLicense";
             this.groupBox1.ResumeLayout(false);

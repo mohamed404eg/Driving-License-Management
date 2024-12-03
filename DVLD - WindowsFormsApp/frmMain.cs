@@ -15,6 +15,12 @@ using System.Windows.Forms;
 using DVLD___WindowsFormsApp.MyFroms.ManageTestTypes;
 using DVLD___WindowsFormsApp.MyFroms.Application.LocalApplication;
 using DVLD___WindowsFormsApp.MyFroms.Driver.List_Drivers;
+using DVLD___WindowsFormsApp.MyFroms.Driver.Renew_License;
+using DVLD___WindowsFormsApp.MyFroms.Driver.Replacement;
+using DVLD___WindowsFormsApp.MyFroms.Driver.Release_Detain_Licenses;
+using DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision;
+using DVLD___WindowsFormsApp.MyFroms.Application.International;
+using DVLD___WindowsFormsApp.MyFroms.Driver.Detain.Manage_Detain_License;
 namespace DVLD___WindowsFormsApp
 {
 
@@ -249,6 +255,146 @@ namespace DVLD___WindowsFormsApp
 
         private void internationalLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+        frmRenewLocalLicense _frmRenewLocalLicense;
+        private void rrToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(_frmRenewLocalLicense == null || _frmRenewLocalLicense.IsDisposed)
+            {
+
+             _frmRenewLocalLicense = new frmRenewLocalLicense();
+            _frmRenewLocalLicense.FormClosed += _frmRenewLocalLicense_FormClosed;
+            _frmRenewLocalLicense.MdiParent = this;
+            _frmRenewLocalLicense.Show();
+
+            }
+            else
+            {
+                _frmRenewLocalLicense.BringToFront();
+            }
+
+
+        }
+
+        private void _frmRenewLocalLicense_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _frmRenewLocalLicense = null;
+        }
+
+
+        frmReplacment _frmReplacment;
+        private void replacmentForLostOrDamagedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if(_frmReplacment == null  || _frmReplacment.IsDisposed)
+            {
+                _frmReplacment = new frmReplacment();
+                _frmReplacment.MdiParent = this;
+                _frmReplacment.FormClosed += _frmReplacment_FormClosed;
+                _frmReplacment.Show();
+
+
+            }
+            else
+            {
+                _frmReplacment.BringToFront();
+            }
+
+        }
+
+        private void _frmReplacment_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _frmReplacment = null; 
+        }
+
+
+        frmReleaseDetainLicenses _frmReleaseDetainLicenses;
+        private void releaseDetainedDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           if(_frmReleaseDetainLicenses == null || _frmReleaseDetainLicenses.IsDisposed)
+            {
+                _frmReleaseDetainLicenses = new frmReleaseDetainLicenses();
+                _frmReleaseDetainLicenses.MdiParent= this;
+                _frmReleaseDetainLicenses.FormClosed += _frmReleaseDetainLicenses_FormClosed;
+                _frmReleaseDetainLicenses.Show();
+
+
+            }
+            else
+            {
+                _frmReleaseDetainLicenses.BringToFront();
+            }
+
+
+
+        }
+
+        private void _frmReleaseDetainLicenses_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _frmReleaseDetainLicenses= null;
+        }
+
+
+
+        frmManageLocalDrivingApplication _RetakeTesst;
+        private void retakeTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(_RetakeTesst == null || _RetakeTesst.IsDisposed)
+            {
+
+            _RetakeTesst = new frmManageLocalDrivingApplication();
+            _RetakeTesst .MdiParent= this;
+            _RetakeTesst.FormClosed += _RetakeTesst_FormClosed;
+            _RetakeTesst.Show();
+            }
+            else
+            {
+                _RetakeTesst.BringToFront();
+            }
+
+
+
+
+        }
+
+        private void _RetakeTesst_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           _RetakeTesst = null;
+        }
+
+
+
+        frmManageInternationalDrivingApplication _frmManageInternationalDrivingApplication;
+        private void internationlLicneseAppliactionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(_frmManageInternationalDrivingApplication == null || _frmManageInternationalDrivingApplication.IsDisposed)
+            {
+                _frmManageInternationalDrivingApplication = new frmManageInternationalDrivingApplication();
+                _frmManageInternationalDrivingApplication .MdiParent= this;
+                _frmManageInternationalDrivingApplication.FormClosed += _frmManageInternationalDrivingApplication_FormClosed;
+                _frmManageInternationalDrivingApplication.Show();
+            }
+            else
+            {
+                _frmManageInternationalDrivingApplication.BringToFront();
+            }
+
+
+
+        }
+
+        private void _frmManageInternationalDrivingApplication_FormClosed(object sender, FormClosedEventArgs e)
+        {
+         _frmManageInternationalDrivingApplication=null;
+        }
+
+
+       
+        frmManageDetainLicenses _frmManageDetainLicenses;
+        private void manageDetaineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          //  if()
 
         }
     }

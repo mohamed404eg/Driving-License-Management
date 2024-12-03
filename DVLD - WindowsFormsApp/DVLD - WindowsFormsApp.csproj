@@ -612,5 +612,20 @@
   <ItemGroup>
     <None Include="Resources\banned-64px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\renewable-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\renewable-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alter-24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RetakeTest-24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\international-driver-license-24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
