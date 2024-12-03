@@ -69,7 +69,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (clsTestAppointments.haveTestAppointmentsSameStautsOnTestType(_LocalApplicationID,1,false) )
+            if (clsTestAppointments.haveTestAppointmentsSameStautsOnTestType(_LocalApplicationID,((int)_TestType),false) )
                
             {
 

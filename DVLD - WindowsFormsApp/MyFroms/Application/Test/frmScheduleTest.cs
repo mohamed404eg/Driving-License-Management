@@ -25,7 +25,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision
         int _LocalAppId;
         
         clsTestAppointments _tA;
-
+        clsApplications _RetakeTestApplication;
         enum enMode
         {
             New,Update , IsLocked
@@ -33,6 +33,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision
         }
         enMode _Mode;
 
+        // load TestAppointment from db
         public frmScheduleTest(int TestAppointmentId)
         {
             InitializeComponent();
@@ -191,6 +192,8 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision
 
                 FeesRetake();
 
+                // show RetakeTestApplicationID
+                lab_R_Test_Id.Text = _tA.RetakeTestApplicationID.ToString();
 
 
 
@@ -202,6 +205,8 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision
 
 
         }
+
+
 
         void FeesRetake()
         {
@@ -229,6 +234,28 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision
 
         }
 
+
+        bool Full_RetakeTestApplication()
+        {
+            clsLocalDrivingLicenseApplications localDrivingLicenseApplications = clsLocalDrivingLicenseApplications.Find(_LocalAppId);
+
+          if(localDrivingLicenseApplications == null ) return false;
+
+            _RetakeTestApplication = new clsApplications();
+
+            _RetakeTestApplication.ApplicantPersonID = localDrivingLicenseApplications.ApplicantPersonID;
+            _RetakeTestApplication.ApplicationDate = DateTime.Now;
+            _RetakeTestApplication.ApplicationTypeID = 7; //Retake Test
+            _RetakeTestApplication.ApplicationStatus = 3; // end
+            _RetakeTestApplication.LastStatusDate = DateTime.Now;
+            _RetakeTestApplication.PaidFees = clsApplicationTypes.Find(7).ApplicationTypeFees;
+            _RetakeTestApplication.CreatedByUserID = CurrentUser.User.UserID;
+
+
+            return _RetakeTestApplication.Save();
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             switch (_Mode)
@@ -245,16 +272,50 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision
             }
             
 
+             
+            void UddateRetakeTestApplicationIdInScreen()
+
+            {
+                lab_R_Test_Id.Text = _RetakeTestApplication.ApplicationID.ToString();
+
+
+
+
+            }
           if (MessageBox.Show("Are sure Save","Save",MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                if (_tA.Save())
+
+                if (_tA.RetakeTest())
+
                 {
+
+                  if(Full_RetakeTestApplication())
+                    {
+                        _tA.RetakeTestApplicationID = _RetakeTestApplication.ApplicationID;
+
+                        UddateRetakeTestApplicationIdInScreen();
+                    }
+                    else
+                    {
+                        MessageBox.Show("error in function : Full_RetakeTestApplication() ");
+                        return;
+                    }
+                }
+
+
+
+
+                 if (_tA.Save()){
+
                     MessageBox.Show("Successfully Save");
+                    IsIsLocked();
+
                 }
                 else
                 {
                     MessageBox.Show("Filad Save");
                 }
+
             }
 
 

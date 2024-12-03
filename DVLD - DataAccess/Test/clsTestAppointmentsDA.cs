@@ -125,7 +125,7 @@ select SCOPE_IDENTITY ()
         ref DateTime AppointmentDate,
         ref decimal PaidFees,
        ref int CreatedByUserID,
-          ref bool IsLocked)
+          ref bool IsLocked,ref int RetakeTestApplicationID)
         {
 
             bool Found = false;
@@ -141,6 +141,7 @@ SELECT [TestAppointmentID]
       ,[PaidFees]
       ,[CreatedByUserID]
       ,[IsLocked]
+      ,[RetakeTestApplicationID]
   FROM [dbo].[TestAppointments]
   WHERE TestAppointmentID = @TestAppointmentID  
 ";
@@ -166,7 +167,15 @@ SELECT [TestAppointmentID]
                     PaidFees = (decimal)reader["PaidFees"];
                     CreatedByUserID = (int)reader["CreatedByUserID"];
                     IsLocked = (bool)reader["IsLocked"];
-                
+                    if (reader["RetakeTestApplicationID"] == DBNull.Value)
+                    {
+                        RetakeTestApplicationID = -1;
+
+                    }
+                    else
+                    {
+                        RetakeTestApplicationID = (int)reader["RetakeTestApplicationID"];
+                    }
 
 
                 }

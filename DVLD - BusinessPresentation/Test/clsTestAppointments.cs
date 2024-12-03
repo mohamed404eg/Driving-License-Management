@@ -58,7 +58,7 @@ namespace DVLD___BusinessPresentation.Test
         // fill object when load
         clsTestAppointments(int testAppointmentID, int testTypeID,
             int localDrivingLicenseApplicationID, DateTime appointmentDate,
-            decimal paidFees, int createdByUserID, bool isLocked, _enMode mode)
+            decimal paidFees, int createdByUserID, bool isLocked,int RetakeTestApplicationID, _enMode mode)
         {
             TestAppointmentID = testAppointmentID;
             TestTypeID = testTypeID;
@@ -68,6 +68,7 @@ namespace DVLD___BusinessPresentation.Test
             CreatedByUserID = createdByUserID;
             IsLocked = isLocked;
             _Mode = mode;
+            this.RetakeTestApplicationID = RetakeTestApplicationID;
         }
 
         public clsTestAppointments()
@@ -244,16 +245,17 @@ namespace DVLD___BusinessPresentation.Test
             decimal PaidFees = -1;
             int CreatedByUserID = -1;
             bool IsLocked = false;
+            int RetakeTestApplicationID = -1 ;
 
             if (clsTestAppointmentsDA.Find(TestAppointmentID, ref TestTypeID, ref LocalDrivingLicenseApplicationID,
-                ref AppointmentDate, ref PaidFees, ref CreatedByUserID, ref IsLocked))
+                ref AppointmentDate, ref PaidFees, ref CreatedByUserID, ref IsLocked,ref  RetakeTestApplicationID))
             {
 
                 return new clsTestAppointments(
                     TestAppointmentID, TestTypeID,
                     LocalDrivingLicenseApplicationID,
                     AppointmentDate, PaidFees,
-                    CreatedByUserID, IsLocked, _enMode.Updata);
+                    CreatedByUserID, IsLocked, RetakeTestApplicationID, _enMode.Updata);
             }
             else
             {

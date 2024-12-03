@@ -78,7 +78,7 @@ namespace DVLD___DataAccess
             SqlConnection sqlConnection = new SqlConnection(clsConnectionsString.ConnectionsString);
 
 
-            string query = @"select * from V_People
+            string query = @"select * from People
 where PersonID = @PersonID;";
 
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
@@ -203,7 +203,7 @@ where PersonID = @PersonID;";
             SqlConnection sqlConnection = new SqlConnection(clsConnectionsString.ConnectionsString);
 
 
-            string query = @"select * from V_People
+            string query = @"select * from People
 where NationalNo = @NationalNo;";
 
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
@@ -295,7 +295,7 @@ where NationalNo = @NationalNo;";
             SqlConnection sqlConnection = new SqlConnection(clsConnectionsString.ConnectionsString);
 
 
-            string query = @"select * from V_People
+            string query = @"select * from People
 where FirstName like '' + @FirstName + '%' ";
 
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
@@ -355,7 +355,7 @@ where FirstName like '' + @FirstName + '%' ";
             SqlConnection sqlConnection = new SqlConnection(clsConnectionsString.ConnectionsString);
 
 
-            string query = @"select * from  V_People
+            string query = @"select * from  People
 where SecondName like '' + @SecondName + '%' ";
 
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
@@ -415,7 +415,7 @@ where SecondName like '' + @SecondName + '%' ";
             SqlConnection sqlConnection = new SqlConnection(clsConnectionsString.ConnectionsString);
 
 
-            string query = @"select * from  V_People
+            string query = @"select * from  People
 where ThirdName like '' + @ThirdName + '%' ";
 
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
@@ -473,7 +473,7 @@ where ThirdName like '' + @ThirdName + '%' ";
             SqlConnection sqlConnection = new SqlConnection(clsConnectionsString.ConnectionsString);
 
 
-            string query = @"select * from  V_People
+            string query = @"select * from  People
 where LastName like '' + @LastName + '%' ";
 
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
@@ -536,8 +536,8 @@ where LastName like '' + @LastName + '%' ";
 
            string query = @"
 
-select * from V_People
-where V_People.Nationality like ''+ @NationalityCountry + '%'
+select * from People
+where People.Nationality like ''+ @NationalityCountry + '%'
 
 
 ";
@@ -601,8 +601,8 @@ where V_People.Nationality like ''+ @NationalityCountry + '%'
             string query = @"
 
 
-select * from V_People
-where V_People.Gendor =  @GendorName
+select * from People
+where People.Gendor =  @GendorName
 ";
 
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
@@ -664,7 +664,7 @@ where V_People.Gendor =  @GendorName
             string query = @"
 
 select * 
- from  V_People
+ from  People
  where Phone = @Phone
 ";
 
@@ -727,7 +727,7 @@ select *
 
 
 select * 
- from  V_People
+ from  People
  where Email = @Email
 
 ";
@@ -1149,7 +1149,7 @@ DELETE FROM [dbo].[People]
             SqlConnection sqlConnection = new SqlConnection(clsConnectionsString.ConnectionsString);
 
 
-            string query = @"select * from V_People";
+            string query = @"select * from People";
 
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
 
@@ -1214,7 +1214,7 @@ DELETE FROM [dbo].[People]
 
             string query = @"
 
-select distinct Gendor from V_People
+select distinct Gendor from People
 
 ";
 
