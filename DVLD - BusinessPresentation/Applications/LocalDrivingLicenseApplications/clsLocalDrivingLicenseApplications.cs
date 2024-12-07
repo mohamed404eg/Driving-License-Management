@@ -1,4 +1,5 @@
 ﻿using DVLD___BusinessPresentation.Applications.LicenseClass;
+using DVLD___BusinessPresentation.Test;
 using DVLD___DataAccess;
 using System;
 using System.Collections.Generic;
@@ -393,6 +394,43 @@ namespace DVLD___BusinessPresentation
         }
 
 
+
+
+        /// <summary>
+        /// deleted LocalDrivingLicenseApplication by LocalApplicationID
+        /// </summary>
+        /// <param name="LocalApplicationID"></param>
+        /// <returns>return true is successfully otherwise return false</returns>
+
+        static public bool DeletedLocalApplocation(int LocalApplicationID)
+        {
+
+            bool IsDeleted = false;
+
+            if (clsTestAppointments.isHave(LocalApplicationID))  return false ;
+
+            // load LocalDrivingLicenseApplications before deleted , so when delete applcation we found ApplicationID
+            clsLocalDrivingLicenseApplications _localDrivingLicenseApplications = clsLocalDrivingLicenseApplications.Find(LocalApplicationID);
+
+            if(_localDrivingLicenseApplications ==  null) return false ;
+
+            if(clsLocalDrivingLicenseApplicationsDataAccess.DeletedLocalApplocation(LocalApplicationID))
+            {
+                if (clsApplications.Deleted(_localDrivingLicenseApplications.applications.ApplicationID))
+                {
+
+                IsDeleted = true ;
+
+                }
+
+            }
+
+
+
+
+
+            return IsDeleted;
+        }
 
 
 

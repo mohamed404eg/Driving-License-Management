@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.IO;
+using DVLD___WindowsFormsApp.MyFroms.Coustom_Utility;
 
 namespace DVLD___WindowsFormsApp.MyFroms.Person
 {
@@ -89,7 +90,7 @@ namespace DVLD___WindowsFormsApp.MyFroms.Person
                 rtb_Address.Text = _Person.Address;
                 OFD_Image.FileName = _Person.ImagePath;
 
-                pB_Image.ImageLocation = OFD_Image.FileName;
+                pB_Image.ImageLocation = (clsImagePath.Path + OFD_Image.FileName);
 
                 if (_Person.ImagePath != "")
                 {
@@ -343,8 +344,8 @@ namespace DVLD___WindowsFormsApp.MyFroms.Person
         bool _SaveCopyFile(OpenFileDialog FileName ,ref string FileNameCopy ) {
 
             if (FileName.FileName == "") return false;
-            FileNameCopy = "P:/DVLD - Driving License Management/Temp/";
-
+            //  FileNameCopy = "P:/DVLD - Driving License Management/Temp/";
+            FileNameCopy = "../";
             FileNameCopy += Guid.NewGuid().ToString();
             FileNameCopy += Path.GetExtension(FileName.FileName);
 

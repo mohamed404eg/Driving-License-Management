@@ -51,6 +51,7 @@
     <Compile Include="Driver\InternationalLicenses\TestclsInternationalLicenses.cs" />
     <Compile Include="Driver\TestclsDetainedLicenses.cs" />
     <Compile Include="Driver\TestclsLicenses.cs" />
+    <Compile Include="Path Image Test\PathTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test\clsTestAppointmentsTest.cs" />

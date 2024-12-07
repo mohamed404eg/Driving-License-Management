@@ -553,10 +553,51 @@ SELECT *
 
 
 
+        static public bool DeletedLocalApplocation(int LocalApplicationID)
+        {
+
+
+            bool isDeleted = false;
+
+
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+
+DELETE FROM [dbo].[LocalDrivingLicenseApplications]
+      WHERE LocalDrivingLicenseApplicationID = @LocalApplicationID
 
 
 
+";
+            SqlCommand Command = new SqlCommand(Query, connection);
 
+            Command.Parameters.AddWithValue("LocalApplicationID", LocalApplicationID);
+
+            try
+            {
+                connection.Open();
+
+                int rowAffected = Command.ExecuteNonQuery();
+                if (rowAffected > 0)
+                {
+                    isDeleted = true;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+
+            }
+            finally { connection.Close(); }
+
+            return isDeleted;
+
+
+
+        }
 
 
 

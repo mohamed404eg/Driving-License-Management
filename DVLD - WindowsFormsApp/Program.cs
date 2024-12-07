@@ -1,4 +1,5 @@
-﻿using DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision;
+﻿using DVLD___WindowsFormsApp.MyFroms.Application.LocalApplication;
+using DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision;
 using DVLD___WindowsFormsApp.MyFroms.Driver.Detain.Manage_Detain_License;
 using DVLD___WindowsFormsApp.MyFroms.Login;
 using System;
@@ -25,11 +26,11 @@ namespace DVLD___WindowsFormsApp
             // == test ===
             //Application.Run(new frmVisionTest(35,frmVisionTest.enTestType.VisionTest));
             //Application.Run(new frmListDrivers());
-            // Application.Run(new frmManageLocalDrivingApplication());
+             Application.Run(new frmManageLocalDrivingApplication());
             //Application.Run(new frmManageDetainLicenses());
 
             //  Application.Run(new frmScheduleTest());
-            Application.Run(new frmMain());
+          //  Application.Run(new frmMain());
 
         }
     }

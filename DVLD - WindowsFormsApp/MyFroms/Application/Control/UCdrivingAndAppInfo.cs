@@ -71,6 +71,15 @@ namespace DVLD___WindowsFormsApp.MyFroms.Application.Control
              _LocalDrivingLicenseApplication = LocalDrivingLicenseApplication;
         }
 
+
+        // just send LocalApplicationID and the fuction load everything
+        public void LoadLocalApplication(int LocalApplicationID)
+        {
+            UpdateApplicationID(LocalApplicationID);
+            LoadData();
+        }
+
+
         void ShowLicense(clsLocalDrivingLicenseApplications app)
         {
             if (app.ApplicationStatus == 3)

@@ -175,5 +175,19 @@ namespace DVLD___BusinessPresentation
 
 
 
+
+
+        /// <summary>
+        /// deleted Application by ApplicationID
+        /// </summary>
+        /// <param name="ApplicationID"></param>
+        /// <returns>return true is successfully otherwise return false</returns>
+        static public bool Deleted(int ApplicationID)
+        {
+            return clsApplicationsDataAccess.Deleted(ApplicationID);    
+
+        }
+
+
     }
 }

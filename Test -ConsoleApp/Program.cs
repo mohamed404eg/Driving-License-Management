@@ -15,6 +15,7 @@ using Test__ConsoleApp.Applications.LocalDrivingLicenseApplications;
 using Test__ConsoleApp.Driver;
 using Test__ConsoleApp.Driver.Detain;
 using Test__ConsoleApp.Driver.InternationalLicenses;
+using Test__ConsoleApp.Path_Image_Test;
 using Test__ConsoleApp.Test;
 
 namespace Test__ConsoleApp
@@ -1258,10 +1259,9 @@ string ImagePath)
             //TestclsDetain.FindByReleaseApplicationIdDataTable(3);
             //TestclsDetain.TestDetain(38, DateTime.Now, 100, 1, false, DateTime.MinValue, -1, -1);
 
-          //  TestclsDetain.UpdateDetain(38);
+            //  TestclsDetain.UpdateDetain(38);
 
-
-
+            //PathTest.Test();
 
 
             Console.ReadKey();

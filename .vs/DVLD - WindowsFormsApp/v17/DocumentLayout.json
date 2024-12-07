@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4EC19277-DDC8-49AE-8C37-1ECE64A1E43E}|DVLD - WindowsFormsApp\\DVLD - WindowsFormsApp.csproj|C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\dvld - windowsformsapp\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EC19277-DDC8-49AE-8C37-1ECE64A1E43E}|DVLD - WindowsFormsApp\\DVLD - WindowsFormsApp.csproj|solutionrelative:dvld - windowsformsapp\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2E261DA-11C0-4B50-9983-9C098E3D8A8A}|DVLD - DataAccess\\DVLD - DataAccess.csproj|c:\\users\\otg43\\source\\repos\\driving-license-management\\dvld - dataaccess\\applications\\clsapplicationsdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2E261DA-11C0-4B50-9983-9C098E3D8A8A}|DVLD - DataAccess\\DVLD - DataAccess.csproj|solutionrelative:dvld - dataaccess\\applications\\clsapplicationsdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EC19277-DDC8-49AE-8C37-1ECE64A1E43E}|DVLD - WindowsFormsApp\\DVLD - WindowsFormsApp.csproj|c:\\users\\otg43\\source\\repos\\driving-license-management\\dvld - windowsformsapp\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EC19277-DDC8-49AE-8C37-1ECE64A1E43E}|DVLD - WindowsFormsApp\\DVLD - WindowsFormsApp.csproj|solutionrelative:dvld - windowsformsapp\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4EC19277-DDC8-49AE-8C37-1ECE64A1E43E}|DVLD - WindowsFormsApp\\DVLD - WindowsFormsApp.csproj|c:\\users\\otg43\\source\\repos\\driving-license-management\\dvld - windowsformsapp\\myfroms\\application\\localapplication\\frmmanagelocaldrivingapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EC19277-DDC8-49AE-8C37-1ECE64A1E43E}|DVLD - WindowsFormsApp\\DVLD - WindowsFormsApp.csproj|solutionrelative:dvld - windowsformsapp\\myfroms\\application\\localapplication\\frmmanagelocaldrivingapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EC19277-DDC8-49AE-8C37-1ECE64A1E43E}|DVLD - WindowsFormsApp\\DVLD - WindowsFormsApp.csproj|c:\\users\\otg43\\source\\repos\\driving-license-management\\dvld - windowsformsapp\\myfroms\\application\\localapplication\\frmmanagelocaldrivingapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EC19277-DDC8-49AE-8C37-1ECE64A1E43E}|DVLD - WindowsFormsApp\\DVLD - WindowsFormsApp.csproj|solutionrelative:dvld - windowsformsapp\\myfroms\\application\\localapplication\\frmmanagelocaldrivingapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D8385AA-DC79-4B8A-8F27-00BE3ADAC7F1}|DVLD - BusinessPresentation\\DVLD - BusinessPresentation.csproj|c:\\users\\otg43\\source\\repos\\driving-license-management\\dvld - businesspresentation\\applications\\localdrivinglicenseapplications\\clslocaldrivinglicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D8385AA-DC79-4B8A-8F27-00BE3ADAC7F1}|DVLD - BusinessPresentation\\DVLD - BusinessPresentation.csproj|solutionrelative:dvld - businesspresentation\\applications\\localdrivinglicenseapplications\\clslocaldrivinglicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2E261DA-11C0-4B50-9983-9C098E3D8A8A}|DVLD - DataAccess\\DVLD - DataAccess.csproj|c:\\users\\otg43\\source\\repos\\driving-license-management\\dvld - dataaccess\\applications\\clslocaldrivinglicenseapplicationsdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2E261DA-11C0-4B50-9983-9C098E3D8A8A}|DVLD - DataAccess\\DVLD - DataAccess.csproj|solutionrelative:dvld - dataaccess\\applications\\clslocaldrivinglicenseapplicationsdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D8385AA-DC79-4B8A-8F27-00BE3ADAC7F1}|DVLD - BusinessPresentation\\DVLD - BusinessPresentation.csproj|c:\\users\\otg43\\source\\repos\\driving-license-management\\dvld - businesspresentation\\applications\\clsapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D8385AA-DC79-4B8A-8F27-00BE3ADAC7F1}|DVLD - BusinessPresentation\\DVLD - BusinessPresentation.csproj|solutionrelative:dvld - businesspresentation\\applications\\clsapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D8385AA-DC79-4B8A-8F27-00BE3ADAC7F1}|DVLD - BusinessPresentation\\DVLD - BusinessPresentation.csproj|c:\\users\\otg43\\source\\repos\\driving-license-management\\dvld - businesspresentation\\test\\clstestappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D8385AA-DC79-4B8A-8F27-00BE3ADAC7F1}|DVLD - BusinessPresentation\\DVLD - BusinessPresentation.csproj|solutionrelative:dvld - businesspresentation\\test\\clstestappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4EC19277-DDC8-49AE-8C37-1ECE64A1E43E}|DVLD - WindowsFormsApp\\DVLD - WindowsFormsApp.csproj|C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\dvld - windowsformsapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,46 +42,111 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "clsApplicationsDataAccess.cs",
+              "DocumentMoniker": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - DataAccess\\Applications\\clsApplicationsDataAccess.cs",
+              "RelativeDocumentMoniker": "DVLD - DataAccess\\Applications\\clsApplicationsDataAccess.cs",
+              "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - DataAccess\\Applications\\clsApplicationsDataAccess.cs",
+              "RelativeToolTip": "DVLD - DataAccess\\Applications\\clsApplicationsDataAccess.cs",
+              "ViewState": "AgIAADEBAAAAAAAAAAAAADEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T08:56:09.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "clsApplications.cs",
+              "DocumentMoniker": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - BusinessPresentation\\Applications\\clsApplications.cs",
+              "RelativeDocumentMoniker": "DVLD - BusinessPresentation\\Applications\\clsApplications.cs",
+              "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - BusinessPresentation\\Applications\\clsApplications.cs",
+              "RelativeToolTip": "DVLD - BusinessPresentation\\Applications\\clsApplications.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAYwLoAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T08:55:10.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "clsTestAppointments.cs",
+              "DocumentMoniker": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - BusinessPresentation\\Test\\clsTestAppointments.cs",
+              "RelativeDocumentMoniker": "DVLD - BusinessPresentation\\Test\\clsTestAppointments.cs",
+              "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - BusinessPresentation\\Test\\clsTestAppointments.cs",
+              "RelativeToolTip": "DVLD - BusinessPresentation\\Test\\clsTestAppointments.cs",
+              "ViewState": "AgIAAFgBAAAAAAAAAAAswHIBAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T08:35:26.024Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmMain.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - WindowsFormsApp\\frmMain.cs",
-              "RelativeDocumentMoniker": "DVLD - WindowsFormsApp\\frmMain.cs",
-              "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - WindowsFormsApp\\frmMain.cs [Design]",
-              "RelativeToolTip": "DVLD - WindowsFormsApp\\frmMain.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "clsLocalDrivingLicenseApplicationsDataAccess.cs",
+              "DocumentMoniker": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - DataAccess\\Applications\\clsLocalDrivingLicenseApplicationsDataAccess.cs",
+              "RelativeDocumentMoniker": "DVLD - DataAccess\\Applications\\clsLocalDrivingLicenseApplicationsDataAccess.cs",
+              "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - DataAccess\\Applications\\clsLocalDrivingLicenseApplicationsDataAccess.cs",
+              "RelativeToolTip": "DVLD - DataAccess\\Applications\\clsLocalDrivingLicenseApplicationsDataAccess.cs",
+              "ViewState": "AgIAACoCAAAAAAAAAAAmwEQCAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T07:01:15.122Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-07T08:32:02.963Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmMain.cs",
-              "DocumentMoniker": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - WindowsFormsApp\\frmMain.cs",
-              "RelativeDocumentMoniker": "DVLD - WindowsFormsApp\\frmMain.cs",
-              "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - WindowsFormsApp\\frmMain.cs",
-              "RelativeToolTip": "DVLD - WindowsFormsApp\\frmMain.cs",
-              "ViewState": "AgIAAHQBAAAAAAAAAAD4v4wBAAAMAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "clsLocalDrivingLicenseApplications.cs",
+              "DocumentMoniker": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - BusinessPresentation\\Applications\\LocalDrivingLicenseApplications\\clsLocalDrivingLicenseApplications.cs",
+              "RelativeDocumentMoniker": "DVLD - BusinessPresentation\\Applications\\LocalDrivingLicenseApplications\\clsLocalDrivingLicenseApplications.cs",
+              "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - BusinessPresentation\\Applications\\LocalDrivingLicenseApplications\\clsLocalDrivingLicenseApplications.cs",
+              "RelativeToolTip": "DVLD - BusinessPresentation\\Applications\\LocalDrivingLicenseApplications\\clsLocalDrivingLicenseApplications.cs",
+              "ViewState": "AgIAAGgBAAAAAAAAAAAgwJMBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T05:51:18.307Z",
+              "WhenOpened": "2024-12-07T08:09:39.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmManageLocalDrivingApplication.cs",
+              "DocumentMoniker": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - WindowsFormsApp\\MyFroms\\Application\\LocalApplication\\frmManageLocalDrivingApplication.cs",
+              "RelativeDocumentMoniker": "DVLD - WindowsFormsApp\\MyFroms\\Application\\LocalApplication\\frmManageLocalDrivingApplication.cs",
+              "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - WindowsFormsApp\\MyFroms\\Application\\LocalApplication\\frmManageLocalDrivingApplication.cs",
+              "RelativeToolTip": "DVLD - WindowsFormsApp\\MyFroms\\Application\\LocalApplication\\frmManageLocalDrivingApplication.cs",
+              "ViewState": "AgIAAM8BAAAAAAAAAAA1wNgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T07:46:03.955Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "frmManageLocalDrivingApplication.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - WindowsFormsApp\\MyFroms\\Application\\LocalApplication\\frmManageLocalDrivingApplication.cs",
+              "RelativeDocumentMoniker": "DVLD - WindowsFormsApp\\MyFroms\\Application\\LocalApplication\\frmManageLocalDrivingApplication.cs",
+              "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - WindowsFormsApp\\MyFroms\\Application\\LocalApplication\\frmManageLocalDrivingApplication.cs [Design]",
+              "RelativeToolTip": "DVLD - WindowsFormsApp\\MyFroms\\Application\\LocalApplication\\frmManageLocalDrivingApplication.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T07:45:57.296Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - WindowsFormsApp\\Program.cs",
               "RelativeDocumentMoniker": "DVLD - WindowsFormsApp\\Program.cs",
               "ToolTip": "C:\\Users\\otg43\\source\\repos\\Driving-License-Management\\DVLD - WindowsFormsApp\\Program.cs",
               "RelativeToolTip": "DVLD - WindowsFormsApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAiwBwAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T13:20:19.096Z",
               "EditorCaption": ""

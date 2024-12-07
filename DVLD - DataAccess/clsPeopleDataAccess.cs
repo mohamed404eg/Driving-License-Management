@@ -68,7 +68,7 @@ namespace DVLD___DataAccess
        ref string Address ,
        ref string Phone,
        ref string Email ,
-       ref string NationalityCountry ,
+       ref int NationalityCountryId,
        ref string ImagePath)
         {
 
@@ -103,7 +103,19 @@ where PersonID = @PersonID;";
                   
                     LastName = (string)reader["LastName"];
                     DateOfBirth = (DateTime)reader["DateOfBirth"];
-                    Gendor = (string)reader["Gendor"];
+
+
+                    // 0 Male , 1 Femail
+                    if ((byte)reader["Gendor"] == 0)
+                    {
+                        Gendor = "Male";
+
+                    }
+                    else
+                    {
+                        Gendor = "Femail";
+                    }
+
                     Address = (string)reader["Address"];
                     Phone = (string)reader["Phone"];
 
@@ -125,7 +137,7 @@ where PersonID = @PersonID;";
                         Email = "";
                     }
 
-                    NationalityCountry = (string)reader["Nationality"];
+                    NationalityCountryId = (int)reader["NationalityCountryID"];
 
 
                     if (reader["ImagePath"] != DBNull.Value) {
@@ -193,7 +205,7 @@ where PersonID = @PersonID;";
      ref string Address,
      ref string Phone,
      ref string Email,
-     ref string NationalityCountry,
+     ref int NationalityCountryId,
      ref string ImagePath)
         {
 
@@ -228,7 +240,19 @@ where NationalNo = @NationalNo;";
                     ThirdName = (string)reader["ThirdName"];
                     LastName = (string)reader["LastName"];
                     DateOfBirth = (DateTime)reader["DateOfBirth"];
-                    Gendor = (string)reader["Gendor"];
+
+
+                   
+                    //0 Male , 1 Femail
+                    if ((byte)reader["Gendor"] == 0)
+                    {
+                        Gendor = "Male";
+                    }
+                    else
+                    {
+                        Gendor = "Femail";
+                    }
+
                     Address = (string)reader["Address"];
                     Phone = (string)reader["Phone"];
 
@@ -242,7 +266,7 @@ where NationalNo = @NationalNo;";
                         Email = "";
                     }
 
-                    NationalityCountry = (string)reader["Nationality"];
+                    NationalityCountryId = (int)reader["NationalityCountryID"];
 
 
                     if (reader["ImagePath"] != DBNull.Value)
@@ -295,7 +319,7 @@ where NationalNo = @NationalNo;";
             SqlConnection sqlConnection = new SqlConnection(clsConnectionsString.ConnectionsString);
 
 
-            string query = @"select * from People
+            string query = @"select * from V_People
 where FirstName like '' + @FirstName + '%' ";
 
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
@@ -355,7 +379,7 @@ where FirstName like '' + @FirstName + '%' ";
             SqlConnection sqlConnection = new SqlConnection(clsConnectionsString.ConnectionsString);
 
 
-            string query = @"select * from  People
+            string query = @"select * from  V_People
 where SecondName like '' + @SecondName + '%' ";
 
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
@@ -415,7 +439,7 @@ where SecondName like '' + @SecondName + '%' ";
             SqlConnection sqlConnection = new SqlConnection(clsConnectionsString.ConnectionsString);
 
 
-            string query = @"select * from  People
+            string query = @"select * from  V_People
 where ThirdName like '' + @ThirdName + '%' ";
 
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
@@ -473,7 +497,7 @@ where ThirdName like '' + @ThirdName + '%' ";
             SqlConnection sqlConnection = new SqlConnection(clsConnectionsString.ConnectionsString);
 
 
-            string query = @"select * from  People
+            string query = @"select * from  V_People
 where LastName like '' + @LastName + '%' ";
 
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
@@ -536,15 +560,15 @@ where LastName like '' + @LastName + '%' ";
 
            string query = @"
 
-select * from People
-where People.Nationality like ''+ @NationalityCountry + '%'
+select * from V_People
+where CountryName like ''+ @Nationality + '%'
 
 
 ";
 
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
 
-            cmd.Parameters.AddWithValue("@NationalityCountry", NationalityCountry);
+            cmd.Parameters.AddWithValue("@Nationality", NationalityCountry);
 
 
             DataTable dt = new DataTable();
@@ -601,13 +625,18 @@ where People.Nationality like ''+ @NationalityCountry + '%'
             string query = @"
 
 
-select * from People
-where People.Gendor =  @GendorName
+select * from V_People
+where Gendor =  @GendorName
 ";
 
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
 
-            cmd.Parameters.AddWithValue("@GendorName", GendorName);
+            //0 Male , 1 Femail
+   
+                cmd.Parameters.AddWithValue("@GendorName", GendorName);
+
+
+            
 
 
             DataTable dt = new DataTable();
@@ -664,7 +693,7 @@ where People.Gendor =  @GendorName
             string query = @"
 
 select * 
- from  People
+ from  V_People
  where Phone = @Phone
 ";
 
@@ -727,7 +756,7 @@ select *
 
 
 select * 
- from  People
+ from  V_People
  where Email = @Email
 
 ";
@@ -869,7 +898,10 @@ select SCOPE_IDENTITY();
             }
             cmd.Parameters.AddWithValue("@LastName", LastName);
             cmd.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
+
+            // 0 Male , 1 Femail
             cmd.Parameters.AddWithValue("@Gendor", Gendor);
+
             cmd.Parameters.AddWithValue("@Address", Address);
             cmd.Parameters.AddWithValue("@Phone", Phone);
 
@@ -1149,7 +1181,7 @@ DELETE FROM [dbo].[People]
             SqlConnection sqlConnection = new SqlConnection(clsConnectionsString.ConnectionsString);
 
 
-            string query = @"select * from People";
+            string query = @"select * from V_People";
 
             SqlCommand cmd = new SqlCommand(query, sqlConnection);
 
@@ -1214,7 +1246,7 @@ DELETE FROM [dbo].[People]
 
             string query = @"
 
-select distinct Gendor from People
+select distinct Gendor from V_People
 
 ";
 

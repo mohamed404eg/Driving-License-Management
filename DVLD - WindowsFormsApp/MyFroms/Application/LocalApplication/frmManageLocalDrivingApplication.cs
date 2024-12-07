@@ -209,9 +209,21 @@ Status
             }
         }
 
+
+     
         private void showToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not implemented"); ;
+            //MessageBox.Show("Not implemented"); ;
+
+            int LocalApplicationId = Multi._GetfirstCellInRow(dGV);
+
+            if (LocalApplicationId != -1)
+            {
+                frmViewLocalApplication _frmViewLocalApplication = new frmViewLocalApplication(LocalApplicationId);
+                _frmViewLocalApplication.ShowDialog();
+            }
+
+
         }
 
         private void eDrivingLiceseFirstTimeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -468,7 +480,22 @@ Status
 
         private void deleteApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not implemented"); ;
+
+
+            // MessageBox.Show("Not implemented"); ;
+
+            int LocalAppId = Multi._GetfirstCellInRow(dGV);
+            if (LocalAppId != -1)
+            {
+                if(MessageBox.Show($"Are You Sure Delete Local ApplicationId = {LocalAppId}") == DialogResult.OK)
+                {
+
+                }
+              
+            }
+
+
+
         }
     }
 }

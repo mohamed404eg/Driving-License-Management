@@ -93,10 +93,14 @@ namespace DVLD___BusinessPresentation
             string NationalityCountry ="";
             string ImagePath = "";
 
+            //NationalityCountry
+            int NationalityCountryId = -1;
 
-
-            if (clsPeopleDataAccess.FindById(PersonId ,ref NationalNo,ref FirstName,ref SecondName,ref ThirdName,ref LastName,ref DateOfBirth,ref Gendor,ref Address,ref Phone,ref Email,ref NationalityCountry ,ref ImagePath))
+            if (clsPeopleDataAccess.FindById(PersonId ,ref NationalNo,ref FirstName,ref SecondName,ref ThirdName,ref LastName,ref DateOfBirth,ref Gendor,ref Address,ref Phone,ref Email,ref NationalityCountryId, ref ImagePath))
             {
+
+                NationalityCountry = clsCountries.Find(NationalityCountryId).CountryName;
+
                 return new clsPeople(PersonId, NationalNo, FirstName, SecondName, ThirdName, LastName, DateOfBirth, Gendor, Address, Phone, Email, NationalityCountry, ImagePath);
             }
             else
@@ -129,10 +133,14 @@ namespace DVLD___BusinessPresentation
             string NationalityCountry = "";
             string ImagePath = "";
 
+            //NationalityCountry
+            int NationalityCountryId = -1;
 
-
-            if (clsPeopleDataAccess.FindByNationalNo(ref PersonId,  NationalNo, ref FirstName, ref SecondName, ref ThirdName, ref LastName, ref DateOfBirth, ref Gendor, ref Address, ref Phone, ref Email, ref NationalityCountry, ref ImagePath))
+            if (clsPeopleDataAccess.FindByNationalNo(ref PersonId,  NationalNo, ref FirstName, ref SecondName, ref ThirdName, ref LastName, ref DateOfBirth, ref Gendor, ref Address, ref Phone, ref Email, ref NationalityCountryId, ref ImagePath))
             {
+
+                NationalityCountry = clsCountries.Find(NationalityCountryId).CountryName;
+
                 return new clsPeople(PersonId, NationalNo, FirstName, SecondName, ThirdName, LastName, DateOfBirth, Gendor, Address, Phone, Email, NationalityCountry, ImagePath);
             }
             else
@@ -191,7 +199,8 @@ namespace DVLD___BusinessPresentation
             //GendorId
             byte GendorId = 0;
 
-            if (this.Gendor == "Male")
+            // 0 Male , 1 Femail
+            if (this.Gendor.ToUpper() == "Male".ToUpper())
             {
                 GendorId = 0;
             }else
@@ -226,7 +235,8 @@ namespace DVLD___BusinessPresentation
             //GendorId
             byte GendorId = 0;
 
-            if (this.Gendor == "Male")
+            // 0 Male , 1 Femail
+            if (this.Gendor.ToUpper() == "Male".ToUpper())
             {
                 GendorId = 0;
             }

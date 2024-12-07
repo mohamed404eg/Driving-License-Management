@@ -278,6 +278,8 @@ namespace DVLD___BusinessPresentation.Test
                 (LocalDrivingLicenseApplicationID);
         }
 
+      
+
 
         /// <summary>
         /// find by LocalDrivingLicenseApplicationID and TestTypeID
@@ -362,7 +364,15 @@ namespace DVLD___BusinessPresentation.Test
         }
 
 
-        
+        /// <summary>
+        /// chehck if LocalDrivingLicenseApplicationID have TestAppointment
+        /// </summary>
+        /// <param name="LocalDrivingLicenseApplicationID"></param>
+        /// <returns>return true if have it, otherwise return false</returns>
+        static public bool isHave(int LocalDrivingLicenseApplicationID)
+        {
+            return (0 < clsTestAppointmentsDA.NumberOfTrial(LocalDrivingLicenseApplicationID, 1));
+        }
 
 
 

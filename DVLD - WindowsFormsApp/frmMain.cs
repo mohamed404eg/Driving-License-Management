@@ -21,6 +21,8 @@ using DVLD___WindowsFormsApp.MyFroms.Driver.Release_Detain_Licenses;
 using DVLD___WindowsFormsApp.MyFroms.Application.Test.Vision;
 using DVLD___WindowsFormsApp.MyFroms.Application.International;
 using DVLD___WindowsFormsApp.MyFroms.Driver.Detain.Manage_Detain_License;
+using DVLD___WindowsFormsApp.MyFroms.Driver.Detain_Licesne;
+using DVLD___WindowsFormsApp.MyFroms.Driver.International_License;
 namespace DVLD___WindowsFormsApp
 {
 
@@ -169,25 +171,25 @@ namespace DVLD___WindowsFormsApp
             applicationTypes = null;
         }
 
-        frmManageTestTypes frmManageTest; 
+        frmManageTestTypes _frmManageTest; 
         private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (frmManageTest == null || frmManageTest.IsDisposed)
+            if (_frmManageTest == null || _frmManageTest.IsDisposed)
             {
-                frmManageTest = new frmManageTestTypes();
-                frmManageTest.MdiParent = this;
-                frmManageTest.FormClosed += FrmManageTest_FormClosed; ;
-                frmManageTest.Show();
+                _frmManageTest = new frmManageTestTypes();
+                _frmManageTest.MdiParent = this;
+                _frmManageTest.FormClosed += FrmManageTest_FormClosed; ;
+                _frmManageTest.Show();
             }
             else
             {
-                applicationTypes.BringToFront();
+                _frmManageTest.BringToFront();
             }
         }
 
         private void FrmManageTest_FormClosed(object sender, FormClosedEventArgs e)
         {
-            applicationTypes = null;
+            _frmManageTest = null;
         }
 
 
@@ -253,10 +255,29 @@ namespace DVLD___WindowsFormsApp
             }
         }
 
+
+        frmIssueeInternationalLicense _frmIssueeInternationalLicense;
         private void internationalLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if(_frmIssueeInternationalLicense == null || _frmIssueeInternationalLicense.IsDisposed)
+            {
+                _frmIssueeInternationalLicense = new frmIssueeInternationalLicense();
+                _frmIssueeInternationalLicense.MdiParent = this;
+                _frmIssueeInternationalLicense.FormClosed += _frmIssueeInternationalLicense_FormClosed;
+                _frmIssueeInternationalLicense.Show();
+            }
+            else
+            {
+                _frmIssueeInternationalLicense.BringToFront();
+            }
 
         }
+
+        private void _frmIssueeInternationalLicense_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _frmIssueeInternationalLicense = null;
+        }
+
         frmRenewLocalLicense _frmRenewLocalLicense;
         private void rrToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -394,8 +415,76 @@ namespace DVLD___WindowsFormsApp
         frmManageDetainLicenses _frmManageDetainLicenses;
         private void manageDetaineToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          //  if()
+          if(_frmManageDetainLicenses == null || _frmManageDetainLicenses.IsDisposed)
+            {
+                _frmManageDetainLicenses = new frmManageDetainLicenses();
+                _frmManageDetainLicenses .MdiParent= this;
+                _frmManageDetainLicenses.FormClosed += _frmManageDetainLicenses_FormClosed;
+                _frmManageDetainLicenses.Show();
+            }
+            else
+            {
+                _frmManageDetainLicenses.BringToFront();
+            }
 
         }
+
+        private void _frmManageDetainLicenses_FormClosed(object sender, FormClosedEventArgs e)
+        {
+     
+        
+            _frmManageDetainLicenses=null;  
+        
+        }
+
+      
+
+        frmDetainLicense _frmDetainLicense;
+        private void detainedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_frmDetainLicense == null || _frmDetainLicense.IsDisposed)
+            {
+                _frmDetainLicense = new frmDetainLicense();
+                _frmDetainLicense.MdiParent = this;
+                _frmDetainLicense.FormClosed += _frmDetainLicense_FormClosed; ;
+                _frmDetainLicense.Show();
+            }
+            else
+            {
+                _frmDetainLicense.BringToFront();
+            }
+
+
+        }
+
+        private void _frmDetainLicense_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _frmDetainLicense = null;
+        }
+
+
+
+        frmReleaseDetainLicenses _frmReleaseLicense;
+        private void releaseDetainedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_frmReleaseLicense == null || _frmReleaseLicense.IsDisposed)
+            {
+                _frmReleaseLicense = new frmReleaseDetainLicenses();
+                _frmReleaseLicense.MdiParent = this;
+                _frmReleaseLicense.FormClosed += _frmReleaseLicense_FormClosed; ;
+                _frmReleaseLicense.Show();
+            }
+            else
+            {
+                _frmReleaseLicense.BringToFront();
+            }
+        }
+
+        private void _frmReleaseLicense_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _frmReleaseLicense = null;
+        }
+
+
     }
 }

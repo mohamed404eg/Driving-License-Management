@@ -302,7 +302,57 @@ join LocalDrivingLicenseApplications on LocalDrivingLicenseApplications.Applicat
 
 
 
-   
+
+
+        /// <summary>
+        /// deleted Application by ApplicationID
+        /// </summary>
+        /// <param name="ApplicationID"></param>
+        /// <returns>return true is successfully otherwise return false</returns>
+        static public bool Deleted(int ApplicationID)
+        {
+
+
+            bool isDeleted = false;
+
+
+            SqlConnection connection = new SqlConnection(clsConnectionsString.ConnectionsString);
+
+            string Query = @"
+
+DELETE FROM [dbo].[Applications]
+      WHERE ApplicationID = @ApplicationID
+
+
+
+";
+            SqlCommand Command = new SqlCommand(Query, connection);
+
+            Command.Parameters.AddWithValue("ApplicationID", ApplicationID);
+
+            try
+            {
+                connection.Open();
+
+                int rowAffected = Command.ExecuteNonQuery();
+                if (rowAffected > 0)
+                {
+                    isDeleted = true;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+
+            }
+            finally { connection.Close(); }
+
+            return isDeleted;
+        }
+
+
 
     }
 }

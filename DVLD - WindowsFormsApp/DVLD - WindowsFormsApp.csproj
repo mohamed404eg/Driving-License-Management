@@ -88,6 +88,12 @@
     <Compile Include="MyFroms\Application\LocalApplication\frmNewLocalDrivingApplication.Designer.cs">
       <DependentUpon>frmNewLocalDrivingApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyFroms\Application\LocalApplication\View\frmViewLocalApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFroms\Application\LocalApplication\View\frmViewLocalApplication.Designer.cs">
+      <DependentUpon>frmViewLocalApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyFroms\Application\Test\FactionTest.cs" />
     <Compile Include="MyFroms\Application\Test\frmTakeTest.cs">
       <SubType>Form</SubType>
@@ -107,6 +113,7 @@
     <Compile Include="MyFroms\Application\Test\frmTestAppointment.Designer.cs">
       <DependentUpon>frmTestAppointment.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyFroms\Coustom Utility\clsImagePath.cs" />
     <Compile Include="MyFroms\CurrentUser.cs" />
     <Compile Include="MyFroms\Driver\Detain\detain licesne\frmDetainLicense.cs">
       <SubType>Form</SubType>
@@ -302,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Application\LocalApplication\frmNewLocalDrivingApplication.resx">
       <DependentUpon>frmNewLocalDrivingApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFroms\Application\LocalApplication\View\frmViewLocalApplication.resx">
+      <DependentUpon>frmViewLocalApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFroms\Application\Test\frmTakeTest.resx">
       <DependentUpon>frmTakeTest.cs</DependentUpon>
