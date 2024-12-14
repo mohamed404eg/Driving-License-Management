@@ -487,8 +487,20 @@ Status
             int LocalAppId = Multi._GetfirstCellInRow(dGV);
             if (LocalAppId != -1)
             {
-                if(MessageBox.Show($"Are You Sure Delete Local ApplicationId = {LocalAppId}") == DialogResult.OK)
+                if(MessageBox.Show($"Are You Sure Delete Local ApplicationId = {LocalAppId}","Sure",MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
+                   if(clsLocalDrivingLicenseApplications.DeletedLocalApplocation(LocalAppId))
+                    {
+
+                        MessageBox.Show("Successfull Deleted");
+                        //update 
+                        ChangeDataGrid();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Faild Deleted");
+
+                    }
 
                 }
               
