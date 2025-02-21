@@ -70,5 +70,5 @@ People is administrator User And Normal User Like driver.
 ## database 
 - you need to download the sqlserver and sql server management studio 
 - after download import the database backup name "DVLD-v1.bak" in folder "DatabaseBackup" 
-- now yuor finsh .
+- now yuor finish .
 
