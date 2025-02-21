@@ -81,6 +81,7 @@ namespace DVLD___BusinessPresentation.Test
             CreatedByUserID = -1;
             IsLocked = false;
             _Mode = _enMode.Add;
+            RetakeTestApplicationID = -1;
 
         }
 

@@ -57,3 +57,18 @@ People is administrator User And Normal User Like driver.
 ![Screenshot](Media/Screenshot/Main%20features/Applications%20Replacement%20for%20Damaged%20or%20Lost%20Licenses/Applications%20Replacement%20for%20Damaged%20or%20Lost%20Licenses.png)
 - Flow chart => https://whimsical.com/applications-replacement-for-damaged-or-lost-licenses-48AfgRiDmYSdKnKKwf9hTJ
 
+
+
+# how running the project
+## project
+- Download the visual studio 22 community 
+- then clone the project and open file name "DVLD - WindowsFormsApp.sln" 
+- you need to add the database info before you running the programming
+- add your database info in file name "clsConnectionsString.cs" in sub project "DVLD - DataAccess"
+- and now you can run the applications
+
+## database 
+- you need to download the sqlserver and sql server management studio 
+- after download import the database backup name "DVLD-v1.bak" in folder "DatabaseBackup" 
+- now yuor finsh .
+

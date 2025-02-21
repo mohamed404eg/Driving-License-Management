@@ -30,7 +30,7 @@ SELECT [DetainID]
       ,[NationalNo]
       ,[FullName]
       ,[ReleaseApplicationID]
-  FROM [dbo].[V_DetainedLicensesList]
+  FROM [dbo].[DetainedLicenses_View]
 
 ";
 
@@ -93,7 +93,7 @@ SELECT [DetainID]
       ,[NationalNo]
       ,[FullName]
       ,[ReleaseApplicationID]
-  FROM [dbo].[V_DetainedLicensesList]
+  FROM [dbo].[DetainedLicenses_View]
 
   where DetainID = @DetainID
 
@@ -159,7 +159,7 @@ SELECT [DetainID]
       ,[NationalNo]
       ,[FullName]
       ,[ReleaseApplicationID]
-  FROM [dbo].[V_DetainedLicensesList]
+  FROM [dbo].[DetainedLicenses_View]
 
   where IsReleased = @IsReleased
 
@@ -225,7 +225,7 @@ SELECT [DetainID]
       ,[NationalNo]
       ,[FullName]
       ,[ReleaseApplicationID]
-  FROM [dbo].[V_DetainedLicensesList]
+  FROM [dbo].[DetainedLicenses_View]
 
   where NationalNo = @NationalNo
 
@@ -291,7 +291,7 @@ SELECT [DetainID]
       ,[NationalNo]
       ,[FullName]
       ,[ReleaseApplicationID]
-  FROM [dbo].[V_DetainedLicensesList]
+  FROM [dbo].[DetainedLicenses_View]
 
   where FullName = @FullName
 
@@ -358,7 +358,7 @@ SELECT [DetainID]
       ,[NationalNo]
       ,[FullName]
       ,[ReleaseApplicationID]
-  FROM [dbo].[V_DetainedLicensesList]
+  FROM [dbo].[DetainedLicenses_View]
 
   where ReleaseApplicationID = @ReleaseApplicationID
 
